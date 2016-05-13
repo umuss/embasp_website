@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>EmbASP</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+
+    <style>
+        .layer {
+            text-transform: uppercase;
+        }
+        
+        .class {}
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2><img src="img/EmbASP_Logo.png" alt="embASP" height="150" style=" padding-bottom: 0.2cm;"/></h2>
+            <div> EmbASP is a general framework for embedding Answer Set Programming (ASP) in complex systems, and in particular within applications for mobile devices. EmbASP is conceived in order to help developers at designing and implementing complex reasoning tasks in a straightforward way by means of ASP solvers. The framework is provided with <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> as default solver, which is the first ASP system which is undergoing an industrial exploitation; however, it is easy to extend it with different solvers through plain Java Object-Oriented programming. </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Core Team</h2>
+                <div>
+                    <ul>
+                        <li>
+                            Francesco Calimeri <a href="https://www.mat.unical.it/calimeri"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+</a>
+                        </li>
+                        <li>
+                            Davide Fuscà
+                        </li>
+                        <li>
+                            Stefano Germano
+                        </li>
+                        <li>
+                            Simona Perri
+                        </li>
+                        <li>
+                            Jessica Zangari
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Contacts</h2>
+                <div>
+                    For further information, contact <a href="mailto:embasp@mat.unical.it">embasp@mat.unical.it</a>.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>License</h2>
+                <div>
+                    <p>
+                        The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>.
+                    </p>
+                    <p> The framework specializations for DLV (such as the one for DLV on Android) embeds the DLV system itself, which is free for academic and non-commercial educational use, as well as for use by non-profit organisations. For further information about DLV please refer to the <a href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Download</h2>
+                <div>
+                    <h3 id="release">Latest release version</h3> You can download the last stable release version of EmbASP <a href="embasp/embasp.zip">here</a>.
+                </div>
+                <div>
+                    <h3>Development Version <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40"/></h3> You can find the current development version <a href="https://github.com/dave90/EmbASP">here</a>.
+                </div>
+                <div>
+                    <h3>Application Showcase</h3>
+                    <h4><em>DLVfit</em></h4>
+                    <p><em>DLVfit</em> is a health and fitness app that monitors the user activity during the day and suggests some workout plans that depend on her age, weight, gender and goals. The app periodically stores some information about the user activities (running, walking, etc.) and infers the current amount of calories burned so far. When the user asks for a workout plan, <em>DLVfit</em> proposes a set of exercises that would allow the user to reach her daily goal, taking into account also to her preferences. The suggested workout plans are computed in the background by DLV via EmbASP. </p>
+
+                    <p>The ASP program used within <em>DLVfit</em> can be found <a href="dlvfit/dlvfit_logic_program.lp">here</a>. Basically, the program guesses for possible fitness exercises to do in order to burn the remaing calories. Each answer set represent a possible workout plan, in which is ensured that the user's requirements about the calories to burn and the time to spend in the workout are respected. Moreover, also user's preferences are taken into account by means of weak constraints.</p>
+
+                    <h5><b>Releases</b></h5>
+                    <h6><i>Current Release</i></h6>
+                    <p>You can download the latest version of <em>DLVfit</em> <a href="dlvfit/apk/dlvfit_latest.apk">here</a>.</p>
+                    <p></p>
+                    <h6><i>Major Releases</i></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="dlvfit/apk/dlvfit_0.2.0.apk">DLVfit 0.2.0 (beta)</a>
+                            <ul>
+                                <li>Improved performances</li>
+                                <li>Improved layout</li>
+                                <li>Added preference selection</li>
+                                <li>Added custom activities</li>
+                                <li>Defined input ranges</li>
+                            </ul>
+                        </li>
+                        <li><a href="dlvfit/apk/dlvfit_0.1.0.apk">DLVfit 0.1.0 (beta)</a>
+                            <ul>
+                                <li>First release</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <p>Should work on most devices equipped with Android 4.x/5.x.<br />
+                        The list of compatible devices include (but it is not limited to):</p>
+                    <ul>
+                        <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
+                        <li>HTC One - Android 4.3, API 18</li>
+                        <li>HTC One XL - Android 4.2.2, API 17</li>
+                        <li>HTC One XL  - Android 4.1.1, API 16</li>
+                        <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
+                        <li>Google Nexus 7 - Android 4.4.4, API 19</li>
+                        <li>Samsung S4 - Android 4.4.4, API 19</li>
+                        <li>Samnsung S3 - Android 4.3, API 18</li>
+                        <li>Sony Xperia S - Android 4.1.1, API 16</li>
+                        <li>Google Nexus 7 - Android 4.3, API 18</li>
+                        <li>Sony Xperia Go - Android 4.0</li>
+                        <li>Sony Xperia Z3 - Android 5.0</li>
+                        <li>Sony Xperia Z3 - Android 5.1</li>
+                        <li>Galaxy S6 - Android 5.0</li>
+                        <li>Nexus 6 - Android 5.0</li>
+                    </ul>
+
+                    <h5><b>Developers</b></h5>
+                    <ul>
+                        <li>Dario Campisano</li>
+                        <li>The EmbASP Team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>History</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Reports</h2>
+
+            </div>
+        </div>
+-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Documentation</h2>
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-info" href="#getting-started">Getting Started
+                    </a>
+                    <a class="list-group-item list-group-item-info" href="#setting-up">Setting up the execution
+                    </a>
+                    <a class="list-group-item list-group-item-info" href="#gathering-result">Gathering results
+                    </a>
+                    <a class="list-group-item list-group-item-info" href="#arch-desc">Architecture Description
+                    </a>
+                    <a class="list-group-item list-group-item-info" href="#detailed-desc">Detailed Description
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary" id="getting-started">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Getting Started</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h4>How to import the framework on Android Studio</h4>
+                        <p> In order to use the framework in your applications you can import it as module on Android Studio.</p>
+                        <ol>
+                            <li>Import the framework module:
+                                <ol>
+                                    <li>Download the framework last released <a href="#release">module</a>.</li>
+                                    <li>Extract the downloaded file.</li>
+                                    <li>In the project view, right-click on your project <b>New &gt; Module</b>.</li>
+                                    <li>Select <b>Import Existing Project</b>.</li>
+                                    <li>Select the extracted directory.</li>
+                                </ol>
+                            </li>
+                            <li>Set the dependency:
+                                <ol>
+                                    <li>In the Android Studio menu: <b>File &gt; Project Structure</b>.</li>
+                                    <li>Select your project module (by default called <b>app</b>).</li>
+                                    <li>In the <b>Dependencies Tab</b> add as <b>Module Dependency</b> the previously imported framework.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary" id="setting-up">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Setting up the execution</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>In the following, we detail the actual usage of the framework by means of a running example. In particular we show how to use the framework to develop a simple mobile app that make use of ASP in order to solve the 3-Colouring problem. This problem asks for a valid assignment of colours to the nodes of a graph: given a graph as set of nodes and edges between them, it is "3-colourable" if to each node can be assigned one among three available colours, in such a way that any two nodes directly linked by an edge cannot have the same colour.</p>
+                        <!--
+                        <div class="row">
+                            <figure class="col-xs-12 col-sm-offset-4 col-sm-4 text-center">
+                                <img class="img-responsive" src="img/graphcol.png" alt="3-Colouring example">
+                                <figcaption>A valid solution for a 3-Colouring instance</figcaption>
+                            </figure>
+                        </div>
+                        -->
+                        <p>The framework can be invoked adding logic programs as strings and as files:</p>
+                        <pre><code class="language-java">
+        ASPHandler handler = new DLVHandler();
+        handler.addRawInput("col(N,red) | col(N,green) | col(N,blue) :- node(N).");
+        handler.addRawInput(":- col(N1,C1), col(N2,C1), edge(N1,N2).");
+        handler.addFileInput("my_edb_file.asp");
+        handler.setFilter("col");
+        handler.start(theContext, myAnswerSetCallback);
+                        </code></pre>
+                        <p>First, we create a new instance of an ASPHandler subclass. Then, the program is added as string input, while "my_edb_file.asp" is a file of input facts, added by its path. In addition, a filter option is set on the predicate "col".
+                        </p>
+                        <p>Finally, we start the execution of the solver giving as parameter the Android Context (needed to start the Service) and an object which must be an instance of a class implementing AnswerSetCallback. </p>
+                        <p>The framework allows also to add input using objects:</p>
+                        <pre><code class="language-java">
+        Edge edge1 = new Edge("node_1","node_2");
+        Edge edge2 = new Edge("node_1","node_3");
+        handler.addInput(edge1);
+        handler.addInput(edge2);
+                        </code></pre>
+                        <p>In order to use this feature, the added objects' classes must be implemented as JavaBeans and properly annotated. Basically, the class Edge can be annotated in this way
+                            <!-- (more details about the format of the annotations can be found <a href="">here. TODO </a>)!-->:</p>
+                        <pre><code class="language-java">
+        @Predicate("edge")
+        public class Edge {
+        @Term(0)
+        private String node1;
+        @Term(1)
+        private String node2;
+        .....
+        }
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary" id="gathering-result">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Gathering results</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Once the solver has been started with the given input, the framework offers different ways to gather its result. First, the user has to write a class implementing AnswerSetCallback, and override the abstract method <code>callback(AnswerSets answerSets)</code>. The answer sets found by the solver are contained in an AnswerSets object and one can use this object to analyse each AnswerSet returned by the reasoner. Moreover the user can get an <code>AnswerSet</code> as set of objects, previously annotated using the specific annotations.</p>
+                        <pre><code class="language-java">
+            public void callback(AnswerSets answerSets) {
+                List&lt;AnswerSet&gt; answerSetList=answerSets.getAnswerSetsList();
+                for(AnswerSet answerSet:answerSetList){
+                    Set&lt;Object&gt; objSet=answerSet.getAnswerObjects();	
+                    ....
+                }
+            }
+                        </code></pre>
+                        <p>In our example of 3-colouring, in order to get back the colours assignment in the form of objects, one can implement a class representing the "col" predicate. In this case, this class will be used to convert the "col" facts in the answer sets as instances of this class; this class can be implemented as follows:</p>
+                        <pre><code class="language-java">
+        @Predicate("col")
+        public class Col {
+        @Term(0)
+        private String node;
+        @Term(1)
+        private String colour;
+        .....
+        }
+                        </code></pre> In order to notify the framework of the existence of the Col class, the user has to register it, calling the <code>registerClass(Class&lt;?&gt; cl)</code> method of the Singleton class ASPMapper, that notify this class to the ASPMapper. The registration is automatic if the input or the fillter are added using Class objects. The framework in a transparent way will map the answer sets into objects taking care of the parsing of the output string returned by the solver. From this point on, the user can manage the answer sets using plain Java objects as she wish.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary" id="arch-desc">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Architecture Description</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Description arch -->
+                        <p>The framework consists of three different layers:</p>
+                        <ul>
+                            <li>The first layer acts like a facade to the user of the framework. It contains all functions needed in order to manage input and output of the ASP solver.</li>
+                            <li>The second layer acts as a middleware between the facade and the actual solver, providing the native functions that allow to invoke the solver.</li>
+                            <li> The third layer is the actual ASP solver. It also contains the functions to run and make use of it.</li>
+                        </ul>
+
+                        <div class="row">
+                            <figure class="col-xs-12 col-sm-3 text-center">
+                                <img class="img-responsive" src="img/architecture.png" alt="Abstract Architecture">
+                                <figcaption>Abstract Architecture of the framework. Overshadowed components are related to the specialization for DLV on Android.</figcaption>
+                            </figure>
+
+                            <div class="col-xs-12 col-sm-9">
+                                <p>The figure shows how the layers interact. It is worth noting that, as for the implementation herein presented, <code class="layer">ASPHandler</code> and <code class="layer">Solver Handler</code> are totally written in Java, and communicate by means of function calls; in addition, even if the framework can be easily extended in order to handle other ASP solvers, it comes equipped with <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> as default <code class="layer">ASP Solver</code> layer. Given that <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> is implemented in C++, the <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni">JNI</a> was used in order to let the upper layers communicate with the <code class="layer">ASP Solver</code> layer. Basically, the execution works as follows: <code class="layer">ASPHandler</code> (asynchronously) calls the <code class="layer">Solver Handler</code>, providing it with the logic program and the proper options for the solver; then, <code class="layer">Solver Handler</code> starts the <code class="layer">ASP Solver</code>, invoking the native functions of the solver with the needed parameters, and then collecting the reasoning results. Eventually, it publishes the results collected by <code class="layer">ASPHandler</code> and turn them back to the user via a callback function; this mechanism is better detailed below. The <code class="layer">Solver Handler</code> layer is needed in order to handle an Android Service, i.e., a native application component that can perform long-running operations in the background; this allows the application that makes use of <code>EmbASP</code> can asynchronously perform other operations while waiting for the answer from the ASP solver. Furthermore, the use of an Android Service makes the solver type and invocation details transparent to the framework. It is noteworthy that the stratified architecture has been designed in order to be general enough to facilitate the replacement of the <code class="layer">ASP Solver</code> layer. Moreover, it can be adapted, with minor changes, to any other Java compliant environment, even much different from Android.</p>
+                                <!-- END Description arch -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary" id="detailed-desc">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Detailed Description</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Description diagram class -->
+                        <p>The framework is composed by an hierarchy of classes that interact as shown in the figure.</p>
+
+                        <div class="row">
+                            <figure class="col-xs-12 col-sm-offset-1 col-sm-10 text-center">
+                                <img class="img-responsive" src="img/class_diagram.png" alt="Class Diagram">
+                                <figcaption>Class Diagram of the framework</figcaption>
+                            </figure>
+                        </div>
+
+                        <p>The abstract class <code class="class">ASPHandler</code> contains the methods to add input in different ways; in particular, the input can be in the form of simple string, files or Java Objects. It contains also a method to set options for the solver. Since the filter option is a very common one, the framework provides a direct way to add it. Indeed, as for the input, the user can set a filter as string using the predicates names, or as a class object representing classes that are annotated as explained hereafter. In addiction, since it acts like an interface to the users, it also contains the method to let the solver starts the reasoning, so this is the class that has to be extended in order to use the framework with an other solver. However, it comes already equipped with an implementation of this class, that uses <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> as solver, the <code>DLVHandler</code> class. In addition, each concrete class that extends <code class="class">ASPHandler</code> should start a proper <code class="class">ASPService</code>.</p>
+
+                        The abstract class <code class="class">ASPService</code> manages the invocation of the solver and takes care of the results of its computation. The framework provides a concrete implementation of this class, <a>DLVService</a>, which invokes the <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> solver. The source code of <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> has been built using the Android <a href="https://developer.android.com/tools/sdk/ndk/index.html">NDK</a> and the <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> code has been optimized for this particular use case, and is linked to the Java code using the <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni">JNI</a> as required by the <a href="https://developer.android.com/tools/sdk/ndk/index.html">NDK</a>. The following figure depicts an abstract class diagram of an implementation of EmbASP enhanced with two generic solvers.
+
+                        <div class="row">
+                            <figure class="col-xs-12 col-sm-offset-1 col-sm-10 text-center">
+                                <img class="img-responsive" src="img/abstract_class_diagram.png" alt="Class Diagram">
+                                <figcaption>Abstract Class Diagram of the framework with two generic solvers</figcaption>
+                            </figure>
+                        </div>
+
+                        <p>In order to get back the results obtained by the solver, that is invoked asynchronously, it is needed a callback function, which is automatically called when the computation is terminated. This callback function can be specified implementing the <code>AnswerSetCallback</code> interface.</p>
+                        <p>The answer sets are represented by the class <code>AnswerSets</code> that can be extended in order to parse the specific output of different ASP solvers. While, the concept of answer set is captured by the <code>AnswerSet</code> class.</p>
+
+                        <p>The framework provides also a <code>mapper</code> able to convert the output string of the solver into Java Objects. This conversion is guided by the annotations of the Java Objects mapped. Indeed, to exploit this functionality, the user has to provides classes with specific annotations and those classes must be implemented as JavaBeans. Basically, there are two types of annotations:</p>
+                        <ul>
+                            <li> <code>@Predicate(String name)</code> specify the predicate name and the target of this annotation must be a class.</li>
+                            <li> <code>@Term(Integer position)</code> specify the term position in the atoms (whose predicate name is specified with <code>@Predicate</code> annotation) and the target of this annotation must be a field of a class.</li>
+                        </ul>
+
+                        <p>Moreover, the mapping is done also in the other way around, from objects to strings, so that the input can be also specified as plain Java objects.</p>
+                        <!-- END Description diagram class -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Publications</h2>
+
+            </div>
+        </div>
+        -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+
+        </script>
+    </div>
+</body>
+
+</html>

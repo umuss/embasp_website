@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>EmbASP</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+
+    <style>
+        .layer {
+            text-transform: uppercase;
+        }
+        
+        .class {}
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2><img src="img/EmbASP_Logo.png" alt="embASP" height="150" style=" padding-bottom: 0.2cm;"/></h2>
+            <div class="alert alert-info" role="alert">This is the website of the version 2 of the EmbASP Framework, if you are looking for an older version of the Framework please <a href="old_version.html">click here</a></div>
+            <div> EmbASP is a general framework for embedding Answer Set Programming (ASP) in complex systems, and in particular
+                within applications for mobile devices. EmbASP is conceived in order to help developers at designing and
+                implementing complex reasoning tasks in a straightforward way by means of ASP solvers. The framework is provided
+                with <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> as default solver, which is the first ASP
+                system which is undergoing an industrial exploitation; however, it is easy to extend it with different solvers
+                through plain Java Object-Oriented programming. </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Core Team</h2>
+                <div>
+                    <ul>
+                        <li>
+                            Francesco Calimeri <a href="https://www.mat.unical.it/calimeri"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            Davide Fuscà
+                        </li>
+                        <li>
+                            Stefano Germano
+                        </li>
+                        <li>
+                            Simona Perri
+                        </li>
+                        <li>
+                            Jessica Zangari
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Contacts</h2>
+                <div>
+                    For further information, contact <a href="mailto:embasp@mat.unical.it">embasp@mat.unical.it</a>.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>License</h2>
+                <div>
+                    <p>
+                        The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>.
+                    </p>
+                    <p> The framework specializations for DLV (such as the one for DLV on Android) embeds the DLV system itself,
+                        which is free for academic and non-commercial educational use, as well as for use by non-profit organisations.
+                        For further information about DLV please refer to the <a href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Download</h2>
+                <div>
+                    <h3 id="release">Latest release version</h3> You can download the last stable release version of EmbASP <a href="embasp/embasp.zip">here</a>.
+                </div>
+                <div>
+                    <h3>Development Version <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40"/></h3> You can find the current development version <a href="https://github.com/dave90/EmbASP">here</a>.
+                </div>
+                <div>
+                    <h3>Application Showcase</h3>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <em>DLVfit</em>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p><em>DLVfit</em> is a health and fitness app that monitors the user activity during the
+                                        day and suggests some workout plans that depend on her age, weight, gender and goals.
+                                        The app periodically stores some information about the user activities (running,
+                                        walking, etc.) and infers the current amount of calories burned so far. When the
+                                        user asks for a workout plan, <em>DLVfit</em> proposes a set of exercises that would
+                                        allow the user to reach her daily goal, taking into account also to her preferences.
+                                        The suggested workout plans are computed in the background by DLV via EmbASP. </p>
+
+                                    <p>The ASP program used within <em>DLVfit</em> can be found <a href="dlvfit/dlvfit_logic_program.lp">here</a>.
+                                        Basically, the program guesses for possible fitness exercises to do in order to burn
+                                        the remaing calories. Each answer set represent a possible workout plan, in which
+                                        is ensured that the user's requirements about the calories to burn and the time to
+                                        spend in the workout are respected. Moreover, also user's preferences are taken into
+                                        account by means of weak constraints.</p>
+
+                                    <h5><b>Releases</b></h5>
+                                    <h6><i>Current Release</i></h6>
+                                    <p>You can download the latest version of <em>DLVfit</em> <a href="dlvfit/apk/dlvfit_latest.apk">here</a>.</p>
+                                    <p></p>
+                                    <h6><i>Major Releases</i></h6>
+                                    <ul class="list-unstyled">
+                                        <li><a href="dlvfit/apk/dlvfit_0.2.0.apk">DLVfit 0.2.0 (beta)</a>
+                                            <ul>
+                                                <li>Improved performances</li>
+                                                <li>Improved layout</li>
+                                                <li>Added preference selection</li>
+                                                <li>Added custom activities</li>
+                                                <li>Defined input ranges</li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="dlvfit/apk/dlvfit_0.1.0.apk">DLVfit 0.1.0 (beta)</a>
+                                            <ul>
+                                                <li>First release</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <p>Should work on most devices equipped with Android 4.x/5.x.<br /> The list of compatible
+                                        devices include (but it is not limited to):</p>
+                                    <ul>
+                                        <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
+                                        <li>HTC One - Android 4.3, API 18</li>
+                                        <li>HTC One XL - Android 4.2.2, API 17</li>
+                                        <li>HTC One XL - Android 4.1.1, API 16</li>
+                                        <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
+                                        <li>Google Nexus 7 - Android 4.4.4, API 19</li>
+                                        <li>Samsung S4 - Android 4.4.4, API 19</li>
+                                        <li>Samnsung S3 - Android 4.3, API 18</li>
+                                        <li>Sony Xperia S - Android 4.1.1, API 16</li>
+                                        <li>Google Nexus 7 - Android 4.3, API 18</li>
+                                        <li>Sony Xperia Go - Android 4.0</li>
+                                        <li>Sony Xperia Z3 - Android 5.0</li>
+                                        <li>Sony Xperia Z3 - Android 5.1</li>
+                                        <li>Galaxy S6 - Android 5.0</li>
+                                        <li>Nexus 6 - Android 5.0</li>
+                                    </ul>
+
+                                    <h5><b>Developers</b></h5>
+                                    <ul>
+                                        <li>Dario Campisano</li>
+                                        <li>The EmbASP Team</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Collapsible Group Item #2
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Collapsible Group Item #3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                                    3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Documentation</h2>
+                <div class="alert alert-warning" role="alert">Section under construction...</div>
+            </div>
+        </div>
+
+        <!--
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Publications</h2>
+
+            </div>
+        </div>
+        -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </div>
+</body>
+
+</html>
