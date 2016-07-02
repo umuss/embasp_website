@@ -48,12 +48,17 @@
 			versions 2+ of the EmbASP Framework. If you are looking for an older version, 
 			please <a href="old_version.html">click here.</a></div>
 
-            <div> EmbASP is a framework for the integration (embedding) of Answer Set Programming in external systems 
-			    for generic applications, conceived in order to help developers at designing and implementing complex 
-				reasoning tasks by means of ASP
-                solvers on different platforms. The framework is provided with APIs for the use of two state-of-the-art ASP
-                systems, namely DLV and clingo, respectively, on Android mobile context and on desktop platform; however,
-                it has been designed to be easily extensible and adaptable to different solvers and platforms.
+            <div> EmbASP is a framework for the integration (embedding) of Answer Set 
+			Programming (ASP) in external systems for generic applications. It helps 
+			developers at designing and implementing complex reasoning tasks by means 
+			of ASP solvers on different platforms. 
+			The framework can be implemented in a object-oriented programming language
+			of choice, easing and guiding the generation of suitable libraries for the 
+			use of specific solvers on particular platforms.
+
+			We currently provide ready-made libraries for the use of two 
+			state-of-the-art ASP systems: DLV and clingo, on Android mobile context 
+			and on desktop platform, respectively; however, it has been designed to be easily extensible and adaptable to different solvers and platforms.
             </div>
         </div>
         <div class="row">
@@ -95,10 +100,11 @@
                     <p>
                         The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>.
                     </p>
-                    <p> The framework APIs for DLV on Android embeds the DLV system itself, which is free for academic and non-commercial
-                        educational use, as well as for use by non-profit organisations. For further information about DLV,
-                        please refer to the <a href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
-                </div>
+                              <p> The framework library for DLV on Android embeds the DLV system 
+	    					    itself, which is free for academic and non-commercial educational 
+	    						use, as well as for use by non-profit organisations. For further 
+	    						information about DLV, please refer to the <a 
+						href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
             </div>
         </div>
         <div class="row">
@@ -106,8 +112,8 @@
                 <h2>Download</h2>
                 <div>
                     <h3 id="release">Latest release version</h3>
-                    <div>To use the APIs of EmbASP for DLV on Android, an AAR file has been released.</div>
-                    <div>To use the APIs of EmbASP for clingo on desktop, a JAR file has been released. </div>
+                    <div>To use the specialized libraries for DLV on Android, an AAR file has been released.</div>
+                    <div>To use the specialized libraries for clingo on desktop, a JAR file has been released. </div>
                     <div>You can download their last stable versions <a href="https://github.com/DeMaCS-UNICAL/EmbASP/releases">here</a>.</div>
                 </div>
                 <div>
@@ -446,7 +452,9 @@ Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Ce
                             inputProgram.addObjectInput(
                                 new Cell(i, j, sudokuMatrix[i][j]));
                         }
-                    } catch (Exception e) {	// Handle Exception }
+                    } catch (Exception e) {	
+                    	// Handle Exception 
+                    }
             }
             handler.addProgram(inputProgram);
     
