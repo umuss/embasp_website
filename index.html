@@ -303,16 +303,17 @@
                
                 <h4>Class Diagram</h4>
                 <div>An UML Class Diagram is available <a href="">here</a>. </div>
-                <div class="list-group">
+                
+                <p><div class="list-group">
 					<a class="list-group-item list-group-item-info"
 						href="#getting-started">Getting Started </a> <a
-						class="list-group-item list-group-item-info" href="#setting-up">Setting
-						up the execution </a> <a class="list-group-item list-group-item-info"
-						href="#gathering-result">Gathering results </a> <a
+						class="list-group-item list-group-item-info" href="#setting-up">Using EmbASP</a>
+                        <a
 						class="list-group-item list-group-item-info" href="#arch-desc">Architecture
 						Description </a> <a class="list-group-item list-group-item-info"
 						href="#detailed-desc">Detailed Description </a>
 				</div>
+                </p>
 
 			</div>
 
@@ -367,154 +368,139 @@
 			<div class="col-xs-12">
 				<div class="panel panel-primary" id="setting-up">
 					<div class="panel-heading">
-						<h3 class="panel-title">Setting up the execution</h3>
+						<h3 class="panel-title">Using EmbASP</h3>
 					</div>
 					<div class="panel-body">
-						<div>
-							In the following, we detail the actual usage of the framework by
-							means of a running example; as a use case, we will develop a
-							simple Android application for solving Sudoku puzzles. Hereafter,
-							we explain the crucial stepts, while <b>the complete code is
-								freely available <a
-								href="https://github.com/dave90/EmbASPSudokuExample">here</a>
-							</b>.
-						</div>
-						<div>
-							The framework features a annotation-guided mapping, offered by
-							the <i>ASPMapper</i> component, for two-way translations between
-							strings recognizable by ASP solvers and objects in the
-							programming language at hand, directly employable within
-							applications. By means of this feature, the ASP-based aspects can
-							be separated from the Java coding: the programmer doesn't even
-							necessarily need to be aware of ASP.
-						</div>
-						<div>
-							Indeed, we can assume the user has designed (or has been given) a
-							proper logic program <i>P</i> to solve a Sudoku puzzle and a set
-							of facts <i>F</i> representing the initial schema, such that the
-							answer set of <i>P+F</i> correspond to the only admissible
-							solution. We assume the typical setting in which partially filled
-							Sudoku tables are chosen in a way such that the complete puzzle
-							solution exists and is unique; a possible ASP program is embedded
-							in the complete example (<a
-								href="https://github.com/dave90/EmbASPSudokuExample">here</a>).
-
-						</div>
-						<div>
-							Intuitively, we represent a Sudoku puzzle as a matrix of integers
-							such that position (i,j) contains the value of cell (i,j) in the
-							initial schema; cells initially empty are represented by
-							positions containing zero. To actually implement the app, we need
-							at first to create an <i>InputProgram</i> instance and an <i>AndroidHandler</i>
-							instance as shown in the following snippet of Java code.
-						</div>
-						<pre>
-			<code class="language-java">
-	ASPInputProgram inputProgram = new ASPInputProgram();
-	for(int i = 0; i &lt; 9; i++)
-		for(int j = 0; j &lt; 9; j++)
-			if(matrix[i][j]!=0)
-				inputProgram.addObjectInput(new Cell(i,j,matrix[i][j]));
-					
-	Handler handler = new AndroidHandler(context,DLVAndroidService.class);
-	handler.addProgram(inputProgram);            
-                </code>
-		</pre>
-						<div>
-							The <i>ASPInputProgram</i> instance is filled by means of Java
-							objects representing the initial state of the schema: in
-							particular, instances of a proper class <i>Cell</i>; the <i>AndroidHandler</i>
-							creation requires as parameters the Android Context (an Android
-							utility, needed to start an Android Service) and the type of <i>AndroidService</i>
-							to use.
-						</div>
-						<div>
-							The <i>Cell</i> objects created above can be translated by the <i>ASPMapper</i>
-							into strings properly recognizable from the ASP solver as logic
-							facts of the form <i>cell(X,Y,Value)</i>, that appear in the
-							logic program. To this purpose, the class <i>Cell</i> should be
-							annotated as following:
-						</div>
-						<pre>
-			<code class="language-java">
-	@Predicate("cell")
-	public class Cell {
-		
-		@Term(1)
-		int row;
-		
-		@Term(2)
-		int column;
-		
-		@Term(3)
-		int value;
+                                        <div>In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will develop
+                    a simple Android application for solving Sudoku puzzles. Hereafter, we explain the crucial stepts, while
+                    <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
+                </div>
+                <div>
+                    The framework features a annotation-guided mapping, offered by the <i>ASPMapper</i> component, for two-way
+                    translations between strings recognizable by ASP solvers and objects in the programming language at hand,
+                    directly employable within applications. By means of this feature, the ASP-based aspects can be separated
+                    from the Java coding: the programmer doesn't even necessarily need to be aware of ASP.
+                </div>
+                <div>                   
+                Let us think of a user that designed (or has been given) a proper logic program <i>P</i> to solve a sudoku puzzle and has also an initial schema. We assume that the initial schema is well-formed i.e. the complete schema solution exists and is unique. A possible program <i>P</i> is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>), that, coupled with a set of facts <i>F</i> representing the given initial schema, allows to obtain the only admissible solution.
+                </div>
+                <div>
+				By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent, we define the class <i>Cell</i>, aimed at representing the single cell of the sudoku schema, as follows:
+                </div>
+                <pre><code class="language-java">
+    @Predicate("cell")
+    public class Cell {
+    
+        @Term(1)
+        private int row;
+        
+        @Term(2)
+        private int column;
+        
+        @Term(3)
+        private int value;
+        
+        [...]
+        
+    }           
+                </code></pre>
+                <div>
+				It is worth noticing how the class has been annotated by two custom annotations, defined according to the following syntax:
+					<ul>
+                        <li>
+                            <i>@Predicate(string_name)</i>: the target must be a class, and defines the predicate name the
+                            class is mapped to;
+                        </li>
+                        <li>
+                            <i>@Term(integer_position)</i>: the target must be a field of a class annotated via @Predicate,
+                            and defines the term (and its position) in the ASP atom the field is mapped to.
+                        </li>
+                    </ul>
+Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Cell</i> objects into strings properly recognizable from the ASP solver as logic facts of the form <i>cell(Row,Column,Value)</i>. At this point, we can create an <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>, and start deploying our sudoku application:
+                </div>
+                <pre><code class="language-java">
+    public class MainActivity extends AppCompatActivity {
 	
-		...
-		
-	}
-            </code>
-		</pre>
+        [...]
+        private Handler handler;
+    
+        @Override
+        protected void onCreate(Bundle bundle) {
+            handler = new AndroidHandler(getApplicationContext(),
+                DLVAndroidService.class);
+            [...]
+        }
+        
+        public void onClick(final View view){
+            startReasoning();
+            [...]
+        }
+    
+        public void startReasoning() {
+            InputProgram inputProgram =
+                new InputProgram();
+            for ( int i = 0; i < 9; i++){
+                for ( int j = 0; j < 9; j++)
+                    try {
+                        if(sudokuMatrix[ i ] [ j ]!=0) {
+                            inputProgram.addObjectInput(
+                                new Cell(i, j, sudokuMatrix[i][j]));
+                        }
+                    } catch (Exception e) {	// Handle Exception }
+            }
+            handler.addProgram(inputProgram);
+    
+            String sudokuEncoding =
+                getEncodingFromResources();			
+            handler.addProgram(new InputProgram(sudokuEncoding));
+    
+            Callback callback = new MyCallback();
+            handler.startAsync(callback);
+        }
+    }
+            </code></pre>
 
-						<div>
-							It's worth noting that Annotations constitute the key feature of
-							the process. In order to map a class to a predicate, and hence
-							objects to logic literals, two annotations are adopted:
-							<ul>
-								<li><i>@Predicate(string_name)</i>: the target must be a
-									class, and defines the predicate name the class is mapped to;</li>
-								<li><i>@Term (integer_position)</i>: the target must be a
-									field of a class annotated via @Predicate, and defines the term
-									(and its position) in the ASP atom the field is mapped to.</li>
-							</ul>
-						</div>
-						<div>
-							Then, the encoding has to be provided to the handler. For
-							example, it can be loaded it as a text file from a <a
-								href="https://developer.android.com/guide/topics/resources/index.html">Resources
-								folder</a>, which is typically meant at containing images, sound,
-							and files in general, within Android applications. At this point,
-							the reasoning process can be started, and since for Android we
-							provide only the asynchronous execution mode, a callback object
-							is in charge of fetching the output when the ASP system has done.
-						</div>
-						<pre>
-			<code class="language-java">
-	String sudokuEncoding = getEncodingFromResources();
-	handler.addProgram(new InputProgram(sudokuEncoding));
-	Callback callback = new MyCallback();
-	handler.startAsync(callback);
-			</code>
-		</pre>
+                <div>
+                   The class contains an <i>Handler</i> instance as field, that is initialized when the <i>Activity</i> is created as an <i>AndroidHandler</i>.
+Required parameters include the <i>Android Context</i> (an Android utility, needed to start an Android Service Component) and the type of <i>AndroidService</i> to use, in our case a <i>DLVAndroidService</i>.
+                </div>
+                <div>
+                    In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where position <i> (i,j) </i> contains the value of cell <i> (i,j) </i> in the initial schema; cells initially empty are represented by positions containing zero.
+                </div>
+                <div>
+                The method <i>startReasoning</i> is in charge of actually managing the reasoning: in our case, it is invoked in response to a click event that is generated when the user asks for the solution.
+It is firstly created an <i>InputProgram</i> object that is filled with <i>Cell</i> objects representing the initial schema, which is then provided to the handler; then it is provided with the sudoku encoding.
+It could be loaded, for instance, by means of an utility function that retrieves it from the <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>, which, within Android applications, is typically meant for containing images, sounds, files and resources in general.              
+                </div>
+                <div>
+                At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback object is in charge of fetching the output when the ASP system has done.
+                </div>
+                <div>
+                Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of Java objects. For instance, in our case an inner <i>MyCallback</i> implements the interface <i>Callback</i>:</div>
+                <pre><code class="language-java">
+	private class MyCallback implements Callback {
 
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="panel panel-primary" id="gathering-result">
-					<div class="panel-heading">
-						<h3 class="panel-title">Gathering results</h3>
-					</div>
-					<div class="panel-body">
-
-						<div>Finally, once the computation is over, from within the
-							callback function the output can be retrieved directly in form of
-							Java objects:</div>
-
-						<pre>
-							<code class="language-java">
-	AnswerSet as = answerSets.getAnswersets().get(0);
-	for(Object obj: as.getAtoms()) {
-		Cell cell = (Cell) obj;
-		matrix[cell.getRow()][cell.getColumn()] = cell.getValue();
-	}
-		</code>
-						</pre>
-
-
+        @Override
+        public void callback(Output o) {
+            if(!(o instanceof AnswerSets))
+                return;
+            AnswerSets answerSets=(AnswerSets)o;
+            if(answerSets.getAnswersets().isEmpty())
+                return;
+            AnswerSet as = answerSets.getAnswersets().get(0);
+            try {
+                for(Object obj:as.getAtoms()) {
+                    Cell cell = (Cell) obj;
+                    sudokuMatrix[cell.getRow()]
+                        [cell.getColumn()] = cell.getValue();
+                }
+            } catch (Exception e) {
+                // Handle Exception
+            }
+            displaySolution();
+        }
+    }
+		</code></pre>
 					</div>
 				</div>
 			</div>
