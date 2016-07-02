@@ -48,17 +48,12 @@
 			versions 2+ of the EmbASP Framework. If you are looking for an older version, 
 			please <a href="old_version.html">click here.</a></div>
 
-            <div> EmbASP is a framework for the integration (embedding) of Answer Set 
-			Programming (ASP) in external systems for generic applications. It helps 
-			developers at designing and implementing complex reasoning tasks by means 
-			of ASP solvers on different platforms. 
-			The framework can be implemented in a object-oriented programming language
-			of choice, easing and guiding the generation of suitable libraries for the 
-			use of specific solvers on particular platforms.
-
-			We currently provide ready-made libraries for the use of two 
-			state-of-the-art ASP systems: DLV and clingo, on Android mobile context 
-			and on desktop platform, respectively; however, it has been designed to be easily extensible and adaptable to different solvers and platforms.
+            <div> EmbASP is a framework for the integration (embedding) of Answer Set Programming in external systems 
+			    for generic applications, conceived in order to help developers at designing and implementing complex 
+				reasoning tasks by means of ASP
+                solvers on different platforms. The framework is provided with APIs for the use of two state-of-the-art ASP
+                systems, namely DLV and clingo, respectively, on Android mobile context and on desktop platform; however,
+                it has been designed to be easily extensible and adaptable to different solvers and platforms.
             </div>
         </div>
         <div class="row">
@@ -100,11 +95,9 @@
                     <p>
                         The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>.
                     </p>
-                    <p> The framework librariey for DLV on Android embeds the DLV system 
-					    itself, which is free for academic and non-commercial educational 
-						use, as well as for use by non-profit organisations. For further 
-						information about DLV, please refer to the <a 
-						href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
+                    <p> The framework APIs for DLV on Android embeds the DLV system itself, which is free for academic and non-commercial
+                        educational use, as well as for use by non-profit organisations. For further information about DLV,
+                        please refer to the <a href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
                 </div>
             </div>
         </div>
@@ -113,9 +106,9 @@
                 <h2>Download</h2>
                 <div>
                     <h3 id="release">Latest release version</h3>
-                    <div>To use the EmbASP library for DLV on Android, an AAR file has been released.</div>
-                    <div>To use the EmbASP library for clingo on desktop, a JAR file has been released. </div>
-                    <div>You can download last stable versions <a href="https://github.com/DeMaCS-UNICAL/EmbASP/releases">here</a>.</div>
+                    <div>To use the APIs of EmbASP for DLV on Android, an AAR file has been released.</div>
+                    <div>To use the APIs of EmbASP for clingo on desktop, a JAR file has been released. </div>
+                    <div>You can download their last stable versions <a href="https://github.com/DeMaCS-UNICAL/EmbASP/releases">here</a>.</div>
                 </div>
                 <div>
                     <h3>Development Version <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40"/></h3> You can find the current development version <a href="https://github.com/DeMaCS-UNICAL/EmbASP">here</a>.
@@ -310,33 +303,114 @@
                
                 <h4>Class Diagram</h4>
                 <div>An UML Class Diagram is available <a href="">here</a>. </div>
-                <h4>Using EmbASP</h4>
-                <div>
-                    In the following, we detail the actual usage of the framework by means of a running example; as a use case, we will develop
-                    a simple Android application for solving Sudoku puzzles. Hereafter, we explain the crucial stepts, while
-                    <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
-                </div>
-                <div>
-                    The framework features a annotation-guided mapping, offered by the <i>ASPMapper</i> component, for two-way
-                    translations between strings recognizable by ASP solvers and objects in the programming language at hand,
-                    directly employable within applications. By means of this feature, the ASP-based aspects can be separated
-                    from the Java coding: the programmer doesn't even necessarily need to be aware of ASP.
-                </div>
-                <div>
-                    Indeed, we can assume the user has designed (or has been given) a proper logic program <i>P</i> to solve
-                    a Sudoku puzzle and a set of facts <i>F</i> representing the initial schema, such that the answer set
-                    of <i>P+F</i> correspond to the only admissible solution. We assume the typical setting in which partially
-                    filled Sudoku tables are chosen in a way such that the complete puzzle solution exists and is unique;
-                    a possible ASP program is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>).
+                <div class="list-group">
+					<a class="list-group-item list-group-item-info"
+						href="#getting-started">Getting Started </a> <a
+						class="list-group-item list-group-item-info" href="#setting-up">Setting
+						up the execution </a> <a class="list-group-item list-group-item-info"
+						href="#gathering-result">Gathering results </a> <a
+						class="list-group-item list-group-item-info" href="#arch-desc">Architecture
+						Description </a> <a class="list-group-item list-group-item-info"
+						href="#detailed-desc">Detailed Description </a>
+				</div>
 
-                </div>
-                <div>
-                    Intuitively, we represent a sudoku puzzle as a matrix of integers such that position (i,j) contains the value of cell (i,j)
-                    in the initial schema; cells initially empty are represented by positions containing zero. To actually
-                    implement the app, we need at first to create an <i>InputProgram</i> instance and
-                    an <i>AndroidHandler</i> instance as shown in the following snippet of Java code.</div>
-                <pre><code class="language-java">
-	InputProgram inputProgram = new InputProgram();
+			</div>
+
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary" id="getting-started">
+					<div class="panel-heading">
+						<h3 class="panel-title">Getting Started</h3>
+					</div>
+					<div class="panel-body">
+						<h4>How to import the framework on Android Studio</h4>
+						<p>In order to use the framework in your applications you have
+							to import it as module on Android Studio.</p>
+						<ol>
+							<li>Import the framework module:
+								<ol>
+									<li>Download the framework last released <a
+										href="#release">module</a>.
+									</li>
+									<li>In the project view, right-click on your project <b>New
+											&gt; Module</b>.
+									</li>
+									<li>Select <b>Import .JAR/.AAR Package</b>.
+									</li>
+									<li>Select the directory in which the module has been
+										downloaded.</li>
+								</ol>
+							</li>
+							<li>Set the dependency:
+								<ol>
+									<li>In the Android Studio menu: <b>File &gt; Project
+											Structure</b>.
+									</li>
+									<li>Select your project module (by default called <b>app</b>).
+									</li>
+									<li>In the <b>Dependencies Tab</b> add as <b>Module
+											Dependency</b> the previously imported framework.
+									</li>
+								</ol>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary" id="setting-up">
+					<div class="panel-heading">
+						<h3 class="panel-title">Setting up the execution</h3>
+					</div>
+					<div class="panel-body">
+						<div>
+							In the following, we detail the actual usage of the framework by
+							means of a running example; as a use case, we will develop a
+							simple Android application for solving Sudoku puzzles. Hereafter,
+							we explain the crucial stepts, while <b>the complete code is
+								freely available <a
+								href="https://github.com/dave90/EmbASPSudokuExample">here</a>
+							</b>.
+						</div>
+						<div>
+							The framework features a annotation-guided mapping, offered by
+							the <i>ASPMapper</i> component, for two-way translations between
+							strings recognizable by ASP solvers and objects in the
+							programming language at hand, directly employable within
+							applications. By means of this feature, the ASP-based aspects can
+							be separated from the Java coding: the programmer doesn't even
+							necessarily need to be aware of ASP.
+						</div>
+						<div>
+							Indeed, we can assume the user has designed (or has been given) a
+							proper logic program <i>P</i> to solve a Sudoku puzzle and a set
+							of facts <i>F</i> representing the initial schema, such that the
+							answer set of <i>P+F</i> correspond to the only admissible
+							solution. We assume the typical setting in which partially filled
+							Sudoku tables are chosen in a way such that the complete puzzle
+							solution exists and is unique; a possible ASP program is embedded
+							in the complete example (<a
+								href="https://github.com/dave90/EmbASPSudokuExample">here</a>).
+
+						</div>
+						<div>
+							Intuitively, we represent a Sudoku puzzle as a matrix of integers
+							such that position (i,j) contains the value of cell (i,j) in the
+							initial schema; cells initially empty are represented by
+							positions containing zero. To actually implement the app, we need
+							at first to create an <i>InputProgram</i> instance and an <i>AndroidHandler</i>
+							instance as shown in the following snippet of Java code.
+						</div>
+						<pre>
+			<code class="language-java">
+	ASPInputProgram inputProgram = new ASPInputProgram();
 	for(int i = 0; i &lt; 9; i++)
 		for(int j = 0; j &lt; 9; j++)
 			if(matrix[i][j]!=0)
@@ -344,19 +418,25 @@
 					
 	Handler handler = new AndroidHandler(context,DLVAndroidService.class);
 	handler.addProgram(inputProgram);            
-                </code></pre>
-                <div>
-                    The <i>InputProgram</i> instance is filled by means of Java objects representing the initial state of
-                    the schema: in particular, instances of a proper class <i>Cell</i>; the <i>AndroidHandler</i> creation
-                    requires as parameters the Android Context (an Android utility, needed to start an Android Service) and
-                    the type of <i>AndroidService</i> to use.
-                </div>
-                <div>
-                    The <i>Cell</i> objects created above can be translated by the <i>ASPMapper</i> into strings properly
-                    recognizable from the ASP solver as logic facts of the form <i>cell(X,Y,Value)</i>, that appear in the
-                    logic program. To this purpose, the class <i>Cell</i> should be annotated as following:
-                </div>
-                <pre><code class="language-java">
+                </code>
+		</pre>
+						<div>
+							The <i>ASPInputProgram</i> instance is filled by means of Java
+							objects representing the initial state of the schema: in
+							particular, instances of a proper class <i>Cell</i>; the <i>AndroidHandler</i>
+							creation requires as parameters the Android Context (an Android
+							utility, needed to start an Android Service) and the type of <i>AndroidService</i>
+							to use.
+						</div>
+						<div>
+							The <i>Cell</i> objects created above can be translated by the <i>ASPMapper</i>
+							into strings properly recognizable from the ASP solver as logic
+							facts of the form <i>cell(X,Y,Value)</i>, that appear in the
+							logic program. To this purpose, the class <i>Cell</i> should be
+							annotated as following:
+						</div>
+						<pre>
+			<code class="language-java">
 	@Predicate("cell")
 	public class Cell {
 		
@@ -372,50 +452,233 @@
 		...
 		
 	}
-            </code></pre>
+            </code>
+		</pre>
 
-                <div>
-                    It's worth noting that Annotations constitute the key feature of the process. In order to map a class to a predicate, and
-                    hence objects to logic literals, two annotations are adopted:
-                    <ul>
-                        <li>
-                            <i>@Predicate(string_name)</i>: the target must be a class, and defines the predicate name the
-                            class is mapped to;
-                        </li>
-                        <li>
-                            <i>@Term(integer_position)</i>: the target must be a field of a class annotated via @Predicate,
-                            and defines the term (and its position) in the ASP atom the field is mapped to.
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    Then, the encoding has to be provided to the handler. For example, it can be loaded it as a text file from a
-                    <a
-                        href="https://developer.android.com/guide/topics/resources/index.html">Resources folder</a>, which is typically meant at containing images, sound, and files in general, within
-                        Android applications. At this point, the reasoning process can be started, and since for Android
-                        we provide only the asynchronous execution mode, a callback object is in charge of fetching the output
-                        when the ASP system has done.
-                </div>
-                <pre><code class="language-java">
+						<div>
+							It's worth noting that Annotations constitute the key feature of
+							the process. In order to map a class to a predicate, and hence
+							objects to logic literals, two annotations are adopted:
+							<ul>
+								<li><i>@Predicate(string_name)</i>: the target must be a
+									class, and defines the predicate name the class is mapped to;</li>
+								<li><i>@Term (integer_position)</i>: the target must be a
+									field of a class annotated via @Predicate, and defines the term
+									(and its position) in the ASP atom the field is mapped to.</li>
+							</ul>
+						</div>
+						<div>
+							Then, the encoding has to be provided to the handler. For
+							example, it can be loaded it as a text file from a <a
+								href="https://developer.android.com/guide/topics/resources/index.html">Resources
+								folder</a>, which is typically meant at containing images, sound,
+							and files in general, within Android applications. At this point,
+							the reasoning process can be started, and since for Android we
+							provide only the asynchronous execution mode, a callback object
+							is in charge of fetching the output when the ASP system has done.
+						</div>
+						<pre>
+			<code class="language-java">
 	String sudokuEncoding = getEncodingFromResources();
 	handler.addProgram(new InputProgram(sudokuEncoding));
 	Callback callback = new MyCallback();
 	handler.startAsync(callback);
-			</code></pre>
+			</code>
+		</pre>
 
-                <div>Finally, once the computation is over, from within the callback function the output can be retrieved directly
-                    in form of Java objects:</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                <pre><code class="language-java">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary" id="gathering-result">
+					<div class="panel-heading">
+						<h3 class="panel-title">Gathering results</h3>
+					</div>
+					<div class="panel-body">
+
+						<div>Finally, once the computation is over, from within the
+							callback function the output can be retrieved directly in form of
+							Java objects:</div>
+
+						<pre>
+							<code class="language-java">
 	AnswerSet as = answerSets.getAnswersets().get(0);
 	for(Object obj: as.getAtoms()) {
 		Cell cell = (Cell) obj;
 		matrix[cell.getRow()][cell.getColumn()] = cell.getValue();
 	}
-		</code></pre>
+		</code>
+						</pre>
 
-            </div>
-        </div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary" id="arch-desc">
+					<div class="panel-heading">
+						<h3 class="panel-title">Architecture Description</h3>
+					</div>
+					<div class="panel-body">
+						The framework is almost totally written in Java to ensure the
+						portability in both Desktop and Mobile systems, it is noteworthy
+						that the
+						<code class="class">DLV Solver</code>
+						is implemented in C++ , using <a
+							href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni">JNI</a>
+						as communication layer between solver's code and framework's code.
+						The
+						<code class="class">Handler</code>
+						class is used to manage generic inputs ,like programs and options
+						represented respectively by
+						<code class="class">InputProgram</code>
+						and
+						<code class="class">OptionDescriptor</code>
+						classes, providing methods to start the solving process in a
+						synchronous or asynchronous way. These methods rely on
+						<code class="class">Service</code>
+						classes which invoking the native functions of the solver with the
+						needed parameters, and then collecting the reasoning results, via
+						the
+						<code class="class">Callback</code>
+						interface results are published back to the user.
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary" id="detailed-desc">
+					<div class="panel-heading">
+						<h3 class="panel-title">Detailed Description</h3>
+					</div>
+					<div class="panel-body">
+						<p>
+							This simplified class diagram shows the hierarchical
+							structure of EmbASP
+						</p>
+						<div class="row">
+							<figure class="col-xs-12 col-sm-offset-1 col-sm-10 text-center">
+								<img class="img-responsive"
+									src="img/simplified_class_diagram.png" alt="Class Diagram">
+								<figcaption>Class Diagram of the framework</figcaption>
+							</figure>
+						</div>
+
+						<div>
+							The
+							<code class="class">Handler</code>
+							class as described above acts like a facade for user to manage
+							inputs ,in fact it (and his two subclasses
+							<code class="class">DesktopHandler</code>
+							and
+							<code class="class">AndroidHandler</code>
+							) have a collection of methods used to add and remove data such
+							as programs , files and options giving the user the possibility
+							to select which set of rules , option or files use within the
+							solver for the selected platform.
+						</div>
+						<div>
+							The way she can manage programs is thought
+							<code class="class">InputProgram</code>
+							class and his subclass
+							<code class="class">ASPInputProgram</code>
+							while the first represents a generic program , the second
+							represents a generic ASP program with the capability of
+							extrapolate data from Java objects with the help of
+							<code class="class">ASPMapper</code>
+							both classes support files as input. Similar ,but not to ignore,
+							is the
+							<code class="class">OptionDescriptor</code>
+							class which represents a generic option , again we have a
+							subclass for ASP context the
+							<code class="class">ASPFilterOption</code>
+							. A subclass for this one is the
+							<code class="class">DLVFilterOption</code>
+							which is a "-filter" option for DLV solver.
+						</div>
+						<div>
+							Handlers ,in addition, provides two methods for starting a solver
+							:
+							<code class="class">startSync</code>
+							and
+							<code class="class">startAsync</code>
+							for a detailed description refer to <a href="#documentation">JavaDoc</a>.
+						</div>
+						How data is formatted and transmitted from handler to solver , in
+						order to start a reasoning process , is handled by classes that
+						implements
+						<code class="class"> Service</code>
+						interface. The framework provides two classes that provide
+						facilities to make easier the integration of ASP in complex
+						systems the
+						<code class="class">AndroidService</code>
+						and
+						<code class="class">DesktopService</code>
+						though many more classes can be easily generated.
+						<div>
+							Starting a reasoning process depends entirely from the
+							implementation of the subclasses a default reasoner for DLV in
+							Android systems is the
+							<code calass="class">DLVAndroidService</code>
+							that is written in C++ , has been built using the Android NDK and
+							the <a href="http://www.dlvsystem.com/" target="_blank">DLV</a> code has been optimized for this particular use case, and
+							is linked to the Java code using the JNI as required by the NDK.
+						</div>
+						<div>
+							In order to get back results obtainer by the solver ,that is
+							invoked asynchronously,it is needed a callback function wich is
+							automatically called when computation is terminated.This callback
+							function can be specified implementing the
+							<code class="class">Callback</code>
+							interface.
+							<code class="class">Output</code>
+							represent a simple output in a string format and is used as
+							anchor for
+							<code class="class">AnswerSets</code>
+							class. AnswerSets can be extended in order to parse specific
+							output of different ASP solvers, the framework provide two
+							AnswerSets one for DLV
+							<code class="class">DLVAnswerSets</code>
+							and one for Clingo
+							<code class="class">ClingoAnswerSets</code>
+							.
+						</div>
+
+
+						<div>
+							<code class="class">ASPMapper</code>
+							class is in charge of translating data from objects into ASP
+							programs (generally as strings) , when an object is given as
+							input, the mapper is able to convert only if specific annotations
+							are provided. Moreover, the mapping is done also in the other way around, from
+							objects to strings, so that the input can be also specified as
+							plain Java objects.
+						</div>
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
         
     <footer class="footer">
         <p class="text-center">A project of the <a href="https://www.mat.unical.it">Department of Mathematics and Computer Science</a> of the <a href="http://unical.it">University of Calabria</a></p>
