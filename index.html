@@ -457,8 +457,7 @@ Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Ce
     
         @Override
         protected void onCreate(Bundle bundle) {
-            handler = new AndroidHandler(getApplicationContext(),
-                DLVAndroidService.class);
+            handler = new AndroidHandler(getApplicationContext(), DLVAndroidService.class);
             [...]
         }
         
@@ -468,12 +467,11 @@ Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Ce
         }
     
         public void startReasoning() {
-            InputProgram inputProgram =
-                new InputProgram();
-            for ( int i = 0; i < 9; i++){
-                for ( int j = 0; j < 9; j++)
+            InputProgram inputProgram = new InputProgram();
+            for (int i = 0; i < 9; i++){
+                for (int j = 0; j < 9; j++)
                     try {
-                        if(sudokuMatrix[ i ] [ j ]!=0) {
+                        if(sudokuMatrix[i][j]!=0) {
                             inputProgram.addObjectInput(new Cell(i, j, sudokuMatrix[i][j]));
                         }
                     } catch (Exception e) {	
