@@ -474,8 +474,7 @@ Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Ce
                 for ( int j = 0; j < 9; j++)
                     try {
                         if(sudokuMatrix[ i ] [ j ]!=0) {
-                            inputProgram.addObjectInput(
-                                new Cell(i, j, sudokuMatrix[i][j]));
+                            inputProgram.addObjectInput(new Cell(i, j, sudokuMatrix[i][j]));
                         }
                     } catch (Exception e) {	
                     	// Handle Exception 
@@ -483,8 +482,7 @@ Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Ce
             }
             handler.addProgram(inputProgram);
     
-            String sudokuEncoding =
-                getEncodingFromResources();			
+            String sudokuEncoding = getEncodingFromResources();			
             handler.addProgram(new InputProgram(sudokuEncoding));
     
             Callback callback = new MyCallback();
@@ -509,9 +507,9 @@ It could be loaded, for instance, by means of an utility function that retrieves
                 At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback object is in charge of fetching the output when the ASP system has done.
                 </div>
                 <div>
-                Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of Java objects. For instance, in our case an inner <i>MyCallback</i> implements the interface <i>Callback</i>:</div>
+                Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of Java objects. For instance, in our case an inner class <i>MyCallback</i> implements the interface <i>Callback</i>:</div>
                 <pre><code class="language-java">
-	private class MyCallback implements Callback {
+    private class MyCallback implements Callback {
 
         @Override
         public void callback(Output o) {
@@ -524,8 +522,7 @@ It could be loaded, for instance, by means of an utility function that retrieves
             try {
                 for(Object obj:as.getAtoms()) {
                     Cell cell = (Cell) obj;
-                    sudokuMatrix[cell.getRow()]
-                        [cell.getColumn()] = cell.getValue();
+                    sudokuMatrix[cell.getRow()][cell.getColumn()] = cell.getValue();
                 }
             } catch (Exception e) {
                 // Handle Exception
