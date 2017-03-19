@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head lang="en">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
 
     <style>
+        h2 {
+            padding-top: 55px;
+        }
+        
         .layer {
             text-transform: uppercase;
         }
@@ -45,20 +49,71 @@
 </head>
 
 <body>
-    <div class="container">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-main-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">
+                            EmbASP
+                            <!--<img src="img/EmbASP_Logo.png" alt="embASP" />-->
+                        </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-main-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#CoreTeam">Core Team</a></li>
+                    <li><a href="#Contacts">Contacts</a></li>
+                    <li><a href="#License">License</a></li>
+                    <li><a href="#Download">Download</a></li>
+                    <li><a href="#Documentation">Documentation</a></li>
+                    <li><a href="#Publications">Publications</a></li>
+                    <!--<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container" style="padding-top: 40px">
         <div class="page-header">
-            <h2><img src="img/EmbASP_Logo.png" alt="embASP" height="150" style=" padding-bottom: 0.2cm;" /></h2>
+            <!--<h2 style="text-align: center"><img src="img/EmbASP_Logo.png" alt="embASP" height="150" style=" padding-bottom: 0.2cm;" /></h2>-->
+
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-xs-4"><img src="img/EmbASP_Logo.png" alt="embASP" height="150" /></div>
+                    <p class="col-xs-8">
+                        EmbASP is a framework for the integration (embedding) of Logic Programming in external systems for generic applications.<br
+                        /> It helps developers at designing and implementing complex reasoning tasks by means of solvers
+                        on different platforms.
+                    </p>
+                </div>
+            </div>
+
             <div class="alert alert-info" role="alert">
                 NOTE: this is the official site of versions 3x of the EmbASP Framework. If you are looking for an older version, please
                 <a href="version_2x.html">click here.</a>
             </div>
 
             <div>
-                <p>
-                    EmbASP is a framework for the integration (embedding) of Logic Programming in external systems for generic applications.
-                    It helps developers at designing and implementing complex reasoning tasks by means of solvers on different
-                    platforms.
-                </p>
                 <p>
                     The framework can be implemented in a object-oriented programming language of choice, easing and guiding the generation of
                     suitable libraries for the use of specific solvers on particular platforms. We currently provide a Java
@@ -77,7 +132,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h2>Core Team</h2>
+                <h2 id="CoreTeam">Core Team</h2>
                 <div>
                     <ul>
                         <li>
@@ -101,7 +156,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h2>Contacts</h2>
+                <h2 id="Contacts">Contacts</h2>
                 <div>
                     For further information, contact <a href="mailto:embasp@mat.unical.it">embasp@mat.unical.it</a>.
                 </div>
@@ -109,7 +164,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h2>License</h2>
+                <h2 id="License">License</h2>
                 <div>
                     <p>
                         The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>.
@@ -122,7 +177,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h2>Download</h2>
+                <h2 id="Download">Download</h2>
                 <div>
                     <h3 id="release">Latest release version</h3>
                     <div>To use the specialized library for DLV on Android, an AAR file has been released.</div>
@@ -317,7 +372,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <h2>Documentation</h2>
+                <h2 id="Documentation">Documentation</h2>
 
                 <p>
                     <div class="list-group">
@@ -375,7 +430,8 @@
                     </div>
                     <div class="panel-body">
                         <h4>How to import the framework on Android Studio</h4>
-                        <p>In order to use the framework in your applications you have to import it as module on Android Studio.</p>
+                        <p>In order to use the framework in your applications you have to import it as module on Android Studio.
+                        </p>
                         <ol>
                             <li>Import the framework module:
                                 <ol>
@@ -430,9 +486,9 @@
                         <div>
                             Let us think of a user that designed (or has been given) a proper logic program <i>P</i> to solve
                             a sudoku puzzle and has also an initial schema. We assume that the initial schema is well-formed
-                            i.e. the complete schema solution exists and is unique. A possible program <i>P</i> is embedded
-                            in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>), that,
-                            coupled with a set of facts <i>F</i> representing the given initial schema, allows to obtain
+                            i.e. the complete schema solution exists and is unique. A possible program
+                            <i>P</i> is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>),
+                            that, coupled with a set of facts <i>F</i> representing the given initial schema, allows to obtain
                             the only admissible solution.
                         </div>
                         <div>
@@ -568,7 +624,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <h2>Publications</h2>
+                <h2 id="Publications">Publications</h2>
 
                 <div>
                     <ul>
@@ -578,8 +634,8 @@
                             <strong>To appear</strong> at The 15th International Conference of the Italian Association for
                             Artificial Intelligence (AI*IA 2016).
                         </li>
-                        <li>Davide Fuscà, Stefano Germano, Jessica Zangari, Marco Anastasio, Francesco Calimeri and Simona Perri.<br
-                            />
+                        <li>Davide Fuscà, Stefano Germano, Jessica Zangari, Marco Anastasio, Francesco Calimeri and Simona Perri.
+                            <br />
                             <em>A Framework for Easing the Development of Applications Embedding Answer Set Programming</em><br
                             /> In Proceedings of the 18th International Symposium on Principles and Practice of Declarative
                             Programming (PPDP 2016).<br /> [
