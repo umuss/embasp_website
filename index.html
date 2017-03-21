@@ -397,116 +397,118 @@
             </div>
             </p>-->
 
-            </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation" class="active"><a href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab">General Architecture</a></li>
+                    <li role="presentation"><a href="#implementation" aria-controls="implementation" role="tab" data-toggle="tab">Java implementation</a></li>
+                    <li role="presentation"><a href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab">Example DLV on Android</a></li>
+                    <li role="presentation"><a href="#desktop_example" aria-controls="desktop_example" role="tab" data-toggle="tab">Example SPD on Desktop</a></li>
+                </ul>
 
-        </div>
-
-
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-primary" id="javadoc">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Javadoc</h3>
+                <!-- Tab panes -->
+                <div class="tab-content" style="padding-top: 10px">
+                    <div role="tabpanel" class="tab-pane fade active" id="architecture">
+                        Work in progress
                     </div>
-                    <div class="panel-body">
-                        <div>The Javadoc documentation is available <a href="javadoc/index.html">here</a>. </div>
-                        <div>For an offline usage, you can download it <a href="javadoc-embasp.zip">here</a>. </div>
+                    <div role="tabpanel" class="tab-pane fade" id="implementation">
 
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div class="panel panel-primary" id="javadoc">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Javadoc</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>The Javadoc documentation is available <a href="javadoc/index.html">here</a>. </div>
+                                <div>For an offline usage, you can download it <a href="javadoc-embasp.zip">here</a>. </div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-primary" id="class-diagram">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Class Diagram</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div>A complete UML Class Diagram is available <a href="img/complete_class_diagram_fixed.png">here</a>.
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+                        <div class="panel panel-primary" id="class-diagram">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Class Diagram</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>A complete UML Class Diagram is available <a href="img/complete_class_diagram_fixed.png">here</a>.
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-primary" id="getting-started">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Getting Started</h3>
                     </div>
-                    <div class="panel-body">
-                        <h4>How to import the framework on Android Studio</h4>
-                        <p>In order to use the framework in your applications you have to import it as module on Android Studio.
-                        </p>
-                        <ol>
-                            <li>Import the framework module:
-                                <ol>
-                                    <li>Download the framework last released <a href="#release">module</a>.
-                                    </li>
-                                    <li>In the project view, right-click on your project <b>New
+
+                    <div role="tabpanel" class="tab-pane fade" id="android_example">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="panel panel-primary" id="getting-started">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Getting Started</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h4>How to import the framework on Android Studio</h4>
+                                        <p>In order to use the framework in your applications you have to import it as module
+                                            on Android Studio.
+                                        </p>
+                                        <ol>
+                                            <li>Import the framework module:
+                                                <ol>
+                                                    <li>Download the framework last released <a href="#release">module</a>.
+                                                    </li>
+                                                    <li>In the project view, right-click on your project <b>New
 											&gt; Module</b>.
-                                    </li>
-                                    <li>Select <b>Import .JAR/.AAR Package</b>.
-                                    </li>
-                                    <li>Select the directory in which the module has been downloaded.
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>Set the dependency:
-                                <ol>
-                                    <li>In the Android Studio menu: <b>File &gt; Project
+                                                    </li>
+                                                    <li>Select <b>Import .JAR/.AAR Package</b>.
+                                                    </li>
+                                                    <li>Select the directory in which the module has been downloaded.
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li>Set the dependency:
+                                                <ol>
+                                                    <li>In the Android Studio menu: <b>File &gt; Project
 											Structure</b>.
-                                    </li>
-                                    <li>Select your project module (by default called <b>app</b>).
-                                    </li>
-                                    <li>In the <b>Dependencies Tab</b> add as <b>Module
+                                                    </li>
+                                                    <li>Select your project module (by default called <b>app</b>).
+                                                    </li>
+                                                    <li>In the <b>Dependencies Tab</b> add as <b>Module
 											Dependency</b> the previously imported framework.
-                                    </li>
-                                </ol>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-primary" id="setting-up">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Using EmbASP</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div>In the following, we describe an the actual usage of the framework by means of a running example;
-                            as a use case, we will develop a simple Android application for solving Sudoku puzzles. Hereafter,
-                            we explain the crucial stepts, while
-                            <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
-                        </div>
-                        <div>
-                            The framework features a annotation-guided mapping, offered by the <i>ASPMapper</i> component,
-                            for two-way translations between strings recognizable by ASP solvers and objects in the programming
-                            language at hand, directly employable within applications. By means of this feature, the ASP-based
-                            aspects can be separated from the Java coding: the programmer doesn't even necessarily need to
-                            be aware of ASP.
-                        </div>
-                        <div>
-                            Let us think of a user that designed (or has been given) a proper logic program <i>P</i> to solve
-                            a sudoku puzzle and has also an initial schema. We assume that the initial schema is well-formed
-                            i.e. the complete schema solution exists and is unique. A possible program
-                            <i>P</i> is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>),
-                            that, coupled with a set of facts <i>F</i> representing the given initial schema, allows to obtain
-                            the only admissible solution.
-                        </div>
-                        <div>
-                            By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent,
-                            we define the class <i>Cell</i>, aimed at representing the single
-                            cell of the sudoku schema, as follows:
-                        </div>
-                        <pre><code class="language-java">
+                        <div class="panel panel-primary" id="setting-up">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Using EmbASP</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>In the following, we describe an the actual usage of the framework by means of a running
+                                    example; as a use case, we will develop a simple Android application for solving Sudoku
+                                    puzzles. Hereafter, we explain the crucial stepts, while
+                                    <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
+                                </div>
+                                <div>
+                                    The framework features a annotation-guided mapping, offered by the <i>ASPMapper</i> component,
+                                    for two-way translations between strings recognizable by ASP solvers and objects in the
+                                    programming language at hand, directly employable within applications. By means of this
+                                    feature, the ASP-based aspects can be separated from the Java coding: the programmer
+                                    doesn't even necessarily need to be aware of ASP.
+                                </div>
+                                <div>
+                                    Let us think of a user that designed (or has been given) a proper logic program <i>P</i>                                    to solve a sudoku puzzle and has also an initial schema. We assume that the initial schema
+                                    is well-formed i.e. the complete schema solution exists and is unique. A possible program
+                                    <i>P</i> is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>),
+                                    that, coupled with a set of facts <i>F</i> representing the given initial schema, allows
+                                    to obtain the only admissible solution.
+                                </div>
+                                <div>
+                                    By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent,
+                                    we define the class <i>Cell</i>, aimed at representing
+                                    the single cell of the sudoku schema, as follows:
+                                </div>
+                                <pre><code class="language-java">
     @Predicate("cell")
     public class Cell {
     
@@ -523,24 +525,24 @@
         
     }           
                 </code></pre>
-                        <div>
-                            It is worth noticing how the class has been annotated by two custom annotations, defined according to the following syntax:
-                            <ul>
-                                <li>
-                                    <i>@Predicate(string_name)</i>: the target must be a class, and defines the predicate
-                                    name the class is mapped to;
-                                </li>
-                                <li>
-                                    <i>@Term(integer_position)</i>: the target must be a field of a class annotated via @Predicate,
-                                    and defines the term (and its position) in the ASP atom the field is mapped to.
-                                </li>
-                            </ul>
-                            Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Cell</i> objects
-                            into strings properly recognizable from the ASP solver as logic facts of the form <i>cell(Row,Column,Value)</i>.
-                            At this point, we can create an <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>,
-                            and start deploying our sudoku application:
-                        </div>
-                        <pre><code class="language-java">
+                                <div>
+                                    It is worth noticing how the class has been annotated by two custom annotations, defined according to the following syntax:
+                                    <ul>
+                                        <li>
+                                            <i>@Predicate(string_name)</i>: the target must be a class, and defines the predicate
+                                            name the class is mapped to;
+                                        </li>
+                                        <li>
+                                            <i>@Term(integer_position)</i>: the target must be a field of a class annotated
+                                            via @Predicate, and defines the term (and its position) in the ASP atom the field
+                                            is mapped to.
+                                        </li>
+                                    </ul>
+                                    Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Cell</i>                                    objects into strings properly recognizable from the ASP solver as logic facts of the
+                                    form <i>cell(Row,Column,Value)</i>. At this point, we can create an <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>,
+                                    and start deploying our sudoku application:
+                                </div>
+                                <pre><code class="language-java">
     public class MainActivity extends AppCompatActivity {
 	
         [...]
@@ -580,31 +582,36 @@
     }
             </code></pre>
 
-                        <div>
-                            The class contains an <i>Handler</i> instance as field, that is initialized when the <i>Activity</i>                            is created as an <i>AndroidHandler</i>. Required parameters include the <i>Android Context</i>                            (an Android utility, needed to start an Android Service Component) and the type of <i>AndroidService</i>                            to use, in our case a <i>DLVAndroidService</i>.
-                        </div>
-                        <div>
-                            In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where
-                            position <i> (i,j) </i> contains the value of cell <i> (i,j) </i>                            in the initial schema; cells initially empty are represented by positions containing zero.
-                        </div>
-                        <div>
-                            The method <i>startReasoning</i> is in charge of actually managing the reasoning: in our case,
-                            it is invoked in response to a click event that is generated when the user asks for the solution.
-                            It is firstly created an <i>InputProgram</i> object that is filled with <i>Cell</i> objects representing
-                            the initial schema, which is then provided to the handler; then it is provided with the sudoku
-                            encoding. It could be loaded, for instance, by means of an utility function that retrieves it
-                            from the <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>,
-                            which, within Android applications, is typically meant for containing images, sounds, files and
-                            resources in general.
-                        </div>
-                        <div>
-                            At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback
-                            object is in charge of fetching the output when the ASP system has done.
-                        </div>
-                        <div>
-                            Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of
-                            Java objects. For instance, in our case an inner class <i>MyCallback</i>                            implements the interface <i>Callback</i>:</div>
-                        <pre><code class="language-java">
+                                <div>
+                                    The class contains an <i>Handler</i> instance as field, that is initialized when the
+                                    <i>Activity</i> is created as an <i>AndroidHandler</i>. Required parameters include the
+                                    <i>Android Context</i> (an Android utility, needed to start an Android Service Component)
+                                    and the type of <i>AndroidService</i> to use, in our case a <i>DLVAndroidService</i>.
+                                </div>
+                                <div>
+                                    In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where
+                                    position <i> (i,j) </i> contains the value of cell
+                                    <i> (i,j) </i> in the initial schema; cells initially empty are represented by positions
+                                    containing zero.
+                                </div>
+                                <div>
+                                    The method <i>startReasoning</i> is in charge of actually managing the reasoning: in
+                                    our case, it is invoked in response to a click event that is generated when the user
+                                    asks for the solution. It is firstly created an <i>InputProgram</i> object that is filled
+                                    with <i>Cell</i> objects representing the initial schema, which is then provided to the
+                                    handler; then it is provided with the sudoku encoding. It could be loaded, for instance,
+                                    by means of an utility function that retrieves it from the <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>,
+                                    which, within Android applications, is typically meant for containing images, sounds,
+                                    files and resources in general.
+                                </div>
+                                <div>
+                                    At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback
+                                    object is in charge of fetching the output when the ASP system has done.
+                                </div>
+                                <div>
+                                    Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of
+                                    Java objects. For instance, in our case an inner class <i>MyCallback</i>                                    implements the interface <i>Callback</i>:</div>
+                                <pre><code class="language-java">
     private class MyCallback implements Callback {
 
         @Override
@@ -627,10 +634,22 @@
         }
     }
 		</code></pre>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="desktop_example">
+                        Work in progress
                     </div>
                 </div>
+
+
             </div>
+
         </div>
+
+
+
 
         <div class="row">
             <div class="col-xs-12">
