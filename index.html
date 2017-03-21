@@ -399,7 +399,7 @@
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li role="presentation" class="active"><a href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab">General Architecture</a></li>
+                    <li role="presentation" class="active"><a href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab">Abstract Architecture</a></li>
                     <li role="presentation"><a href="#implementation" aria-controls="implementation" role="tab" data-toggle="tab">Java implementation</a></li>
                     <li role="presentation"><a href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab">Example DLV on Android</a></li>
                     <li role="presentation"><a href="#desktop_example" aria-controls="desktop_example" role="tab" data-toggle="tab">Example SPD on Desktop</a></li>
@@ -407,9 +407,107 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content" style="padding-top: 15px">
-                    <div role="tabpanel" class="tab-pane fade active" id="architecture">
-                        Work in progress
+
+                    <div role="tabpanel" class="tab-pane fade in active" id="architecture">
+                        <div class="panel panel-primary" id="arch-desc">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Architecture Description</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    The general architecture of EmbASP is depicted in the following figure: it is intended as an abstract framework to be implemented
+                                    in some object-oriented programming language.
+                                </p>
+                                <p>
+                                    In addition, this architecture can be specialized for different platforms, logic languages and solvers: darker coloured modules
+                                    are related to the proposed specialization.
+                                </p>
+                                <p>
+                                    According to its abstract nature, the figure reports general dependencies among the main modules.
+                                </p>
+
+                                <figure>
+                                    <img class="img-responsive, center-block" src="img/architecture_v3.png" alt="Abstract Architecture">
+                                    <figcaption class="text-center">
+                                        Abstract Architecture of the framework. <br /> Blocks overshadowed in white depict
+                                        the abstract components of the framework, while dark-grey blocks represent the modules
+                                        more closely related to the proposed specialization.
+                                    </figcaption>
+                                </figure>
+
+                                <div style="padding-top: 1em">
+
+                                    <p>
+                                        The framework architecture has been designed by means of four modules: <code class="layer">Core</code>,
+                                        <code class="layer">Platforms</code>, <code class="layer">Languages</code>, and
+                                        <code class="layer">Systems</code>. In the following, we denote with "solver" a logic-based
+                                        system that is meant to be used by external application with the help of EmbASP.
+                                    </p>
+
+                                    <h4>Core Module</h4>
+                                    <p>The <code class="layer">Core</code> module defines the basic components of the Framework.</p>
+
+                                    <p>
+                                        The <code>Handler</code> component mediates the communication between the Framework
+                                        and the user that can provide it with the input program(s) via the component <code>InputProgram</code>,
+                                        along with any desired solver's option(s) via the component <code>OptionDescriptor</code>.
+                                        A <code>Service</code> component is meant for managing the chosen solver executions.
+
+                                    </p>
+
+                                    <p>
+                                        Two different execution modes can be made available: synchronous or asynchronous. While in the synchronous mode any call
+                                        to the execution of the solver is <em>blocking</em>                                        (i.e., the caller waits until the reasoning task is completed), in asynchronous mode
+                                        the call is non-blocking: a <code>Callback</code> component notifies the caller once
+                                        the reasoning task is completed. The result of the execution (i.e., the output of
+                                        the logic system) is handled by the <code>Output</code> component, in both modes.</p>
+
+
+                                    <h4>Platforms Module</h4>
+
+                                    <p>
+                                        The <code class="layer">Platforms</code> module is meant for containing what is platform-dependent;
+                                        in particular, the <code>Handler</code> and <code>Service</code> components from
+                                        the <code class="layer">Core</code> module that should be adapted according to the
+                                        platform at hand, since they take care of practically launching solvers.
+                                    </p>
+
+                                    <h4>Languages Module</h4>
+
+                                    <p>
+                                        The <code class="layer">Languages</code> module defines specific facilities for each
+                                        supported logic language.
+                                    </p>
+
+                                    <p>
+                                        The generic <code>Mapper</code> component is conceived as an utility for managing
+                                        input and output via objects, if the programming language at hand permits it.
+                                    </p>
+
+                                    <p>
+                                        The sub-module ASP comprises components such as <code>ASPInputProgram</code> that
+                                        adapts <code>InputProgram</code> to the ASP case, while
+                                        <code>AnswerSet</code> and <code>AnswerSets</code> represent the <code>Output</code>                                        for ASP. Moreover the <code>ASPMapper</code> allow the management of ASP input facts
+                                        and answer sets via objects.
+                                    </p>
+
+                                    <p>
+                                        Similarly, the sub-module PDDL includes <code>PDDLInputProgram</code>, <code>Action</code>,
+                                        <code>Plan</code> and <code>PDDLMapper</code>.
+                                    </p>
+
+                                    <h4>Systems Module</h4>
+                                    <p>
+                                        The <code class="layer">Systems</code> module defines what is system-dependent; in
+                                        particular, the <code>InputProgram</code>, <code>Output</code> and <code>OptionDescriptor</code>                                        components from the <code class="layer">Core</code> module should be adapted in order
+                                        to effectively interact with the solver at hand.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     <div role="tabpanel" class="tab-pane fade" id="implementation">
 
                         <div class="panel panel-primary" id="javadoc">
