@@ -530,7 +530,81 @@
 
                                 <div style="padding-top: 1em">
 
+                                    <h4>Core module implementation</h4>
                                     <p>
+                                        Each component in the <code class="layer">Core</code> module has been implemented
+                                        by means of an homonymous class or interface.
+                                    </p>
+                                    <p>
+                                        In particular, the <code>Handler</code> class collects <code>InputProgram</code>                                        and <code>OptionDescriptor</code> objects communicated by the user.
+                                    </p>
+                                    <p>
+                                        For what the asynchronous mode is concerned, the class <code>Service</code> depends
+                                        from the interface <code>Callback</code>, since once the reasoning service has terminated,
+                                        the result of the computation is returned back via a class <code>Callback</code>.
+                                    </p>
+
+                                    <h4>Platforms module implementation</h4>
+                                    <p>
+                                        In order to support a new platform, the <code>Handler</code> and <code>Service</code>                                        components must be adapted.
+                                    </p>
+                                    <p>
+                                        As for the Android platform, we developed an <code>AndroidHandler</code> that handles
+                                        the execution of an <code>AndroidService</code>, which provides facilities to manage
+                                        the execution of an ASP reasoner on the Android platform.
+                                    </p>
+                                    <p>
+                                        Similarly, for the desktop platform we developed a <code>DesktopHandler</code> and
+                                        a <code>DesktopService</code>, which generalizes the usage of an ASP reasoner on
+                                        the desktop platform, allowing both synchronous and asynchronous execution modes.
+                                    </p>
+
+                                    <h4>Languages module implementation</h4>
+                                    <p>
+                                        This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+                                    </p>
+                                    <p>
+                                        The <code>Mapper</code> component of the <code class="layer">Languages</code> module
+                                        is implemented via a <code>Mapper</code> class, that allows to translate input and
+                                        output into Java objects. Such translations are guided by <a href="https://docs.oracle.com/javase/tutorial/java/annotations">Java Annotations</a>,
+                                        a form of metadata that mark Java code and provide information that is not part of
+                                        the program itself: they have no direct effect on the operation of the code they
+                                        annotate.
+                                    </p>
+                                    <p>
+                                        In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two
+                                        custom annotations, defined according to the following syntax:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <code>@Predicate (string_name)</code>: the target must be a class, and defines
+                                            the predicate name the class is mapped to;
+                                        </li>
+                                        <li>
+                                            <code>@Term (integer_position)</code>: the target must be a field of a class
+                                            annotated via <code>@Predicate</code>, and defines the term (and its position)
+                                            in the ASP atom the field is mapped to.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        By means of the Java Reflection mechanisms, annotations are examined at runtime, and taken into account to properly define
+                                        the translation.
+                                    </p>
+                                    <p>
+                                        If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
+                                    </p>
+                                    <p>
+                                        In addition to the <code>Mapper</code>, this module features two sub-modules which
+                                        are more strictly related to ASP and PDDL.
+                                    </p>
+
+                                    <h4>Systems Module Implementation</h4>
+                                    <p>
+                                        The classes <code>DLVAnswerSets</code>, <code>ClingoAnswerSets</code>, <code>DLV2AnswerSets</code>                                        and <code>SPDPlan</code> implement specific extensions of the <code>AnswerSets</code>                                        or <code>Plan</code> classes, in charge of manipulating the output of the respective
+                                        solvers.
+                                    </p>
+                                    <p>
+                                        Moreover, this module can contain classes extending <code>OptionDescriptor</code>                                        to implement specific options of the solver at hand.
                                     </p>
 
                                 </div>
