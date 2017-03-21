@@ -406,7 +406,7 @@
                 </ul>
 
                 <!-- Tab panes -->
-                <div class="tab-content" style="padding-top: 10px">
+                <div class="tab-content" style="padding-top: 15px">
                     <div role="tabpanel" class="tab-pane fade active" id="architecture">
                         Work in progress
                     </div>
@@ -417,8 +417,12 @@
                                 <h3 class="panel-title">Javadoc</h3>
                             </div>
                             <div class="panel-body">
-                                <div>The Javadoc documentation is available <a href="javadoc/index.html">here</a>. </div>
-                                <div>For an offline usage, you can download it <a href="javadoc-embasp.zip">here</a>. </div>
+                                <p>
+                                    The Javadoc documentation is available <a href="javadoc/index.html">here</a>.
+                                </p>
+                                <p>
+                                    For an offline usage, you can download it <a href="javadoc-embasp.zip">here</a>.
+                                </p>
 
                             </div>
                         </div>
@@ -428,54 +432,49 @@
                                 <h3 class="panel-title">Class Diagram</h3>
                             </div>
                             <div class="panel-body">
-                                <div>A complete UML Class Diagram is available <a href="img/complete_class_diagram_fixed.png">here</a>.
-                                </div>
+                                A complete UML Class Diagram is available <a href="img/complete_class_diagram_fixed.png">here</a>.
                             </div>
                         </div>
 
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade" id="android_example">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="panel panel-primary" id="getting-started">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Getting Started</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <h4>How to import the framework on Android Studio</h4>
-                                        <p>In order to use the framework in your applications you have to import it as module
-                                            on Android Studio.
-                                        </p>
+                        <div class="panel panel-primary" id="getting-started">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Getting Started</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h4>How to import the framework on Android Studio</h4>
+                                <p>In order to use the framework in your applications you have to import it as module on Android
+                                    Studio.
+                                </p>
+                                <ol>
+                                    <li>Import the framework module:
                                         <ol>
-                                            <li>Import the framework module:
-                                                <ol>
-                                                    <li>Download the framework last released <a href="#release">module</a>.
-                                                    </li>
-                                                    <li>In the project view, right-click on your project <b>New
-											&gt; Module</b>.
-                                                    </li>
-                                                    <li>Select <b>Import .JAR/.AAR Package</b>.
-                                                    </li>
-                                                    <li>Select the directory in which the module has been downloaded.
-                                                    </li>
-                                                </ol>
+                                            <li>Download the framework last released <a href="#release">module</a>.
                                             </li>
-                                            <li>Set the dependency:
-                                                <ol>
-                                                    <li>In the Android Studio menu: <b>File &gt; Project
-											Structure</b>.
-                                                    </li>
-                                                    <li>Select your project module (by default called <b>app</b>).
-                                                    </li>
-                                                    <li>In the <b>Dependencies Tab</b> add as <b>Module
-											Dependency</b> the previously imported framework.
-                                                    </li>
-                                                </ol>
+                                            <li>In the project view, right-click on your project <b>New
+											&gt; Module</b>.
+                                            </li>
+                                            <li>Select <b>Import .JAR/.AAR Package</b>.
+                                            </li>
+                                            <li>Select the directory in which the module has been downloaded.
                                             </li>
                                         </ol>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>Set the dependency:
+                                        <ol>
+                                            <li>In the Android Studio menu: <b>File &gt; Project
+											Structure</b>.
+                                            </li>
+                                            <li>Select your project module (by default called <b>app</b>).
+                                            </li>
+                                            <li>In the <b>Dependencies Tab</b> add as <b>Module
+											Dependency</b> the previously imported framework.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
 
@@ -484,30 +483,30 @@
                                 <h3 class="panel-title">Using EmbASP</h3>
                             </div>
                             <div class="panel-body">
-                                <div>In the following, we describe an the actual usage of the framework by means of a running
+                                <p>In the following, we describe an the actual usage of the framework by means of a running
                                     example; as a use case, we will develop a simple Android application for solving Sudoku
                                     puzzles. Hereafter, we explain the crucial stepts, while
                                     <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     The framework features a annotation-guided mapping, offered by the <i>ASPMapper</i> component,
                                     for two-way translations between strings recognizable by ASP solvers and objects in the
                                     programming language at hand, directly employable within applications. By means of this
                                     feature, the ASP-based aspects can be separated from the Java coding: the programmer
                                     doesn't even necessarily need to be aware of ASP.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     Let us think of a user that designed (or has been given) a proper logic program <i>P</i>                                    to solve a sudoku puzzle and has also an initial schema. We assume that the initial schema
                                     is well-formed i.e. the complete schema solution exists and is unique. A possible program
                                     <i>P</i> is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>),
                                     that, coupled with a set of facts <i>F</i> representing the given initial schema, allows
                                     to obtain the only admissible solution.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent,
                                     we define the class <i>Cell</i>, aimed at representing
                                     the single cell of the sudoku schema, as follows:
-                                </div>
+                                </p>
                                 <pre><code class="language-java">
     @Predicate("cell")
     public class Cell {
@@ -525,7 +524,7 @@
         
     }           
                 </code></pre>
-                                <div>
+                                <p>
                                     It is worth noticing how the class has been annotated by two custom annotations, defined according to the following syntax:
                                     <ul>
                                         <li>
@@ -541,7 +540,7 @@
                                     Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Cell</i>                                    objects into strings properly recognizable from the ASP solver as logic facts of the
                                     form <i>cell(Row,Column,Value)</i>. At this point, we can create an <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>,
                                     and start deploying our sudoku application:
-                                </div>
+                                </p>
                                 <pre><code class="language-java">
     public class MainActivity extends AppCompatActivity {
 	
@@ -582,19 +581,19 @@
     }
             </code></pre>
 
-                                <div>
+                                <p>
                                     The class contains an <i>Handler</i> instance as field, that is initialized when the
                                     <i>Activity</i> is created as an <i>AndroidHandler</i>. Required parameters include the
                                     <i>Android Context</i> (an Android utility, needed to start an Android Service Component)
                                     and the type of <i>AndroidService</i> to use, in our case a <i>DLVAndroidService</i>.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where
                                     position <i> (i,j) </i> contains the value of cell
                                     <i> (i,j) </i> in the initial schema; cells initially empty are represented by positions
                                     containing zero.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     The method <i>startReasoning</i> is in charge of actually managing the reasoning: in
                                     our case, it is invoked in response to a click event that is generated when the user
                                     asks for the solution. It is firstly created an <i>InputProgram</i> object that is filled
@@ -603,14 +602,14 @@
                                     by means of an utility function that retrieves it from the <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>,
                                     which, within Android applications, is typically meant for containing images, sounds,
                                     files and resources in general.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback
                                     object is in charge of fetching the output when the ASP system has done.
-                                </div>
-                                <div>
+                                </p>
+                                <p>
                                     Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of
-                                    Java objects. For instance, in our case an inner class <i>MyCallback</i>                                    implements the interface <i>Callback</i>:</div>
+                                    Java objects. For instance, in our case an inner class <i>MyCallback</i>                                    implements the interface <i>Callback</i>:</p>
                                 <pre><code class="language-java">
     private class MyCallback implements Callback {
 
