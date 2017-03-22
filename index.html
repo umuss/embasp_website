@@ -425,7 +425,7 @@
                                     The figure also reports general dependencies among the main modules.
                                 </p>
 
-                                <figure>
+                                <figure style="padding-bottom: 1em">
                                     <img class="img-responsive center-block" src="img/architecture_v3.png" alt="Abstract Architecture">
                                     <figcaption class="text-center">
                                         Abstract Architecture of the framework. <br /> Blocks overshadowed in white depict
@@ -434,75 +434,72 @@
                                     </figcaption>
                                 </figure>
 
-                                <div style="padding-top: 1em">
+                                <p>
+                                    The framework architecture has been designed by means of four modules: <code class="layer">Core</code>,
+                                    <code class="layer">Platforms</code>, <code class="layer">Languages</code>, and
+                                    <code class="layer">Systems</code>. In the following, we denote with "solver" a logic-based
+                                    system that is meant to be used by external application with the help of EmbASP.
+                                </p>
 
-                                    <p>
-                                        The framework architecture has been designed by means of four modules: <code class="layer">Core</code>,
-                                        <code class="layer">Platforms</code>, <code class="layer">Languages</code>, and
-                                        <code class="layer">Systems</code>. In the following, we denote with "solver" a logic-based
-                                        system that is meant to be used by external application with the help of EmbASP.
-                                    </p>
+                                <h4>Core Module</h4>
+                                <p>The <code class="layer">Core</code> module defines the basic components of the Framework.</p>
 
-                                    <h4>Core Module</h4>
-                                    <p>The <code class="layer">Core</code> module defines the basic components of the Framework.</p>
+                                <p>
+                                    The <code>Handler</code> component mediates the communication between the Framework and
+                                    the user that can provide it with the input program(s) via the component <code>InputProgram</code>,
+                                    along with any desired solver's option(s) via the component <code>OptionDescriptor</code>.
+                                    A <code>Service</code> component is meant for managing the chosen solver executions.
 
-                                    <p>
-                                        The <code>Handler</code> component mediates the communication between the Framework
-                                        and the user that can provide it with the input program(s) via the component <code>InputProgram</code>,
-                                        along with any desired solver's option(s) via the component <code>OptionDescriptor</code>.
-                                        A <code>Service</code> component is meant for managing the chosen solver executions.
+                                </p>
 
-                                    </p>
-
-                                    <p>
-                                        Two different execution modes can be made available: synchronous or asynchronous. While in the synchronous mode any call
-                                        to the execution of the solver is <em>blocking</em>                                        (i.e., the caller waits until the reasoning task is completed), in asynchronous mode
-                                        the call is non-blocking: a <code>Callback</code> component notifies the caller once
-                                        the reasoning task is completed. The result of the execution (i.e., the output of
-                                        the logic system) is handled by the <code>Output</code> component, in both modes.</p>
+                                <p>
+                                    Two different execution modes can be made available: synchronous or asynchronous. While in the synchronous mode any call
+                                    to the execution of the solver is <em>blocking</em>                                    (i.e., the caller waits until the reasoning task is completed), in asynchronous mode
+                                    the call is non-blocking: a <code>Callback</code> component notifies the caller once
+                                    the reasoning task is completed. The result of the execution (i.e., the output of the
+                                    logic system) is handled by the <code>Output</code> component, in both modes.</p>
 
 
-                                    <h4>Platforms Module</h4>
+                                <h4>Platforms Module</h4>
 
-                                    <p>
-                                        The <code class="layer">Platforms</code> module is meant for containing what is platform-dependent;
-                                        in particular, the <code>Handler</code> and <code>Service</code> components from
-                                        the <code class="layer">Core</code> module that should be adapted according to the
-                                        platform at hand, since they take care of practically launching solvers.
-                                    </p>
+                                <p>
+                                    The <code class="layer">Platforms</code> module is meant for containing what is platform-dependent;
+                                    in particular, the <code>Handler</code> and <code>Service</code> components from the
+                                    <code class="layer">Core</code> module that should be adapted according to the platform
+                                    at hand, since they take care of practically launching solvers.
+                                </p>
 
-                                    <h4>Languages Module</h4>
+                                <h4>Languages Module</h4>
 
-                                    <p>
-                                        The <code class="layer">Languages</code> module defines specific facilities for each
-                                        supported logic language.
-                                    </p>
+                                <p>
+                                    The <code class="layer">Languages</code> module defines specific facilities for each
+                                    supported logic language.
+                                </p>
 
-                                    <p>
-                                        The generic <code>Mapper</code> component is conceived as an utility for managing
-                                        input and output via objects, if the programming language at hand permits it.
-                                    </p>
+                                <p>
+                                    The generic <code>Mapper</code> component is conceived as an utility for managing input
+                                    and output via objects, if the programming language at hand permits it.
+                                </p>
 
-                                    <p>
-                                        The sub-module ASP comprises components such as <code>ASPInputProgram</code> that
-                                        adapts <code>InputProgram</code> to the ASP case, while
-                                        <code>AnswerSet</code> and <code>AnswerSets</code> represent the <code>Output</code>                                        for ASP. Moreover the <code>ASPMapper</code> allow the management of ASP input facts
-                                        and answer sets via objects.
-                                    </p>
+                                <p>
+                                    The sub-module ASP comprises components such as <code>ASPInputProgram</code> that adapts
+                                    <code>InputProgram</code> to the ASP case, while
+                                    <code>AnswerSet</code> and <code>AnswerSets</code> represent the <code>Output</code>                                    for ASP. Moreover the <code>ASPMapper</code> allow the management of ASP input facts
+                                    and answer sets via objects.
+                                </p>
 
-                                    <p>
-                                        Similarly, the sub-module PDDL includes <code>PDDLInputProgram</code>, <code>Action</code>,
-                                        <code>Plan</code> and <code>PDDLMapper</code>.
-                                    </p>
+                                <p>
+                                    Similarly, the sub-module PDDL includes <code>PDDLInputProgram</code>, <code>Action</code>,
+                                    <code>Plan</code> and <code>PDDLMapper</code>.
+                                </p>
 
-                                    <h4>Systems Module</h4>
-                                    <p>
-                                        The <code class="layer">Systems</code> module defines what is system-dependent; in
-                                        particular, the <code>InputProgram</code>, <code>Output</code> and <code>OptionDescriptor</code>                                        components from the <code class="layer">Core</code> module should be adapted in order
-                                        to effectively interact with the solver at hand.
-                                    </p>
+                                <h4>Systems Module</h4>
+                                <p>
+                                    The <code class="layer">Systems</code> module defines what is system-dependent; in particular,
+                                    the <code>InputProgram</code>, <code>Output</code> and <code>OptionDescriptor</code>                                    components from the <code class="layer">Core</code> module should be adapted in order
+                                    to effectively interact with the solver at hand.
+                                </p>
 
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -521,120 +518,118 @@
                                     The following figure provides some details about classes and interfaces of the implementation.
                                 </p>
 
-                                <figure>
+                                <figure style="padding-bottom: 1em">
                                     <img class="img-responsive center-block" src="img/class_diagram_v3.png" alt="Abstract Architecture">
                                     <figcaption class="text-center">
                                         Simplified class diagram of the provided Java implementation of EmbASP.
                                     </figcaption>
                                 </figure>
 
-                                <div style="padding-top: 1em">
+                                <h4>Core module implementation</h4>
+                                <p>
+                                    Each component in the <code class="layer">Core</code> module has been implemented by
+                                    means of an homonymous class or interface.
+                                </p>
+                                <p>
+                                    In particular, the <code>Handler</code> class collects <code>InputProgram</code> and
+                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                </p>
+                                <p>
+                                    For what the asynchronous mode is concerned, the class <code>Service</code> depends from
+                                    the interface <code>Callback</code>, since once the reasoning service has terminated,
+                                    the result of the computation is returned back via a class <code>Callback</code>.
+                                </p>
 
-                                    <h4>Core module implementation</h4>
-                                    <p>
-                                        Each component in the <code class="layer">Core</code> module has been implemented
-                                        by means of an homonymous class or interface.
-                                    </p>
-                                    <p>
-                                        In particular, the <code>Handler</code> class collects <code>InputProgram</code>                                        and <code>OptionDescriptor</code> objects communicated by the user.
-                                    </p>
-                                    <p>
-                                        For what the asynchronous mode is concerned, the class <code>Service</code> depends
-                                        from the interface <code>Callback</code>, since once the reasoning service has terminated,
-                                        the result of the computation is returned back via a class <code>Callback</code>.
-                                    </p>
+                                <h4>Platforms module implementation</h4>
+                                <p>
+                                    In order to support a new platform, the <code>Handler</code> and <code>Service</code>                                    components must be adapted.
+                                </p>
+                                <p>
+                                    As for the Android platform, we developed an <code>AndroidHandler</code> that handles
+                                    the execution of an <code>AndroidService</code>, which provides facilities to manage
+                                    the execution of an ASP reasoner on the Android platform.
+                                </p>
+                                <p>
+                                    Similarly, for the desktop platform we developed a <code>DesktopHandler</code> and a
+                                    <code>DesktopService</code>, which generalizes the usage of an ASP reasoner on the desktop
+                                    platform, allowing both synchronous and asynchronous execution modes.
+                                </p>
 
-                                    <h4>Platforms module implementation</h4>
-                                    <p>
-                                        In order to support a new platform, the <code>Handler</code> and <code>Service</code>                                        components must be adapted.
-                                    </p>
-                                    <p>
-                                        As for the Android platform, we developed an <code>AndroidHandler</code> that handles
-                                        the execution of an <code>AndroidService</code>, which provides facilities to manage
-                                        the execution of an ASP reasoner on the Android platform.
-                                    </p>
-                                    <p>
-                                        Similarly, for the desktop platform we developed a <code>DesktopHandler</code> and
-                                        a <code>DesktopService</code>, which generalizes the usage of an ASP reasoner on
-                                        the desktop platform, allowing both synchronous and asynchronous execution modes.
-                                    </p>
+                                <h4>Languages module implementation</h4>
+                                <p>
+                                    This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+                                </p>
+                                <p>
+                                    The <code>Mapper</code> component of the <code class="layer">Languages</code> module
+                                    is implemented via a <code>Mapper</code> class, that allows to translate input and output
+                                    into Java objects. Such translations are guided by <a href="https://docs.oracle.com/javase/tutorial/java/annotations">Java Annotations</a>,
+                                    a form of metadata that mark Java code and provide information that is not part of the
+                                    program itself: they have no direct effect on the operation of the code they annotate.
+                                </p>
+                                <p>
+                                    In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two
+                                    custom annotations, defined according to the following syntax:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code>@Predicate (string_name)</code>: the target must be a class, and defines the
+                                        predicate name the class is mapped to;
+                                    </li>
+                                    <li>
+                                        <code>@Term (integer_position)</code>: the target must be a field of a class annotated
+                                        via <code>@Predicate</code>, and defines the term (and its position) in the atom
+                                        the field is mapped to.
+                                    </li>
+                                </ul>
+                                <p>
+                                    By means of the Java Reflection mechanisms, annotations are examined at runtime, and taken into account to properly define
+                                    the translation.
+                                </p>
+                                <p>
+                                    If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
+                                </p>
+                                <p>
+                                    In addition to the <code>Mapper</code>, this module features two sub-modules which are
+                                    more strictly related to ASP and PDDL.
+                                </p>
 
-                                    <h4>Languages module implementation</h4>
-                                    <p>
-                                        This module includes specific classes for the management of input and output to ASP and PDDL solvers.
-                                    </p>
-                                    <p>
-                                        The <code>Mapper</code> component of the <code class="layer">Languages</code> module
-                                        is implemented via a <code>Mapper</code> class, that allows to translate input and
-                                        output into Java objects. Such translations are guided by <a href="https://docs.oracle.com/javase/tutorial/java/annotations">Java Annotations</a>,
-                                        a form of metadata that mark Java code and provide information that is not part of
-                                        the program itself: they have no direct effect on the operation of the code they
-                                        annotate.
-                                    </p>
-                                    <p>
-                                        In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two
-                                        custom annotations, defined according to the following syntax:
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            <code>@Predicate (string_name)</code>: the target must be a class, and defines
-                                            the predicate name the class is mapped to;
-                                        </li>
-                                        <li>
-                                            <code>@Term (integer_position)</code>: the target must be a field of a class
-                                            annotated via <code>@Predicate</code>, and defines the term (and its position)
-                                            in the ASP atom the field is mapped to.
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        By means of the Java Reflection mechanisms, annotations are examined at runtime, and taken into account to properly define
-                                        the translation.
-                                    </p>
-                                    <p>
-                                        If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
-                                    </p>
-                                    <p>
-                                        In addition to the <code>Mapper</code>, this module features two sub-modules which
-                                        are more strictly related to ASP and PDDL.
-                                    </p>
+                                <h4>Systems Module Implementation</h4>
+                                <p>
+                                    The classes <code>DLVAnswerSets</code>, <code>ClingoAnswerSets</code>, <code>DLV2AnswerSets</code>                                    and <code>SPDPlan</code> implement specific extensions of the <code>AnswerSets</code>                                    or <code>Plan</code> classes, in charge of manipulating the output of the respective
+                                    solvers.
+                                </p>
+                                <p>
+                                    Moreover, this module can contain classes extending <code>OptionDescriptor</code> to
+                                    implement specific options of the solver at hand.
+                                </p>
 
-                                    <h4>Systems Module Implementation</h4>
+                            </div>
+
+                            <div class="panel panel-primary" id="javadoc">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Javadoc</h3>
+                                </div>
+                                <div class="panel-body">
                                     <p>
-                                        The classes <code>DLVAnswerSets</code>, <code>ClingoAnswerSets</code>, <code>DLV2AnswerSets</code>                                        and <code>SPDPlan</code> implement specific extensions of the <code>AnswerSets</code>                                        or <code>Plan</code> classes, in charge of manipulating the output of the respective
-                                        solvers.
+                                        The Javadoc documentation is available <a href="javadoc/index.html">here</a>.
                                     </p>
                                     <p>
-                                        Moreover, this module can contain classes extending <code>OptionDescriptor</code>                                        to implement specific options of the solver at hand.
+                                        For an offline usage, you can download it <a href="javadoc-embasp.zip">here</a>.
                                     </p>
 
                                 </div>
                             </div>
+
+                            <div class="panel panel-primary" id="class-diagram">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Class Diagram</h3>
+                                </div>
+                                <div class="panel-body">
+                                    A complete UML Class Diagram is available <a href="img/complete_class_diagram_fixed.png">here</a>.
+                                </div>
+                            </div>
+
                         </div>
-
-                        <div class="panel panel-primary" id="javadoc">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Javadoc</h3>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    The Javadoc documentation is available <a href="javadoc/index.html">here</a>.
-                                </p>
-                                <p>
-                                    For an offline usage, you can download it <a href="javadoc-embasp.zip">here</a>.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <div class="panel panel-primary" id="class-diagram">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Class Diagram</h3>
-                            </div>
-                            <div class="panel-body">
-                                A complete UML Class Diagram is available <a href="img/complete_class_diagram_fixed.png">here</a>.
-                            </div>
-                        </div>
-
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade" id="android_example">
@@ -682,9 +677,10 @@
                                 <h3 class="panel-title">Using EmbASP</h3>
                             </div>
                             <div class="panel-body">
-                                <p>In the following, we describe an the actual usage of the framework by means of a running
-                                    example; as a use case, we will develop a simple Android application for solving Sudoku
-                                    puzzles. Hereafter, we explain the crucial stepts, while
+                                <p>
+                                    In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                    develop a simple Android application for solving Sudoku puzzles. Hereafter, we explain
+                                    the crucial stepts, while
                                     <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
                                 </p>
                                 <p>
@@ -798,7 +794,8 @@
                                     asks for the solution. It is firstly created an <i>InputProgram</i> object that is filled
                                     with <i>Cell</i> objects representing the initial schema, which is then provided to the
                                     handler; then it is provided with the sudoku encoding. It could be loaded, for instance,
-                                    by means of an utility function that retrieves it from the <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>,
+                                    by means of an utility function that retrieves it from the
+                                    <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>,
                                     which, within Android applications, is typically meant for containing images, sounds,
                                     files and resources in general.
                                 </p>
@@ -836,8 +833,152 @@
                         </div>
 
                     </div>
+
                     <div role="tabpanel" class="tab-pane fade" id="desktop_example">
-                        Work in progress
+                        <div class="panel panel-primary" id="getting-started">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Getting Started</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any
+                                    Java project.
+                                </p>
+                                <!--<p>
+                                    It's worth noticing that in order to use the ASP solvers (DLV, clingo and DLV2) on a Desktop platform, the binaries for the
+                                    specific machine must be download in advance.
+                                </p>-->
+                            </div>
+                        </div>
+
+                        <div class="panel panel-primary" id="setting-up">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Using EmbASP</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                    develop a simple Desktop application to solve the blocks-world problem.
+                                    <!-- Hereafter, we explain the crucial stepts, while
+                                    <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.-->
+                                </p>
+
+
+                                <figure style="padding-bottom: 1em">
+                                    <img class="img-responsive center-block" src="img/blocks-world.png" alt="Abstract Architecture">
+                                    <figcaption class="text-center">
+                                        Sample configuration for blocks-world.
+                                    </figcaption>
+                                </figure>
+
+
+                                <p>
+                                    We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Java objects.
+                                    To this purpose, the following classes are intended to represent possible actions that
+                                    a blocks-world solution plan can feature:
+                                </p>
+                                <pre><code class="language-java">
+    @Predicate("pick-up")
+    public class PickUp {
+
+        @Term(0)
+        private String block;
+
+        [...]
+    }
+                </code></pre>
+                                <pre><code class="language-java">
+    @Predicate("put-down")
+    public class PutDown {
+
+        @Term(0)
+        private String block;
+
+        [...]
+    }
+                </code></pre>
+                                <pre><code class="language-java">
+    @Predicate("stack")
+    public class Stack {
+
+        @Term(0)
+        private String block1;
+
+        @Term(1)
+        private String block2;
+        
+        [...]
+    }
+                </code></pre>
+                                <pre><code class="language-java">
+    @Predicate("unstack")
+    public class Unstack {
+
+        @Term(0)
+        private String block1;
+
+        @Term(1)
+        private String block2;
+        
+        [...]
+    }         
+                </code></pre>
+                                <p>
+                                    At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
+                                    deploying our application:
+                                </p>
+                                <pre><code class="language-java">
+    public class Blocksworld {
+        
+        private static String domainFileName = "domain.pddl";
+        private static String problemFileName = "p01.pddl";;
+
+        public static void main(String[] args) {
+            Handler handler = new DesktopHandler(new SPDDesktopService());
+            
+            final InputProgram inputProgramDomain = new PDDLInputProgram(PDDLProgramType.DOMAIN);
+            inputProgramDomain.addFilesPath(domainFileName);
+
+            final InputProgram inputProgramProblem = new PDDLInputProgram(PDDLProgramType.PROBLEM);
+            inputProgramProblem.addFilesPath(problemFileName);
+
+            handler.addProgram(inputProgramDomain);
+            handler.addProgram(inputProgramProblem);
+
+            try {
+
+                PDDLMapper.getInstance().registerClass(PickUp.class);
+                PDDLMapper.getInstance().registerClass(PutDown.class);
+                PDDLMapper.getInstance().registerClass(Stack.class);
+                PDDLMapper.getInstance().registerClass(Unstack.class);
+
+                Plan plan = (Plan)(handler.startSync());
+                
+                for (final Object obj : plan.getActionsObjects())
+                        //Manage objects as needed
+                        
+            } catch (Exception e) {
+                // Handle Exception
+            }
+        }
+    }
+            </code></pre>
+                                <p>
+                                    The class contains an <i>Handler</i> instance as field, that is initialized with a <i>DesktopHandler</i>                                    using the required parameter <i>SPDDesktopService</i>.
+                                </p>
+                                <p>
+                                    Then it's set-up the input to the solver; since \PDDL requires separate definitions for domain and problem, two <i>PDDLInputProgram</i>                                    are created and then given to the handler.
+                                </p>
+                                <p>
+                                    The next lines inform the <i>PDDLMapper</i> about what classes are intended to map the
+                                    output actions.
+                                </p>
+                                <p>
+                                    Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
