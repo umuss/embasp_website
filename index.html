@@ -68,7 +68,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="">
                     <img src="img/EmbASP_Logo.png" alt="EmbASP logo" height="25" />
                 </a>
                 <p class="navbar-text">
@@ -110,8 +110,8 @@
 
             <div class="jumbotron">
                 <div class="row">
-                    <div class="col-xs-4"><img src="img/EmbASP_Logo.png" alt="EmbASP logo" height="150" /></div>
-                    <p class="col-xs-8">
+                    <div class="col-xs-12 col-sm-4"><img class="center-block" src="img/EmbASP_Logo.png" alt="EmbASP logo" height="150" /></div>
+                    <p class="col-xs-12 col-sm-8" style="padding-top: 15px">
                         <strong><em>EmbASP</em></strong> is a framework for the integration (embedding) of Logic Programming
                         in external systems for generic applications.<br /> It helps developers at designing and implementing
                         complex reasoning tasks by means of solvers on different platforms.
@@ -169,7 +169,7 @@
             <div class="col-xs-12">
                 <h2 id="Contacts">Contacts</h2>
                 <div>
-                    For further information, contact <a href="mailto:embasp@mat.unical.it">embasp@mat.unical.it</a>.
+                    For further information, contact <a href="mailto:embasp@mat.unical.it">embasp@mat.unical.it</a>
                 </div>
             </div>
         </div>
@@ -178,7 +178,7 @@
                 <h2 id="License">License</h2>
                 <div>
                     <p>
-                        The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>.
+                        The framework is released under <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>
                     </p>
                     <p> The framework library for DLV on Android embeds the DLV system itself, which is free for academic and
                         non-commercial educational use, as well as for use by non-profit organizations. For further information
@@ -196,8 +196,8 @@
                     <div>You can download their last stable versions <a href="https://github.com/DeMaCS-UNICAL/EmbASP/releases">here</a>.</div>
                 </div>
                 <div>
-                    <h3>Development Version <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40" /></h3> You can
-                    find the current development version <a href="https://github.com/DeMaCS-UNICAL/EmbASP">here</a>.
+                    <h3>Development Version</h3> You can find the current development version <a href="https://github.com/DeMaCS-UNICAL/EmbASP">on GitHub
+                    <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40" /></a>
                 </div>
             </div>
         </div>
@@ -789,7 +789,7 @@
                                     The class contains an <i>Handler</i> instance as field, that is initialized with a <i>DesktopHandler</i>                                    using the required parameter <i>SPDDesktopService</i>.
                                 </p>
                                 <p>
-                                    Then it's set-up the input to the solver; since \PDDL requires separate definitions for domain and problem, two <i>PDDLInputProgram</i>                                    are created and then given to the handler.
+                                    Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two <i>PDDLInputProgram</i>                                    are created and then given to the handler.
                                 </p>
                                 <p>
                                     The next lines inform the <i>PDDLMapper</i> about what classes are intended to map the
