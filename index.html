@@ -500,9 +500,12 @@
                             <div class="panel-body">
                                 <p>
                                     In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
-                                    develop a simple Android application for solving Sudoku puzzles. Hereafter, we explain
-                                    the crucial stepts, while
-                                    <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.
+                                    develop a simple Android application for solving Sudoku puzzles.
+                                </p>
+                                <p>
+                                    The complete code of this example is freely available <a href="files/EmbASP_Android_Sudoku.zip">here</a>.
+                                    Please note that the zip file contains an Android Studio (version 2.3) project and uses
+                                    the version 3.1.0 of EmbASP.
                                 </p>
                                 <p>
                                     The framework features a annotation-guided mapping, offered by the <i>ASPMapper</i> component,
@@ -514,9 +517,7 @@
                                 <p>
                                     Let us think of a user that designed (or has been given) a proper logic program <i>P</i>                                    to solve a sudoku puzzle and has also an initial schema. We assume that the initial schema
                                     is well-formed i.e. the complete schema solution exists and is unique. A possible program
-                                    <i>P</i> is embedded in the complete example (<a href="https://github.com/dave90/EmbASPSudokuExample">here</a>),
-                                    that, coupled with a set of facts <i>F</i> representing the given initial schema, allows
-                                    to obtain the only admissible solution.
+                                    <i>P</i> is embedded in the complete example, that, coupled with a set of facts <i>F</i>                                    representing the given initial schema, allows to obtain the only admissible solution.
                                 </p>
                                 <p>
                                     By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent,
@@ -667,7 +668,7 @@
                                 </p>
                                 <p>
                                     The SPD solver is invoked via an HTTP connection using JSON files as data interchange format. In order to manage them, the
-                                    framework needs the <a href="https://cliftonlabs.github.io/json-simple">JSON simple library</a>                                    (you can download the JAR and include directly in your project or you can use Gradle
+                                    framework needs the <a href="https://cliftonlabs.github.io/json-simple">json-simple library</a>                                    (you can download the JAR and include directly in your project or you can use Gradle
                                     or Maven)
                                 </p>
                                 <!--<p>
@@ -685,8 +686,11 @@
                                 <p>
                                     In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
                                     develop a simple Desktop application to solve the blocks-world problem.
-                                    <!-- Hereafter, we explain the crucial stepts, while
-                                    <b>the complete code is freely available <a href="https://github.com/dave90/EmbASPSudokuExample">here</a></b>.-->
+                                </p>
+                                <p>
+                                    The complete code of this example is freely available <a href="files/EmbASP_Desktop_Blocksworld.zip">here</a>.
+                                    Please note that the zip file contains an Eclipse (Neon) project and uses the version
+                                    3.1.0 of EmbASP.
                                 </p>
 
 
