@@ -394,13 +394,14 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <code>@Predicate (string_name)</code>: the target must be a class, and defines the
-                                        predicate name the class is mapped to;
+                                        <code>@Id (string_name)</code>: the target must be a class, and defines the predicate
+                                        name (in the ASP case) and the action name (in the PDDL case) the class is mapped
+                                        to;
                                     </li>
                                     <li>
-                                        <code>@Term (integer_position)</code>: the target must be a field of a class annotated
-                                        via <code>@Predicate</code>, and defines the term (and its position) in the atom
-                                        the field is mapped to.
+                                        <code>@Param (integer_position)</code>: the target must be a field of a class annotated
+                                        via <code>@Id</code>, and defines the term (and its position) in the atom (in the
+                                        ASP case) and in the action (in the PDDL case) the field is mapped to.
                                     </li>
                                 </ul>
                                 <p>
@@ -525,16 +526,16 @@
                                     the single cell of the sudoku schema, as follows:
                                 </p>
                                 <pre><code class="language-java">
-    @Predicate("cell")
+    @Id("cell")
     public class Cell {
     
-        @Term(0)
+        @Param(0)
         private int row;
         
-        @Term(1)
+        @Param(1)
         private int column;
         
-        @Term(2)
+        @Param(2)
         private int value;
         
         [...]
@@ -545,13 +546,13 @@
                                     It is worth noticing how the class has been annotated by two custom annotations, defined according to the following syntax:
                                     <ul>
                                         <li>
-                                            <i>@Predicate(string_name)</i>: the target must be a class, and defines the predicate
+                                            <i>@Id(string_name)</i>: the target must be a class, and defines the predicate
                                             name the class is mapped to;
                                         </li>
                                         <li>
-                                            <i>@Term(integer_position)</i>: the target must be a field of a class annotated
-                                            via @Predicate, and defines the term (and its position) in the ASP atom the field
-                                            is mapped to.
+                                            <i>@Param(integer_position)</i>: the target must be a field of a class annotated
+                                            via @Id, and defines the term (and its position) in the ASP atom the field is
+                                            mapped to.
                                         </li>
                                     </ul>
                                     Thanks to these annotations the <i>ASPMapper</i> class will be able to map <i>Cell</i>                                    objects into strings properly recognizable from the ASP solver as logic facts of the
@@ -708,46 +709,46 @@
                                     a blocks-world solution plan can feature:
                                 </p>
                                 <pre><code class="language-java">
-    @Predicate("pick-up")
+    @Id("pick-up")
     public class PickUp {
 
-        @Term(0)
+        @Param(0)
         private String block;
 
         [...]
     }
                 </code></pre>
                                 <pre><code class="language-java">
-    @Predicate("put-down")
+    @Id("put-down")
     public class PutDown {
 
-        @Term(0)
+        @Param(0)
         private String block;
 
         [...]
     }
                 </code></pre>
                                 <pre><code class="language-java">
-    @Predicate("stack")
+    @Id("stack")
     public class Stack {
 
-        @Term(0)
+        @Param(0)
         private String block1;
 
-        @Term(1)
+        @Param(1)
         private String block2;
         
         [...]
     }
                 </code></pre>
                                 <pre><code class="language-java">
-    @Predicate("unstack")
+    @Id("unstack")
     public class Unstack {
 
-        @Term(0)
+        @Param(0)
         private String block1;
 
-        @Term(1)
+        @Param(1)
         private String block2;
         
         [...]
