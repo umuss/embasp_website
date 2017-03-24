@@ -870,79 +870,150 @@
                 <h2 id="Applications">Applications Showcase</h2>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-primary">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
-                                    aria-controls="collapseOne">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
                                     <em>DLVfit</em>
-                                </a>
-                            </h4>
-                        </div>
+                                </h4>
+                            </div>
+                        </a>
                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                                <p><a href="https://github.com/brainatwork/DLVfit"><em>DLVfit</em></a> is a health and fitness
-                                    app that monitors the user activity during the day and suggests some workout plans that
-                                    depend on her age, weight, gender and goals. The app periodically stores some information
-                                    about the user activities (running, walking, etc.) and infers the current amount of calories
-                                    burned so far. When the user asks for a workout plan, <em>DLVfit</em> proposes a set
-                                    of exercises that would allow the user to reach her daily goal, taking into account also
-                                    to her preferences. The suggested workout plans are computed in the background by DLV
-                                    via EmbASP. </p>
+                            <div class="panel-body row">
+                                <div class="col-xs-12 col-sm-7">
+                                    <p><a href="https://github.com/brainatwork/DLVfit"><em>DLVfit</em></a> is a health and fitness
+                                        app that monitors the user activity during the day and suggests some workout plans
+                                        that depend on her age, weight, gender and goals. The app periodically stores some
+                                        information about the user activities (running, walking, etc.) and infers the current
+                                        amount of calories burned so far. When the user asks for a workout plan, <em>DLVfit</em>                                        proposes a set of exercises that would allow the user to reach her daily goal, taking
+                                        into account also to her preferences. The suggested workout plans are computed in
+                                        the background by DLV via EmbASP. </p>
 
-                                <p>The ASP program used within <em>DLVfit</em> can be found in the repository. Basically, the
-                                    program guesses for possible fitness exercises to do in order to burn the remaing calories.
-                                    Each answer set represent a possible workout plan, in which is ensured that the user's
-                                    requirements about the calories to burn and the time to spend in the workout are respected.
-                                    Moreover, also user's preferences are taken into account by means of weak constraints.</p>
+                                    <p>The ASP program used within <em>DLVfit</em> can be found in the repository. Basically,
+                                        the program guesses for possible fitness exercises to do in order to burn the remaing
+                                        calories. Each answer set represent a possible workout plan, in which is ensured
+                                        that the user's requirements about the calories to burn and the time to spend in
+                                        the workout are respected. Moreover, also user's preferences are taken into account
+                                        by means of weak constraints.</p>
 
-                                <h5><b>Release</b></h5>
-                                <p>You can download the latest version of <em>DLVfit</em> <a href="https://github.com/brainatwork/DLVfit">here</a>.</p>
+                                    <h5><b>Release</b></h5>
+                                    <p>You can download the latest version of <em>DLVfit</em> <a href="https://github.com/brainatwork/DLVfit">here</a>.</p>
 
-                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-                                    aria-controls="collapseExample">
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
                                         Supported versions of Android
                                     </button>
-                                <div class="collapse" id="collapseExample">
-                                    <div class="well">
-                                        <p>The app should work on most devices equipped with Android 4.x/5.x.<br /> The list
-                                            of compatible devices include (but it is not limited to):</p>
-                                        <ul>
-                                            <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
-                                            <li>HTC One - Android 4.3, API 18</li>
-                                            <li>HTC One XL - Android 4.2.2, API 17</li>
-                                            <li>HTC One XL - Android 4.1.1, API 16</li>
-                                            <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
-                                            <li>Google Nexus 7 - Android 4.4.4, API 19</li>
-                                            <li>Samsung S4 - Android 4.4.4, API 19</li>
-                                            <li>Samnsung S3 - Android 4.3, API 18</li>
-                                            <li>Sony Xperia S - Android 4.1.1, API 16</li>
-                                            <li>Google Nexus 7 - Android 4.3, API 18</li>
-                                            <li>Sony Xperia Go - Android 4.0</li>
-                                            <li>Sony Xperia Z3 - Android 5.0</li>
-                                            <li>Sony Xperia Z3 - Android 5.1</li>
-                                            <li>Galaxy S6 - Android 5.0</li>
-                                            <li>Nexus 6 - Android 5.0</li>
-                                        </ul>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="well">
+                                            <p>The app should work on most devices equipped with Android 4.x/5.x.<br /> The
+                                                list of compatible devices include (but it is not limited to):</p>
+                                            <ul>
+                                                <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
+                                                <li>HTC One - Android 4.3, API 18</li>
+                                                <li>HTC One XL - Android 4.2.2, API 17</li>
+                                                <li>HTC One XL - Android 4.1.1, API 16</li>
+                                                <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
+                                                <li>Google Nexus 7 - Android 4.4.4, API 19</li>
+                                                <li>Samsung S4 - Android 4.4.4, API 19</li>
+                                                <li>Samnsung S3 - Android 4.3, API 18</li>
+                                                <li>Sony Xperia S - Android 4.1.1, API 16</li>
+                                                <li>Google Nexus 7 - Android 4.3, API 18</li>
+                                                <li>Sony Xperia Go - Android 4.0</li>
+                                                <li>Sony Xperia Z3 - Android 5.0</li>
+                                                <li>Sony Xperia Z3 - Android 5.1</li>
+                                                <li>Galaxy S6 - Android 5.0</li>
+                                                <li>Nexus 6 - Android 5.0</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <h5><b>Developers</b></h5>
+                                    <ul>
+                                        <li>Dario Campisano</li>
+                                        <li>The EmbASP Team</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-5">
+                                    <div id="carousel-DLVfit" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-DLVfit" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="1"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="2"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="3"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="4"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="5"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="6"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="7"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="8"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="9"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="10"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="img/screenshots/DLVfit/Screenshot(1).png" alt="Screenshot(1)" />
+                                                <!--<div class="carousel-caption">
+                                            <h3>Welcome</h3>
+                                            <p>...</p>
+                                        </div>-->
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(2).png" alt="Screenshot(2)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(3).png" alt="Screenshot(3)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(4).png" alt="Screenshot(4)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(5).png" alt="Screenshot(5)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(6).png" alt="Screenshot(6)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(7).png" alt="Screenshot(7)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(8).png" alt="Screenshot(8)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(9).png" alt="Screenshot(9)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(10).png" alt="Screenshot(10)" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVfit/Screenshot(11).png" alt="Screenshot(11)" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#carousel-DLVfit" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-DLVfit" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
                                     </div>
                                 </div>
-
-                                <h5><b>Developers</b></h5>
-                                <ul>
-                                    <li>Dario Campisano</li>
-                                    <li>The EmbASP Team</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-primary">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
                                     <em>GuessAndCheckers</em>
-                                </a>
-                            </h4>
-                        </div>
+                                </h4>
+                            </div>
+                        </a>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
                                 <p><a href="https://github.com/vincenzoarieta93/GuessAndCheckers"><em>GuessAndCheckers</em></a>                                    is a native mobile application that works as an helper for users that play "live" games
@@ -967,54 +1038,210 @@
                                     <li>Vincenzo Arieta</li>
                                     <li>The EmbASP Team</li>
                                 </ul>
+                                <div id="carousel-GuessAndCheckers" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="1"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="2"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="3"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="4"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="5"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="6"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="7"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="8"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="9"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="10"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="11"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="12"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="13"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="14"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="15"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="16"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="17"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="18"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="19"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="20"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="21"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="img/screenshots/GuessAndCheckers/welcome_activity.png" alt="Welcome" />
+                                            <!--<div class="carousel-caption">
+                                            <h3>Welcome</h3>
+                                            <p>...</p>
+                                        </div>-->
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_1.png" alt="Tutorial slide 1" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_2.png" alt="Tutorial slide 2" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_3.png" alt="Tutorial slide 3" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_4.png" alt="Tutorial slide 4" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_5.png" alt="Tutorial slide 5" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/scelta_mossa.png" alt="scelta mossa" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/solving_phase_1.png" alt="solving phase 1" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/solving_phase_2.png" alt="solving phase 2" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/solving_phase_3.png" alt="solving phase 3" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/textual_hint.png" alt="textual hint" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/scelta_mossa_sol.png" alt="scelta mossa sol" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/obbligo_presa.png" alt="obbligo presa" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti.png" alt="presa avente pezzi forti" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti_sol.png" alt="presa avente pezzi forti sol" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_con_il_piu_forte.png" alt="presa con il piu forte" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_forte.png" alt="presa con piu forte" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima.png" alt=presa_con_piu_forte_prima "" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima_sol.png" alt=presa_con_piu_forte_prima_sol "" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi.png" alt="presa con piu pezzi" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi_sol.png" alt="presa con piu pezzi sol" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/screenshots/GuessAndCheckers/embasp_ack.png" alt="embasp ack" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-GuessAndCheckers" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-GuessAndCheckers" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="panel panel-primary">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
                                     <em>DLVEdu</em>
-                                </a>
-                            </h4>
-                        </div>
+                                </h4>
+                            </div>
+                        </a>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body">
-                                <p><em>DLVEdu</em> is an educational Android App for children, that integrates well-established
-                                    mobile technologies, such as voice or drawn text recognition, with the modeling capabilities
-                                    of ASP. In particular, it is able to guide the child throughout the learning tasks, by
-                                    proposing a series of educational games, and developing a personalized educational path.
-                                    The games are divided into four macro-areas: Logic, Numeric-Mathematical, Memory, and
-                                    Verbal Language. The usage of ASP allows the application to adapt to the game experiences
-                                    fulfilled by the user, her formative gap, and the obtained improvements.
-                                </p>
+                            <div class="panel-body row">
+                                <div class="col-xs-12 col-sm-7">
+                                    <p><em>DLVEdu</em> is an educational Android App for children, that integrates well-established
+                                        mobile technologies, such as voice or drawn text recognition, with the modeling capabilities
+                                        of ASP. In particular, it is able to guide the child throughout the learning tasks,
+                                        by proposing a series of educational games, and developing a personalized educational
+                                        path. The games are divided into four macro-areas: Logic, Numeric-Mathematical, Memory,
+                                        and Verbal Language. The usage of ASP allows the application to adapt to the game
+                                        experiences fulfilled by the user, her formative gap, and the obtained improvements.
+                                    </p>
 
-                                <p>
-                                    The application continuously profiles the user by recording mistakes and successes, and dynamically builds and updates a
-                                    customized educational path along the different games. The application features a "Parent
-                                    Area", that allows parents to monitor child's achievements and to express some preferences,
-                                    such as explicit filters of some games or educational areas.
-                                </p>
+                                    <p>
+                                        The application continuously profiles the user by recording mistakes and successes, and dynamically builds and updates a
+                                        customized educational path along the different games. The application features a
+                                        "Parent Area", that allows parents to monitor child's achievements and to express
+                                        some preferences, such as explicit filters of some games or educational areas.
+                                    </p>
 
-                                <h5><b>Developers</b></h5>
-                                <ul>
-                                    <li>Mattia Lanzillotta</li>
-                                    <li>Mirko Pontoriero</li>
-                                    <li>The EmbASP Team</li>
-                                </ul>
+                                    <h5><b>Developers</b></h5>
+                                    <ul>
+                                        <li>Mattia Lanzillotta</li>
+                                        <li>Mirko Pontoriero</li>
+                                        <li>The EmbASP Team</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-5">
+                                    <div id="carousel-DLVEdu" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="1"></li>
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="2"></li>
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="3"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <img src="img/screenshots/DLVEdu/home.png" alt="Home" />
+                                                <!--<div class="carousel-caption">
+                                            <h3>Welcome</h3>
+                                            <p>...</p>
+                                        </div>-->
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVEdu/giochi.png" alt="Giochi" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVEdu/sudoku.png" alt="Sudoku" />
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/screenshots/DLVEdu/area genitori.png" alt="Area genitori" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#carousel-DLVEdu" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-DLVEdu" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-primary">
-                        <div class="panel-heading" role="tab" id="headingFour">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
-                                    aria-controls="collapseFour">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
                                     <em>Connect4</em>
-                                </a>
-                            </h4>
-                        </div>
+                                </h4>
+                            </div>
+                        </a>
                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                             <div class="panel-body">
                                 <p>Connect4 is an application that allows a user to play the popular Connect Four game (also
