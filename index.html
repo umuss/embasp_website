@@ -129,12 +129,12 @@
             <div>
                 <p>
                     The framework can be implemented in a object-oriented programming language of choice, easing and guiding the generation of
-                    suitable libraries for the use of specific solvers on particular platforms. We currently provide a Java
-                    implementation and ready-made libraries for the embedding of the ASP (Answer Set Programming) solvers
+                    suitable libraries for the use of specific solvers on selected platforms. We currently provide 2 implementations
+                    (one in <a href="https://www.java.com"><strong>Java</strong></a> and one in <a href="https://www.python.org"><strong>Python</strong></a>)
+                    and ready-made libraries for the embedding of the <em>ASP (Answer Set Programming)</em> solvers
                     <a href="http://www.dlvsystem.com/dlv">DLV</a>, <a href="https://potassco.org/clingo">clingo</a> and
-                    <a href="https://www.mat.unical.it/DLV2">DLV2</a> and the PDDL (Planning Domain Definition Language)
-                    cloud solver <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (SPD) on the Desktop
-                    platform and of DLV and SPD on the Mobile (Android&trade;) one.
+                    <a href="https://www.mat.unical.it/DLV2">DLV2</a> and the <em>PDDL (Planning Domain Definition Language)</em>                    cloud solver <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (SPD) on the Desktop
+                    platform and of DLV and SPD on the Mobile (Android&trade;) one (available only for the Java version).
                 </p>
                 <p>
                     However, the framework has been designed to be easily extensible and adaptable to different solvers and platforms. It is
@@ -146,16 +146,17 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <h2 id="Download">Download</h2>
+                <h2 id="Download">Download <a href="https://github.com/DeMaCS-UNICAL/EmbASP"><img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40" /></a></h2>
                 <div>
                     <h3 id="release">Latest release version</h3>
-                    <div>To use the specialized library on Desktop, a JAR file has been released.</div>
+                    <div>To use the specialized library on Desktop, a JAR file
+                        <!-- and an EGG file have -->
+                        has been released.</div>
                     <div>To use the specialized library on Mobile (Android), an AAR file has been released.</div>
                     <div>You can download their last stable versions <a href="https://github.com/DeMaCS-UNICAL/EmbASP/releases">here</a>.</div>
                 </div>
                 <div>
-                    <h3>Development Version</h3> You can find the current development version <a href="https://github.com/DeMaCS-UNICAL/EmbASP">on GitHub
-                    <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40" /></a>
+                    <h3>Development Version</h3> You can find the current development version <a href="https://github.com/DeMaCS-UNICAL/EmbASP">on GitHub</a>
                 </div>
             </div>
         </div>
@@ -180,7 +181,8 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-justified" role="tablist">
                     <li role="presentation" class="active"><a href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab">Abstract Architecture</a></li>
-                    <li role="presentation"><a href="#implementation" aria-controls="implementation" role="tab" data-toggle="tab">Java implementation</a></li>
+                    <li role="presentation"><a href="#implementation_java" aria-controls="implementation_java" role="tab" data-toggle="tab">Java implementation</a></li>
+                    <li role="presentation"><a href="#implementation_python" aria-controls="implementation_python" role="tab" data-toggle="tab">Python implementation</a></li>
                     <li role="presentation"><a href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab">Example DLV on Android</a></li>
                     <li role="presentation"><a href="#desktop_example" aria-controls="desktop_example" role="tab" data-toggle="tab">Example SPD on Desktop</a></li>
                 </ul>
@@ -284,7 +286,7 @@
                         </div>
                     </div>
 
-                    <div role="tabpanel" class="tab-pane fade" id="implementation">
+                    <div role="tabpanel" class="tab-pane fade" id="implementation_java">
                         <div class="panel panel-primary" id="arch-desc">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Implementation Description</h3>
@@ -412,12 +414,25 @@
                             </div>
                             -->
                     </div>
+                    <div role="tabpanel" class="tab-pane fade" id="implementation_python">
+                        <div class="panel panel-primary" id="arch-desc">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Implementation Description</h3>
+                            </div>
+                            <div class="panel-body">
+                                Work in Progress...
+                            </div>
+                        </div>
+                    </div>
                     <div role="tabpanel" class="tab-pane fade" id="android_example">
                         <div class="panel panel-primary" id="getting-started">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Getting Started</h3>
                             </div>
                             <div class="panel-body">
+                                <mark>This example is available only in Java due to the restrictions of the Android mobile operating
+                                    system.
+                                </mark>
                                 <h4>How to import the framework on Android Studio</h4>
                                 <p>In order to use the framework in your applications you have to import it as module on Android
                                     Studio.
@@ -623,19 +638,28 @@
                                 <h3 class="panel-title">Getting Started</h3>
                             </div>
                             <div class="panel-body">
-                                <p>
-                                    The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any
-                                    Java project.
-                                </p>
-                                <p>
-                                    The SPD solver is invoked via an HTTP connection using JSON files as data interchange format. In order to manage them, the
-                                    framework needs the <a href="https://cliftonlabs.github.io/json-simple">json-simple library</a>                                    (you can download the JAR and include directly in your project or you can use Gradle
-                                    or Maven)
-                                </p>
-                                <!--<p>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <h4>Java version</h4>
+                                        <p>
+                                            The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any
+                                            Java project.
+                                        </p>
+                                        <p>
+                                            The SPD solver is invoked via an HTTP connection using JSON files as data interchange format. In order to manage them, the
+                                            framework needs the <a href="https://cliftonlabs.github.io/json-simple">json-simple library</a>                                            (you can download the JAR and include directly in your project or you can use
+                                            Gradle or Maven)
+                                        </p>
+                                        <!--<p>
                                     It's worth noticing that in order to use the ASP solvers (DLV, clingo and DLV2) on a Desktop platform, the binaries for the
                                     specific machine must be download in advance.
                                 </p>-->
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <h4>Python version</h4>
+                                        Work in progress...
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -668,7 +692,10 @@
                                     To this purpose, the following classes are intended to represent possible actions that
                                     a blocks-world solution plan can feature:
                                 </p>
-                                <pre><code class="language-java">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <h4>Java version</h4>
+                                        <pre><code class="language-java">
     @Id("pick-up")
     public class PickUp {
 
@@ -678,7 +705,7 @@
         [...]
     }
                 </code></pre>
-                                <pre><code class="language-java">
+                                        <pre><code class="language-java">
     @Id("put-down")
     public class PutDown {
 
@@ -688,7 +715,7 @@
         [...]
     }
                 </code></pre>
-                                <pre><code class="language-java">
+                                        <pre><code class="language-java">
     @Id("stack")
     public class Stack {
 
@@ -701,7 +728,7 @@
         [...]
     }
                 </code></pre>
-                                <pre><code class="language-java">
+                                        <pre><code class="language-java">
     @Id("unstack")
     public class Unstack {
 
@@ -714,11 +741,31 @@
         [...]
     }         
                 </code></pre>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <h4>Python version</h4>
+                                        <pre><code class="language-python">
+        Work in progress...
+                </code></pre>
+                                        <pre><code class="language-python">
+        Work in progress...
+                </code></pre>
+                                        <pre><code class="language-python">
+        Work in progress...
+                </code></pre>
+                                        <pre><code class="language-python">
+        Work in progress...
+                </code></pre>
+                                    </div>
+                                </div>
                                 <p>
                                     At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
                                     deploying our application:
                                 </p>
-                                <pre><code class="language-java">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <h4>Java version</h4>
+                                        <pre><code class="language-java">
     public class Blocksworld {
         
         private static String domainFileName = "domain.pddl";
@@ -754,6 +801,14 @@
         }
     }
             </code></pre>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <h4>Python version</h4>
+                                        <pre><code class="language-python">
+        Work in progress...
+                </code></pre>
+                                    </div>
+                                </div>
                                 <p>
                                     The class contains an <i>Handler</i> instance as field, that is initialized with a <i>DesktopHandler</i>                                    using the required parameter <i>SPDDesktopService</i>.
                                 </p>
