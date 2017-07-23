@@ -329,12 +329,12 @@
                                 <p>
                                     As for the Android platform, we developed an <code>AndroidHandler</code> that handles
                                     the execution of an <code>AndroidService</code>, which provides facilities to manage
-                                    the execution of an ASP reasoner on the Android platform.
+                                    the execution of a solver on the Android platform.
                                 </p>
                                 <p>
                                     Similarly, for the desktop platform we developed a <code>DesktopHandler</code> and a
-                                    <code>DesktopService</code>, which generalizes the usage of an ASP reasoner on the desktop
-                                    platform, allowing both synchronous and asynchronous execution modes.
+                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform,
+                                    allowing both synchronous and asynchronous execution modes.
                                 </p>
 
                                 <h4>Languages module implementation</h4>
@@ -420,7 +420,96 @@
                                 <h3 class="panel-title">Implementation Description</h3>
                             </div>
                             <div class="panel-body">
-                                Work in Progress...
+                                <p>
+                                    As mentioned above, we provide a <a href="https://www.python.org/">Python</a> implementation
+                                    of the EmbASP framework.
+                                </p>
+                                <p>
+                                    The following figure provides some details about classes and interfaces of the implementation.
+                                </p>
+
+                                <figure style="padding-bottom: 1em">
+                                    <img class="img-responsive center-block" src="img/class_diagram_python.png" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                    <figcaption class="text-center">
+                                        Simplified class diagram of the provided Python implementation of EmbASP.
+                                    </figcaption>
+                                </figure>
+
+                                <h4>Core module implementation</h4>
+                                <p>
+                                    Each component in the <code class="layer">Core</code> module has been implemented by
+                                    means of an abstract class or generic classes that will specialize in the following packages.
+                                </p>
+                                <p>
+                                    In particular, the <code>Handler</code> class collects <code>InputProgram</code> and
+                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                </p>
+                                <p>
+                                    For what the asynchronous mode is concerned, the class <code>Service</code> depends from
+                                    the interface <code>Callback</code>, since once the reasoning service has terminated,
+                                    the result of the computation is returned back via a class <code>Callback</code>.
+                                </p>
+
+                                <h4>Platforms module implementation</h4>
+                                <p>
+                                    In order to support a new platform, the <code>Handler</code> and <code>Service</code>                                    components must be adapted.
+                                </p>
+                                <p>
+                                    For the desktop platform we developed a <code>DesktopHandler</code> and a <code>DesktopService</code>,
+                                    which generalizes the usage of a solver on the desktop platform, allowing both synchronous
+                                    and asynchronous execution modes.
+                                </p>
+
+                                <h4>Languages module implementation</h4>
+                                <p>
+                                    This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+                                </p>
+                                <p>
+                                    The <code>Mapper</code> component of the <code class="layer">Languages</code> module
+                                    is implemented via a <code>Mapper</code> class, that allows to translate input and output
+                                    into Python objects. Such translations are guided by <code>Predicate</code> abstract
+                                    class, also present in the module.
+                                </p>
+                                <p>
+                                    To make possible translate facts into strings and vice versa, the classes that want to represent a predicate, must extend
+                                    the abstract class <code>Predicate</code>, and must
+                                    be implemented by including the following code:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code>predicateName="string_name"</code>: must be entered as a class field and must
+                                        contain the predicate name (in the ASP case) or the action name (in the PDDL case)
+                                        to map;
+                                    </li>
+                                    <li>
+                                        <code>[("class_field_name_1", int), ("class_field_name_2"), ...]</code>: Is a list
+                                        that must be passed to super in the constructor, and must contain so many tuples
+                                        how many are the class field, containing the field name, sorted by the position of
+                                        the terms they represent, and optionally the keyword <code>int</code> if the field
+                                        represents an integer.
+                                    </li>
+                                </ul>
+                                <p>
+                                    Thanks to the structure of the <code>Predicate</code> class, this information is passed
+                                    to the <code>Mapper</code> class, to correctly perform the translation mechanism.
+                                </p>
+                                <p>
+                                    If the classes intended for the translation are not constructed correctly in this way, an exception is raised.
+                                </p>
+                                <p>
+                                    In addition to the <code>Mapper</code>, this module features two sub-modules which are
+                                    more strictly related to ASP and PDDL.
+                                </p>
+
+                                <h4>Systems Module Implementation</h4>
+                                <p>
+                                    The classes <code>DLVAnswerSets</code>, <code>ClingoAnswerSets</code>, <code>DLV2AnswerSets</code>                                    and <code>SPDPlan</code> implement specific extensions of the <code>AnswerSets</code>                                    or <code>Plan</code> classes, in charge of manipulating the output of the respective
+                                    solvers.
+                                </p>
+                                <p>
+                                    Moreover, this module can contain classes extending <code>OptionDescriptor</code> to
+                                    implement specific options of the solver at hand.
+                                </p>
                             </div>
                         </div>
                     </div>
