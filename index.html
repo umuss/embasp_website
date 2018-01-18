@@ -957,49 +957,49 @@
                                         <h4>Python version</h4>
                                         <pre><code class="language-python">
     class PickUp(Predicate):
-
-    predicateName="pick-up"
-    
-    def __init__(self, block=None):
-        super(PickUp, self).__init__([("block")])
-        self.block = block
+        predicateName="pick-up"
         
-    [...]
+        def __init__(self, block=None):
+            super(PickUp, self).__init__([("block")])
+            self.block = block
+            
+        [...]
                 </code></pre>
                                         <pre><code class="language-python">
     class PutDown (Predicate):
-
-    predicateName="put-down"
-    
-    def __init__(self, block=None):
-        super(PutDown, self).__init__([("block")])
-        self.block = block
+        predicateName="put-down"
         
-    [...]
+        def __init__(self, block=None):
+            super(PutDown, self).__init__([("block")])
+            self.block = block
+            
+        [...]
                 </code></pre>
                                         <pre><code class="language-python">
     class Stack (Predicate):
-
-    predicateName="stack"
-    
-    def __init__(self, block1=None, block2=None):
-        super(Stack, self).__init__([("block1"), ("block2")])
-        self.block1 = block1
-        self.block2 = block2
+        predicateName="stack"
         
-    [...]
+        def __init__(self, block1=None, block2=None):
+            super(Stack, self).__init__([("block1"), ("block2")])
+            self.block1 = block1
+            self.block2 = block2
+            
+        [...]
+        
+
                 </code></pre>
                                         <pre><code class="language-python">
     class Unstack (Predicate):
-
-    predicateName="unstack"
-    
-    def __init__(self, block1=None, block2=None):
-        super(Unstack, self).__init__([("block1"), ("block2")])
-        self.block1 = block1
-        self.block2 = block2
+        predicateName="unstack"
         
-    [...]
+        def __init__(self, block1=None, block2=None):
+            super(Unstack, self).__init__([("block1"), ("block2")])
+            self.block1 = block1
+            self.block2 = block2
+            
+        [...]
+
+
                 </code></pre>
                                     </div>
                                 </div>
@@ -1173,8 +1173,7 @@
                         <li>Davide Fuscà, Stefano Germano, Jessica Zangari, Marco Anastasio, Francesco Calimeri and Simona Perri.
                             <br />
                             <em>A Framework for Easing the Development of Applications Embedding Answer Set Programming</em>
-                            <br
-                            /> Presented at the 23rd International Workshop on Experimental Evaluation of Algorithms for solving
+                            <br /> Presented at the 23rd International Workshop on Experimental Evaluation of Algorithms for solving
                             problems with combinatorial explosion (RCRA 2016).
                             <p>
                                 <a href="files/RCRA-2016-slides.pdf">
@@ -1196,8 +1195,7 @@
                         <li>Davide Fuscà, Stefano Germano, Jessica Zangari, Marco Anastasio, Francesco Calimeri and Simona Perri.
                             <br />
                             <em>A Framework for Easing the Development of Applications Embedding Answer Set Programming</em>
-                            <br
-                            /> In Proceedings of the 18th International Symposium on Principles and Practice of Declarative
+                            <br /> In Proceedings of the 18th International Symposium on Principles and Practice of Declarative
                             Programming (PPDP 2016).
                             <p>
                                 <a href="http://dl.acm.org/citation.cfm?id=2968594">
@@ -1399,8 +1397,7 @@
                                 <p>Thanks to EmbASP and the use of ASP,
                                     <em>GuessAndCheckers</em> features a fully-declarative approach that made easy to develop
                                     and improve several different strategies, also experimenting with many combinations thereof.
-                                    <br
-                                    /> The source code of this application along with the Android Application Package (APK)
+                                    <br /> The source code of this application along with the Android Application Package (APK)
                                     are available online.</p>
 
                                 <h5>
