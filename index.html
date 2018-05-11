@@ -151,12 +151,15 @@
                 <p>
                     The framework can be implemented in a object-oriented programming language of choice, easing and guiding the generation of
                     suitable libraries for the use of specific solvers on selected platforms. We currently provide 2 implementations
-                    (one in
+                    (in
                     <a href="https://www.java.com">
                         <strong>Java</strong>
-                    </a> and one in
+                    </a>, in
                     <a href="https://www.python.org">
                         <strong>Python</strong>
+                    </a> and in 
+                    <a href="https://docs.microsoft.com/dotnet/csharp/language-reference/">
+                        <strong>C#</strong>
                     </a>) and ready-made libraries for the embedding of the
                     <em>ASP (Answer Set Programming)</em> solvers
                     <a href="http://www.dlvsystem.com/dlv">DLV</a>,
@@ -224,6 +227,9 @@
                     </li>
                     <li role="presentation">
                         <a href="#implementation_python" aria-controls="implementation_python" role="tab" data-toggle="tab">Python implementation</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#implementation_csharp" aria-controls="implementation_csharp" role="tab" data-toggle="tab">C# implementation</a>
                     </li>
                     <li role="presentation">
                         <a href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab">Example DLV on Android</a>
@@ -606,6 +612,16 @@
                                     Moreover, this module can contain classes extending
                                     <code>OptionDescriptor</code> to implement specific options of the solver at hand.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="implementation_csharp">
+                        <div class="panel panel-primary" id="arch-desc">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Implementation Description</h3>
+                            </div>
+                            <div class="panel-body">
+                                In development
                             </div>
                         </div>
                     </div>
@@ -1687,6 +1703,111 @@
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-primary">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"
+                                aria-controls="collapseSix">
+                                <div class="panel-heading" role="tab" id="headingSix">
+                                    <h4 class="panel-title">
+                                        <em>Pac-Man Unity-EmbASP</em>
+                                    </h4>
+                                </div>
+                            </a>
+                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                <div class="panel-body row">
+                                    <div class="col-xs-12 col-sm-5">
+                                        <p>
+                                            <a href="https://github.com/DeMaCS-UNICAL/Pac-Man-Unity-EmbASP">
+                                                <em>Pac-Man Unity-EmbASP</em>
+                                            </a> ...</p>
+    
+                                        <!-- <p>
+
+                                        </p>
+    
+                                        <h5>
+                                            <b>Release</b>
+                                        </h5>
+                                        <p>You can download the latest version of
+                                            <em>DLVfit</em>
+                                            <a href="https://github.com/brainatwork/DLVfit">here</a>.</p>
+    
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Supported versions of Android
+                                        </button>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="well">
+                                                <p>The app should work on most devices equipped with Android 4.x/5.x.
+                                                    <br /> The list of compatible devices include (but it is not limited to):</p>
+                                                <ul>
+                                                    <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
+                                                    <li>HTC One - Android 4.3, API 18</li>
+                                                    <li>HTC One XL - Android 4.2.2, API 17</li>
+                                                    <li>HTC One XL - Android 4.1.1, API 16</li>
+                                                    <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
+                                                    <li>Google Nexus 7 - Android 4.4.4, API 19</li>
+                                                    <li>Samsung S4 - Android 4.4.4, API 19</li>
+                                                    <li>Samnsung S3 - Android 4.3, API 18</li>
+                                                    <li>Sony Xperia S - Android 4.1.1, API 16</li>
+                                                    <li>Google Nexus 7 - Android 4.3, API 18</li>
+                                                    <li>Sony Xperia Go - Android 4.0</li>
+                                                    <li>Sony Xperia Z3 - Android 5.0</li>
+                                                    <li>Sony Xperia Z3 - Android 5.1</li>
+                                                    <li>Galaxy S6 - Android 5.0</li>
+                                                    <li>Nexus 6 - Android 5.0</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+    
+                                        <h5>
+                                            <b>Developers</b>
+                                        </h5>
+                                        <ul>
+                                            <li>Dario Campisano</li>
+                                            <li>The EmbASP Team</li>
+                                        </ul>-->
+                                    </div> 
+                                    <div class="col-xs-12 col-sm-7">
+                                        <div id="carousel-PacMan" class="carousel slide" data-ride="carousel">
+                                            <!-- Indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carousel-PacMan" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carousel-PacMan" data-slide-to="1"></li>
+                                                <li data-target="#carousel-PacMan" data-slide-to="2"></li>
+                                            </ol>
+    
+                                            <!-- Wrapper for slides -->
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="item active">
+                                                    <img src="img/screenshots/PacMan/Pac-Man.png" alt="Pac-Man Menu" />
+                                                    <!--<div class="carousel-caption">
+                                                <h3>Welcome</h3>
+                                                <p>...</p>
+                                            </div>-->
+                                                </div>
+                                                <div class="item">
+                                                    <img src="img/screenshots/PacMan/Pac-Man1.png" alt="Pac-Man" />
+                                                </div>
+
+                                                <div class="item">
+                                                        <img src="img/screenshots/PacMan/Pac-Man2.png" alt="Pac-Man" />
+                                                    </div>
+                                            </div>
+    
+                                            <!-- Controls -->
+                                            <a class="left carousel-control" href="#carousel-PacMan" role="button" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" href="#carousel-PacMan" role="button" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                 </div>
             </div>
