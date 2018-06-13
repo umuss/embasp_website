@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head lang="en">
+<head>
 
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
 
     <title>EmbASP</title>
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
-
     <!-- highlight.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+    <!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
 
     <style>
         h2 {
@@ -38,13 +36,13 @@
             border-top: 1px solid #eee;
         }
 
-        #toTop {
+        /* #toTop {
             position: fixed;
             bottom: 10px;
             right: 10px;
             cursor: pointer;
             display: none;
-        }
+        } */
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -58,74 +56,61 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-main-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">
-                    <img src="img/EmbASP_Logo.svg" alt="EmbASP logo" height="25" onerror="this.src='img/EmbASP_Logo.png'" />
-                </a>
-                <p class="navbar-text">
-                    <strong>
-                        <em>EmbASP</em>
-                    </strong>
-                </p>
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="">
+            <img src="img/EmbASP_Logo.svg" alt="EmbASP logo" height="25" onerror="this.src='img/EmbASP_Logo.png'" />
+        </a>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right" id="bs-main-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#Download">Download</a>
-                    </li>
-                    <li>
-                        <a href="#Documentation">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="#CoreTeam">Core Team</a>
-                    </li>
-                    <li>
-                        <a href="#Contacts">Contacts</a>
-                    </li>
-                    <li>
-                        <a href="#License">License</a>
-                    </li>
-                    <li>
-                        <a href="#Publications">Publications</a>
-                    </li>
-                    <li>
-                        <a href="#Applications">Applications</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Previous versions
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="version_1x.html">Version 1x</a>
-                            </li>
-                            <li>
-                                <a href="version_2x.html">Version 2x</a>
-                            </li>
-                            <li>
-                                <a href="version_3x.html">Version 3x</a>
-                            </li>
-                            <li>
-                                <a href="version_4x.html">Version 4x</a>
-                            </li>
-                            <!-- <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li> -->
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Download">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Documentation">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#CoreTeam">Core Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contacts">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#License">License</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Publications">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Applications">Applications</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Previous versions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="version_1x.html">Version 1x</a>
+                        <a class="dropdown-item" href="version_2x.html">Version 2x</a>
+                        <a class="dropdown-item" href="version_3x.html">Version 3x</a>
+                        <a class="dropdown-item" href="version_4x.html">Version 4x</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+
+        <span class="navbar-text">
+            <strong>
+                <em>EmbASP</em>
+            </strong>
+        </span>
+
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -134,61 +119,56 @@
         <div class="page-header">
             <!--<h2 style="text-align: center"><img src="img/EmbASP_Logo.png" alt="embASP" height="150" style=" padding-bottom: 0.2cm;" /></h2>-->
 
-            <div class="jumbotron">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <img class="center-block" src="img/EmbASP_Logo.png" alt="EmbASP logo" height="150" onerror="this.src='img/EmbASP_Logo.png'"
-                        />
-                    </div>
-                    <p class="col-xs-12 col-sm-8" style="padding-top: 15px">
-                        <strong>
-                            <em>EmbASP</em>
-                        </strong> is a framework for the integration (embedding) of Logic Programming in external systems for generic
-                        applications.
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <img class="float-right" src="img/EmbASP_Logo.png" alt="EmbASP logo" height="150" onerror="this.src='img/EmbASP_Logo.png'"
+                    />
+                    <h1 class="display-4">
+                        <em>EmbASP</em>
+                    </h1>
+                    <p class="lead">A framework for the integration (embedding) of Logic Programming in external systems for generic applications.
                         <br /> It helps developers at designing and implementing complex reasoning tasks by means of solvers on
                         different platforms.
+                    </p>
+                    <hr class="my-4">
+                    <p>
+                        The framework can be implemented in a object-oriented programming language of choice, easing and guiding the generation of
+                        suitable libraries for the use of specific solvers on selected platforms. We currently provide 2
+                        implementations (in
+                        <a href="https://www.java.com">
+                            <strong>Java</strong>
+                        </a>, in
+                        <a href="https://www.python.org">
+                            <strong>Python</strong>
+                        </a> and in
+                        <a href="https://docs.microsoft.com/dotnet/csharp/language-reference/">
+                            <strong>C#</strong>
+                        </a>) and ready-made libraries for the embedding of the
+                        <em>ASP (Answer Set Programming)</em> solvers
+                        <a href="http://www.dlvsystem.com/dlv">DLV</a>,
+                        <a href="https://potassco.org/clingo">clingo</a> and
+                        <a href="https://www.mat.unical.it/DLV2">DLV2</a> and the
+                        <em>PDDL (Planning Domain Definition Language)</em> cloud solver
+                        <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (SPD) on the Desktop platform and of DLV and SPD on the Mobile (Android&trade;)
+                        one (available only for the Java version).
+                    </p>
+                    <p>
+                        However, the framework has been designed to be easily extensible and adaptable to different solvers and platforms. It is
+                        worth to notice that solvers are invoked in different modes; for instance, SPD is invoked via a remote
+                        connection, while for the other, binaries are effectively embedded and natively executed.
                     </p>
                 </div>
             </div>
 
             <div class="alert alert-info" role="alert">
                 NOTE: this is the official site of versions
-                <strong>5x</strong> of the EmbASP Framework. If you are looking for an older version, please check the last item
-                in the top menu.</a>
-            </div>
-
-            <div>
-                <p>
-                    The framework can be implemented in a object-oriented programming language of choice, easing and guiding the generation of
-                    suitable libraries for the use of specific solvers on selected platforms. We currently provide 2 implementations
-                    (in
-                    <a href="https://www.java.com">
-                        <strong>Java</strong>
-                    </a>, in
-                    <a href="https://www.python.org">
-                        <strong>Python</strong>
-                    </a> and in
-                    <a href="https://docs.microsoft.com/dotnet/csharp/language-reference/">
-                        <strong>C#</strong>
-                    </a>) and ready-made libraries for the embedding of the
-                    <em>ASP (Answer Set Programming)</em> solvers
-                    <a href="http://www.dlvsystem.com/dlv">DLV</a>,
-                    <a href="https://potassco.org/clingo">clingo</a> and
-                    <a href="https://www.mat.unical.it/DLV2">DLV2</a> and the
-                    <em>PDDL (Planning Domain Definition Language)</em> cloud solver
-                    <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (SPD) on the Desktop platform and of DLV and SPD on the Mobile (Android&trade;)
-                    one (available only for the Java version).
-                </p>
-                <p>
-                    However, the framework has been designed to be easily extensible and adaptable to different solvers and platforms. It is
-                    worth to notice that solvers are invoked in different modes; for instance, SPD is invoked via a remote
-                    connection, while for the other, binaries are effectively embedded and natively executed.
-                </p>
+                <strong>5</strong> of the EmbASP Framework. If you are looking for an older version, please check the last item in
+                the top menu.</a>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="Download">Download
                     <a href="https://github.com/DeMaCS-UNICAL/EmbASP">
                         <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40" />
@@ -211,44 +191,30 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="Documentation">Documentation</h2>
 
-                <!--<p>
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-info" href="#javadoc">Javadoc </a>
-                        <a class="list-group-item list-group-item-info" href="#class-diagram">Class Diagram </a>
-                        <a class="list-group-item list-group-item-info" href="#getting-started">Getting Started </a> <a class="list-group-item list-group-item-info"
-                            href="#setting-up">Using EmbASP</a>
-                        <a
-						class="list-group-item list-group-item-info" href="#arch-desc">Architecture
-						Description </a> <a class="list-group-item list-group-item-info"
-						href="#detailed-desc">Detailed Description </a>
-            </div>
-            </p>-->
-
                 <!-- Nav tabs -->
-                <ul class="nav nav-pills nav-justified" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab">Abstract Architecture</a>
+                <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab" aria-selected="true">Abstract Architecture</a>
                     </li>
-                    <li role="presentation">
-                        <a href="#implementations" aria-controls="implementations" role="tab" data-toggle="tab">Implementations</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#implementations" aria-controls="implementations" role="tab" data-toggle="tab" aria-selected="false">Implementations</a>
                     </li>
-                    <li role="presentation">
-                        <a href="#examples" aria-controls="examples" role="tab" data-toggle="tab">Examples</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#examples" aria-controls="examples" role="tab" data-toggle="tab" aria-selected="false">Examples</a>
                     </li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content" style="padding-top: 15px">
-
-                    <div role="tabpanel" class="tab-pane fade in active" id="architecture">
-                        <div class="panel panel-primary" id="arch-desc">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Architecture Description</h3>
+                    <div role="tabpanel" class="tab-pane fade show active" id="architecture">
+                        <div class="card card-primary" id="arch-desc">
+                            <div class="card-header">
+                                <h3 class="card-title">Architecture Description</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="card-body">
                                 <p>
                                     The general architecture of EmbASP is depicted in the following figure: it is intended as an abstract framework to be implemented
                                     in some object-oriented programming language.
@@ -261,7 +227,7 @@
                                 </p>
 
                                 <figure style="padding-bottom: 1em">
-                                    <img class="img-responsive center-block" src="img/architecture_v3.svg" alt="Abstract Architecture" onerror="this.src='img/architecture_v3.png'">
+                                    <img class="img-fluid mx-auto d-block" src="img/architecture_v3.svg" alt="Abstract Architecture" onerror="this.src='img/architecture_v3.png'">
                                     <figcaption class="text-center">
                                         Abstract Architecture of the framework.
                                         <br /> Blocks overshadowed in white depict the abstract components of the framework, while
@@ -357,33 +323,33 @@
                             </div>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade in" id="implementations">
-                        <div class="panel panel-primary" id="arch-desc">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Implementations</h3>
+                    <div role="tabpanel" class="tab-pane fade" id="implementations">
+                        <div class="card card-primary" id="arch-desc">
+                            <div class="card-header">
+                                <h3 class="card-title">Implementations</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="card-body">
                                 <!-- Nav tabs -->
-                                <ul class="nav nav-tabs nav-justified" role="tablist">
-                                    <li role="presentation">
-                                        <a href="#implementation_java" aria-controls="implementation_java" role="tab" data-toggle="tab">Java implementation</a>
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#implementation_java" aria-controls="implementation_java" role="tab" data-toggle="tab" aria-selected="true">Java implementation</a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#implementation_python" aria-controls="implementation_python" role="tab" data-toggle="tab">Python implementation</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#implementation_python" aria-controls="implementation_python" role="tab" data-toggle="tab" aria-selected="false">Python implementation</a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#implementation_csharp" aria-controls="implementation_csharp" role="tab" data-toggle="tab">C# implementation</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#implementation_csharp" aria-controls="implementation_csharp" role="tab" data-toggle="tab" aria-selected="false">C# implementation</a>
                                     </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content" style="padding-top: 15px">
 
-                                    <div role="tabpanel" class="tab-pane fade" id="implementation_java">
-                                        <div class="panel panel-primary" id="arch-desc">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Implementation Description</h3>
+                                    <div role="tabpanel" class="tab-pane fade show active" id="implementation_java">
+                                        <div class="card card-primary" id="arch-desc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Implementation Description</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <p>
                                                     As mentioned above, we provide a
                                                     <a href="https://www.oracle.com/java">Java</a> implementation of the EmbASP framework.
@@ -393,7 +359,7 @@
                                                 </p>
 
                                                 <figure style="padding-bottom: 1em">
-                                                    <img class="img-responsive center-block" src="img/class_diagram_v3.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_v3.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
                                                     <figcaption class="text-center">
                                                         Simplified class diagram of the provided Java implementation of EmbASP.
                                                     </figcaption>
@@ -498,11 +464,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="panel panel-primary" id="javadoc">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Javadoc</h3>
+                                        <div class="card card-primary" id="javadoc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Javadoc</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <p>
                                                     The Javadoc documentation is available
                                                     <a href="javadoc/index.html">here</a>.
@@ -515,11 +481,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="panel panel-primary" id="class-diagram">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Class Diagram</h3>
+                                        <div class="card card-primary" id="class-diagram">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Class Diagram</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 A complete UML Class Diagram is available
                                                 <a href="img/complete_class_diagram2.png">here</a>.
                                             </div>
@@ -527,11 +493,11 @@
 
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="implementation_python">
-                                        <div class="panel panel-primary" id="arch-desc">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Implementation Description</h3>
+                                        <div class="card card-primary" id="arch-desc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Implementation Description</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <p>
                                                     As mentioned above, we provide a
                                                     <a href="https://www.python.org/">Python</a> implementation of the EmbASP framework.
@@ -541,7 +507,7 @@
                                                 </p>
 
                                                 <figure style="padding-bottom: 1em">
-                                                    <img class="img-responsive center-block" src="img/class_diagram_python.png" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_python.png" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
                                                     <figcaption class="text-center">
                                                         Simplified class diagram of the provided Python implementation of EmbASP.
                                                     </figcaption>
@@ -642,11 +608,11 @@
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="implementation_csharp">
-                                        <div class="panel panel-primary" id="arch-desc">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Implementation Description</h3>
+                                        <div class="card card-primary" id="arch-desc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Implementation Description</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 In development
                                             </div>
                                         </div>
@@ -655,29 +621,29 @@
                             </div>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade in" id="examples">
-                        <div class="panel panel-primary" id="arch-desc">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Examples</h3>
+                    <div role="tabpanel" class="tab-pane fade" id="examples">
+                        <div class="card card-primary" id="arch-desc">
+                            <div class="card-header">
+                                <h3 class="card-title">Examples</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="card-body">
                                 <!-- Nav tabs -->
-                                <ul class="nav nav-tabs nav-justified" role="tablist">
-                                    <li role="presentation">
-                                        <a href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab">Example DLV on Android</a>
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab" aria-selected="true">Example DLV on Android</a>
                                     </li>
-                                    <li role="presentation">
-                                        <a href="#desktop_example" aria-controls="desktop_example" role="tab" data-toggle="tab">Example SPD on Desktop</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#desktop_example" aria-controls="desktop_example" role="tab" data-toggle="tab" aria-selected="false">Example SPD on Desktop</a>
                                     </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content" style="padding-top: 15px">
-                                    <div role="tabpanel" class="tab-pane fade" id="android_example">
-                                        <div class="panel panel-primary" id="getting-started">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Getting Started</h3>
+                                    <div role="tabpanel" class="tab-pane fade show active" id="android_example">
+                                        <div class="card card-primary" id="getting-started">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Getting Started</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <mark>This example is available only in Java due to the restrictions of the Android
                                                     mobile operating system.
                                                 </mark>
@@ -721,11 +687,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="panel panel-primary" id="setting-up">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Using EmbASP</h3>
+                                        <div class="card card-primary" id="setting-up">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Using EmbASP</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <p>
                                                     In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
                                                     develop a simple Android application for solving Sudoku puzzles.
@@ -907,13 +873,13 @@
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane fade" id="desktop_example">
-                                        <div class="panel panel-primary" id="getting-started">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Getting Started</h3>
+                                        <div class="card card-primary" id="getting-started">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Getting Started</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-xs-12 col-md-6">
+                                                    <div class="col col-md-6">
                                                         <h4>Java version</h4>
                                                         <p>
                                                             The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any
@@ -930,7 +896,7 @@
                                     specific machine must be download in advance.
                                 </p>-->
                                                     </div>
-                                                    <div class="col-xs-12 col-md-6">
+                                                    <div class="col col-md-6">
                                                         <h4>Python version</h4>
                                                         <p>
                                                             The framework is released as EGG file to be used on a Desktop platform, it can be easily installed in a Python installation.
@@ -943,11 +909,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="panel panel-primary" id="setting-up">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Using EmbASP</h3>
+                                        <div class="card card-primary" id="setting-up">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Using EmbASP</h3>
                                             </div>
-                                            <div class="panel-body">
+                                            <div class="card-body">
                                                 <p>
                                                     In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
                                                     develop a simple Desktop application to solve the blocks-world problem.
@@ -960,7 +926,7 @@
 
 
                                                 <figure style="padding-bottom: 1em">
-                                                    <img class="img-responsive center-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
+                                                    <img class="img-fluid mx-auto d-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
                                                     <figcaption class="text-center">
                                                         Sample configuration for blocks-world.
                                                     </figcaption>
@@ -973,7 +939,7 @@
                                                     actions that a blocks-world solution plan can feature:
                                                 </p>
                                                 <div class="row">
-                                                    <div class="col-xs-12 col-md-6">
+                                                    <div class="col col-md-6">
                                                         <h4>Java version</h4>
                                                         <pre><code class="language-java">
     @Id("pick-up")
@@ -1022,7 +988,7 @@
     }         
                 </code></pre>
                                                     </div>
-                                                    <div class="col-xs-12 col-md-6">
+                                                    <div class="col col-md-6">
                                                         <h4>Python version</h4>
                                                         <pre><code class="language-python">
     class PickUp(Predicate):
@@ -1077,7 +1043,7 @@
                                                     deploying our application:
                                                 </p>
                                                 <div class="row">
-                                                    <div class="col-xs-12 col-md-6">
+                                                    <div class="col col-md-6">
                                                         <h4>Java version</h4>
                                                         <pre><code class="language-java">
     public class Blocksworld {
@@ -1116,7 +1082,7 @@
     }
             </code></pre>
                                                     </div>
-                                                    <div class="col-xs-12 col-md-6">
+                                                    <div class="col col-md-6">
                                                         <h4>Python version</h4>
                                                         <pre><code class="language-python">
     class Blocksworld():
@@ -1183,7 +1149,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="CoreTeam">Core Team</h2>
                 <div>
                     <ul>
@@ -1209,8 +1175,9 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="Contacts">Contacts</h2>
                 <div>
                     For further information, contact
@@ -1218,8 +1185,9 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="License">License</h2>
                 <div>
                     <p>
@@ -1235,7 +1203,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="Publications">Publications</h2>
 
                 <div>
@@ -1293,21 +1261,21 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col">
                 <h2 id="Applications">Applications Showcase</h2>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-primary">
+                <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card card-primary">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
                             aria-controls="collapseOne">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h4 class="card-title">
                                     <em>DLVfit</em>
                                 </h4>
                             </div>
                         </a>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body row">
-                                <div class="col-xs-12 col-sm-7">
+                        <div id="collapseOne" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-body row">
+                                <div class="col col-sm-7">
                                     <p>
                                         <a href="https://github.com/brainatwork/DLVfit">
                                             <em>DLVfit</em>
@@ -1334,12 +1302,14 @@
                                         <em>DLVfit</em>
                                         <a href="https://github.com/brainatwork/DLVfit">here</a>.</p>
 
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-                                        aria-controls="collapseExample">
-                                        Supported versions of Android
-                                    </button>
+                                    <p>
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Supported versions of Android
+                                        </button>
+                                    </p>
                                     <div class="collapse" id="collapseExample">
-                                        <div class="well">
+                                        <div class="card card-body">
                                             <p>The app should work on most devices equipped with Android 4.x/5.x.
                                                 <br /> The list of compatible devices include (but it is not limited to):
                                             </p>
@@ -1371,8 +1341,8 @@
                                         <li>The EmbASP Team</li>
                                     </ul>
                                 </div>
-                                <div class="col-xs-12 col-sm-5">
-                                    <div id="carousel-DLVfit" class="carousel slide" data-ride="carousel">
+                                <div class="col col-sm-5">
+                                    <div id="carousel-DLVfit" class="carousel slide carousel-fade" data-ride="carousel">
                                         <!-- Indicators -->
                                         <ol class="carousel-indicators">
                                             <li data-target="#carousel-DLVfit" data-slide-to="0" class="active"></li>
@@ -1390,52 +1360,52 @@
 
                                         <!-- Wrapper for slides -->
                                         <div class="carousel-inner" role="listbox">
-                                            <div class="item active">
-                                                <img src="img/screenshots/DLVfit/Screenshot(1).png" alt="Screenshot(1)" />
+                                            <div class="carousel-item active">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(1).png" alt="Screenshot(1)" />
                                                 <!--<div class="carousel-caption">
                                             <h3>Welcome</h3>
                                             <p>...</p>
                                         </div>-->
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(2).png" alt="Screenshot(2)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(2).png" alt="Screenshot(2)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(3).png" alt="Screenshot(3)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(3).png" alt="Screenshot(3)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(4).png" alt="Screenshot(4)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(4).png" alt="Screenshot(4)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(5).png" alt="Screenshot(5)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(5).png" alt="Screenshot(5)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(6).png" alt="Screenshot(6)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(6).png" alt="Screenshot(6)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(7).png" alt="Screenshot(7)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(7).png" alt="Screenshot(7)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(8).png" alt="Screenshot(8)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(8).png" alt="Screenshot(8)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(9).png" alt="Screenshot(9)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(9).png" alt="Screenshot(9)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(10).png" alt="Screenshot(10)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(10).png" alt="Screenshot(10)" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVfit/Screenshot(11).png" alt="Screenshot(11)" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(11).png" alt="Screenshot(11)" />
                                             </div>
                                         </div>
 
                                         <!-- Controls -->
-                                        <a class="left carousel-control" href="#carousel-DLVfit" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <a class="carousel-control-prev" href="#carousel-DLVfit" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Previous</span>
                                         </a>
-                                        <a class="right carousel-control" href="#carousel-DLVfit" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <a class="carousel-control-next" href="#carousel-DLVfit" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
                                     </div>
@@ -1443,17 +1413,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-primary">
+                    <div class="card card-primary">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
                             aria-controls="collapseTwo">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <h4 class="card-title">
                                     <em>GuessAndCheckers</em>
                                 </h4>
                             </div>
                         </a>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                            <div class="panel-body">
+                        <div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="card-body">
                                 <p>
                                     <a href="https://github.com/vincenzoarieta93/GuessAndCheckers">
                                         <em>GuessAndCheckers</em>
@@ -1486,7 +1456,7 @@
                                     <li>Vincenzo Arieta</li>
                                     <li>The EmbASP Team</li>
                                 </ul>
-                                <div id="carousel-GuessAndCheckers" class="carousel slide" data-ride="carousel">
+                                <div id="carousel-GuessAndCheckers" class="carousel slide carousel-fade" data-ride="carousel">
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         <li data-target="#carousel-GuessAndCheckers" data-slide-to="0" class="active"></li>
@@ -1515,85 +1485,99 @@
 
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="img/screenshots/GuessAndCheckers/welcome_activity.png" alt="Welcome" />
+                                        <div class="carousel-item active">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/welcome_activity.png" alt="Welcome" />
                                             <!--<div class="carousel-caption">
                                             <h3>Welcome</h3>
                                             <p>...</p>
                                         </div>-->
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_1.png" alt="Tutorial slide 1" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_1.png" alt="Tutorial slide 1"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_2.png" alt="Tutorial slide 2" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_2.png" alt="Tutorial slide 2"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_3.png" alt="Tutorial slide 3" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_3.png" alt="Tutorial slide 3"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_4.png" alt="Tutorial slide 4" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_4.png" alt="Tutorial slide 4"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/tutorial_slide_5.png" alt="Tutorial slide 5" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_5.png" alt="Tutorial slide 5"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/scelta_mossa.png" alt="scelta mossa" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/scelta_mossa.png" alt="scelta mossa" />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/solving_phase_1.png" alt="solving phase 1" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/solving_phase_1.png" alt="solving phase 1" />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/solving_phase_2.png" alt="solving phase 2" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/solving_phase_2.png" alt="solving phase 2" />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/solving_phase_3.png" alt="solving phase 3" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/solving_phase_3.png" alt="solving phase 3" />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/textual_hint.png" alt="textual hint" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/textual_hint.png" alt="textual hint" />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/scelta_mossa_sol.png" alt="scelta mossa sol" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/scelta_mossa_sol.png" alt="scelta mossa sol"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/obbligo_presa.png" alt="obbligo presa" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/obbligo_presa.png" alt="obbligo presa" />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti.png" alt="presa avente pezzi forti" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti.png" alt="presa avente pezzi forti"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti_sol.png" alt="presa avente pezzi forti sol" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti_sol.png" alt="presa avente pezzi forti sol"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_con_il_piu_forte.png" alt="presa con il piu forte" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_il_piu_forte.png" alt="presa con il piu forte"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_forte.png" alt="presa con piu forte" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_forte.png" alt="presa con piu forte"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima.png" alt="presa_con_piu_forte_prima" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima.png" alt="presa_con_piu_forte_prima"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima_sol.png" alt="presa_con_piu_forte_prima_sol" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima_sol.png" alt="presa_con_piu_forte_prima_sol"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi.png" alt="presa con piu pezzi" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi.png" alt="presa con piu pezzi"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi_sol.png" alt="presa con piu pezzi sol" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi_sol.png" alt="presa con piu pezzi sol"
+                                            />
                                         </div>
-                                        <div class="item">
-                                            <img src="img/screenshots/GuessAndCheckers/embasp_ack.png" alt="embasp ack" />
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/embasp_ack.png" alt="embasp ack" />
                                         </div>
                                     </div>
 
                                     <!-- Controls -->
-                                    <a class="left carousel-control" href="#carousel-GuessAndCheckers" role="button" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <a class="carousel-control-prev" href="#carousel-GuessAndCheckers" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Previous</span>
                                     </a>
-                                    <a class="right carousel-control" href="#carousel-GuessAndCheckers" role="button" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <a class="carousel-control-next" href="#carousel-GuessAndCheckers" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </div>
@@ -1601,18 +1585,18 @@
 
                         </div>
                     </div>
-                    <div class="panel panel-primary">
+                    <div class="card card-primary">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
                             aria-controls="collapseThree">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <h4 class="panel-title">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <h4 class="card-title">
                                     <em>DLVEdu</em>
                                 </h4>
                             </div>
                         </a>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body row">
-                                <div class="col-xs-12 col-sm-7">
+                        <div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="card-body row">
+                                <div class="col col-sm-7">
                                     <p>
                                         <em>DLVEdu</em> is an educational Android App for children, that integrates well-established
                                         mobile technologies, such as voice or drawn text recognition, with the modeling capabilities
@@ -1640,8 +1624,8 @@
                                     </ul>
                                 </div>
 
-                                <div class="col-xs-12 col-sm-5">
-                                    <div id="carousel-DLVEdu" class="carousel slide" data-ride="carousel">
+                                <div class="col col-sm-5">
+                                    <div id="carousel-DLVEdu" class="carousel slide carousel-fade" data-ride="carousel">
                                         <!-- Indicators -->
                                         <ol class="carousel-indicators">
                                             <li data-target="#carousel-DLVEdu" data-slide-to="0" class="active"></li>
@@ -1652,31 +1636,31 @@
 
                                         <!-- Wrapper for slides -->
                                         <div class="carousel-inner" role="listbox">
-                                            <div class="item active">
-                                                <img src="img/screenshots/DLVEdu/home.png" alt="Home" />
+                                            <div class="carousel-item active">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/home.png" alt="Home" />
                                                 <!--<div class="carousel-caption">
                                             <h3>Welcome</h3>
                                             <p>...</p>
                                         </div>-->
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVEdu/giochi.png" alt="Giochi" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/giochi.png" alt="Giochi" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVEdu/sudoku.png" alt="Sudoku" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/sudoku.png" alt="Sudoku" />
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/DLVEdu/area genitori.png" alt="Area genitori" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/area genitori.png" alt="Area genitori" />
                                             </div>
                                         </div>
 
                                         <!-- Controls -->
-                                        <a class="left carousel-control" href="#carousel-DLVEdu" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <a class="carousel-control-prev" href="#carousel-DLVEdu" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Previous</span>
                                         </a>
-                                        <a class="right carousel-control" href="#carousel-DLVEdu" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <a class="carousel-control-next" href="#carousel-DLVEdu" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
                                     </div>
@@ -1684,17 +1668,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-primary">
+                    <div class="card card-primary">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
                             aria-controls="collapseFour">
-                            <div class="panel-heading" role="tab" id="headingFour">
-                                <h4 class="panel-title">
+                            <div class="card-header" role="tab" id="headingFour">
+                                <h4 class="card-title">
                                     <em>Connect4</em>
                                 </h4>
                             </div>
                         </a>
-                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                            <div class="panel-body">
+                        <div id="collapseFour" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="card-body">
                                 <p>Connect4 is an application that allows a user to play the popular Connect Four game (also
                                     known as Four-in-a-Row) against an ASP-based artificial player.
                                     <br /> The Connect Four game is played by two opponents on a vertical 7*6 rectangular board.
@@ -1722,17 +1706,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-primary">
+                    <div class="card card-primary">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
                             aria-controls="collapseFive">
-                            <div class="panel-heading" role="tab" id="headingFive">
-                                <h4 class="panel-title">
+                            <div class="card-header" role="tab" id="headingFive">
+                                <h4 class="card-title">
                                     <em>LoIDE</em>
                                 </h4>
                             </div>
                         </a>
-                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                            <div class="panel-body">
+                        <div id="collapseFive" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="card-body">
                                 <p>
                                     <a href="https://github.com/DeMaCS-UNICAL/LoIDE">
                                         <em>LoIDE</em>
@@ -1759,18 +1743,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-primary">
+                    <div class="card card-primary">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"
                             aria-controls="collapseSix">
-                            <div class="panel-heading" role="tab" id="headingSix">
-                                <h4 class="panel-title">
+                            <div class="card-header" role="tab" id="headingSix">
+                                <h4 class="card-title">
                                     <em>Pac-Man Unity-EmbASP</em>
                                 </h4>
                             </div>
                         </a>
-                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                            <div class="panel-body row">
-                                <div class="col-xs-12 col-sm-5">
+                        <div id="collapseSix" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="card-body row">
+                                <div class="col col-sm-5">
                                     <p>
                                         <a href="https://github.com/DeMaCS-UNICAL/Pac-Man-Unity-EmbASP">
                                             <em>Pac-Man Unity-EmbASP</em>
@@ -1823,8 +1807,8 @@
                                             <li>The EmbASP Team</li>
                                         </ul>-->
                                 </div>
-                                <div class="col-xs-12 col-sm-7">
-                                    <div id="carousel-PacMan" class="carousel slide" data-ride="carousel">
+                                <div class="col col-sm-7">
+                                    <div id="carousel-PacMan" class="carousel slide carousel-fade" data-ride="carousel">
                                         <!-- Indicators -->
                                         <ol class="carousel-indicators">
                                             <li data-target="#carousel-PacMan" data-slide-to="0" class="active"></li>
@@ -1834,29 +1818,29 @@
 
                                         <!-- Wrapper for slides -->
                                         <div class="carousel-inner" role="listbox">
-                                            <div class="item active">
-                                                <img src="img/screenshots/PacMan/Pac-Man.png" alt="Pac-Man Menu" />
+                                            <div class="carousel-item active">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/PacMan/Pac-Man.png" alt="Pac-Man Menu" />
                                                 <!--<div class="carousel-caption">
                                                 <h3>Welcome</h3>
                                                 <p>...</p>
                                             </div>-->
                                             </div>
-                                            <div class="item">
-                                                <img src="img/screenshots/PacMan/Pac-Man1.png" alt="Pac-Man" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/PacMan/Pac-Man1.png" alt="Pac-Man" />
                                             </div>
 
-                                            <div class="item">
-                                                <img src="img/screenshots/PacMan/Pac-Man2.png" alt="Pac-Man" />
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/PacMan/Pac-Man2.png" alt="Pac-Man" />
                                             </div>
                                         </div>
 
                                         <!-- Controls -->
-                                        <a class="left carousel-control" href="#carousel-PacMan" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <a class="carousel-control-prev" href="#carousel-PacMan" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Previous</span>
                                         </a>
-                                        <a class="right carousel-control" href="#carousel-PacMan" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <a class="carousel-control-next" href="#carousel-PacMan" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
                                     </div>
@@ -1878,13 +1862,14 @@
         </p>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 
     <!-- highlight.js -->
@@ -1894,7 +1879,7 @@
     </script>
 
     <!--From http://bootsnipp.com/snippets/featured/back-to-top-->
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span> Back to Top</div>');
             $(window).scroll(function () {
@@ -1909,7 +1894,7 @@
                 return false;
             });
         });
-    </script>
+    </script> -->
 
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
