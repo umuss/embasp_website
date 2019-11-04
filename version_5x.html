@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+
+    <title>EmbASP</title>
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+    <!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <style>
+        h2 {
+            padding-top: 55px;
+        }
+
+        .layer {
+            text-transform: uppercase;
+        }
+
+        .footer {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+
+        /* #toTop {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+            display: none;
+        } */
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="">
+            <img src="img/EmbASP_Logo.svg" alt="EmbASP logo" height="25" onerror="this.src='img/EmbASP_Logo.png'" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Download">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Documentation">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#CoreTeam">Core Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contacts">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#License">License</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Publications">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Applications">Applications</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Previous versions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="version_1x.html">Version 1x</a>
+                        <a class="dropdown-item" href="version_2x.html">Version 2x</a>
+                        <a class="dropdown-item" href="version_3x.html">Version 3x</a>
+                        <a class="dropdown-item" href="version_4x.html">Version 4x</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+
+        <span class="navbar-text">
+            <strong>
+                <em>EmbASP</em>
+            </strong>
+        </span>
+
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container" style="padding-top: 40px">
+
+        <div class="page-header">
+            <!--<h2 style="text-align: center"><img src="img/EmbASP_Logo.png" alt="embASP" height="150" style=" padding-bottom: 0.2cm;" /></h2>-->
+
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <img class="float-right" src="img/EmbASP_Logo.png" alt="EmbASP logo" height="150" onerror="this.src='img/EmbASP_Logo.png'"
+                    />
+                    <h1 class="display-4">
+                        <em>EmbASP</em>
+                    </h1>
+                    <p class="lead">A framework for the integration (embedding) of Logic Programming in external systems for generic applications.
+                        <br /> It helps developers at designing and implementing complex reasoning tasks by means of solvers on
+                        different platforms.
+                    </p>
+                    <hr class="my-4">
+                    <p>
+                        The framework can be implemented in a object-oriented programming language of choice, easing and guiding the generation of
+                        suitable libraries for the use of specific solvers on selected platforms. We currently provide 3
+                        implementations (in
+                        <a href="https://www.java.com">
+                            <strong>Java</strong>
+                        </a>, in
+                        <a href="https://www.python.org">
+                            <strong>Python</strong>
+                        </a> and in
+                        <a href="https://docs.microsoft.com/dotnet/csharp/language-reference/">
+                            <strong>C#</strong>
+                        </a>) and ready-made libraries for the embedding of the
+                        <em>ASP (Answer Set Programming)</em> solvers
+                        <a href="http://www.dlvsystem.com/dlv">DLV</a>,
+                        <a href="https://potassco.org/clingo">clingo</a> and
+                        <a href="https://www.mat.unical.it/DLV2">DLV2</a> and the
+                        <em>PDDL (Planning Domain Definition Language)</em> cloud solver
+                        <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (SPD) on the Desktop platform and of DLV and SPD on the Mobile (Android&trade;)
+                        one (available only for the Java version).
+                    </p>
+                    <p>
+                        However, the framework has been designed to be easily extensible and adaptable to different solvers and platforms. It is
+                        worth to notice that solvers are invoked in different modes; for instance, SPD is invoked via a remote
+                        connection, while for the other, binaries are effectively embedded and natively executed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="alert alert-info" role="alert">
+                NOTE: this is the official site of versions
+                <strong>5</strong> of the EmbASP Framework. If you are looking for an older version, please check the last item in
+                the top menu.</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="Download">Download
+                    <a href="https://github.com/DeMaCS-UNICAL/EmbASP">
+                        <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub" height="40" />
+                    </a>
+                </h2>
+                <!-- <div>
+                    <h3 id="release">Latest release version</h3>
+                    <div>To use the specialized library on Desktop, a JAR file, an wheel file and a DLL have been released.</div>
+                    <div>To use the specialized library on Mobile (Android), an AAR file has been released.</div>
+                    <div>You can download their last stable versions <a href="https://github.com/DeMaCS-UNICAL/EmbASP/releases">here</a>.</div>
+                </div> -->
+                <div>
+                    <h3>Development Version</h3> You can find the current development version
+                    <a href="https://github.com/DeMaCS-UNICAL/EmbASP">on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="Documentation">Documentation</h2>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#architecture" aria-controls="architecture" role="tab" data-toggle="tab" aria-selected="true">Abstract Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#implementations" aria-controls="implementations" role="tab" data-toggle="tab" aria-selected="false">Implementations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#examples" aria-controls="examples" role="tab" data-toggle="tab" aria-selected="false">Examples</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content" style="padding-top: 15px">
+                    <div role="tabpanel" class="tab-pane fade show active" id="architecture">
+                        <div class="card card-primary" id="arch-desc">
+                            <div class="card-header">
+                                <h3 class="card-title">Architecture Description</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    The general architecture of EmbASP is depicted in the following figure: it is intended as an abstract framework to be implemented
+                                    in some object-oriented programming language.
+                                </p>
+                                <p>
+                                    In addition, this architecture can be specialized for different platforms, logic languages and solvers.
+                                </p>
+                                <p>
+                                    The figure also reports general dependencies among the main modules.
+                                </p>
+
+                                <figure style="padding-bottom: 1em">
+                                    <img class="img-fluid mx-auto d-block" src="img/architecture_v3.svg" alt="Abstract Architecture" onerror="this.src='img/architecture_v3.png'">
+                                    <figcaption class="text-center">
+                                        Abstract Architecture of the framework.
+                                        <br /> Blocks overshadowed in white depict the abstract components of the framework, while
+                                        dark-grey blocks represent the modules more closely related to the proposed specialization.
+                                    </figcaption>
+                                </figure>
+
+                                <p>
+                                    The framework architecture has been designed by means of four modules:
+                                    <code class="layer">Core</code>,
+                                    <code class="layer">Platforms</code>,
+                                    <code class="layer">Languages</code>, and
+                                    <code class="layer">Systems</code>. In the following, we denote with "solver" a logic-based system that is meant to be
+                                    used by external application with the help of EmbASP.
+                                </p>
+
+                                <h4>Core Module</h4>
+                                <p>The
+                                    <code class="layer">Core</code> module defines the basic components of the Framework.</p>
+
+                                <p>
+                                    The
+                                    <code>Handler</code> component mediates the communication between the Framework and the user that can provide
+                                    it with the input program(s) via the component
+                                    <code>InputProgram</code>, along with any desired solver's option(s) via the component
+                                    <code>OptionDescriptor</code>. A
+                                    <code>Service</code> component is meant for managing the chosen solver executions.
+
+                                </p>
+
+                                <p>
+                                    Two different execution modes can be made available: synchronous or asynchronous. While in the synchronous mode any call
+                                    to the execution of the solver is
+                                    <em>blocking</em> (i.e., the caller waits until the reasoning task is completed), in asynchronous
+                                    mode the call is non-blocking: a
+                                    <code>Callback</code> component notifies the caller once the reasoning task is completed. The result of the
+                                    execution (i.e., the output of the logic system) is handled by the
+                                    <code>Output</code> component, in both modes.</p>
+
+
+                                <h4>Platforms Module</h4>
+
+                                <p>
+                                    The
+                                    <code class="layer">Platforms</code> module is meant for containing what is platform-dependent; in particular, the
+                                    <code>Handler</code> and
+                                    <code>Service</code> components from the
+                                    <code class="layer">Core</code> module that should be adapted according to the platform at hand, since they take care
+                                    of practically launching solvers.
+                                </p>
+
+                                <h4>Languages Module</h4>
+
+                                <p>
+                                    The
+                                    <code class="layer">Languages</code> module defines specific facilities for each supported logic language.
+                                </p>
+
+                                <p>
+                                    The generic
+                                    <code>Mapper</code> component is conceived as an utility for managing input and output via objects, if the
+                                    programming language at hand permits it.
+                                </p>
+
+                                <p>
+                                    The sub-module ASP comprises components such as
+                                    <code>ASPInputProgram</code> that adapts
+                                    <code>InputProgram</code> to the ASP case, while
+                                    <code>AnswerSet</code> and
+                                    <code>AnswerSets</code> represent the
+                                    <code>Output</code> for ASP. Moreover the
+                                    <code>ASPMapper</code> allow the management of ASP input facts and answer sets via objects.
+                                </p>
+
+                                <p>
+                                    Similarly, the sub-module PDDL includes
+                                    <code>PDDLInputProgram</code>,
+                                    <code>Action</code>,
+                                    <code>Plan</code> and
+                                    <code>PDDLMapper</code>.
+                                </p>
+
+                                <h4>Systems Module</h4>
+                                <p>
+                                    The
+                                    <code class="layer">Systems</code> module defines what is system-dependent; in particular, the
+                                    <code>InputProgram</code>,
+                                    <code>Output</code> and
+                                    <code>OptionDescriptor</code> components from the
+                                    <code class="layer">Core</code> module should be adapted in order to effectively interact with the solver at hand.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="implementations">
+                        <div class="card card-primary" id="arch-desc">
+                            <div class="card-header">
+                                <h3 class="card-title">Implementations</h3>
+                            </div>
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#implementation_java" aria-controls="implementation_java" role="tab" data-toggle="tab" aria-selected="true">Java implementation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#implementation_python" aria-controls="implementation_python" role="tab" data-toggle="tab" aria-selected="false">Python implementation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#implementation_csharp" aria-controls="implementation_csharp" role="tab" data-toggle="tab" aria-selected="false">C# implementation</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content" style="padding-top: 15px">
+
+                                    <div role="tabpanel" class="tab-pane fade show active" id="implementation_java">
+                                        <div class="card card-primary" id="arch-desc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Implementation Description</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    As mentioned above, we provide a
+                                                    <a href="https://www.oracle.com/java">Java</a> implementation of the EmbASP framework.
+                                                </p>
+                                                <p>
+                                                    The following figure provides some details about classes and interfaces of the implementation.
+                                                </p>
+
+                                                <figure style="padding-bottom: 1em">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_v3.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                                    <figcaption class="text-center">
+                                                        Simplified class diagram of the provided Java implementation of EmbASP.
+                                                    </figcaption>
+                                                </figure>
+
+                                                <h4>Core module implementation</h4>
+                                                <p>
+                                                    Each component in the
+                                                    <code class="layer">Core</code> module has been implemented by means of an homonymous class or interface.
+                                                </p>
+                                                <p>
+                                                    In particular, the
+                                                    <code>Handler</code> class collects
+                                                    <code>InputProgram</code> and
+                                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                                </p>
+                                                <p>
+                                                    For what the asynchronous mode is concerned, the class
+                                                    <code>Service</code> depends from the interface
+                                                    <code>Callback</code>, since once the reasoning service has terminated, the result of the
+                                                    computation is returned back via a class
+                                                    <code>Callback</code>.
+                                                </p>
+
+                                                <h4>Platforms module implementation</h4>
+                                                <p>
+                                                    In order to support a new platform, the
+                                                    <code>Handler</code> and
+                                                    <code>Service</code> components must be adapted.
+                                                </p>
+                                                <p>
+                                                    As for the Android platform, we developed an
+                                                    <code>AndroidHandler</code> that handles the execution of an
+                                                    <code>AndroidService</code>, which provides facilities to manage the execution of a solver on the
+                                                    Android platform.
+                                                </p>
+                                                <p>
+                                                    Similarly, for the desktop platform we developed a
+                                                    <code>DesktopHandler</code> and a
+                                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform, allowing
+                                                    both synchronous and asynchronous execution modes.
+                                                </p>
+
+                                                <h4>Languages module implementation</h4>
+                                                <p>
+                                                    This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+                                                </p>
+                                                <p>
+                                                    The
+                                                    <code>Mapper</code> component of the
+                                                    <code class="layer">Languages</code> module is implemented via a
+                                                    <code>Mapper</code> class, that allows to translate input and output into Java objects.
+                                                    Such translations are guided by
+                                                    <a href="https://docs.oracle.com/javase/tutorial/java/annotations">Java Annotations</a>, a form of metadata that mark Java code and provide
+                                                    information that is not part of the program itself: they have no direct
+                                                    effect on the operation of the code they annotate.
+                                                </p>
+                                                <p>
+                                                    In our setting, we make use of such feature so that it is possible to translate facts into strings and vice-versa via two
+                                                    custom annotations, defined according to the following syntax:
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <code>@Id (string_name)</code>: the target must be a class, and defines the predicate name (in
+                                                        the ASP case) and the action name (in the PDDL case) the class is
+                                                        mapped to;
+                                                    </li>
+                                                    <li>
+                                                        <code>@Param (integer_position)</code>: the target must be a field of a class annotated via
+                                                        <code>@Id</code>, and defines the term (and its position) in the atom (in the ASP
+                                                        case) and in the action (in the PDDL case) the field is mapped to.
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    By means of the Java Reflection mechanisms, annotations are examined at runtime, and taken into account to properly define
+                                                    the translation.
+                                                </p>
+                                                <p>
+                                                    If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
+                                                </p>
+                                                <p>
+                                                    In addition to the
+                                                    <code>Mapper</code>, this module features two sub-modules which are more strictly related
+                                                    to ASP and PDDL.
+                                                </p>
+
+                                                <h4>Systems Module Implementation</h4>
+                                                <p>
+                                                    The classes
+                                                    <code>DLVAnswerSets</code>,
+                                                    <code>ClingoAnswerSets</code>,
+                                                    <code>DLV2AnswerSets</code> and
+                                                    <code>SPDPlan</code> implement specific extensions of the
+                                                    <code>AnswerSets</code> or
+                                                    <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
+                                                </p>
+                                                <p>
+                                                    Moreover, this module can contain classes extending
+                                                    <code>OptionDescriptor</code> to implement specific options of the solver at hand.
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-primary" id="javadoc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Javadoc</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    The Javadoc documentation is available
+                                                    <a href="javadoc/index.html">here</a>.
+                                                </p>
+                                                <p>
+                                                    For an offline usage, you can download it
+                                                    <a href="javadoc-embasp.zip">here</a>.
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-primary" id="class-diagram">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Class Diagram</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                A complete UML Class Diagram is available
+                                                <a href="img/complete_class_diagram2.png">here</a>.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="implementation_python">
+                                        <div class="card card-primary" id="arch-desc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Implementation Description</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    As mentioned above, we provide a
+                                                    <a href="https://www.python.org/">Python</a> implementation of the EmbASP framework.
+                                                </p>
+                                                <p>
+                                                    The following figure provides some details about classes and interfaces of the implementation.
+                                                </p>
+
+                                                <figure style="padding-bottom: 1em">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_python.png" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                                    <figcaption class="text-center">
+                                                        Simplified class diagram of the provided Python implementation of EmbASP.
+                                                    </figcaption>
+                                                </figure>
+
+                                                <h4>Core module implementation</h4>
+                                                <p>
+                                                    Each component in the
+                                                    <code class="layer">Core</code> module has been implemented by means of an abstract class or generic
+                                                    classes that will specialize in the following packages.
+                                                </p>
+                                                <p>
+                                                    In particular, the
+                                                    <code>Handler</code> class collects
+                                                    <code>InputProgram</code> and
+                                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                                </p>
+                                                <p>
+                                                    For what the asynchronous mode is concerned, the class
+                                                    <code>Service</code> depends from the interface
+                                                    <code>Callback</code>, since once the reasoning service has terminated, the result of the
+                                                    computation is returned back via a class
+                                                    <code>Callback</code>.
+                                                </p>
+
+                                                <h4>Platforms module implementation</h4>
+                                                <p>
+                                                    In order to support a new platform, the
+                                                    <code>Handler</code> and
+                                                    <code>Service</code> components must be adapted.
+                                                </p>
+                                                <p>
+                                                    For the desktop platform we developed a
+                                                    <code>DesktopHandler</code> and a
+                                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform, allowing
+                                                    both synchronous and asynchronous execution modes.
+                                                </p>
+
+                                                <h4>Languages module implementation</h4>
+                                                <p>
+                                                    This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+                                                </p>
+                                                <p>
+                                                    The
+                                                    <code>Mapper</code> component of the
+                                                    <code class="layer">Languages</code> module is implemented via a
+                                                    <code>Mapper</code> class, that allows to translate input and output into Python objects.
+                                                    Such translations are guided by
+                                                    <code>Predicate</code> abstract class, also present in the module.
+                                                </p>
+                                                <p>
+                                                    To make possible translate facts into strings and vice versa, the classes that want to represent a predicate, must extend
+                                                    the abstract class
+                                                    <code>Predicate</code>, and must be implemented by including the following code:
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <code>predicateName="string_name"</code>: must be entered as a class field and must contain the predicate
+                                                        name (in the ASP case) or the action name (in the PDDL case) to map;
+                                                    </li>
+                                                    <li>
+                                                        <code>[("class_field_name_1", int), ("class_field_name_2"), ...]</code>: Is a list that must be passed to super in the constructor, and
+                                                        must contain so many tuples how many are the class field, containing
+                                                        the field name, sorted by the position of the terms they represent,
+                                                        and optionally the keyword
+                                                        <code>int</code> if the field represents an integer.
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    Thanks to the structure of the
+                                                    <code>Predicate</code> class, this information is passed to the
+                                                    <code>Mapper</code> class, to correctly perform the translation mechanism.
+                                                </p>
+                                                <p>
+                                                    If the classes intended for the translation are not constructed correctly in this way, an exception is raised.
+                                                </p>
+                                                <p>
+                                                    In addition to the
+                                                    <code>Mapper</code>, this module features two sub-modules which are more strictly related
+                                                    to ASP and PDDL.
+                                                </p>
+
+                                                <h4>Systems Module Implementation</h4>
+                                                <p>
+                                                    The classes
+                                                    <code>DLVAnswerSets</code>,
+                                                    <code>ClingoAnswerSets</code>,
+                                                    <code>DLV2AnswerSets</code> and
+                                                    <code>SPDPlan</code> implement specific extensions of the
+                                                    <code>AnswerSets</code> or
+                                                    <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
+                                                </p>
+                                                <p>
+                                                    Moreover, this module can contain classes extending
+                                                    <code>OptionDescriptor</code> to implement specific options of the solver at hand.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="implementation_csharp">
+                                        <div class="card card-primary" id="arch-desc">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Implementation Description</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                In development
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="examples">
+                        <div class="card card-primary" id="arch-desc">
+                            <div class="card-header">
+                                <h3 class="card-title">Examples</h3>
+                            </div>
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#android_example" aria-controls="android_example" role="tab" data-toggle="tab" aria-selected="true">Example DLV on Android</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#desktop_example" aria-controls="desktop_example" role="tab" data-toggle="tab" aria-selected="false">Example SPD on Desktop</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content" style="padding-top: 15px">
+                                    <div role="tabpanel" class="tab-pane fade show active" id="android_example">
+                                        <div class="card card-primary" id="getting-started">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Getting Started</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <mark>This example is available only in Java due to the restrictions of the Android
+                                                    mobile operating system.
+                                                </mark>
+                                                <h4>How to import the framework on Android Studio</h4>
+                                                <p>In order to use the framework in your applications you have to import it
+                                                    as module on Android Studio.
+                                                </p>
+                                                <ol>
+                                                    <li>Import the framework module:
+                                                        <ol>
+                                                            <li>Download the framework last released
+                                                                <a href="#release">module</a>.
+                                                            </li>
+                                                            <li>In the project view, right-click on your project
+                                                                <b>New &gt; Module</b>.
+                                                            </li>
+                                                            <li>Select
+                                                                <b>Import .JAR/.AAR Package</b>.
+                                                            </li>
+                                                            <li>Select the directory in which the module has been downloaded.
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    <li>Set the dependency:
+                                                        <ol>
+                                                            <li>In the Android Studio menu:
+                                                                <b>File &gt; Project Structure
+                                                                </b>.
+                                                            </li>
+                                                            <li>Select your project module (by default called
+                                                                <b>app</b>).
+                                                            </li>
+                                                            <li>In the
+                                                                <b>Dependencies Tab</b> add as
+                                                                <b>Module Dependency
+                                                                </b> the previously imported framework.
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-primary" id="setting-up">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Using EmbASP</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                                    develop a simple Android application for solving Sudoku puzzles.
+                                                </p>
+                                                <p>
+                                                    The complete code of this example is freely available
+                                                    <a href="files/EmbASP_Android_Sudoku.zip">here</a>. Please note that the zip file contains an Android Studio (version
+                                                    2.3) project and uses the version 3.1.0 of EmbASP.
+                                                </p>
+                                                <p>
+                                                    The framework features a annotation-guided mapping, offered by the
+                                                    <i>ASPMapper</i> component, for two-way translations between strings recognizable
+                                                    by ASP solvers and objects in the programming language at hand, directly
+                                                    employable within applications. By means of this feature, the ASP-based
+                                                    aspects can be separated from the Java coding: the programmer doesn't
+                                                    even necessarily need to be aware of ASP.
+                                                </p>
+                                                <p>
+                                                    Let us think of a user that designed (or has been given) a proper logic program
+                                                    <i>P</i> to solve a sudoku puzzle and has also an initial schema. We assume
+                                                    that the initial schema is well-formed i.e. the complete schema solution
+                                                    exists and is unique. A possible program
+                                                    <i>P</i> is embedded in the complete example, that, coupled with a set of
+                                                    facts
+                                                    <i>F</i> representing the given initial schema, allows to obtain the only
+                                                    admissible solution.
+                                                </p>
+                                                <p>
+                                                    By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent,
+                                                    we define the class
+                                                    <i>Cell</i>, aimed at representing the single cell of the sudoku schema,
+                                                    as follows:
+                                                </p>
+                                                <pre><code class="language-java">
+    @Id("cell")
+    public class Cell {
+    
+        @Param(0)
+        private int row;
+        
+        @Param(1)
+        private int column;
+        
+        @Param(2)
+        private int value;
+        
+        [...]
+        
+    }           
+                </code></pre>
+                                                <p>
+                                                    It is worth noticing how the class has been annotated by two custom annotations, defined according to the following syntax:
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <i>@Id(string_name)</i>: the target must be a class, and defines the
+                                                        predicate name the class is mapped to;
+                                                    </li>
+                                                    <li>
+                                                        <i>@Param(integer_position)</i>: the target must be a field of a class
+                                                        annotated via @Id, and defines the term (and its position) in the
+                                                        ASP atom the field is mapped to.
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    Thanks to these annotations the
+                                                    <i>ASPMapper</i> class will be able to map
+                                                    <i>Cell</i> objects into strings properly recognizable from the ASP solver
+                                                    as logic facts of the form
+                                                    <i>cell(Row,Column,Value)</i>. At this point, we can create an
+                                                    <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>, and start deploying our sudoku application:
+                                                </p>
+                                                <pre><code class="language-java">
+    public class MainActivity extends AppCompatActivity {
+	
+        [...]
+        private Handler handler;
+    
+        @Override
+        protected void onCreate(Bundle bundle) {
+            handler = new AndroidHandler(getApplicationContext(), DLVAndroidService.class);
+            [...]
+        }
+        
+        public void onClick(final View view){
+            startReasoning();
+            [...]
+        }
+    
+        public void startReasoning() {
+            InputProgram inputProgram = new InputProgram();
+            for (int i = 0; i &lt; 9; i++){
+                for (int j = 0; j &lt; 9; j++)
+                    try {
+                        if(sudokuMatrix[i][j]!=0) {
+                            inputProgram.addObjectInput(new Cell(i, j, sudokuMatrix[i][j]));
+                        }
+                    } catch (Exception e) {	
+                    	// Handle Exception 
+                    }
+            }
+            handler.addProgram(inputProgram);
+    
+            String sudokuEncoding = getEncodingFromResources();			
+            handler.addProgram(new InputProgram(sudokuEncoding));
+    
+            Callback callback = new MyCallback();
+            handler.startAsync(callback);
+        }
+    }
+            </code></pre>
+
+                                                <p>
+                                                    The class contains an
+                                                    <i>Handler</i> instance as field, that is initialized when the
+                                                    <i>Activity</i> is created as an
+                                                    <i>AndroidHandler</i>. Required parameters include the
+                                                    <i>Android Context</i> (an Android utility, needed to start an Android Service
+                                                    Component) and the type of
+                                                    <i>AndroidService</i> to use, in our case a
+                                                    <i>DLVAndroidService</i>.
+                                                </p>
+                                                <p>
+                                                    In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where
+                                                    position
+                                                    <i> (i,j) </i> contains the value of cell
+                                                    <i> (i,j) </i> in the initial schema; cells initially empty are represented
+                                                    by positions containing zero.
+                                                </p>
+                                                <p>
+                                                    The method
+                                                    <i>startReasoning</i> is in charge of actually managing the reasoning: in
+                                                    our case, it is invoked in response to a click event that is generated
+                                                    when the user asks for the solution. It is firstly created an
+                                                    <i>InputProgram</i> object that is filled with
+                                                    <i>Cell</i> objects representing the initial schema, which is then provided
+                                                    to the handler; then it is provided with the sudoku encoding. It could
+                                                    be loaded, for instance, by means of an utility function that retrieves
+                                                    it from the
+                                                    <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>, which, within Android applications, is
+                                                    typically meant for containing images, sounds, files and resources in
+                                                    general.
+                                                </p>
+                                                <p>
+                                                    At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback
+                                                    object is in charge of fetching the output when the ASP system has done.
+                                                </p>
+                                                <p>
+                                                    Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of
+                                                    Java objects. For instance, in our case an inner class
+                                                    <i>MyCallback</i> implements the interface
+                                                    <i>Callback</i>:</p>
+                                                <pre><code class="language-java">
+    private class MyCallback implements Callback {
+
+        @Override
+        public void callback(Output o) {
+            if(!(o instanceof AnswerSets))
+                return;
+            AnswerSets answerSets=(AnswerSets)o;
+            if(answerSets.getAnswersets().isEmpty())
+                return;
+            AnswerSet as = answerSets.getAnswersets().get(0);
+            try {
+                for(Object obj:as.getAtoms()) {
+                    Cell cell = (Cell) obj;
+                    sudokuMatrix[cell.getRow()][cell.getColumn()] = cell.getValue();
+                }
+            } catch (Exception e) {
+                // Handle Exception
+            }
+            displaySolution();
+        }
+    }
+		</code></pre>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="desktop_example">
+                                        <div class="card card-primary" id="getting-started">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Getting Started</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col col-md-6">
+                                                        <h4>Java version</h4>
+                                                        <p>
+                                                            The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any
+                                                            Java project.
+                                                        </p>
+                                                        <p>
+                                                            The SPD solver is invoked via an HTTP connection using JSON files as data interchange format. In order to manage them, the
+                                                            framework needs the
+                                                            <a href="https://cliftonlabs.github.io/json-simple">json-simple library</a> (you can download the JAR and include
+                                                            directly in your project or you can use Gradle or Maven)
+                                                        </p>
+                                                        <!--<p>
+                                    It's worth noticing that in order to use the ASP solvers (DLV, clingo and DLV2) on a Desktop platform, the binaries for the
+                                    specific machine must be download in advance.
+                                </p>-->
+                                                    </div>
+                                                    <div class="col col-md-6">
+                                                        <h4>Python version</h4>
+                                                        <p>
+                                                            The framework is released as EGG file to be used on a Desktop platform, it can be easily installed in a Python installation.
+                                                        </p>
+                                                        <p>
+                                                            The framework is stand alone and does not need any library for its operation, except for a Python installation.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-primary" id="setting-up">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Using EmbASP</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                                    develop a simple Desktop application to solve the blocks-world problem.
+                                                </p>
+                                                <p>
+                                                    The complete code of this example is freely available
+                                                    <a href="files/EmbASP_Desktop_Blocksworld.zip">here</a>. Please note that the zip file contains an Eclipse (Neon) project
+                                                    and uses the version 3.1.0 of EmbASP.
+                                                </p>
+
+
+                                                <figure style="padding-bottom: 1em">
+                                                    <img class="img-fluid mx-auto d-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
+                                                    <figcaption class="text-center">
+                                                        Sample configuration for blocks-world.
+                                                    </figcaption>
+                                                </figure>
+
+
+                                                <p>
+                                                    We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Java objects.
+                                                    To this purpose, the following classes are intended to represent possible
+                                                    actions that a blocks-world solution plan can feature:
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col col-md-6">
+                                                        <h4>Java version</h4>
+                                                        <pre><code class="language-java">
+    @Id("pick-up")
+    public class PickUp {
+
+        @Param(0)
+        private String block;
+
+        [...]
+    }
+                </code></pre>
+                                                        <pre><code class="language-java">
+    @Id("put-down")
+    public class PutDown {
+
+        @Param(0)
+        private String block;
+
+        [...]
+    }
+                </code></pre>
+                                                        <pre><code class="language-java">
+    @Id("stack")
+    public class Stack {
+
+        @Param(0)
+        private String block1;
+
+        @Param(1)
+        private String block2;
+        
+        [...]
+    }
+                </code></pre>
+                                                        <pre><code class="language-java">
+    @Id("unstack")
+    public class Unstack {
+
+        @Param(0)
+        private String block1;
+
+        @Param(1)
+        private String block2;
+        
+        [...]
+    }         
+                </code></pre>
+                                                    </div>
+                                                    <div class="col col-md-6">
+                                                        <h4>Python version</h4>
+                                                        <pre><code class="language-python">
+    class PickUp(Predicate):
+        predicateName="pick-up"
+        
+        def __init__(self, block=None):
+            super(PickUp, self).__init__([("block")])
+            self.block = block
+            
+        [...]
+                </code></pre>
+                                                        <pre><code class="language-python">
+    class PutDown (Predicate):
+        predicateName="put-down"
+        
+        def __init__(self, block=None):
+            super(PutDown, self).__init__([("block")])
+            self.block = block
+            
+        [...]
+                </code></pre>
+                                                        <pre><code class="language-python">
+    class Stack (Predicate):
+        predicateName="stack"
+        
+        def __init__(self, block1=None, block2=None):
+            super(Stack, self).__init__([("block1"), ("block2")])
+            self.block1 = block1
+            self.block2 = block2
+            
+        [...]
+        
+
+                </code></pre>
+                                                        <pre><code class="language-python">
+    class Unstack (Predicate):
+        predicateName="unstack"
+        
+        def __init__(self, block1=None, block2=None):
+            super(Unstack, self).__init__([("block1"), ("block2")])
+            self.block1 = block1
+            self.block2 = block2
+            
+        [...]
+
+
+                </code></pre>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
+                                                    deploying our application:
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col col-md-6">
+                                                        <h4>Java version</h4>
+                                                        <pre><code class="language-java">
+    public class Blocksworld {
+        
+        private static String domainFileName = "domain.pddl";
+        private static String problemFileName = "p01.pddl";;
+
+        public static void main(String[] args) {
+            Handler handler = new DesktopHandler(new SPDDesktopService());
+            
+            final InputProgram inputProgramDomain = new PDDLInputProgram(PDDLProgramType.DOMAIN);
+            inputProgramDomain.addFilesPath(domainFileName);
+
+            final InputProgram inputProgramProblem = new PDDLInputProgram(PDDLProgramType.PROBLEM);
+            inputProgramProblem.addFilesPath(problemFileName);
+
+            handler.addProgram(inputProgramDomain);
+            handler.addProgram(inputProgramProblem);
+
+            try {
+
+                PDDLMapper.getInstance().registerClass(PickUp.class);
+                PDDLMapper.getInstance().registerClass(PutDown.class);
+                PDDLMapper.getInstance().registerClass(Stack.class);
+                PDDLMapper.getInstance().registerClass(Unstack.class);
+
+                Plan plan = (Plan)(handler.startSync());
+                
+                for (final Object obj : plan.getActionsObjects())
+                        //Manage objects as needed
+                        
+            } catch (Exception e) {
+                // Handle Exception
+            }
+        }
+    }
+            </code></pre>
+                                                    </div>
+                                                    <div class="col col-md-6">
+                                                        <h4>Python version</h4>
+                                                        <pre><code class="language-python">
+    class Blocksworld():
+        
+        __domainFileName = "domain.pddl"
+        __problemFileName = "p01.pddl"
+
+        def main(self):
+            handler = DesktopHandler(SPDDesktopService())
+            inputProgramDomain = PDDLInputProgram(PDDLProgramType.DOMAIN)
+            inputProgramDomain.addFilesPath(self.__domainFileName)
+            inputProgramProblem = PDDLInputProgram(PDDLProgramType.PROBLEM)
+            inputProgramProblem.addFilesPath(self.__problemFileName)
+            handler.addProgram(inputProgramDomain)
+            handler.addProgram(inputProgramProblem)
+            
+            try:
+                PDDLMapper.getInstance().registerClass(PickUp)
+                PDDLMapper.getInstance().registerClass(PutDown)
+                PDDLMapper.getInstance().registerClass(Stack)
+                PDDLMapper.getInstance().registerClass(Unstack)
+                
+                plan = handler.startSync()
+                
+                for obj  in plan.getActionsObjects():
+                    #Manage objects as needed
+                    
+            except:
+                #Handle Exception
+
+
+    if __name__ == '__main__':
+        Blocksworld.main()
+                </code></pre>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    The class contains an
+                                                    <i>Handler</i> instance as field, that is initialized with a
+                                                    <i>DesktopHandler</i> using the required parameter
+                                                    <i>SPDDesktopService</i>.
+                                                </p>
+                                                <p>
+                                                    Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
+                                                    <i>PDDLInputProgram</i> are created and then given to the handler.
+                                                </p>
+                                                <p>
+                                                    The next lines inform the
+                                                    <i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                </p>
+                                                <p>
+                                                    Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="CoreTeam">Core Team</h2>
+                <div>
+                    <ul>
+                        <li>
+                            Francesco Calimeri
+                            <a href="https://www.mat.unical.it/calimeri">
+                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            Davide Fusc&agrave;
+                        </li>
+                        <li>
+                            Stefano Germano
+                        </li>
+                        <li>
+                            Simona Perri
+                        </li>
+                        <li>
+                            Jessica Zangari
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="Contacts">Contacts</h2>
+                <div>
+                    For further information, contact
+                    <a href="mailto:embasp@mat.unical.it">embasp@mat.unical.it</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="License">License</h2>
+                <div>
+                    <p>
+                        The framework is released under
+                        <a href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>
+                    </p>
+                    <p> The framework library for DLV on Android embeds the DLV system itself, which is free for academic and
+                        non-commercial educational use, as well as for use by non-profit organizations. For further information
+                        about DLV, please refer to the
+                        <a href="http://www.dlvsystem.com">DLVSystem Ltd. home page</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="Publications">Publications</h2>
+                <div>
+                    <ul>
+                        <li>Francesco Calimeri, Davide Fuscà, Stefano Germano, Simona Perri, and Jessica Zangari.
+                            <br />
+                            <em>Fostering the Use of Declarative Formalisms for Real-World Applications: The EmbASP Framework</em>
+                            <br /> In New Generation Computing (2018).
+                            <p>
+                                <a href="https://link.springer.com/article/10.1007%2Fs00354-018-0046-2"><i class="fas fa-book"></i> paper</a>&nbsp;
+                            </p>
+                        </li>
+                        <li>Davide Fuscà, Stefano Germano, Jessica Zangari, Marco Anastasio, Francesco Calimeri and Simona Perri.
+                            <br />
+                            <em>A Framework for Easing the Development of Applications Embedding Answer Set Programming</em>
+                            <br /> Presented at the 23rd International Workshop on Experimental Evaluation of Algorithms for solving
+                            problems with combinatorial explosion (RCRA 2016).
+                            <p>
+                                <a href="files/RCRA-2016-slides.pdf"><i class="fas fa-chalkboard-teacher"></i> slides</a>
+                            </p>
+                        </li>
+                        <li>Francesco Calimeri, Davide Fuscà, Stefano Germano, Simona Perri and Jessica Zangari.
+                            <br />
+                            <em>Boosting the Development of ASP-based Applications in Mobile and General Scenarios</em>
+                            <br /> In Proceedings of the 15th International Conference of the Italian Association for Artificial
+                            Intelligence (AI*IA 2016).
+                            <p>
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-319-49130-1_17"><i class="fas fa-book"></i> paper</a>&nbsp;
+                                <a href="files/AIxIA-2016-slides.pdf"><i class="fas fa-chalkboard-teacher"></i> slides</a>
+                            </p>
+                        </li>
+                        <li>Davide Fuscà, Stefano Germano, Jessica Zangari, Marco Anastasio, Francesco Calimeri and Simona Perri.
+                            <br />
+                            <em>A Framework for Easing the Development of Applications Embedding Answer Set Programming</em>
+                            <br /> In Proceedings of the 18th International Symposium on Principles and Practice of Declarative
+                            Programming (PPDP 2016).
+                            <p>
+                                <a href="http://dl.acm.org/citation.cfm?id=2968594"><i class="fas fa-book"></i> paper</a>&nbsp;
+                                <a href="files/PPDP-2016-slides.pdf"><i class="fas fa-chalkboard-teacher"></i> slides</a>
+                            </p>
+                        </li>
+                        <li>Francesco Calimeri, Davide Fuscà, Stefano Germano, Simona Perri and Jessica Zangari.
+                            <br />
+                            <em>Embedding ASP in mobile systems: discussion and preliminary implementations</em>
+                            <br /> In (online) Procedings of the 8th Workshop on Answer Set Programming and Other Computing Paradigms
+                            (ASPOCP 2015).
+                            <p>
+                                <a href="https://sites.google.com/site/aspocp2015/ASPOCP2015paper12.pdf"><i class="fas fa-book"></i> paper</a>&nbsp;
+                                <a href="files/ASPOCP-2015-slides.pdf"><i class="fas fa-chalkboard-teacher"></i> slides</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 id="Applications">Applications Showcase</h2>
+                <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card card-primary">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h4 class="card-title">
+                                    <em>DLVfit</em>
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseOne" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-body row">
+                                <div class="col col-sm-7">
+                                    <p>
+                                        <a href="https://github.com/brainatwork/DLVfit">
+                                            <em>DLVfit</em>
+                                        </a> is a health and fitness app that monitors the user activity during the day and suggests
+                                        some workout plans that depend on her age, weight, gender and goals. The app periodically
+                                        stores some information about the user activities (running, walking, etc.) and infers
+                                        the current amount of calories burned so far. When the user asks for a workout plan,
+                                        <em>DLVfit</em> proposes a set of exercises that would allow the user to reach her daily
+                                        goal, taking into account also to her preferences. The suggested workout plans are
+                                        computed in the background by DLV via EmbASP.
+                                    </p>
+
+                                    <p>The ASP program used within
+                                        <em>DLVfit</em> can be found in the repository. Basically, the program guesses for possible
+                                        fitness exercises to do in order to burn the remaing calories. Each answer set represent
+                                        a possible workout plan, in which is ensured that the user's requirements about the
+                                        calories to burn and the time to spend in the workout are respected. Moreover, also
+                                        user's preferences are taken into account by means of weak constraints.</p>
+
+                                    <h5>
+                                        <b>Release</b>
+                                    </h5>
+                                    <p>You can download the latest version of
+                                        <em>DLVfit</em>
+                                        <a href="https://github.com/brainatwork/DLVfit">here</a>.</p>
+
+                                    <p>
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Supported versions of Android
+                                        </button>
+                                    </p>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
+                                            <p>The app should work on most devices equipped with Android 4.x/5.x.
+                                                <br /> The list of compatible devices include (but it is not limited to):
+                                            </p>
+                                            <ul>
+                                                <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
+                                                <li>HTC One - Android 4.3, API 18</li>
+                                                <li>HTC One XL - Android 4.2.2, API 17</li>
+                                                <li>HTC One XL - Android 4.1.1, API 16</li>
+                                                <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
+                                                <li>Google Nexus 7 - Android 4.4.4, API 19</li>
+                                                <li>Samsung S4 - Android 4.4.4, API 19</li>
+                                                <li>Samnsung S3 - Android 4.3, API 18</li>
+                                                <li>Sony Xperia S - Android 4.1.1, API 16</li>
+                                                <li>Google Nexus 7 - Android 4.3, API 18</li>
+                                                <li>Sony Xperia Go - Android 4.0</li>
+                                                <li>Sony Xperia Z3 - Android 5.0</li>
+                                                <li>Sony Xperia Z3 - Android 5.1</li>
+                                                <li>Galaxy S6 - Android 5.0</li>
+                                                <li>Nexus 6 - Android 5.0</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <h5>
+                                        <b>Developers</b>
+                                    </h5>
+                                    <ul>
+                                        <li>Dario Campisano</li>
+                                        <li>The EmbASP Team</li>
+                                    </ul>
+                                </div>
+                                <div class="col col-sm-5">
+                                    <div id="carousel-DLVfit" class="carousel slide carousel-fade" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-DLVfit" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="1"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="2"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="3"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="4"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="5"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="6"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="7"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="8"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="9"></li>
+                                            <li data-target="#carousel-DLVfit" data-slide-to="10"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(1).png" alt="Screenshot(1)" />
+                                                <!--<div class="carousel-caption">
+                                            <h3>Welcome</h3>
+                                            <p>...</p>
+                                        </div>-->
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(2).png" alt="Screenshot(2)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(3).png" alt="Screenshot(3)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(4).png" alt="Screenshot(4)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(5).png" alt="Screenshot(5)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(6).png" alt="Screenshot(6)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(7).png" alt="Screenshot(7)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(8).png" alt="Screenshot(8)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(9).png" alt="Screenshot(9)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(10).png" alt="Screenshot(10)" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVfit/Screenshot(11).png" alt="Screenshot(11)" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <a class="carousel-control-prev" href="#carousel-DLVfit" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-DLVfit" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-primary">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <h4 class="card-title">
+                                    <em>GuessAndCheckers</em>
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="card-body">
+                                <p>
+                                    <a href="https://github.com/vincenzoarieta93/GuessAndCheckers">
+                                        <em>GuessAndCheckers</em>
+                                    </a> is a native mobile application that works as an helper for users that play "live" games
+                                    of the (Italian) checkers (i.e., by means of physical board and pieces). The app, that
+                                    runs on Android, can help a player at any time: by means of the device camera a picture
+                                    of the board is taken, and the information about the current status of the game is properly
+                                    inferred thanks to
+                                    <a href="http://opencv.org">OpenCV</a>, an open source computer vision and machine learning software; an ASP-based
+                                    artificial intelligence module then suggests the move.
+                                </p>
+
+                                <p>Thanks to EmbASP and the use of ASP,
+                                    <em>GuessAndCheckers</em> features a fully-declarative approach that made easy to develop
+                                    and improve several different strategies, also experimenting with many combinations thereof.
+                                    <br /> The source code of this application along with the Android Application Package (APK)
+                                    are available online.</p>
+
+                                <h5>
+                                    <b>Release</b>
+                                </h5>
+                                <p>You can download the latest version of
+                                    <em>GuessAndCheckers</em>
+                                    <a href="https://github.com/vincenzoarieta93/GuessAndCheckers">here</a>.</p>
+
+                                <h5>
+                                    <b>Developers</b>
+                                </h5>
+                                <ul>
+                                    <li>Vincenzo Arieta</li>
+                                    <li>The EmbASP Team</li>
+                                </ul>
+                                <div id="carousel-GuessAndCheckers" class="carousel slide carousel-fade" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="1"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="2"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="3"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="4"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="5"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="6"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="7"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="8"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="9"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="10"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="11"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="12"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="13"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="14"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="15"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="16"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="17"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="18"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="19"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="20"></li>
+                                        <li data-target="#carousel-GuessAndCheckers" data-slide-to="21"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/welcome_activity.png" alt="Welcome" />
+                                            <!--<div class="carousel-caption">
+                                            <h3>Welcome</h3>
+                                            <p>...</p>
+                                        </div>-->
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_1.png" alt="Tutorial slide 1"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_2.png" alt="Tutorial slide 2"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_3.png" alt="Tutorial slide 3"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_4.png" alt="Tutorial slide 4"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/tutorial_slide_5.png" alt="Tutorial slide 5"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/scelta_mossa.png" alt="scelta mossa" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/solving_phase_1.png" alt="solving phase 1" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/solving_phase_2.png" alt="solving phase 2" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/solving_phase_3.png" alt="solving phase 3" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/textual_hint.png" alt="textual hint" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/scelta_mossa_sol.png" alt="scelta mossa sol"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/obbligo_presa.png" alt="obbligo presa" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti.png" alt="presa avente pezzi forti"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_avente_pezzi_forti_sol.png" alt="presa avente pezzi forti sol"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_il_piu_forte.png" alt="presa con il piu forte"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_forte.png" alt="presa con piu forte"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima.png" alt="presa_con_piu_forte_prima"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_forte_prima_sol.png" alt="presa_con_piu_forte_prima_sol"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi.png" alt="presa con piu pezzi"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/presa_con_piu_pezzi_sol.png" alt="presa con piu pezzi sol"
+                                            />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid d-block mx-auto" src="img/screenshots/GuessAndCheckers/embasp_ack.png" alt="embasp ack" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <a class="carousel-control-prev" href="#carousel-GuessAndCheckers" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carousel-GuessAndCheckers" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card card-primary">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <h4 class="card-title">
+                                    <em>DLVEdu</em>
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="card-body row">
+                                <div class="col col-sm-7">
+                                    <p>
+                                        <em>DLVEdu</em> is an educational Android App for children, that integrates well-established
+                                        mobile technologies, such as voice or drawn text recognition, with the modeling capabilities
+                                        of ASP. In particular, it is able to guide the child throughout the learning tasks,
+                                        by proposing a series of educational games, and developing a personalized educational
+                                        path. The games are divided into four macro-areas: Logic, Numeric-Mathematical, Memory,
+                                        and Verbal Language. The usage of ASP allows the application to adapt to the game
+                                        experiences fulfilled by the user, her formative gap, and the obtained improvements.
+                                    </p>
+
+                                    <p>
+                                        The application continuously profiles the user by recording mistakes and successes, and dynamically builds and updates a
+                                        customized educational path along the different games. The application features a
+                                        "Parent Area", that allows parents to monitor child's achievements and to express
+                                        some preferences, such as explicit filters of some games or educational areas.
+                                    </p>
+
+                                    <h5>
+                                        <b>Developers</b>
+                                    </h5>
+                                    <ul>
+                                        <li>Mattia Lanzillotta</li>
+                                        <li>Mirko Pontoriero</li>
+                                        <li>The EmbASP Team</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col col-sm-5">
+                                    <div id="carousel-DLVEdu" class="carousel slide carousel-fade" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="1"></li>
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="2"></li>
+                                            <li data-target="#carousel-DLVEdu" data-slide-to="3"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/home.png" alt="Home" />
+                                                <!--<div class="carousel-caption">
+                                            <h3>Welcome</h3>
+                                            <p>...</p>
+                                        </div>-->
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/giochi.png" alt="Giochi" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/sudoku.png" alt="Sudoku" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/DLVEdu/area genitori.png" alt="Area genitori" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <a class="carousel-control-prev" href="#carousel-DLVEdu" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-DLVEdu" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-primary">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            <div class="card-header" role="tab" id="headingFour">
+                                <h4 class="card-title">
+                                    <em>Connect4</em>
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseFour" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="card-body">
+                                <p>Connect4 is an application that allows a user to play the popular Connect Four game (also
+                                    known as Four-in-a-Row) against an ASP-based artificial player.
+                                    <br /> The Connect Four game is played by two opponents on a vertical 7*6 rectangular board.
+                                    At each turn, the players fill the board by dropping 1 disk into one of the column so
+                                    that it falls from the top to the lowest unoccupied position in the column. The winner
+                                    is the first player who gets four of her disks in a line, connected either horizontally,
+                                    vertically, or diagonally.
+                                </p>
+
+                                <p>
+                                    Different AIs have been implemented, ranging from the most powerful one implementing advanced techniques for the perfect
+                                    play to the simplest one relying on some classical heuristic strategies. By using EmbASP,
+                                    two different versions of the same app have been built: one for Android, making use of
+                                    <a href="http://www.dlvsystem.com">DLV</a>, and one for Java-enabled desktop platforms, making use of
+                                    <a href="http://potassco.sourceforge.net">clingo</a>.
+                                </p>
+
+                                <h5>
+                                    <b>Developers</b>
+                                </h5>
+                                <ul>
+                                    <li>Marco Anastasio</li>
+                                    <li>The EmbASP Team</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-primary">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                            aria-controls="collapseFive">
+                            <div class="card-header" role="tab" id="headingFive">
+                                <h4 class="card-title">
+                                    <em>LoIDE</em>
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseFive" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="card-body">
+                                <p>
+                                    <a href="https://github.com/DeMaCS-UNICAL/LoIDE">
+                                        <em>LoIDE</em>
+                                    </a> is a web-based IDE for Logic Programming.
+                                    <br /> An extensive documentation can be found
+                                    <a href="https://github.com/DeMaCS-UNICAL/LoIDE/wiki">here</a>.
+                                </p>
+
+                                <p>
+                                    A live beta version can be found online at
+                                    <a href="https://www.mat.unical.it/calimeri/projects/loide">https://www.mat.unical.it/calimeri/projects/loide</a>
+                                    <br /> This online version uses the
+                                    <a href="https://github.com/DeMaCS-UNICAL/ASPServerExecutor">ASPServerExecutor</a> to run the ASP solvers (using the EmbASP Framework).
+                                </p>
+
+                                <h5>
+                                    <b>Developers</b>
+                                </h5>
+                                <ul>
+                                    <li>Eliana Palermiti</li>
+                                    <li>Stefano Germano</li>
+                                    <li>Francesco Calimeri</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-primary">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"
+                            aria-controls="collapseSix">
+                            <div class="card-header" role="tab" id="headingSix">
+                                <h4 class="card-title">
+                                    <em>Pac-Man Unity-EmbASP</em>
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseSix" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="card-body row">
+                                <div class="col col-sm-5">
+                                    <p>
+                                        <a href="https://github.com/DeMaCS-UNICAL/Pac-Man-Unity-EmbASP">
+                                            <em>Pac-Man Unity-EmbASP</em>
+                                        </a> ...</p>
+
+                                    <!-- <p>
+
+                                        </p>
+    
+                                        <h5>
+                                            <b>Release</b>
+                                        </h5>
+                                        <p>You can download the latest version of
+                                            <em>DLVfit</em>
+                                            <a href="https://github.com/brainatwork/DLVfit">here</a>.</p>
+    
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Supported versions of Android
+                                        </button>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="well">
+                                                <p>The app should work on most devices equipped with Android 4.x/5.x.
+                                                    <br /> The list of compatible devices include (but it is not limited to):</p>
+                                                <ul>
+                                                    <li>Samsung Galaxy S2 - Android 4.3, API 16</li>
+                                                    <li>HTC One - Android 4.3, API 18</li>
+                                                    <li>HTC One XL - Android 4.2.2, API 17</li>
+                                                    <li>HTC One XL - Android 4.1.1, API 16</li>
+                                                    <li>Samsung Galaxy Note 2 - Android 4.2.2, API 17</li>
+                                                    <li>Google Nexus 7 - Android 4.4.4, API 19</li>
+                                                    <li>Samsung S4 - Android 4.4.4, API 19</li>
+                                                    <li>Samnsung S3 - Android 4.3, API 18</li>
+                                                    <li>Sony Xperia S - Android 4.1.1, API 16</li>
+                                                    <li>Google Nexus 7 - Android 4.3, API 18</li>
+                                                    <li>Sony Xperia Go - Android 4.0</li>
+                                                    <li>Sony Xperia Z3 - Android 5.0</li>
+                                                    <li>Sony Xperia Z3 - Android 5.1</li>
+                                                    <li>Galaxy S6 - Android 5.0</li>
+                                                    <li>Nexus 6 - Android 5.0</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+    
+                                        <h5>
+                                            <b>Developers</b>
+                                        </h5>
+                                        <ul>
+                                            <li>Dario Campisano</li>
+                                            <li>The EmbASP Team</li>
+                                        </ul>-->
+                                </div>
+                                <div class="col col-sm-7">
+                                    <div id="carousel-PacMan" class="carousel slide carousel-fade" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-PacMan" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-PacMan" data-slide-to="1"></li>
+                                            <li data-target="#carousel-PacMan" data-slide-to="2"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/PacMan/Pac-Man.png" alt="Pac-Man Menu" />
+                                                <!--<div class="carousel-caption">
+                                                <h3>Welcome</h3>
+                                                <p>...</p>
+                                            </div>-->
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/PacMan/Pac-Man1.png" alt="Pac-Man" />
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img class="img-fluid d-block mx-auto" src="img/screenshots/PacMan/Pac-Man2.png" alt="Pac-Man" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <a class="carousel-control-prev" href="#carousel-PacMan" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-PacMan" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <p class="text-center">A project of the
+            <a href="https://www.mat.unical.it">Department of Mathematics and Computer Science</a> of the
+            <a href="http://unical.it">University of Calabria</a>
+        </p>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!--From http://bootsnipp.com/snippets/featured/back-to-top-->
+    <!-- <script>
+        $(document).ready(function () {
+            $('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span> Back to Top</div>');
+            $(window).scroll(function () {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        });
+    </script> -->
+
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project = 11307382;
+        var sc_invisible = 1;
+        var sc_security = "8ca95778";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript>
+        <div class="statcounter">
+            <a title="website
+statistics" href="http://statcounter.com/" target="_blank">
+                <img class="statcounter" src="//c.statcounter.com/11307382/0/8ca95778/1/" alt="website statistics">
+            </a>
+        </div>
+    </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+
+</body>
+
+</html>
