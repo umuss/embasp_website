@@ -227,26 +227,26 @@
                                 </p>
 
                                 <figure style="padding-bottom: 1em">
-                                    <img class="img-fluid mx-auto d-block" src="img/architecture_v3.svg" alt="Abstract Architecture" onerror="this.src='img/architecture_v3.png'">
+                                    <img class="img-fluid mx-auto d-block" src="img/abstract_architecture.svg" alt="Abstract Architecture" onerror="this.src='img/abstract_architecture.png'">
                                     <figcaption class="text-center">
                                         Abstract Architecture of the framework.
                                         <br /> Blocks overshadowed in white depict the abstract components of the framework, while
-                                        dark-grey blocks represent the modules more closely related to the proposed specialization.
+                                        light-blue blocks represent the modules more closely related to the proposed specialization.
                                     </figcaption>
                                 </figure>
 
                                 <p>
                                     The framework architecture has been designed by means of four modules:
-                                    <code class="layer">Core</code>,
+                                    <code class="layer">Base</code>,
                                     <code class="layer">Platforms</code>,
                                     <code class="layer">Languages</code>, and
-                                    <code class="layer">Systems</code>. In the following, we denote with "solver" a logic-based system that is meant to be
+                                    <code class="layer">Specialization</code>. In the following, we denote with "solver" a logic-based system that is meant to be
                                     used by external application with the help of EmbASP.
                                 </p>
 
-                                <h4>Core Module</h4>
+                                <h4>Base Module</h4>
                                 <p>The
-                                    <code class="layer">Core</code> module defines the basic components of the Framework.</p>
+                                    <code class="layer">Base</code> module defines the basic components of the Framework.</p>
 
                                 <p>
                                     The
@@ -275,7 +275,7 @@
                                     <code class="layer">Platforms</code> module is meant for containing what is platform-dependent; in particular, the
                                     <code>Handler</code> and
                                     <code>Service</code> components from the
-                                    <code class="layer">Core</code> module that should be adapted according to the platform at hand, since they take care
+                                    <code class="layer">Base</code> module that should be adapted according to the platform at hand, since they take care
                                     of practically launching solvers.
                                 </p>
 
@@ -310,14 +310,14 @@
                                     <code>PDDLMapper</code>.
                                 </p>
 
-                                <h4>Systems Module</h4>
+                                <h4>Specialization Module</h4>
                                 <p>
                                     The
-                                    <code class="layer">Systems</code> module defines what is system-dependent; in particular, the
+                                    <code class="layer">Specialization</code> module defines what is system-dependent; in particular, the
                                     <code>InputProgram</code>,
                                     <code>Output</code> and
                                     <code>OptionDescriptor</code> components from the
-                                    <code class="layer">Core</code> module should be adapted in order to effectively interact with the solver at hand.
+                                    <code class="layer">Base</code> module should be adapted in order to effectively interact with the solver at hand.
                                 </p>
 
                             </div>
@@ -359,16 +359,16 @@
                                                 </p>
 
                                                 <figure style="padding-bottom: 1em">
-                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_v3.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_java_v6.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_java_v6.png'">
                                                     <figcaption class="text-center">
                                                         Simplified class diagram of the provided Java implementation of EmbASP.
                                                     </figcaption>
                                                 </figure>
 
-                                                <h4>Core module implementation</h4>
+                                                <h4>Base module implementation</h4>
                                                 <p>
                                                     Each component in the
-                                                    <code class="layer">Core</code> module has been implemented by means of an homonymous class or interface.
+                                                    <code class="layer">Base</code> module has been implemented by means of an abstract class, generic class or interface that will specialize in the following packages.
                                                 </p>
                                                 <p>
                                                     In particular, the
@@ -377,7 +377,7 @@
                                                     <code>OptionDescriptor</code> objects communicated by the user.
                                                 </p>
                                                 <p>
-                                                    For what the asynchronous mode is concerned, the class
+                                                    For what the asynchronous mode is concerned, the interface
                                                     <code>Service</code> depends from the interface
                                                     <code>Callback</code>, since once the reasoning service has terminated, the result of the
                                                     computation is returned back via a class
@@ -446,12 +446,13 @@
                                                     to ASP and PDDL.
                                                 </p>
 
-                                                <h4>Systems Module Implementation</h4>
+                                                <h4>Specialization module Implementation</h4>
                                                 <p>
                                                     The classes
                                                     <code>DLVAnswerSets</code>,
+                                                    <code>DLV2AnswerSets</code>,
                                                     <code>ClingoAnswerSets</code>,
-                                                    <code>DLV2AnswerSets</code> and
+                                                    <code>DLVHEXAnswerSets</code> and
                                                     <code>SPDPlan</code> implement specific extensions of the
                                                     <code>AnswerSets</code> or
                                                     <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
@@ -507,17 +508,17 @@
                                                 </p>
 
                                                 <figure style="padding-bottom: 1em">
-                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_python.png" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_v3.png'">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_python_v6.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_python_v6.png'">
                                                     <figcaption class="text-center">
                                                         Simplified class diagram of the provided Python implementation of EmbASP.
                                                     </figcaption>
                                                 </figure>
 
-                                                <h4>Core module implementation</h4>
+                                                <h4>Base module implementation</h4>
                                                 <p>
                                                     Each component in the
-                                                    <code class="layer">Core</code> module has been implemented by means of an abstract class or generic
-                                                    classes that will specialize in the following packages.
+                                                    <code class="layer">Base</code> module has been implemented by means of generic class or interface
+                                                    that will specialize in the following packages.
                                                 </p>
                                                 <p>
                                                     In particular, the
@@ -590,12 +591,13 @@
                                                     to ASP and PDDL.
                                                 </p>
 
-                                                <h4>Systems Module Implementation</h4>
+                                                <h4>Specialization module implementation</h4>
                                                 <p>
                                                     The classes
                                                     <code>DLVAnswerSets</code>,
+                                                    <code>DLV2AnswerSets</code>
                                                     <code>ClingoAnswerSets</code>,
-                                                    <code>DLV2AnswerSets</code> and
+                                                    <code>DLVHEXAnswerSets</code> and
                                                     <code>SPDPlan</code> implement specific extensions of the
                                                     <code>AnswerSets</code> or
                                                     <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
@@ -613,7 +615,109 @@
                                                 <h3 class="card-title">Implementation Description</h3>
                                             </div>
                                             <div class="card-body">
-                                                In development
+                                                <p>
+                                                    As mentioned above, we provide a C# implementation of the EmbASP framework.
+                                                </p>
+                                                <p>
+                                                    The following figure provides some details about classes and interfaces of the implementation.
+                                                </p>
+
+                                                <figure style="padding-bottom: 1em">
+                                                    <img class="img-fluid mx-auto d-block" src="img/class_diagram_csharp_v6.svg" alt="Simplified Class Diagram" onerror="this.src='img/class_diagram_charp_v6.png'">
+                                                    <figcaption class="text-center">
+                                                        Simplified class diagram of the provided C# implementation of EmbASP.
+                                                    </figcaption>
+                                                </figure>
+
+                                                <h4>Base module implementation</h4>
+                                                <p>
+                                                    Each component in the
+                                                    <code class="layer">Base</code> module has been implemented by means of abstract class, generic class or interface
+                                                    that will specialize in the following packages.
+                                                </p>
+                                                <p>
+                                                    In particular, the
+                                                    <code>Handler</code> class collects
+                                                    <code>InputProgram</code> and
+                                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                                </p>
+                                                <p>
+                                                    For what the asynchronous mode is concerned, the class
+                                                    <code>Service</code> depends from the interface
+                                                    <code>Callback</code>, since once the reasoning service has terminated, the result of the
+                                                    computation is returned back via a class
+                                                    <code>Callback</code>.
+                                                </p>
+
+                                                <h4>Platforms module implementation</h4>
+                                                <p>
+                                                    In order to support a new platform, the
+                                                    <code>Handler</code> and
+                                                    <code>Service</code> components must be adapted.
+                                                </p>
+                                                <p>
+                                                    For the desktop platform we developed a
+                                                    <code>DesktopHandler</code> and a
+                                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform, allowing
+                                                    both synchronous and asynchronous execution modes.
+                                                </p>
+
+                                                <h4>Languages module implementation</h4>
+                                                <p>
+                                                    This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+                                                </p>
+                                                <p>
+                                                    The
+                                                    <code>Mapper</code> component of the
+                                                    <code class="layer">Languages</code> module is implemented via a
+                                                    <code>Mapper</code> class, that allows to translate input and output into C# objects.
+                                                    Such translations are guided by
+                                                    <code>C# Attributes</code>, a form of metadata that mark C# code and provide information
+                                                    that is not part of the program itself: they have no direct effect on the operation of the code they annotate.
+                                                </p>
+                                                <p>
+                                                    In our setting, we make use of such features so that it is possible to translate facts into strings and vice-versa
+                                                    via two custom attributes, defined according to the following syntax:
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <code>[Id(string_name)]</code>: the target must be a class, and defines the predicate name (in the ASP case)
+                                                        and the action name (in the PDDL case) the class is mapped to;
+                                                    </li>
+                                                    <li>
+                                                        <code>[Param(integer_position)]</code>: the target must be a field of a class annotated via
+                                                        <code>[Id(string_name)]</code>, and defines the term (and its position) in the atom (in the ASP case)
+                                                        and in the action (in the PDDL case) the field is mapped to.
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    By means of the <code>C# Reflection</code> mechanism, attributes are examined at runtime,
+                                                    and taken into account to properly define the translation.
+                                                </p>
+                                                <p>
+                                                    If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
+                                                </p>
+                                                <p>
+                                                    In addition to the
+                                                    <code>Mapper</code>, this module features two sub-modules which are more strictly related
+                                                    to ASP and PDDL.
+                                                </p>
+
+                                                <h4>Specialization module implementation</h4>
+                                                <p>
+                                                    The classes
+                                                    <code>DLVAnswerSets</code>,
+                                                    <code>DLV2AnswerSets</code>
+                                                    <code>ClingoAnswerSets</code>,
+                                                    <code>DLVHEXAnswerSets</code> and
+                                                    <code>SPDPlan</code> implement specific extensions of the
+                                                    <code>AnswerSets</code> or
+                                                    <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
+                                                </p>
+                                                <p>
+                                                    Moreover, this module can contain classes extending
+                                                    <code>OptionDescriptor</code> to implement specific options of the solver at hand.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
