@@ -1,5 +1,7 @@
-it.unical.mat.embasp.asp
 it.unical.mat.embasp.base
+it.unical.mat.embasp.languages
+it.unical.mat.embasp.languages.asp
+it.unical.mat.embasp.languages.pddl
 it.unical.mat.embasp.platforms.android
 it.unical.mat.embasp.platforms.desktop
 it.unical.mat.embasp.specializations.clingo
@@ -7,3 +9,11 @@ it.unical.mat.embasp.specializations.clingo.desktop
 it.unical.mat.embasp.specializations.dlv
 it.unical.mat.embasp.specializations.dlv.android
 it.unical.mat.embasp.specializations.dlv.desktop
+it.unical.mat.embasp.specializations.dlv2
+it.unical.mat.embasp.specializations.dlv2.android
+it.unical.mat.embasp.specializations.dlv2.desktop
+it.unical.mat.embasp.specializations.dlvhex
+it.unical.mat.embasp.specializations.dlvhex.desktop
+it.unical.mat.embasp.specializations.solver_planning_domains
+it.unical.mat.embasp.specializations.solver_planning_domains.android
+it.unical.mat.embasp.specializations.solver_planning_domains.desktop
