@@ -1037,75 +1037,71 @@
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane fade" id="desktop_example">
-                                        <div class="card card-primary" id="getting-started">
-                                            <div class="card-header">
-                                                <h3 class="card-title">Getting Started</h3>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col col-md-6">
-                                                        <h4>Java version</h4>
-                                                        <p>
-                                                            The framework is released as JAR file to be used on a Desktop platform, therefore it can be easily imported and used in any
-                                                            Java project.
-                                                        </p>
-                                                        <p>
-                                                            The SPD solver is invoked via an HTTP connection using JSON files as data interchange format. In order to manage them, the
-                                                            framework needs the
-                                                            <a href="https://cliftonlabs.github.io/json-simple">json-simple library</a> (you can download the JAR and include
-                                                            directly in your project or you can use Gradle or Maven)
-                                                        </p>
-                                                        <!--<p>
-                                    It's worth noticing that in order to use the ASP solvers (DLV, clingo and DLV2) on a Desktop platform, the binaries for the
-                                    specific machine must be download in advance.
-                                </p>-->
-                                                    </div>
-                                                    <div class="col col-md-6">
-                                                        <h4>Python version</h4>
-                                                        <p>
-                                                            The framework is released as EGG file to be used on a Desktop platform, it can be easily installed in a Python installation.
-                                                        </p>
-                                                        <p>
-                                                            The framework is stand alone and does not need any library for its operation, except for a Python installation.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    
+                                    	<div class="card card-primary" id="arch-desc">
+                                    		<div class="card-header">
+												<h3 class="card-title">Version</h3>
+											</div>	
+											<div class="card-body">
+                                    			<ul class="nav nav-pills nav-justified" role="tablist">
+                                    				<li class="nav-item">
+                                       					<a class="nav-link active" href="#java_pddl_example" aria-controls="java_pddl_example" role="tab" data-toggle="tab" aria-selected="true">Java</a>
+                                    				</li>
+                                   					<li class="nav-item">
+                                      					<a class="nav-link" href="#python_pddl_example" aria-controls="python_pddl_example" role="tab" data-toggle="tab" aria-selected="false">Python</a>
+                                    				</li>
+                                    				<li class="nav-item">
+                                      					<a class="nav-link" href="#csharp_pddl_example" aria-controls="csharp_pddl_example" role="tab" data-toggle="tab" aria-selected="false">C#</a>
+                                    				</li>
+                                    			</ul>
+                                    			<div class="tab-content" style="padding-top: 15px">
+													<div role="tabpanel" class="tab-pane fade show active" id="java_pddl_example">
 
-                                        <div class="card card-primary" id="setting-up">
-                                            <div class="card-header">
-                                                <h3 class="card-title">Using EmbASP</h3>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>
-                                                    In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
-                                                    develop a simple Desktop application to solve the blocks-world problem.
-                                                </p>
-                                                <p>
-                                                    The complete code of this example is freely available
-                                                    <a href="files/EmbASP_Desktop_Blocksworld.zip">here</a>. Please note that the zip file contains an Eclipse (Neon) project
-                                                    and uses the version 3.1.0 of EmbASP.
-                                                </p>
+														<div class="card card-primary" id="getting-started">
+															<div class="card-header">
+																<h3 class="card-title">Getting Started</h3>
+															</div>
+															<div class="card-body">
+																<p>The framework is released as JAR file to be used
+																	on a Desktop platform, therefore it can be easily
+																	imported and used in any Java project.</p>
+																<p>
+																	The framework needs <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
+																	You can download the JAR and include directly in your project or you can use Gradle or Maven.
+																</p>
+															</div>
+														</div>
 
+														<div class="card card-primary" id="setting-up">
+                                            				<div class="card-header">
+                                                				<h3 class="card-title">Using EmbASP</h3>
+                                            				</div>
+                                            				<div class="card-body">
+                                                				<p>
+                                                    				In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                                    				develop a simple Desktop application to solve the blocks-world problem.
+                                                				</p>
+                                                				<p>
+                                                    				The complete code of this example is freely available
+                                                    				<a href="files/EmbASP_Desktop_BlocksWorld_Java.zip">here</a>.
+                                                				</p>
 
-                                                <figure style="padding-bottom: 1em">
-                                                    <img class="img-fluid mx-auto d-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
-                                                    <figcaption class="text-center">
-                                                        Sample configuration for blocks-world.
-                                                    </figcaption>
-                                                </figure>
-
-
-                                                <p>
-                                                    We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Java objects.
-                                                    To this purpose, the following classes are intended to represent possible
-                                                    actions that a blocks-world solution plan can feature:
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col col-md-6">
-                                                        <h4>Java version</h4>
-                                                        <pre><code class="language-java">
+                                                				<figure style="padding-bottom: 1em">
+                                                    				<img class="img-fluid mx-auto d-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
+                                                    				<figcaption class="text-center">
+                                                        				Sample configuration for blocks-world.
+                                                    				</figcaption>
+                                                				</figure>
+                                                			
+                                                				<p>
+                                                    				We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Java objects.
+                                                    				To this purpose, the following classes are intended to represent possible
+                                                    				actions that a blocks-world solution plan can feature:
+                                                				</p>
+                                                			
+                                                				<div class="row">
+                                                    				<div class="col col-md-6">
+                                                        				<pre><code class="language-java">
     @Id("pick-up")
     public class PickUp {
 
@@ -1114,8 +1110,8 @@
 
         [...]
     }
-                </code></pre>
-                                                        <pre><code class="language-java">
+               	</code></pre>
+                                                        				<pre><code class="language-java">
     @Id("put-down")
     public class PutDown {
 
@@ -1124,8 +1120,8 @@
 
         [...]
     }
-                </code></pre>
-                                                        <pre><code class="language-java">
+               </code></pre>
+                                                        				<pre><code class="language-java">
     @Id("stack")
     public class Stack {
 
@@ -1137,8 +1133,8 @@
         
         [...]
     }
-                </code></pre>
-                                                        <pre><code class="language-java">
+               </code></pre>
+                                                        				<pre><code class="language-java">
     @Id("unstack")
     public class Unstack {
 
@@ -1150,66 +1146,16 @@
         
         [...]
     }         
-                </code></pre>
-                                                    </div>
-                                                    <div class="col col-md-6">
-                                                        <h4>Python version</h4>
-                                                        <pre><code class="language-python">
-    class PickUp(Predicate):
-        predicateName="pick-up"
-        
-        def __init__(self, block=None):
-            super(PickUp, self).__init__([("block")])
-            self.block = block
-            
-        [...]
-                </code></pre>
-                                                        <pre><code class="language-python">
-    class PutDown (Predicate):
-        predicateName="put-down"
-        
-        def __init__(self, block=None):
-            super(PutDown, self).__init__([("block")])
-            self.block = block
-            
-        [...]
-                </code></pre>
-                                                        <pre><code class="language-python">
-    class Stack (Predicate):
-        predicateName="stack"
-        
-        def __init__(self, block1=None, block2=None):
-            super(Stack, self).__init__([("block1"), ("block2")])
-            self.block1 = block1
-            self.block2 = block2
-            
-        [...]
-        
-
-                </code></pre>
-                                                        <pre><code class="language-python">
-    class Unstack (Predicate):
-        predicateName="unstack"
-        
-        def __init__(self, block1=None, block2=None):
-            super(Unstack, self).__init__([("block1"), ("block2")])
-            self.block1 = block1
-            self.block2 = block2
-            
-        [...]
-
-
-                </code></pre>
-                                                    </div>
-                                                </div>
-                                                <p>
-                                                    At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
-                                                    deploying our application:
-                                                </p>
-                                                <div class="row">
-                                                    <div class="col col-md-6">
-                                                        <h4>Java version</h4>
-                                                        <pre><code class="language-java">
+               </code></pre>
+                                                    				</div>
+                                                    
+                                                				</div>
+                                                				<p>
+                                                    				At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
+                                                    				deploying our application:
+                                                				</p>
+                                                				<div class="row">
+                                                        				<pre><code class="language-java">
     public class Blocksworld {
         
         private static String domainFileName = "domain.pddl";
@@ -1237,18 +1183,134 @@
                 Plan plan = (Plan)(handler.startSync());
                 
                 for (final Object obj : plan.getActionsObjects())
-                        //Manage objects as needed
+                        // Manage objects as needed
                         
             } catch (Exception e) {
                 // Handle Exception
             }
         }
     }
-            </code></pre>
-                                                    </div>
-                                                    <div class="col col-md-6">
-                                                        <h4>Python version</h4>
-                                                        <pre><code class="language-python">
+            					                                	</code></pre>
+                                                    
+                                                				</div>
+                                                				<p>
+                                                    				The class contains an
+                                                    				<i>Handler</i> instance as field, that is initialized with a
+                                                    				<i>DesktopHandler</i> using the required parameter
+                                                   					<i>SPDDesktopService</i>.
+                                                				</p>
+                                                				<p>
+                                                    				Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
+                                                    				<i>PDDLInputProgram</i> are created and then given to the handler.
+                                                				</p>
+                                                				<p>
+                                                    				The next lines inform the
+                                                    				<i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                				</p>
+                                                				<p>
+                                                    				Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
+                                                				</p>
+                                            				</div>
+                                        				</div>
+                                    				</div>
+                                    				
+                                    				<div role="tabpanel" class="tab-pane fade" id="python_pddl_example">
+                                    					
+                                    					<div class="card card-primary" id="getting-started">
+                                            				<div class="card-header">
+                                                				<h3 class="card-title">Getting Started</h3>
+                                            				</div>
+                                            				<div class="card-body">
+                                                        		<p>
+                                                            		The framework is released as EGG file to be used on a Desktop platform, therefore it can be easily installed in a Python installation.
+                                                        		</p>
+                                                        		<p>
+                                                            		The framework needs <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
+                                                       			</p>
+                                         					</div>
+                                       					</div>
+
+                                        				<div class="card card-primary" id="setting-up">
+                                            				<div class="card-header">
+                                                				<h3 class="card-title">Using EmbASP</h3>
+                                            				</div>
+                                            				<div class="card-body">
+                                                				<p>
+                                                    				In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                                    				develop a simple Desktop application to solve the blocks-world problem.
+                                               					</p>
+                                                				<p>
+                                                    				The complete code of this example is freely available
+                                                    				<a href="files/EmbASP_Desktop_BlocksWorld/Python.zip">here</a>.
+                                                				</p>
+
+                                                				<figure style="padding-bottom: 1em">
+                                                    				<img class="img-fluid mx-auto d-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
+                                                    				<figcaption class="text-center">
+                                                        			Sample configuration for blocks-world.
+                                                    				</figcaption>
+                                                				</figure>
+
+                                                				<p>
+                                                    				We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Java objects.
+                                                    				To this purpose, the following classes are intended to represent possible
+                                                    				actions that a blocks-world solution plan can feature:
+                                                				</p>
+                                                				<div class="row">
+                                                    				<div class="col col-md-6">
+                              											<pre><code class="language-python">
+    class PickUp(Predicate):
+        predicateName="pick-up"
+        
+        def __init__(self, block=None):
+            super(PickUp, self).__init__([("block")])
+            self.block = block
+            
+        [...]
+                </code></pre>
+                                                        				<pre><code class="language-python">
+    class PutDown (Predicate):
+        predicateName="put-down"
+        
+        def __init__(self, block=None):
+            super(PutDown, self).__init__([("block")])
+            self.block = block
+            
+        [...]
+                </code></pre>
+                                                        				<pre><code class="language-python">
+    class Stack (Predicate):
+        predicateName="stack"
+        
+        def __init__(self, block1=None, block2=None):
+            super(Stack, self).__init__([("block1"), ("block2")])
+            self.block1 = block1
+            self.block2 = block2
+            
+        [...]
+
+                </code></pre>
+                                                        				<pre><code class="language-python">
+    class Unstack (Predicate):
+        predicateName="unstack"
+        
+        def __init__(self, block1=None, block2=None):
+            super(Unstack, self).__init__([("block1"), ("block2")])
+            self.block1 = block1
+            self.block2 = block2
+            
+        [...]
+
+                </code></pre>
+                                                    				</div>
+                                                    
+                                                				</div>
+                                                				<p>
+                                                    				At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
+                                                    				deploying our application:
+                                                				</p>
+                                                				<div class="row">
+                                                        				<pre><code class="language-python">
     class Blocksworld():
         
         __domainFileName = "domain.pddl"
@@ -1280,29 +1342,189 @@
 
     if __name__ == '__main__':
         Blocksworld.main()
-                </code></pre>
-                                                    </div>
-                                                </div>
-                                                <p>
-                                                    The class contains an
-                                                    <i>Handler</i> instance as field, that is initialized with a
-                                                    <i>DesktopHandler</i> using the required parameter
-                                                    <i>SPDDesktopService</i>.
-                                                </p>
-                                                <p>
-                                                    Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
-                                                    <i>PDDLInputProgram</i> are created and then given to the handler.
-                                                </p>
-                                                <p>
-                                                    The next lines inform the
-                                                    <i>PDDLMapper</i> about what classes are intended to map the output actions.
-                                                </p>
-                                                <p>
-                                                    Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
-                                                </p>
-                                            </div>
-                                        </div>
+                                                               		</code></pre>
+                                                				</div>
+                                                				<p>
+                                                    				The class contains an
+                                                    				<i>Handler</i> instance as field, that is initialized with a
+                                                    				<i>DesktopHandler</i> using the required parameter
+                                                    				<i>SPDDesktopService</i>.
+                                                				</p>
+                                                				<p>
+                                                    				Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
+                                                    				<i>PDDLInputProgram</i> are created and then given to the handler.
+                                                				</p>
+                                                				<p>
+                                                    				The next lines inform the
+                                                    				<i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                				</p>
+                                                				<p>
+                                                    				Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
+                                                				</p>
+                                            				</div>
+                                        				</div>
+                                    					
+                                    				</div>
+                                    				<div role="tabpanel" class="tab-pane fade" id="csharp_pddl_example">
+                                    					
+                                    					<div class="card card-primary" id="getting-started">
+                                            				<div class="card-header">
+                                                				<h3 class="card-title">Getting Started</h3>
+                                            				</div>
+                                            				<div class="card-body">
+                                                        		<p>
+                                                        			The framework id released as VisualStudio project,
+                                                        			therefore it can be easily added and used in any VisualStudio solution.
+                                                        		</p>
+                                            				</div>
+                                        				</div>
+                                        				
+                                        				<div class="card card-primary" id="setting-up">
+                                            				<div class="card-header">
+                                            				    <h3 class="card-title">Using EmbASP</h3>
+                                            				</div>
+                                            				<div class="card-body">
+                                            				    <p>
+                                                				    In the following, we describe an the actual usage of the framework by means of a running example; as a use case, we will
+                                                    				develop a simple Desktop application to solve the blocks-world problem.
+                                                				</p>
+                                                				<p>
+                                                    				The complete code of this example is freely available
+                                                    				<a href="files/EmbASP_Desktop_BlocksWorld/CSharp.zip">here</a>.
+                                                				</p>
 
+                                                				<figure style="padding-bottom: 1em">
+                                                    				<img class="img-fluid mx-auto d-block" src="img/blocks-world.svg" alt="blocks-world configuration" onerror="this.src='img/blocks-world.png'">
+                                                    				<figcaption class="text-center">
+                                                        				Sample configuration for blocks-world.
+                                                    				</figcaption>
+                                                				</figure>
+
+                                                				<p>
+                                                    				We will make use of the annotation-guided mapping, in order to retrieve the actions constituting a PDDL plan via Java objects.
+                                                    				To this purpose, the following classes are intended to represent possible
+                                                    				actions that a blocks-world solution plan can feature:
+                                                				</p>
+                                                				<div class="row">
+                                                    				<div class="col col-md-6">
+                                                        				<pre><code class="language-csharp">
+    [Id("pick-up")]
+    class PickUp
+    {
+    	[Param(0)]
+    	private string block;
+    	
+        [...]
+    }
+                </code></pre>
+                                                        				<pre><code class="language-csharp">
+    [Id("put-down")]
+    class PutDown
+    {
+    	[Param(0)]
+    	private string block;
+    	
+    	[...]
+    }
+                </code></pre>
+                                                       					<pre><code class="language-csharp">
+    [Id("stack")]
+    class Stack
+    {
+    	[Param(0)]
+    	private string block1;
+    	
+    	[Param(1)]
+    	private string block2;
+    	
+    	[...]
+    }
+                </code></pre>
+                                                        				<pre><code class="language-csharp">
+    [Id("unstack")]
+    class Unstack
+    {
+    	[Param(0)]
+    	private string block1;
+    	
+    	[Param(1)]
+    	private string block2;
+    	
+    	[...]
+    }
+                </code></pre>
+                                                    				</div>
+                                                    
+                                                				</div>
+                                                				<p>
+                                                    				At this point, supposing that we are given two files defining the blocks-world domain and a problem instance, we can start
+                                                    				deploying our application:
+                                                				</p>
+                                                				<div class="row">
+                                                        				<pre><code class="language-csharp">
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Handler handler = new DesktopHandler(new SPDDesktopService());
+
+            InputProgram inputDomain = new PDDLInputProgram(PDDLProgramType.DOMAIN);
+            inputDomain.AddFilesPath("domain.pddl");
+
+            InputProgram inputProblem = new PDDLInputProgram(PDDLProgramType.PROBLEM);
+            inputProblem.AddFilesPath("p01.pddl");
+
+            handler.AddProgram(inputDomain);
+            handler.AddProgram(inputProblem);
+
+            try
+            {
+                PDDLMapper.Instance.RegisterClass(typeof(PickUp));
+                PDDLMapper.Instance.RegisterClass(typeof(PutDown));
+                PDDLMapper.Instance.RegisterClass(typeof(Stack));
+                PDDLMapper.Instance.RegisterClass(typeof(Unstack));
+
+                Plan plan = (Plan)handler.StartSync();
+
+                foreach(object obj in plan.ActionsObjects)
+                {
+                    // Manage objects as needed
+                }
+
+            }
+            catch (Exception e)
+            { 
+                // Handle Exception
+            }
+        }
+    }
+                                                            			</code></pre>
+                                                				</div>
+                                                				<p>
+                                                    				The class contains an
+                                                    				<i>Handler</i> instance as field, that is initialized with a
+                                                    				<i>DesktopHandler</i> using the required parameter
+                                                    				<i>SPDDesktopService</i>.
+                                                				</p>
+                                                				<p>
+                                                    				Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
+                                                    				<i>PDDLInputProgram</i> are created and then given to the handler.
+                                               					</p>
+                                                				<p>
+                                                    				The next lines inform the
+                                                    				<i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                				</p>
+                                                				<p>
+                                                    				Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
+                                                				</p>
+                                            				</div>
+                                        				</div>
+                                        				
+                                    				</div>
+                                    			</div>
+                                    		</div>
+                                    	</div>
+                                 
                                     </div>
                                 </div>
                             </div>
