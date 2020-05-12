@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['asp_199',['asp',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp.html',1,'it.unical.mat.embasp.languages.asp'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1asp.html',1,'it.unical.mat.parsers.asp']]],
+  ['clingo_200',['clingo',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1clingo.html',1,'it.unical.mat.embasp.specializations.clingo'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1clingo.html',1,'it.unical.mat.parsers.asp.clingo']]],
+  ['desktop_201',['desktop',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop.html',1,'it.unical.mat.embasp.platforms.desktop'],['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1clingo_1_1desktop.html',1,'it.unical.mat.embasp.specializations.clingo.desktop'],['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1desktop.html',1,'it.unical.mat.embasp.specializations.dlv2.desktop'],['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv_1_1desktop.html',1,'it.unical.mat.embasp.specializations.dlv.desktop'],['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlvhex_1_1desktop.html',1,'it.unical.mat.embasp.specializations.dlvhex.desktop'],['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains_1_1desktop.html',1,'it.unical.mat.embasp.specializations.solver_planning_domains.desktop']]],
+  ['dlv_202',['dlv',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv.html',1,'it.unical.mat.embasp.specializations.dlv'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv.html',1,'it.unical.mat.parsers.asp.dlv']]],
+  ['dlv2_203',['dlv2',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2.html',1,'it.unical.mat.embasp.specializations.dlv2'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv2.html',1,'it.unical.mat.parsers.asp.dlv2']]],
+  ['dlvhex_204',['dlvhex',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlvhex.html',1,'it.unical.mat.embasp.specializations.dlvhex'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex.html',1,'it.unical.mat.parsers.asp.dlvhex']]],
+  ['embasp_205',['embasp',['../namespaceit_1_1unical_1_1mat_1_1embasp.html',1,'it::unical::mat']]],
+  ['it_206',['it',['../namespaceit.html',1,'']]],
+  ['languages_207',['languages',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1languages.html',1,'it::unical::mat::embasp']]],
+  ['mat_208',['mat',['../namespaceit_1_1unical_1_1mat.html',1,'it::unical']]],
+  ['parsers_209',['parsers',['../namespaceit_1_1unical_1_1mat_1_1parsers.html',1,'it::unical::mat']]],
+  ['pddl_210',['pddl',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl.html',1,'it.unical.mat.embasp.languages.pddl'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1pddl.html',1,'it.unical.mat.parsers.pddl']]],
+  ['platforms_211',['platforms',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1platforms.html',1,'it::unical::mat::embasp']]],
+  ['solver_5fplanning_5fdomains_212',['solver_planning_domains',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains.html',1,'it.unical.mat.embasp.specializations.solver_planning_domains'],['../namespaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains.html',1,'it.unical.mat.parsers.pddl.solver_planning_domains']]],
+  ['specializations_213',['specializations',['../namespaceit_1_1unical_1_1mat_1_1embasp_1_1specializations.html',1,'it::unical::mat::embasp']]],
+  ['unical_214',['unical',['../namespaceit_1_1unical.html',1,'it']]]
+];
