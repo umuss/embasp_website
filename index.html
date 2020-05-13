@@ -29,6 +29,8 @@
 
         .layer {
             text-transform: uppercase;
+            background-color: #ebf5fb !important;
+            color: #1b4f72 !important;
         }
 
         .footer {
@@ -38,6 +40,10 @@
             border-top: 1px solid #eee;
         }
 
+        code {
+            background-color: #f4ecf7;
+            color:  #a93226;
+        }
         /* #toTop {
             position: fixed;
             bottom: 10px;
@@ -114,7 +120,6 @@
             </strong>
         </span>
 
-        </div>
         <!-- /.container-fluid -->
     </nav>
     <div class="container" style="padding-top: 40px">
@@ -167,7 +172,7 @@
             <div class="alert alert-info" role="alert">
                 NOTE: this is the official site of versions
                 <strong>6</strong> of the EmbASP Framework. If you are looking for an older version, please check the last item in
-                the top menu.</a>
+                the top menu.
             </div>
         </div>
 
@@ -373,35 +378,35 @@
                                                 </p>
                                                 <p>
                                                     In particular, the
-                                                    <code>Handler</code> class collects
-                                                    <code>InputProgram</code> and
-                                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html">Handler</a></code> class collects
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html">InputProgram</a></code> and
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html">OptionDescriptor</a></code> objects communicated by the user.
                                                 </p>
                                                 <p>
                                                     For what the asynchronous mode is concerned, the interface
-                                                    <code>Service</code> depends from the interface
-                                                    <code>Callback</code>, since once the reasoning service has terminated, the result of the
-                                                    computation is returned back via a class
-                                                    <code>Callback</code>.
+                                                    <code><a href="doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Service.html">Service</a></code> depends from the interface
+                                                    <code><a href="doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Callback.html">Callback</a></code>, since once the reasoning service has terminated, 
+                                                    the result of the computation is returned back via a class
+                                                    <code><a href="doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Callback.html">Callback</a></code>.
                                                 </p>
 
                                                 <h4>Platforms module implementation</h4>
                                                 <p>
                                                     In order to support a new platform, the
-                                                    <code>Handler</code> and
-                                                    <code>Service</code> components must be adapted.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html">Handler</a></code> and
+                                                    <code><a href="doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Service.html">Service</a></code> components must be adapted.
                                                 </p>
                                                 <p>
                                                     As for the Android platform, we developed an
-                                                    <code>AndroidHandler</code> that handles the execution of an
-                                                    <code>AndroidService</code>, which provides facilities to manage the execution of a solver on the
-                                                    Android platform.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidHandler.html">AndroidHandler</a></code> that handles the execution of an
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidService.html">AndroidService</a></code>, 
+                                                    which provides facilities to manage the execution of a solver on the Android platform.
                                                 </p>
                                                 <p>
                                                     Similarly, for the desktop platform we developed a
-                                                    <code>DesktopHandler</code> and a
-                                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform, allowing
-                                                    both synchronous and asynchronous execution modes.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html">DesktopHandler</a></code> and a
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopService.html">DesktopService</a></code>, which generalizes the 
+                                                    usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.
                                                 </p>
 
                                                 <h4>Languages module implementation</h4>
@@ -410,10 +415,10 @@
                                                 </p>
                                                 <p>
                                                     The
-                                                    <code>Mapper</code> component of the
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html">Mapper</a></code> component of the
                                                     <code class="layer">Languages</code> module is implemented via a
-                                                    <code>Mapper</code> class, that allows to translate input and output into Java objects.
-                                                    Such translations are guided by
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html">Mapper</a></code> class, that allows to translate 
+                                                    input and output into Java objects. Such translations are guided by
                                                     <a href="https://www.antlr.org/">ANTLR4</a> library and  
                                                     <a href="https://docs.oracle.com/javase/tutorial/java/annotations">Java Annotations</a>, a form of metadata that mark Java code and provide
                                                     information that is not part of the program itself: they have no direct
@@ -444,24 +449,27 @@
                                                 </p>
                                                 <p>
                                                     In addition to the
-                                                    <code>Mapper</code>, this module features two sub-modules which are more strictly related
-                                                    to ASP and PDDL.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html">Mapper</a></code>, 
+                                                    this module features two sub-modules which are more strictly related to ASP and PDDL.
                                                 </p>
 
                                                 <h4>Specialization module Implementation</h4>
                                                 <p>
                                                     The classes
-                                                    <code>DLVAnswerSets</code>,
-                                                    <code>DLV2AnswerSets</code>,
-                                                    <code>ClingoAnswerSets</code>,
-                                                    <code>DLVHEXAnswerSets</code> and
-                                                    <code>SPDPlan</code> implement specific extensions of the
-                                                    <code>AnswerSets</code> or
-                                                    <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv_1_1DLVAnswerSets.html">DLVAnswerSets</a></code>,
+                                                    <code><a href ="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1DLV2AnswerSets.html">DLV2AnswerSets</a></code>,
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1clingo_1_1ClingoAnswerSets.html">ClingoAnswerSets</a></code>,
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlvhex_1_1DLVHEXAnswerSets.html">DLVHEXAnswerSets</a></code> and
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains_1_1SPDPlan.html">SPDPlan</a></code> 
+                                                    implement specific extensions of the
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1AnswerSets.html">AnswerSets</a></code> or
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1Plan.html">Plan</a></code> 
+                                                    classes, in charge of manipulating the output of the respective solvers.
                                                 </p>
                                                 <p>
                                                     Moreover, this module can contain classes extending
-                                                    <code>OptionDescriptor</code> to implement specific options of the solver at hand.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html">OptionDescriptor</a></code> 
+                                                    to implement specific options of the solver at hand.
                                                 </p>
 
                                             </div>
@@ -524,29 +532,29 @@
                                                 </p>
                                                 <p>
                                                     In particular, the
-                                                    <code>Handler</code> class collects
-                                                    <code>InputProgram</code> and
-                                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                                    <code><a href="doxygen/python/classbase_1_1handler_1_1Handler.html">Handler</a></code> class collects
+                                                    <code><a href="doxygen/python/classbase_1_1input__program_1_1InputProgram.html">InputProgram</a></code> and
+                                                    <code><a href="doxygen/python/classbase_1_1option__descriptor_1_1OptionDescriptor.html">OptionDescriptor</a></code> objects communicated by the user.
                                                 </p>
                                                 <p>
                                                     For what the asynchronous mode is concerned, the class
-                                                    <code>Service</code> depends from the interface
-                                                    <code>Callback</code>, since once the reasoning service has terminated, the result of the
+                                                    <code><a href="doxygen/python/classbase_1_1service_1_1Service.html">Service</a></code> depends from the interface
+                                                    <code><a href="doxygen/python/classbase_1_1callback_1_1Callback.html">Callback</a></code>, since once the reasoning service has terminated, the result of the
                                                     computation is returned back via a class
-                                                    <code>Callback</code>.
+                                                    <code><a href="doxygen/python/classbase_1_1callback_1_1Callback.html">Callback</a></code>.
                                                 </p>
 
                                                 <h4>Platforms module implementation</h4>
                                                 <p>
                                                     In order to support a new platform, the
-                                                    <code>Handler</code> and
-                                                    <code>Service</code> components must be adapted.
+                                                    <code><a href="doxygen/python/classbase_1_1handler_1_1Handler.html">Handler</a></code> and
+                                                    <code><a href="doxygen/python/classbase_1_1service_1_1Service.html">Service</a></code> components must be adapted.
                                                 </p>
                                                 <p>
                                                     For the desktop platform we developed a
-                                                    <code>DesktopHandler</code> and a
-                                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform, allowing
-                                                    both synchronous and asynchronous execution modes.
+                                                    <code><a href="doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html">DesktopHandler</a></code> and a
+                                                    <code><a href="doxygen/python/classplatforms_1_1desktop_1_1desktop__service_1_1DesktopService.html">DesktopService</a></code>, 
+                                                    which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.
                                                 </p>
 
                                                 <h4>Languages module implementation</h4>
@@ -555,17 +563,17 @@
                                                 </p>
                                                 <p>
                                                     The
-                                                    <code>Mapper</code> component of the
+                                                    <code><a href="doxygen/python/classlanguages_1_1mapper_1_1Mapper.html">Mapper</a></code> component of the
                                                     <code class="layer">Languages</code> module is implemented via a
-                                                    <code>Mapper</code> class, that allows to translate input and output into Python objects.
-                                                    Such translations are guided by
+                                                    <code><a href="doxygen/python/classlanguages_1_1mapper_1_1Mapper.html">Mapper</a></code> class, that allows to 
+                                                    translate input and output into Python objects. Such translations are guided by
                                                     <a href="https://www.antlr.org/">ANTLR4</a> library and 
-                                                    <code>Predicate</code> abstract class, also present in the module.
+                                                    <code><a href="doxygen/python/classlanguages_1_1predicate_1_1Predicate.html">Predicate</a></code> abstract class, also present in the module.
                                                 </p>
                                                 <p>
                                                     To make possible translate facts into strings and vice versa, the classes that want to represent a predicate, must extend
                                                     the abstract class
-                                                    <code>Predicate</code>, and must be implemented by including the following code:
+                                                    <code><a href="doxygen/python/classlanguages_1_1predicate_1_1Predicate.html">Predicate</a></code>, and must be implemented by including the following code:
                                                 </p>
                                                 <ul>
                                                     <li>
@@ -582,32 +590,32 @@
                                                 </ul>
                                                 <p>
                                                     Thanks to the structure of the
-                                                    <code>Predicate</code> class, this information is passed to the
-                                                    <code>Mapper</code> class, to correctly perform the translation mechanism.
+                                                    <code><a href="doxygen/python/classlanguages_1_1predicate_1_1Predicate.html">Predicate</a></code> class, this information is passed to the
+                                                    <code><a href="doxygen/python/classlanguages_1_1mapper_1_1Mapper.html">Mapper</a></code> class, to correctly perform the translation mechanism.
                                                 </p>
                                                 <p>
                                                     If the classes intended for the translation are not constructed correctly in this way, an exception is raised.
                                                 </p>
                                                 <p>
                                                     In addition to the
-                                                    <code>Mapper</code>, this module features two sub-modules which are more strictly related
-                                                    to ASP and PDDL.
+                                                    <code><a href="doxygen/python/classlanguages_1_1mapper_1_1Mapper.html">Mapper</a></code>, 
+                                                    this module features two sub-modules which are more strictly related to ASP and PDDL.
                                                 </p>
 
                                                 <h4>Specialization module implementation</h4>
                                                 <p>
                                                     The classes
-                                                    <code>DLVAnswerSets</code>,
-                                                    <code>DLV2AnswerSets</code>
-                                                    <code>ClingoAnswerSets</code>,
-                                                    <code>DLVHEXAnswerSets</code> and
-                                                    <code>SPDPlan</code> implement specific extensions of the
-                                                    <code>AnswerSets</code> or
-                                                    <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
+                                                    <code><a href="doxygen/python/classspecializations_1_1dlv_1_1dlv__answer__sets_1_1DLVAnswerSets.html">DLVAnswerSets</a></code>,
+                                                    <code><a href="doxygen/python/classspecializations_1_1dlv2_1_1dlv2__answer__sets_1_1DLV2AnswerSets.html">DLV2AnswerSets</a></code>
+                                                    <code><a href="doxygen/python/classspecializations_1_1clingo_1_1clingo__answer__sets_1_1ClingoAnswerSets.html">ClingoAnswerSets</a></code>,
+                                                    <code><a href="doxygen/python/classspecializations_1_1dlvhex_1_1dlvhex__answer__sets_1_1DLVHEXAnswerSets.html">DLVHEXAnswerSets</a></code> and
+                                                    <code><a href="doxygen/python/classspecializations_1_1solver__planning__domains_1_1spd__plan_1_1SPDPlan.html">SPDPlan</a></code> implement specific extensions of the
+                                                    <code><a href="doxygen/python/classlanguages_1_1asp_1_1answer__sets_1_1AnswerSets.html">AnswerSets</a></code> or
+                                                    <code><a href="doxygen/python/classlanguages_1_1pddl_1_1plan_1_1Plan.html">Plan</a></code> classes, in charge of manipulating the output of the respective solvers.
                                                 </p>
                                                 <p>
                                                     Moreover, this module can contain classes extending
-                                                    <code>OptionDescriptor</code> to implement specific options of the solver at hand.
+                                                    <code><a href="doxygen/python/classbase_1_1option__descriptor_1_1OptionDescriptor.html">OptionDescriptor</a></code> to implement specific options of the solver at hand.
                                                 </p>
                                             </div>
                                         </div>
@@ -668,29 +676,29 @@
                                                 </p>
                                                 <p>
                                                     In particular, the
-                                                    <code>Handler</code> class collects
-                                                    <code>InputProgram</code> and
-                                                    <code>OptionDescriptor</code> objects communicated by the user.
+                                                    <code><a href="doxygen/cSharp/classbase_1_1Handler.html">Handler</a></code> class collects
+                                                    <code><a href="doxygen/cSharp/classbase_1_1InputProgram.html">InputProgram</a></code> and
+                                                    <code><a href="doxygen/cSharp/classbase_1_1OptionDescriptor.html">OptionDescriptor</a></code> objects communicated by the user.
                                                 </p>
                                                 <p>
                                                     For what the asynchronous mode is concerned, the class
-                                                    <code>Service</code> depends from the interface
-                                                    <code>Callback</code>, since once the reasoning service has terminated, the result of the
+                                                    <code><a href="doxygen/cSharp/interfacebase_1_1Service.html">Service</a></code> depends from the interface
+                                                    <code><a href="doxygen/cSharp/interfacebase_1_1ICallback.html">Callback</a></code>, since once the reasoning service has terminated, the result of the
                                                     computation is returned back via a class
-                                                    <code>Callback</code>.
+                                                    <code><a href="doxygen/cSharp/interfacebase_1_1ICallback.html">Callback</a></code>.
                                                 </p>
 
                                                 <h4>Platforms module implementation</h4>
                                                 <p>
                                                     In order to support a new platform, the
-                                                    <code>Handler</code> and
-                                                    <code>Service</code> components must be adapted.
+                                                    <code><a href="doxygen/cSharp/classbase_1_1Handler.html">Handler</a></code> and
+                                                    <code><a href="doxygen/cSharp/interfacebase_1_1Service.html">Service</a></code> components must be adapted.
                                                 </p>
                                                 <p>
                                                     For the desktop platform we developed a
-                                                    <code>DesktopHandler</code> and a
-                                                    <code>DesktopService</code>, which generalizes the usage of a solver on the desktop platform, allowing
-                                                    both synchronous and asynchronous execution modes.
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html">DesktopHandler</a></code> and a
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopService.html">DesktopService</a></code>, 
+                                                    which generalizes the usage of a solver on the desktop platform, allowing both synchronous and asynchronous execution modes.
                                                 </p>
 
                                                 <h4>Languages module implementation</h4>
@@ -699,13 +707,14 @@
                                                 </p>
                                                 <p>
                                                     The
-                                                    <code>Mapper</code> component of the
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html">Mapper</a></code> component of the
                                                     <code class="layer">Languages</code> module is implemented via a
-                                                    <code>Mapper</code> class, that allows to translate input and output into C# objects.
-                                                    Such translations are guided by
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html">Mapper</a></code> class, 
+                                                    that allows to translate input and output into C# objects. Such translations are guided by
                                                     <a href="https://www.antlr.org/">ANTLR4</a> library and 
-                                                    <code>C# Attributes</code>, a form of metadata that mark C# code and provide information
-                                                    that is not part of the program itself: they have no direct effect on the operation of the code they annotate.
+                                                    <code><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/">C# Attributes</a></code>, 
+                                                    a form of metadata that mark C# code and provide information that is not part of the program itself: 
+                                                    they have no direct effect on the operation of the code they annotate.
                                                 </p>
                                                 <p>
                                                     In our setting, we make use of such features so that it is possible to translate facts into strings and vice-versa
@@ -723,32 +732,35 @@
                                                     </li>
                                                 </ul>
                                                 <p>
-                                                    By means of the <code>C# Reflection</code> mechanism, attributes are examined at runtime,
-                                                    and taken into account to properly define the translation.
+                                                    By means of the 
+                                                    <code><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection">C# Reflection</a></code> mechanism, 
+                                                    attributes are examined at runtime, and taken into account to properly define the translation.
                                                 </p>
                                                 <p>
                                                     If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
                                                 </p>
                                                 <p>
                                                     In addition to the
-                                                    <code>Mapper</code>, this module features two sub-modules which are more strictly related
-                                                    to ASP and PDDL.
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html">Mapper</a></code>, 
+                                                    this module features two sub-modules which are more strictly related to ASP and PDDL.
                                                 </p>
 
                                                 <h4>Specialization module implementation</h4>
                                                 <p>
                                                     The classes
-                                                    <code>DLVAnswerSets</code>,
-                                                    <code>DLV2AnswerSets</code>
-                                                    <code>ClingoAnswerSets</code>,
-                                                    <code>DLVHEXAnswerSets</code> and
-                                                    <code>SPDPlan</code> implement specific extensions of the
-                                                    <code>AnswerSets</code> or
-                                                    <code>Plan</code> classes, in charge of manipulating the output of the respective solvers.
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv_1_1DLVAnswerSets.html">DLVAnswerSets</a></code>,
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1DLV2AnswerSets.html">DLV2AnswerSets</a></code>
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1clingo_1_1ClingoAnswerSets.html">ClingoAnswerSets</a></code>,
+                                                    <code><a href ="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlvhex_1_1DLVHEXAnswerSets.html">DLVHEXAnswerSets</a></code> and
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains_1_1SPDPlan.html">SPDPlan</a></code> 
+                                                    implement specific extensions of the
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1AnswerSets.html">AnswerSets</a></code> or
+                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1Plan.html">Plan</a></code> 
+                                                    classes, in charge of manipulating the output of the respective solvers.
                                                 </p>
                                                 <p>
                                                     Moreover, this module can contain classes extending
-                                                    <code>OptionDescriptor</code> to implement specific options of the solver at hand.
+                                                    <code><a href="doxygen/cSharp/classbase_1_1OptionDescriptor.html">OptionDescriptor</a></code> to implement specific options of the solver at hand.
                                                 </p>
                                             </div>
                                         </div>
@@ -870,8 +882,8 @@
                                                 </p>
                                                 <p>
                                                     The framework features a annotation-guided mapping, offered by the
-                                                    <i>ASPMapper</i> component, for two-way translations between strings recognizable
-                                                    by ASP solvers and objects in the programming language at hand, directly
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html">ASPMapper</a></code> component, 
+                                                    for two-way translations between strings recognizable by ASP solvers and objects in the programming language at hand, directly
                                                     employable within applications. By means of this feature, the ASP-based
                                                     aspects can be separated from the Java coding: the programmer doesn't
                                                     even necessarily need to be aware of ASP.
@@ -889,7 +901,7 @@
                                                 <p>
                                                     By means of the annotation-guided mapping, the initial schema can be expressed in forms of Java objects. To this extent,
                                                     we define the class
-                                                    <i>Cell</i>, aimed at representing the single cell of the sudoku schema,
+                                                    <code>Cell</code>, aimed at representing the single cell of the sudoku schema,
                                                     as follows:
                                                 </p>
                                                 <pre><code class="language-java">
@@ -914,22 +926,23 @@
                                                 </p>
                                                 <ul>
                                                     <li>
-                                                        <i>@Id(string_name)</i>: the target must be a class, and defines the
+                                                        <code>@Id(string_name)</code>: the target must be a class, and defines the
                                                         predicate name the class is mapped to;
                                                     </li>
                                                     <li>
-                                                        <i>@Param(integer_position)</i>: the target must be a field of a class
+                                                        <code>@Param(integer_position)</code>: the target must be a field of a class
                                                         annotated via @Id, and defines the term (and its position) in the
                                                         ASP atom the field is mapped to.
                                                     </li>
                                                 </ul>
                                                 <p>
                                                     Thanks to these annotations the
-                                                    <i>ASPMapper</i> class will be able to map
-                                                    <i>Cell</i> objects into strings properly recognizable from the ASP solver
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html">ASPMapper</a></code> 
+                                                    class will be able to map <code>Cell</code> objects into strings properly recognizable from the ASP solver
                                                     as logic facts of the form
-                                                    <i>cell(Row,Column,Value)</i>. At this point, we can create an
-                                                    <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>, and start deploying our sudoku application:
+                                                    <code>cell(Row,Column,Value)</code>. At this point, we can create an
+                                                    <a href="https://developer.android.com/reference/android/app/Activity.html">Android Activity Component</a>, 
+                                                    and start deploying our sudoku application:
                                                 </p>
                                                 <pre><code class="language-java">
     public class MainActivity extends AppCompatActivity {
@@ -973,34 +986,33 @@
 
                                                 <p>
                                                     The class contains an
-                                                    <i>Handler</i> instance as field, that is initialized when the
-                                                    <i>Activity</i> is created as an
-                                                    <i>AndroidHandler</i>. Required parameters include the
-                                                    <i>Android Context</i> (an Android utility, needed to start an Android Service
-                                                    Component) and the type of
-                                                    <i>AndroidService</i> to use, in our case a
-                                                    <i>DLVAndroidService</i>.
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html">Handler</a></code> 
+                                                    instance as field, that is initialized when the
+                                                    <code>Activity</code> is created as an
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidHandler.html">AndroidHandler</a></code>. 
+                                                    Required parameters include the
+                                                    <i>Android Context</i> (an Android utility, needed to start an Android Service Component) and the type of
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1android_1_1AndroidService.html">AndroidService</a></code> 
+                                                    to use, in our case a 
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv_1_1android_1_1DLVAndroidService.html">DLVAndroidService</a></code>.
                                                 </p>
                                                 <p>
                                                     In addiction, in order to represent an initial sudoku schema, the class features a matrix of integers as another field where
                                                     position
-                                                    <i> (i,j) </i> contains the value of cell
-                                                    <i> (i,j) </i> in the initial schema; cells initially empty are represented
-                                                    by positions containing zero.
+                                                    <code> (i,j) </code> contains the value of cell
+                                                    <code> (i,j) </code> in the initial schema; cells initially empty are represented by positions containing zero.
                                                 </p>
                                                 <p>
                                                     The method
                                                     <i>startReasoning</i> is in charge of actually managing the reasoning: in
                                                     our case, it is invoked in response to a click event that is generated
                                                     when the user asks for the solution. It is firstly created an
-                                                    <i>InputProgram</i> object that is filled with
-                                                    <i>Cell</i> objects representing the initial schema, which is then provided
+                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html">InputProgram</a></code> object that is filled with
+                                                    <code>Cell</code> objects representing the initial schema, which is then provided
                                                     to the handler; then it is provided with the sudoku encoding. It could
-                                                    be loaded, for instance, by means of an utility function that retrieves
-                                                    it from the
+                                                    be loaded, for instance, by means of an utility function that retrieves  it from the
                                                     <a href="http://developer.android.com/guide/topics/resources">Android Resources folder</a>, which, within Android applications, is
-                                                    typically meant for containing images, sounds, files and resources in
-                                                    general.
+                                                    typically meant for containing images, sounds, files and resources in general.
                                                 </p>
                                                 <p>
                                                     At this point, the reasoning process can start; since for Android we provide only the asynchronous execution mode, a callback
@@ -1009,8 +1021,9 @@
                                                 <p>
                                                     Finally, once the computation is over, from within the callback function the output can be retrieved directly in form of
                                                     Java objects. For instance, in our case an inner class
-                                                    <i>MyCallback</i> implements the interface
-                                                    <i>Callback</i>:</p>
+                                                    <code>MyCallback</code> implements the interface
+                                                    <code><a href="doxygen/java/interfaceit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Callback.html">Callback</a></code>:
+                                                </p>
                                                 <pre><code class="language-java">
     private class MyCallback implements Callback {
 
@@ -1072,8 +1085,7 @@
                                                                     imported and used in any Java project.
                                                                 </p>
                                                                 <p>
-                                                                    The framework needs <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
-                                                                    You can download the JAR and include directly in your project or you can use Gradle or Maven.
+                                                                    The framework includes <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1164,7 +1176,7 @@ public class Path {
 public class ShortestPath {
 
   private static int from, to;       // source and destination node
-  private static ArrayList&ltInteger&gt sortedPath;   // edges in the shortest path (sorted)
+  private static ArrayList&lt;Integer&gt; sortedPath;   // edges in the shortest path (sorted)
 
   public static void main(String[] args) {
 
@@ -1198,7 +1210,7 @@ public class ShortestPath {
 
       for(AnswerSet answerSet : answerSets.getOptimalAnswerSets()) {
 
-        ArrayList&ltPath&gt path = new ArrayList&ltPath&gt();  // edges in the shortest path (unsorted)
+        ArrayList&lt;Path&gt; path = new ArrayList&lt;Path&gt;;  // edges in the shortest path (unsorted)
         int sum = 0;        // total weight of the path
 
         for(Object obj : answerSet.getAtoms()) {
@@ -1218,8 +1230,8 @@ public class ShortestPath {
 
   }
 
-  private static ArrayList&ltEdge&gt getEdges() {
-    ArrayList&ltEdge&gt edges = new ArrayList&ltEdge&gt();
+  private static ArrayList&lt;Edge&gt; getEdges() {
+    ArrayList&lt;Edge&gt; edges = new ArrayList&lt;Edge&gt;;
 
     edges.add(new Edge(0,1,1));
     edges.add(new Edge(0,2,4));
@@ -1245,22 +1257,32 @@ public class ShortestPath {
 
                                                                 </div>
                                                                 <p>
-                                                                    The class contains an Handler instance as field, that is initialized with a DesktopHandler 
-                                                                    using the parameter DLV2DesktopService with a string representing the path to the DLV2 local solver.
+                                                                    The class contains an 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html">Handler</a></code> 
+                                                                    instance as field, that is initialized with a 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html">DesktopHandler</a></code> 
+                                                                    using the parameter 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1desktop_1_1DLV2DesktopService.html">DLV2DesktopService</a></code> 
+                                                                    with a string representing the path to the DLV2 local solver.
                                                                 </p>
                                                                 <p>
-                                                                    The ASPMapper registers the classes created before in order to manage the input and output objects.
+                                                                    The 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html">ASPMapper</a></code> 
+                                                                    registers the classes created before in order to manage the input and output objects.
                                                                 </p>
                                                                 <p>
-                                                                    Two string and a list of Edge representing facts, rules and constraints of the ASP program are added 
-                                                                    to an ASPInputProgram, and the ASPInputProgram is added to the Handler.
+                                                                    Two string and a list of <code>Edge</code> representing facts, rules and constraints of the ASP program are added to an 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html">ASPInputProgram</a></code>, and the 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html">ASPInputProgram</a></code> 
+                                                                    is added to the 
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html">Handler</a></code>.
                                                                 </p>
                                                                 <p>
                                                                     Finally the solver is invoked, and the output is retrieved.
                                                                 </p>
                                                                 <p>
                                                                     The output predicates can be managed accordingly to the user’s desiderata. 
-                                                                    In this example the Path predicates, that represent the shortest path, are collected, sorted, 
+                                                                    In this example the <code>Path</code> predicates, that represent the shortest path, are collected, sorted, 
                                                                     and printed as well as the total weight of the path.
                                                                 </p>                                                                
                                                             </div>
@@ -1275,10 +1297,10 @@ public class ShortestPath {
                                                             </div>
                                                             <div class="card-body">
                                                                 <p>
-                                                                    The framework is released as EGG file to be used on a Desktop platform, therefore it can be easily installed in a Python installation.
+                                                                    The framework is released as Wheel file to be used on a Desktop platform, therefore it can be easily installed in any Python installation.
                                                                 </p>
                                                                 <p>
-                                                                    The framework needs <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
+                                                                    The framework includes <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1407,21 +1429,25 @@ except Exception as e:
                                                                     </code></pre>
                                                                 </div>
                                                                 <p>
-                                                                    The class contains an Handler instance as field, that is initialized with a DesktopHandler 
+                                                                    The class contains an 
+                                                                    <code><a href="doxygen/python/classbase_1_1handler_1_1Handler.html">Handler</a></code> instance as field, that is initialized with a DesktopHandler 
                                                                     using the parameter DLV2DesktopService with a string representing the path to the DLV2 local solver.
                                                                 </p>
                                                                 <p>
-                                                                    The ASPMapper registers the classes created before in order to manage the input and output objects.
+                                                                    The <code><a href="doxygen/python/classlanguages_1_1asp_1_1asp__mapper_1_1ASPMapper.html">ASPMapper</a></code> 
+                                                                    registers the classes created before in order to manage the input and output objects.
                                                                 </p>
                                                                 <p>
-                                                                    Two string and a list of Edge representing facts, rules and constraints of the ASP program are added to an ASPInputProgram, 
-                                                                    and the ASPInputProgram is added to the Handler.
+                                                                    Two string and a list of <code>Edge</code> representing facts, rules and constraints of the ASP program are added to an 
+                                                                    <code><a href="doxygen/python/classlanguages_1_1asp_1_1asp__input__program_1_1ASPInputProgram.html">ASPInputProgram</a></code>, and the 
+                                                                    <code><a href="doxygen/python/classlanguages_1_1asp_1_1asp__input__program_1_1ASPInputProgram.html">ASPInputProgram</a></code> is added to the 
+                                                                    <code><a href="doxygen/python/classbase_1_1handler_1_1Handler.html">Handler</a></code>.
                                                                 </p>
                                                                 <p>
                                                                     Finally the solver is invoked, and the output is retrieved.
                                                                 </p>
                                                                 <p>
-                                                                    The output predicates can be managed accordingly to the user’s desiderata. In this example the Path predicates, 
+                                                                    The output predicates can be managed accordingly to the user’s desiderata. In this example the <code>Path</code> predicates, 
                                                                     that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.
                                                                 </p>
                                                             </div>
@@ -1437,8 +1463,10 @@ except Exception as e:
                                                             </div>
                                                             <div class="card-body">
                                                                 <p>
-                                                                    The framework is released as DLL file to be used on a Desktop platform,
-                                                                    therefore it can be easily added and used in any C# project.
+                                                                    The framework is released as DLL file to be used on a Desktop platform, therefore it can be easily added and used in any C# project.
+                                                                </p>
+                                                                <p>
+                                                                    The framework includes <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1523,7 +1551,7 @@ class Path
 class ShortestPath
 {
   private static int from, to;       // source and destination node
-  private static List&ltint&gt sortedPath;    // edges in the shorted path (sorted)
+  private static List&lt;int&gt; sortedPath;    // edges in the shorted path (sorted)
 
   public static void Main(string[] args)
   {
@@ -1559,7 +1587,7 @@ class ShortestPath
 
       foreach (AnswerSet answerSet in answerSets.GetOptimalAnswerSets())
       {
-        List&ltPath&gt path = new List&ltPath&gt();    //  edges in the shortest path (unsorted)
+        List&lt;Path&gt; path = new List&lt;Path&gt;;   //  edges in the shortest path (unsorted)
         int sum = 0;                           //  total weight of the path
 
         foreach (object obj in answerSet.Atoms)
@@ -1582,9 +1610,9 @@ class ShortestPath
     }
   }
 
-  private static List&ltEdge&gt getEdges()
+  private static List&lt;Edge&gt; getEdges()
   {
-    List&ltEdge&gt edges = new List&ltEdge&gt();
+    List&lt;Edge&gt; edges = new List&lt;Edge&gt;;
 
     edges.Add(new Edge(0, 1, 1));
     edges.Add(new Edge(0, 2, 4));
@@ -1609,21 +1637,29 @@ class ShortestPath
                                                                     </code></pre>
                                                                 </div>
                                                                 <p>
-                                                                    The class contains an Handler instance as field, that is initialized with a 
-                                                                    DesktopHandler using the parameter DLV2DesktopService with a string representing the path to the DLV2 local solver.
+                                                                    The class contains an 
+                                                                    <code><a href="doxygen/cSharp/classbase_1_1Handler.html">Handler</a></code> instance as field, that is initialized with a 
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html">DesktopHandler</a></code> 
+                                                                    using the parameter 
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1desktop_1_1DLV2DesktopService.html">DLV2DesktopService</a></code> 
+                                                                    with a string representing the path to the DLV2 local solver.
                                                                 </p>
                                                                 <p>
-                                                                    The ASPMapper registers the classes created before in order to manage the input and output objects.
+                                                                    The 
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html">ASPMapper</a></code> 
+                                                                    registers the classes created before in order to manage the input and output objects.
                                                                 </p>
                                                                 <p>
-                                                                    Two string and a list of Edge representing facts, rules and constraints of the ASP program are added to 
-                                                                    an ASPInputProgram, and the ASPInputProgram is added to the Handler.
+                                                                    Two string and a list of <code>Edge</code> representing facts, rules and constraints of the ASP program are added to an 
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html">ASPInputProgram</a></code>, and the 
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPInputProgram.html">ASPInputProgram</a></code> is added to the 
+                                                                    <code><a href="doxygen/cSharp/classbase_1_1Handler.html">Handler</a></code>.
                                                                 </p>
                                                                 <p>
                                                                      Finally the solver is invoked, and the output is retrieved.
                                                                 </p>
                                                                 <p>
-                                                                    The output predicates can be managed accordingly to the user’s desiderata. In this example the Path predicates, 
+                                                                    The output predicates can be managed accordingly to the user’s desiderata. In this example the <code>Path</code> predicates, 
                                                                     that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.
                                                                 </p>
                                                             </div>
@@ -1633,7 +1669,6 @@ class ShortestPath
                                              </div>
                                         </div>
                                     </div>
-                                    <!-- fine -->
 
                                     <!-- Tab panes -->
                                     <div role="tabpanel" class="tab-pane fade" id="desktop_pddl_example">
@@ -1669,8 +1704,7 @@ class ShortestPath
                                                                     imported and used in any Java project.
                                                                 </p>
                                                                 <p>
-                                                                    The framework needs <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
-                                                                    You can download the JAR and include directly in your project or you can use Gradle or Maven.
+                                                                    The framework includes <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1798,17 +1832,21 @@ class ShortestPath
                                                                 </div>
                                                                 <p>
                                                                     The class contains an
-                                                                    <i>Handler</i> instance as field, that is initialized with a
-                                                                    <i>DesktopHandler</i> using the required parameter
-                                                                    <i>SPDDesktopService</i>.
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html">Handler</a></code> 
+                                                                    instance as field, that is initialized with a
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html">DesktopHandler</a></code> 
+                                                                    using the required parameter
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains_1_1desktop_1_1SPDDesktopService.html">SPDDesktopService</a></code>.
                                                                 </p>
                                                                 <p>
                                                                     Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
-                                                                    <i>PDDLInputProgram</i> are created and then given to the handler.
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1PDDLInputProgram.html">PDDLInputProgram</a></code> 
+                                                                    are created and then given to the handler.
                                                                 </p>
                                                                 <p>
                                                                     The next lines inform the
-                                                                    <i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                                    <code><a href="doxygen/java/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1PDDLMapper.html">PDDLMapper</a></code> 
+                                                                    about what classes are intended to map the output actions.
                                                                 </p>
                                                                 <p>
                                                                     Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
@@ -1825,10 +1863,10 @@ class ShortestPath
                                                             </div>
                                                             <div class="card-body">
                                                                 <p>
-                                                                    The framework is released as EGG file to be used on a Desktop platform, therefore it can be easily installed in a Python installation.
+                                                                    The framework is released as Wheel file to be used on a Desktop platform, therefore it can be easily installed in a Python installation.
                                                                 </p>
                                                                 <p>
-                                                                    The framework needs <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
+                                                                    The framework includes <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -1949,17 +1987,20 @@ class ShortestPath
                                                                 </div>
                                                                 <p>
                                                                 The class contains an
-                                                                <i>Handler</i> instance as field, that is initialized with a
-                                                                    <i>DesktopHandler</i> using the required parameter
-                                                                    <i>SPDDesktopService</i>.
+                                                                <code><a href="doxygen/python/classbase_1_1handler_1_1Handler.html">Handler</a></code> instance as field, that is initialized with a
+                                                                    <code><a href="doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html">DesktopHandler</a></code> 
+                                                                    using the required parameter
+                                                                    <code><a href="doxygen/python/classspecializations_1_1solver__planning__domains_1_1desktop_1_1spd__desktop__service_1_1SPDDesktopService.html">SPDDesktopService</a></code>.
                                                                 </p>
                                                                 <p>
                                                                     Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
-                                                                    <i>PDDLInputProgram</i> are created and then given to the handler.
+                                                                    <code><a href="doxygen/python/classlanguages_1_1pddl_1_1pddl__input__program_1_1PDDLInputProgram.html">PDDLInputProgram</a></code> 
+                                                                    are created and then given to the handler.
                                                                 </p>
                                                                 <p>
                                                                     The next lines inform the
-                                                                    <i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                                    <code><a href="doxygen/python/classlanguages_1_1pddl_1_1pddl__mapper_1_1PDDLMapper.html">PDDLMapper</a></code> 
+                                                                    about what classes are intended to map the output actions.
                                                                 </p>
                                                                 <p>
                                                                     Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
@@ -1977,8 +2018,10 @@ class ShortestPath
                                                             </div>
                                                             <div class="card-body">
                                                                 <p>
-                                                                    The framework is released as DLL file to be used on a Desktop platform,
-                                                                    therefore it can be easily added and used in any C# project.
+                                                                    The framework is released as DLL file to be used on a Desktop platform, therefore it can be easily added and used in any C# project.
+                                                                </p>
+                                                                <p>
+                                                                    The framework includes <a href="https://www.antlr.org/">ANTLR4</a> library for its operation.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -2106,17 +2149,20 @@ class ShortestPath
                                                                 </div>
                                                                 <p>
                                                                     The class contains an
-                                                                    <i>Handler</i> instance as field, that is initialized with a
-                                                                    <i>DesktopHandler</i> using the required parameter
-                                                                    <i>SPDDesktopService</i>.
+                                                                    <code><a href="doxygen/cSharp/classbase_1_1Handler.html">Handler</a></code> instance as field, that is initialized with a
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopHandler.html">DesktopHandler</a></code> 
+                                                                    using the required parameter
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains_1_1desktop_1_1SPDDesktopService.html">SPDDesktopService</a></code>.
                                                                 </p>
                                                                 <p>
                                                                     Then it's set-up the input to the solver; since PDDL requires separate definitions for domain and problem, two
-                                                                    <i>PDDLInputProgram</i> are created and then given to the handler.
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1PDDLInputProgram.html">PDDLInputProgram</a></code> 
+                                                                    are created and then given to the handler.
                                                                 </p>
                                                                 <p>
                                                                     The next lines inform the
-                                                                    <i>PDDLMapper</i> about what classes are intended to map the output actions.
+                                                                    <code><a href="doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1PDDLMapper.html">PDDLMapper</a></code> 
+                                                                    about what classes are intended to map the output actions.
                                                                 </p>
                                                                 <p>
                                                                      Finally the solver is invoked, and the output is retrieved. The output actions can be managed accordingly to the user's desiderata.
