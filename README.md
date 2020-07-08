@@ -1,3 +1,4 @@
+[![Documentation Status](https://readthedocs.org/projects/embasp/badge/?version=latest)](https://embasp.readthedocs.io/en/latest/?badge=latest)
 <div> <img src="img/EmbASP_Logo.png" width="300" height="200"> </div>
 
 # EmbASP website
