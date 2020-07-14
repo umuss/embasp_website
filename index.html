@@ -269,6 +269,13 @@
                             <code class="layer">Base</code> module that should be adapted according to the platform at hand, since they take care
                             of practically launching solvers.
                         </p>
+                        <p>
+                            The 
+                            <code>DesktopHandler</code> manages the 
+                            <code>DesktopService</code> for the execution of the solver on a Desktop platform, and, in a similay way, the
+                            <code>AndroidHandler</code> manages the 
+                            <code>AndroidService</code> on an Android platform.
+                        </p>
 
                         <h4>Languages Module</h4>
                         <p>
@@ -284,12 +291,10 @@
                             The sub-module ASP comprises components such as
                             <code>ASPInputProgram</code> that adapts
                             <code>InputProgram</code> to the ASP case, while
-                            <code>AnswerSet</code> and
-                            <code>AnswerSets</code> represent the
+                            <code>AnswerSets</code>, composed of a set of 
+                            <code>AnswerSet</code>, represents the
                             <code>Output</code> for ASP. Moreover the
                             <code>ASPMapper</code> allow the management of ASP input facts and answer sets via objects.
-                        </p>
-                        <p>
                             Similarly, the sub-module PDDL includes
                             <code>PDDLInputProgram</code>,
                             <code>Action</code>,
@@ -305,6 +310,14 @@
                             <code>Output</code> and
                             <code>OptionDescriptor</code> components from the
                             <code class="layer">Base</code> module should be adapted in order to effectively interact with the solver at hand.
+                        </p>
+                        <p>
+                            In particular, this module contains specific extensions for the different solvers of the <code>DesktopService</code> (
+                            <code>DLVDesktopService</code>, <code>DLV2DesktopService</code>, <code>DLVHEXDesktopService</code>, 
+                            <code>ClingoDesktopService</code> and <code>SPDDesktopService</code>) and the <code>AndroidService</code> (
+                            <code>DLVAndroidService</code>, <code>DLV2AndroidService</code> and <code></code>). There are also the extensions of the 
+                            <code>AnswerSets</code> for ASP language (<code>DLVAnswerSets</code>, <code>DLV2AnswerSets</code>, <code>DLVHEXAnswerSets</code> and 
+                            <code>ClingoAnswerSets</code>) and of the <code>Plan</code> for PDDL language (<code>SPDPlan</code>).
                         </p>
                     </div>
                 </div>
