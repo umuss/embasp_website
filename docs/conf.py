@@ -24,9 +24,9 @@ copyright = u'2020, DeMaCS-Unical'
 author = u'DeMaCS-Unical'
 
 # The short X.Y version
-version = u'6.0'
+version = u'7.1'
 # The full version, including alpha/beta/rc tags
-release = u'6.0'
+release = u'7.1.0'
 
 
 # -- General configuration ---------------------------------------------------

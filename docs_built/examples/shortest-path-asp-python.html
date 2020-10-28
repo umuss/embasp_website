@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shortest-path ASP Python &mdash; EmbASP 7.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Shortest-path ASP C#" href="shortest-path-asp-csharp.html" />
+    <link rel="prev" title="Shortest-path ASP Java" href="shortest-path-asp-java.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> EmbASP
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/java-implementation.html">Java implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/python-implementation.html">Python implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/csharp-implementation.html">C# implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/technical_doc.html">Technical documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shortest-path-asp-java.html">Shortest-path ASP Java</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Shortest-path ASP Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-embasp">Using EmbASP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shortest-path-asp-csharp.html">Shortest-path ASP C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-java.html">Blocks-world PDDL Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-python.html">Blocks-world PDDL Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks-world-pddl-csharp.html">Blocks-world PDDL C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitive-closure-datalog-java.html">Transitive Closure Datalog Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitive-closure-datalog-python.html">Transitive Closure Datalog Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transitive-closure-datalog-csharp.html">Transitive Closure Datalog C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sudoku-android.html">Sudoku Android</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EmbASP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Shortest-path ASP Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/shortest-path-asp-python.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shortest-path-asp-python">
+<h1>Shortest-path ASP Python<a class="headerlink" href="#shortest-path-asp-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The framework is released as EGG file to be used on a Desktop platform, therefore it can be easily installed in a Python installation.</p>
+<p>The framework needs <a class="reference external" href="https://www.antlr.org/">ANTLR4</a> library for its operation.</p>
+</div>
+<div class="section" id="using-embasp">
+<h2>Using EmbASP<a class="headerlink" href="#using-embasp" title="Permalink to this headline">¶</a></h2>
+<p>In the following, we describe an actual usage of the framework by means of a running example;
+as a use case, we will develop a simple Desktop application to solve the shortest-path problem.</p>
+<p>The complete code of this example is freely available <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/files/ShortestPathPython.zip">here</a>.</p>
+<img alt="../_images/shortest-path.png" class="align-center" src="../_images/shortest-path.png" />
+<p>We will make use of the annotation-guided mapping, in order to create Python object constituting ASP predicates.</p>
+<p>To this purpose, the following classes are intended to represent possible predicates that an ASP program can use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Edge</span><span class="p">(</span><span class="n">Predicate</span><span class="p">):</span>
+  <span class="n">predicate_name</span> <span class="o">=</span> <span class="s2">&quot;edge&quot;</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">Predicate</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;source&quot;</span><span class="p">),(</span><span class="s2">&quot;destination&quot;</span><span class="p">),(</span><span class="s2">&quot;weight&quot;</span><span class="p">)])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+
+  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Path</span><span class="p">(</span><span class="n">Predicate</span><span class="p">):</span>
+  <span class="n">predicate_name</span> <span class="o">=</span> <span class="s2">&quot;path&quot;</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">Predicate</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">[(</span><span class="s2">&quot;source&quot;</span><span class="p">),(</span><span class="s2">&quot;destination&quot;</span><span class="p">),(</span><span class="s2">&quot;weight&quot;</span><span class="p">)])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+
+  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>At this point, supposing that we have embedded the DLV2 solver in this project, we can start deploying our application:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getEdges</span><span class="p">():</span>
+
+  <span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+  <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+  <span class="k">return</span> <span class="n">edges</span>
+
+<span class="k">try</span><span class="p">:</span>
+
+  <span class="n">handler</span> <span class="o">=</span> <span class="n">DesktopHandler</span><span class="p">(</span><span class="n">DLV2DesktopService</span><span class="p">(</span><span class="s2">&quot;../../executable/dlv2&quot;</span><span class="p">))</span>
+
+  <span class="n">ASPMapper</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">Edge</span><span class="p">)</span>
+  <span class="n">ASPMapper</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">Path</span><span class="p">)</span>
+
+  <span class="n">inputProgram</span> <span class="o">=</span> <span class="n">ASPInputProgram</span><span class="p">()</span>
+
+  <span class="n">source</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1"># source node</span>
+  <span class="n">destination</span> <span class="o">=</span> <span class="mi">7</span>    <span class="c1"># destination node</span>
+
+  <span class="n">rules</span> <span class="o">=</span> <span class="s2">&quot;source(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;). destination(&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">destination</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;path(X,Y,W) | notPath(X,Y,W) :- source(X), edge(X,Y,W).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;path(X,Y,W) | notPath(X,Y,W) :- path(_,X,_), edge(X,Y,W), not to(X).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;visited(X) :- path(_,X,_).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;:- destination(X), not visited(X).&quot;</span>
+  <span class="n">rules</span> <span class="o">+=</span> <span class="s2">&quot;:~ path(X,Y,W). [W@1 ,X,Y]&quot;</span>
+
+  <span class="n">inputProgram</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="n">rules</span><span class="p">)</span>
+  <span class="n">inputProgram</span><span class="o">.</span><span class="n">add_objects_input</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getEdges</span><span class="p">())</span>
+
+  <span class="n">handler</span><span class="o">.</span><span class="n">add_program</span><span class="p">(</span><span class="n">inputProgram</span><span class="p">)</span>
+
+  <span class="n">answerSets</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">start_sync</span><span class="p">()</span>
+
+  <span class="k">for</span> <span class="n">answerSet</span> <span class="ow">in</span> <span class="n">answerSets</span><span class="o">.</span><span class="n">get_optimal_answer_sets</span><span class="p">():</span>
+      <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>     <span class="c1"># edges in the shortest path (unsorted)</span>
+      <span class="n">sum_</span> <span class="o">=</span> <span class="mi">0</span>      <span class="c1"># total weight of the path</span>
+
+      <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">answerSet</span><span class="o">.</span><span class="n">get_atoms</span><span class="p">():</span>
+          <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
+              <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+              <span class="n">sum_</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">get_weight</span><span class="p">())</span>
+
+      <span class="n">sortedPath</span> <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># edges in the shortest path (sorted)</span>
+      <span class="n">join</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">sortedPath</span><span class="p">)</span>   <span class="c1"># sorts the edges</span>
+      <span class="n">show</span><span class="p">(</span><span class="n">sortedPath</span><span class="p">,</span> <span class="n">sum_</span><span class="p">)</span>     <span class="c1"># shows the path</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The class contains an <a class="reference external" href="../_static/doxygen/python/classbase_1_1handler_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a> instance as field, that is initialized with a <a class="reference external" href="../_static/doxygen/python/classplatforms_1_1desktop_1_1desktop__handler_1_1DesktopHandler.html"><code class="docutils literal notranslate"><span class="pre">DesktopHandler</span></code></a> using the parameter <a class="reference external" href="../_static/doxygen/python/classspecializations_1_1dlv2_1_1desktop_1_1dlv2__desktop__service_1_1DLV2DesktopService.html"><code class="docutils literal notranslate"><span class="pre">DLV2DesktopService</span></code></a> with a string representing the path to the DLV2 local solver.</p>
+<p>The <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1asp_1_1asp__mapper_1_1ASPMapper.html"><code class="docutils literal notranslate"><span class="pre">ASPMapper</span></code></a> registers the classes created before in order to manage the input and output objects.</p>
+<p>A string and a list of <code class="docutils literal notranslate"><span class="pre">Edge</span></code> representing facts, rules and constraints of the ASP program are added to an <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1asp_1_1asp__input__program_1_1ASPInputProgram.html"><code class="docutils literal notranslate"><span class="pre">ASPInputProgram</span></code></a>, and the <a class="reference external" href="../_static/doxygen/python/classlanguages_1_1asp_1_1asp__input__program_1_1ASPInputProgram.html"><code class="docutils literal notranslate"><span class="pre">ASPInputProgram</span></code></a> is added to the <a class="reference external" href="../_static/doxygen/python/classbase_1_1handler_1_1Handler.html"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a>.</p>
+<p>Finally the solver is invoked, and the output is retrieved.</p>
+<p>The output predicates can be managed accordingly to the user’s desiderata. In this example the <code class="docutils literal notranslate"><span class="pre">Path</span></code> predicates, that represent the shortest path, are collected, sorted, and printed as well as the total weight of the path.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>For further information, contact <a class="reference external" href="mailto:embasp&#37;&#52;&#48;mat&#46;unical&#46;it">embasp<span>&#64;</span>mat<span>&#46;</span>unical<span>&#46;</span>it</a> or visit our <a class="reference external" href="https://www.mat.unical.it/calimeri/projects/embasp/">website</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shortest-path-asp-csharp.html" class="btn btn-neutral float-right" title="Shortest-path ASP C#" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shortest-path-asp-java.html" class="btn btn-neutral float-left" title="Shortest-path ASP Java" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, DeMaCS-Unical
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
