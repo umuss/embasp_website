@@ -1,0 +1,89 @@
+\hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor}{}\doxysection{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Visitor$<$ T $>$ Interface Template Reference}
+\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor}\index{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}}
+Inheritance diagram for it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Visitor$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a5c2e7bda22869108a1d07cdf9547784a}{visit\+Output}} (Datalog\+Grammar\+Parser.\+Output\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a4f7962cc3c8b4b00d690d37973196cd0}{visit\+Predicate\+\_\+atom}} (Datalog\+Grammar\+Parser.\+Predicate\+\_\+atom\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a47a59d6f15d5f27395e331f1d61ef0ef}{visit\+Term}} (Datalog\+Grammar\+Parser.\+Term\+Context ctx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines a complete generic visitor for a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarParser}{Datalog\+Grammar\+Parser}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & The return type of the visit operation. Use \mbox{\hyperlink{}{Void}} for operations with no return type. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a5c2e7bda22869108a1d07cdf9547784a}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a5c2e7bda22869108a1d07cdf9547784a}} 
+\index{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}!visitOutput@{visitOutput}}
+\index{visitOutput@{visitOutput}!it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitOutput()}{visitOutput()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Visitor}}$<$ T $>$.visit\+Output (\begin{DoxyParamCaption}\item[{Datalog\+Grammar\+Parser.\+Output\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarParser_a0714cfebe4e652e0c310d75d7a183f6a}{Datalog\+Grammar\+Parser\#output}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarBaseVisitor_a348a44df2ff249ec7e8fcf98f5498c91}{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a4f7962cc3c8b4b00d690d37973196cd0}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a4f7962cc3c8b4b00d690d37973196cd0}} 
+\index{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}!visitPredicate\_atom@{visitPredicate\_atom}}
+\index{visitPredicate\_atom@{visitPredicate\_atom}!it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitPredicate\_atom()}{visitPredicate\_atom()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Visitor}}$<$ T $>$.visit\+Predicate\+\_\+atom (\begin{DoxyParamCaption}\item[{Datalog\+Grammar\+Parser.\+Predicate\+\_\+atom\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarParser_a91b8f840eee4df192d642f97248efd7f}{Datalog\+Grammar\+Parser\#predicate\+\_\+atom}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarBaseVisitor_ab9c281669786480beba729dd33972be4}{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a47a59d6f15d5f27395e331f1d61ef0ef}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor_a47a59d6f15d5f27395e331f1d61ef0ef}} 
+\index{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}!visitTerm@{visitTerm}}
+\index{visitTerm@{visitTerm}!it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.datalog.datalog\_parser\_base.DatalogGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitTerm()}{visitTerm()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Visitor}}$<$ T $>$.visit\+Term (\begin{DoxyParamCaption}\item[{Datalog\+Grammar\+Parser.\+Term\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarParser_aca9757b3084801e9b73e095a0b16a547}{Datalog\+Grammar\+Parser\#term}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1DatalogParser_ad4359b5c4cea505354ef41fd5fa14848}{it.\+unical.\+mat.\+parsers.\+datalog.\+Datalog\+Parser}}, and \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1datalog__parser__base_1_1DatalogGrammarBaseVisitor_ac677c7b2f6dcae66fb8ad2979bac0ba6}{it.\+unical.\+mat.\+parsers.\+datalog.\+datalog\+\_\+parser\+\_\+base.\+Datalog\+Grammar\+Base\+Visitor$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/java/app/src/main/java/it/unical/mat/parsers/datalog/datalog\+\_\+parser\+\_\+base/\mbox{\hyperlink{DatalogGrammarVisitor_8java}{Datalog\+Grammar\+Visitor.\+java}}\end{DoxyCompactItemize}

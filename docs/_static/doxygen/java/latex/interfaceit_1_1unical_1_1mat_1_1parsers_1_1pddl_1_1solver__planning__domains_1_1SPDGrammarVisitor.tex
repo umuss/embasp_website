@@ -1,0 +1,259 @@
+\hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{}\doxysection{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor$<$ T $>$ Interface Template Reference}
+\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+Inheritance diagram for it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a08003d4480a355bea359fa7c6c556790}{visit\+Array}} (SPDGrammar\+Parser.\+Array\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_aaa50dd8a463d2ca63ff315af7c10c79e}{visit\+Json}} (SPDGrammar\+Parser.\+Json\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a9608adec99e31d742a115de6388a028a}{visit\+OBj\+EcT}} (SPDGrammar\+Parser.\+OBj\+Ec\+TContext ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_aef5825f9bee8a74279962bc3516e6fa3}{visit\+Pair}} (SPDGrammar\+Parser.\+Pair\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a850110a8ad47dd35d74d1f6bd3ef5f20}{visit\+Array\+Value}} (SPDGrammar\+Parser.\+Array\+Value\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a575b29eb27b738a0ee23f340955bce8f}{visit\+Boolean\+Value}} (SPDGrammar\+Parser.\+Boolean\+Value\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a4eefbd9fdf32f1ee70c22a28392ce666}{visit\+Integer\+Value}} (SPDGrammar\+Parser.\+Integer\+Value\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a551d30e1c77d44cc3ba324e1c12d9abd}{visit\+Null\+Value}} (SPDGrammar\+Parser.\+Null\+Value\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_ac10da8dd938ee69ce858246212c81c68}{visit\+Object\+Value}} (SPDGrammar\+Parser.\+Object\+Value\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a6e3a4912113b073751d6cf156b507906}{visit\+String\+Value}} (SPDGrammar\+Parser.\+String\+Value\+Context ctx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines a complete generic visitor for a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser}{SPDGrammar\+Parser}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & The return type of the visit operation. Use \mbox{\hyperlink{}{Void}} for operations with no return type. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a08003d4480a355bea359fa7c6c556790}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a08003d4480a355bea359fa7c6c556790}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitArray@{visitArray}}
+\index{visitArray@{visitArray}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitArray()}{visitArray()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Array (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Array\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a7d19ce52f84f1b7e02fdfcbe6dace5b3}{SPDGrammar\+Parser\#array}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_aa749ef2aefa35618aefcb708469a22e2}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a850110a8ad47dd35d74d1f6bd3ef5f20}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a850110a8ad47dd35d74d1f6bd3ef5f20}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitArrayValue@{visitArrayValue}}
+\index{visitArrayValue@{visitArrayValue}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitArrayValue()}{visitArrayValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Array\+Value (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Array\+Value\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by the
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ArrayValue }
+
+\end{DoxyCode}
+ labeled alternative in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a1bd3aced92b28c03cbcd896939ffde4d}{SPDGrammar\+Parser\#value}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_ae5c4b396f6dcb9e48c74fc60286b0558}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a575b29eb27b738a0ee23f340955bce8f}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a575b29eb27b738a0ee23f340955bce8f}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitBooleanValue@{visitBooleanValue}}
+\index{visitBooleanValue@{visitBooleanValue}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitBooleanValue()}{visitBooleanValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Boolean\+Value (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Boolean\+Value\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by the
+\begin{DoxyCode}{0}
+\DoxyCodeLine{BooleanValue }
+
+\end{DoxyCode}
+ labeled alternative in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a1bd3aced92b28c03cbcd896939ffde4d}{SPDGrammar\+Parser\#value}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_a0ca8a131d13c14cf292d25f575909bb5}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a4eefbd9fdf32f1ee70c22a28392ce666}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a4eefbd9fdf32f1ee70c22a28392ce666}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitIntegerValue@{visitIntegerValue}}
+\index{visitIntegerValue@{visitIntegerValue}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitIntegerValue()}{visitIntegerValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Integer\+Value (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Integer\+Value\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by the
+\begin{DoxyCode}{0}
+\DoxyCodeLine{IntegerValue }
+
+\end{DoxyCode}
+ labeled alternative in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a1bd3aced92b28c03cbcd896939ffde4d}{SPDGrammar\+Parser\#value}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_acdaa235d7385ccd8060dc9b98af30a37}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_aaa50dd8a463d2ca63ff315af7c10c79e}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_aaa50dd8a463d2ca63ff315af7c10c79e}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitJson@{visitJson}}
+\index{visitJson@{visitJson}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitJson()}{visitJson()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Json (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Json\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a8a0229bb3331429f0f0ce96215816c46}{SPDGrammar\+Parser\#json}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_a2aed98b01f2cb98819ebfb06c3f4d4ef}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a551d30e1c77d44cc3ba324e1c12d9abd}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a551d30e1c77d44cc3ba324e1c12d9abd}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitNullValue@{visitNullValue}}
+\index{visitNullValue@{visitNullValue}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitNullValue()}{visitNullValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Null\+Value (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Null\+Value\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by the
+\begin{DoxyCode}{0}
+\DoxyCodeLine{NullValue }
+
+\end{DoxyCode}
+ labeled alternative in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a1bd3aced92b28c03cbcd896939ffde4d}{SPDGrammar\+Parser\#value}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_a698deb8f33b6a527c21f98f741132a0b}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a9608adec99e31d742a115de6388a028a}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a9608adec99e31d742a115de6388a028a}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitOBjEcT@{visitOBjEcT}}
+\index{visitOBjEcT@{visitOBjEcT}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitOBjEcT()}{visitOBjEcT()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+OBj\+EcT (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+OBj\+Ec\+TContext}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a046d7b7c50aad9d8a019dd7ea08295f9}{SPDGrammar\+Parser\#o\+Bj\+EcT}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_a218dbf6a83de4c08cc155265f20d8084}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_ac10da8dd938ee69ce858246212c81c68}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_ac10da8dd938ee69ce858246212c81c68}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitObjectValue@{visitObjectValue}}
+\index{visitObjectValue@{visitObjectValue}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitObjectValue()}{visitObjectValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Object\+Value (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Object\+Value\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by the
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ObjectValue }
+
+\end{DoxyCode}
+ labeled alternative in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a1bd3aced92b28c03cbcd896939ffde4d}{SPDGrammar\+Parser\#value}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_a0187c6eb6d7b6fc695eff0e966aeddce}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_aef5825f9bee8a74279962bc3516e6fa3}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_aef5825f9bee8a74279962bc3516e6fa3}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitPair@{visitPair}}
+\index{visitPair@{visitPair}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitPair()}{visitPair()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+Pair (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+Pair\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a04065ba190abdeafb0c7e162f6f4e2d9}{SPDGrammar\+Parser\#pair}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_ae02fdf62d4bf04cd760a2317b67df1d4}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a6e3a4912113b073751d6cf156b507906}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor_a6e3a4912113b073751d6cf156b507906}} 
+\index{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}!visitStringValue@{visitStringValue}}
+\index{visitStringValue@{visitStringValue}!it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.solver\_planning\_domains.SPDGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitStringValue()}{visitStringValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Visitor}}$<$ T $>$.visit\+String\+Value (\begin{DoxyParamCaption}\item[{SPDGrammar\+Parser.\+String\+Value\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by the
+\begin{DoxyCode}{0}
+\DoxyCodeLine{StringValue }
+
+\end{DoxyCode}
+ labeled alternative in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_a1bd3aced92b28c03cbcd896939ffde4d}{SPDGrammar\+Parser\#value}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitor_a41d1a48aa73cabac22ea4917098cb38d}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/java/app/src/main/java/it/unical/mat/parsers/pddl/solver\+\_\+planning\+\_\+domains/\mbox{\hyperlink{SPDGrammarVisitor_8java}{SPDGrammar\+Visitor.\+java}}\end{DoxyCompactItemize}

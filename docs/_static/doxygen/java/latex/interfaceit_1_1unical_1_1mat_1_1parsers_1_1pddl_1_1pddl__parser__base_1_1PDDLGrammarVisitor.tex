@@ -1,0 +1,69 @@
+\hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor}{}\doxysection{it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Visitor$<$ T $>$ Interface Template Reference}
+\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor}\index{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$}}
+Inheritance diagram for it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Visitor$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor_a91b35fab391876aea5ed152ae4c4b2b7}{visit\+Atom}} (PDDLGrammar\+Parser.\+Atom\+Context ctx)
+\item 
+T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor_abcccd449c7aff31d9e9bebc536d68ec4}{visit\+Output}} (PDDLGrammar\+Parser.\+Output\+Context ctx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines a complete generic visitor for a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarParser}{PDDLGrammar\+Parser}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & The return type of the visit operation. Use \mbox{\hyperlink{}{Void}} for operations with no return type. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor_a91b35fab391876aea5ed152ae4c4b2b7}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor_a91b35fab391876aea5ed152ae4c4b2b7}} 
+\index{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$}!visitAtom@{visitAtom}}
+\index{visitAtom@{visitAtom}!it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitAtom()}{visitAtom()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Visitor}}$<$ T $>$.visit\+Atom (\begin{DoxyParamCaption}\item[{PDDLGrammar\+Parser.\+Atom\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarParser_a16e6182aaadddac4529dc92f6349505c}{PDDLGrammar\+Parser\#atom}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a8c3dc50f05f7169ce0546b14b31bacab}{it.\+unical.\+mat.\+parsers.\+pddl.\+PDDLParser}}, and \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarBaseVisitor_a27fa1c7d3b1c0e396b6d1afcdade2ce9}{it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Base\+Visitor$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor_abcccd449c7aff31d9e9bebc536d68ec4}\label{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor_abcccd449c7aff31d9e9bebc536d68ec4}} 
+\index{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$}!visitOutput@{visitOutput}}
+\index{visitOutput@{visitOutput}!it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$@{it.unical.mat.parsers.pddl.pddl\_parser\_base.PDDLGrammarVisitor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visitOutput()}{visitOutput()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarVisitor}{it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Visitor}}$<$ T $>$.visit\+Output (\begin{DoxyParamCaption}\item[{PDDLGrammar\+Parser.\+Output\+Context}]{ctx }\end{DoxyParamCaption})}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarParser_a1351d7b98be5e1c162d63483fe1cc383}{PDDLGrammar\+Parser\#output}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarBaseVisitor_a76e75e84da88012778f1a413151d6684}{it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Base\+Visitor$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/java/app/src/main/java/it/unical/mat/parsers/pddl/pddl\+\_\+parser\+\_\+base/\mbox{\hyperlink{PDDLGrammarVisitor_8java}{PDDLGrammar\+Visitor.\+java}}\end{DoxyCompactItemize}

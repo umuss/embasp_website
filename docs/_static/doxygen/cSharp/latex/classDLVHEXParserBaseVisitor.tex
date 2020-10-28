@@ -1,0 +1,257 @@
+\hypertarget{classDLVHEXParserBaseVisitor}{}\doxysection{DLVHEXParser\+Base\+Visitor$<$ Result $>$ Class Template Reference}
+\label{classDLVHEXParserBaseVisitor}\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+
+
+This class provides an empty implementation of IDLVHEXParser\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods.  
+
+
+Inheritance diagram for DLVHEXParser\+Base\+Visitor$<$ Result $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDLVHEXParserBaseVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_a820ec5697ebb68302c861798795cabc6}{Visit\+Ground\+Query}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Ground\+Query\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Ground\+Query} labeled alternative in DLVHEXParser.\+answer\+\_\+set. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_adfe0de11924500af660b56dc0679deb9}{Visit\+Model}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Model\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Model} labeled alternative in DLVHEXParser.\+answer\+\_\+set. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_ac35cf7cabe8c229376177ff733fcdf2c}{Visit\+Atoms}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Atoms\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+atoms. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_a773abb41c1dffe08dac00bffdf0587f8}{Visit\+Cost}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Cost\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+cost. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_acab9bbfc159133624fefe0bcd6174942}{Visit\+Level}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Level\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+level. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_ad383e052f8e179b93ffcd611e694144e}{Visit\+Output}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Output\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+output. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_a512e815c7f4f5fb1fd3e1d8a7186c5df}{Visit\+Predicate\+\_\+atom}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Predicate\+\_\+atom\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+predicate\+\_\+atom. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_a43ef815b6241e2b8dceab09d0a68a7a1}{Visit\+Term}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Term\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+term. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor_aff7828646adcd5e243a93e38c96e9af2}{Visit\+Witness}} (\mbox{[}Not\+Null\mbox{]} DLVHEXParser.\+Witness\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLVHEXParser.\+witness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides an empty implementation of IDLVHEXParser\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Result} & The return type of the visit operation.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_ac35cf7cabe8c229376177ff733fcdf2c}\label{classDLVHEXParserBaseVisitor_ac35cf7cabe8c229376177ff733fcdf2c}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitAtoms@{VisitAtoms}}
+\index{VisitAtoms@{VisitAtoms}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitAtoms()}{VisitAtoms()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Atoms (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Atoms\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+atoms. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_a63ab7e3ecd242a2add2c92553d73849d}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_a773abb41c1dffe08dac00bffdf0587f8}\label{classDLVHEXParserBaseVisitor_a773abb41c1dffe08dac00bffdf0587f8}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitCost@{VisitCost}}
+\index{VisitCost@{VisitCost}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitCost()}{VisitCost()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Cost (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Cost\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+cost. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_a7c6bcc3be4b639283e2e9954c5bda5b7}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_a820ec5697ebb68302c861798795cabc6}\label{classDLVHEXParserBaseVisitor_a820ec5697ebb68302c861798795cabc6}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitGroundQuery@{VisitGroundQuery}}
+\index{VisitGroundQuery@{VisitGroundQuery}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitGroundQuery()}{VisitGroundQuery()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Ground\+Query (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Ground\+Query\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Ground\+Query} labeled alternative in DLVHEXParser.\+answer\+\_\+set. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_abc90157e5ccf36dda23704512df010e9}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_acab9bbfc159133624fefe0bcd6174942}\label{classDLVHEXParserBaseVisitor_acab9bbfc159133624fefe0bcd6174942}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitLevel@{VisitLevel}}
+\index{VisitLevel@{VisitLevel}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitLevel()}{VisitLevel()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Level (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Level\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+level. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_a975c1f19869f3483abfd8383c2ca4cd6}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex_1_1DLVHEXParserBaseVisitorImplementation_a0baf0d50a97bc3b799820eda52f97d0f}{it.\+unical.\+mat.\+parsers.\+asp.\+dlvhex.\+DLVHEXParser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_adfe0de11924500af660b56dc0679deb9}\label{classDLVHEXParserBaseVisitor_adfe0de11924500af660b56dc0679deb9}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitModel@{VisitModel}}
+\index{VisitModel@{VisitModel}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitModel()}{VisitModel()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Model (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Model\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Model} labeled alternative in DLVHEXParser.\+answer\+\_\+set. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_a806e38bbee99c90e0a41201e60c5db13}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex_1_1DLVHEXParserBaseVisitorImplementation_a4e1c2140f56edfd26ff93c3ac537044e}{it.\+unical.\+mat.\+parsers.\+asp.\+dlvhex.\+DLVHEXParser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_ad383e052f8e179b93ffcd611e694144e}\label{classDLVHEXParserBaseVisitor_ad383e052f8e179b93ffcd611e694144e}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitOutput@{VisitOutput}}
+\index{VisitOutput@{VisitOutput}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitOutput()}{VisitOutput()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Output (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Output\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+output. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_a1a16ffbe63c8ac6308e0194e87c1d8f9}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_a512e815c7f4f5fb1fd3e1d8a7186c5df}\label{classDLVHEXParserBaseVisitor_a512e815c7f4f5fb1fd3e1d8a7186c5df}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitPredicate\_atom@{VisitPredicate\_atom}}
+\index{VisitPredicate\_atom@{VisitPredicate\_atom}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitPredicate\_atom()}{VisitPredicate\_atom()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Predicate\+\_\+atom (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Predicate\+\_\+atom\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+predicate\+\_\+atom. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_ad9306b2d47b846a637a3689c1a3abed3}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex_1_1DLVHEXParserBaseVisitorImplementation_a002633a8485a1292f8f51fa9b4ee1384}{it.\+unical.\+mat.\+parsers.\+asp.\+dlvhex.\+DLVHEXParser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_a43ef815b6241e2b8dceab09d0a68a7a1}\label{classDLVHEXParserBaseVisitor_a43ef815b6241e2b8dceab09d0a68a7a1}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitTerm@{VisitTerm}}
+\index{VisitTerm@{VisitTerm}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitTerm()}{VisitTerm()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Term (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Term\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+term. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_a1ded26f10e1b230328521c0802d0e636}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLVHEXParserBaseVisitor_aff7828646adcd5e243a93e38c96e9af2}\label{classDLVHEXParserBaseVisitor_aff7828646adcd5e243a93e38c96e9af2}} 
+\index{DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}!VisitWitness@{VisitWitness}}
+\index{VisitWitness@{VisitWitness}!DLVHEXParserBaseVisitor$<$ Result $>$@{DLVHEXParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitWitness()}{VisitWitness()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLVHEXParserBaseVisitor}{DLVHEXParser\+Base\+Visitor}}$<$ Result $>$.Visit\+Witness (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLVHEXParser.\+Witness\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLVHEXParser.\+witness. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLVHEXParserVisitor_aeba12daa3fccc452f6a612165b537cef}{IDLVHEXParser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex_1_1DLVHEXParserBaseVisitorImplementation_a6cf1b07136e854ada78e2ab2204d141b}{it.\+unical.\+mat.\+parsers.\+asp.\+dlvhex.\+DLVHEXParser\+Base\+Visitor\+Implementation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/asp/dlvhex/\mbox{\hyperlink{DLVHEXParserBaseVisitor_8cs}{DLVHEXParser\+Base\+Visitor.\+cs}}\end{DoxyCompactItemize}

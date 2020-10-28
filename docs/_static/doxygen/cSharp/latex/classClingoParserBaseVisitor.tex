@@ -1,0 +1,161 @@
+\hypertarget{classClingoParserBaseVisitor}{}\doxysection{Clingo\+Parser\+Base\+Visitor$<$ Result $>$ Class Template Reference}
+\label{classClingoParserBaseVisitor}\index{ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}}
+
+
+This class provides an empty implementation of IClingo\+Parser\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods.  
+
+
+Inheritance diagram for Clingo\+Parser\+Base\+Visitor$<$ Result $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classClingoParserBaseVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor_a3fadce0abffc717ca6ad9687b2a152cc}{Visit\+Answer\+\_\+set}} (\mbox{[}Not\+Null\mbox{]} Clingo\+Parser.\+Answer\+\_\+set\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by Clingo\+Parser.\+answer\+\_\+set. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor_acfee96f90f66176a2e15d16d3fe4dc99}{Visit\+Model}} (\mbox{[}Not\+Null\mbox{]} Clingo\+Parser.\+Model\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by Clingo\+Parser.\+model. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor_a19890f01f20acd2f776f45a6af4fc606}{Visit\+Output}} (\mbox{[}Not\+Null\mbox{]} Clingo\+Parser.\+Output\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by Clingo\+Parser.\+output. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor_a92bbde4a852c2657231eed486412b394}{Visit\+Predicate\+\_\+atom}} (\mbox{[}Not\+Null\mbox{]} Clingo\+Parser.\+Predicate\+\_\+atom\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by Clingo\+Parser.\+predicate\+\_\+atom. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor_ac75fb9f8f6cf20abb66a77a94c89653b}{Visit\+Term}} (\mbox{[}Not\+Null\mbox{]} Clingo\+Parser.\+Term\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by Clingo\+Parser.\+term. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides an empty implementation of IClingo\+Parser\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Result} & The return type of the visit operation.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classClingoParserBaseVisitor_a3fadce0abffc717ca6ad9687b2a152cc}\label{classClingoParserBaseVisitor_a3fadce0abffc717ca6ad9687b2a152cc}} 
+\index{ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}!VisitAnswer\_set@{VisitAnswer\_set}}
+\index{VisitAnswer\_set@{VisitAnswer\_set}!ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitAnswer\_set()}{VisitAnswer\_set()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor}{Clingo\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Answer\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Clingo\+Parser.\+Answer\+\_\+set\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by Clingo\+Parser.\+answer\+\_\+set. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIClingoParserVisitor_a97048bf9e5c2a40f834a13a68801481f}{IClingo\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1clingo_1_1ClingoParserBaseVisitorImplementation_a52a6b8bf60c1e78032298cd6c0d2b40d}{it.\+unical.\+mat.\+parsers.\+asp.\+clingo.\+Clingo\+Parser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classClingoParserBaseVisitor_acfee96f90f66176a2e15d16d3fe4dc99}\label{classClingoParserBaseVisitor_acfee96f90f66176a2e15d16d3fe4dc99}} 
+\index{ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}!VisitModel@{VisitModel}}
+\index{VisitModel@{VisitModel}!ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitModel()}{VisitModel()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor}{Clingo\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Model (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Clingo\+Parser.\+Model\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by Clingo\+Parser.\+model. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIClingoParserVisitor_ae8ba616fd675ca49a0789f0d2e9361fb}{IClingo\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1clingo_1_1ClingoParserBaseVisitorImplementation_a4bc53dd7ec75fe1f54f7d7d525e7c6a0}{it.\+unical.\+mat.\+parsers.\+asp.\+clingo.\+Clingo\+Parser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classClingoParserBaseVisitor_a19890f01f20acd2f776f45a6af4fc606}\label{classClingoParserBaseVisitor_a19890f01f20acd2f776f45a6af4fc606}} 
+\index{ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}!VisitOutput@{VisitOutput}}
+\index{VisitOutput@{VisitOutput}!ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitOutput()}{VisitOutput()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor}{Clingo\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Output (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Clingo\+Parser.\+Output\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by Clingo\+Parser.\+output. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIClingoParserVisitor_a75114052742429c4e2ea8f254100a65f}{IClingo\+Parser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classClingoParserBaseVisitor_a92bbde4a852c2657231eed486412b394}\label{classClingoParserBaseVisitor_a92bbde4a852c2657231eed486412b394}} 
+\index{ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}!VisitPredicate\_atom@{VisitPredicate\_atom}}
+\index{VisitPredicate\_atom@{VisitPredicate\_atom}!ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitPredicate\_atom()}{VisitPredicate\_atom()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor}{Clingo\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Predicate\+\_\+atom (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Clingo\+Parser.\+Predicate\+\_\+atom\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by Clingo\+Parser.\+predicate\+\_\+atom. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIClingoParserVisitor_a901e198af0368467196eebad50510332}{IClingo\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1clingo_1_1ClingoParserBaseVisitorImplementation_a6712bcc2b6da9d952a642e2469daefdc}{it.\+unical.\+mat.\+parsers.\+asp.\+clingo.\+Clingo\+Parser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classClingoParserBaseVisitor_ac75fb9f8f6cf20abb66a77a94c89653b}\label{classClingoParserBaseVisitor_ac75fb9f8f6cf20abb66a77a94c89653b}} 
+\index{ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}!VisitTerm@{VisitTerm}}
+\index{VisitTerm@{VisitTerm}!ClingoParserBaseVisitor$<$ Result $>$@{ClingoParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitTerm()}{VisitTerm()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classClingoParserBaseVisitor}{Clingo\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Term (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Clingo\+Parser.\+Term\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by Clingo\+Parser.\+term. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIClingoParserVisitor_aecca9c20c0942c2a0dc91ae0316523a9}{IClingo\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/asp/clingo/\mbox{\hyperlink{ClingoParserBaseVisitor_8cs}{Clingo\+Parser\+Base\+Visitor.\+cs}}\end{DoxyCompactItemize}

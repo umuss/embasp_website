@@ -1,0 +1,187 @@
+\hypertarget{classDatalogGrammarParser}{}\doxysection{Datalog\+Grammar\+Parser Class Reference}
+\label{classDatalogGrammarParser}\index{DatalogGrammarParser@{DatalogGrammarParser}}
+Inheritance diagram for Datalog\+Grammar\+Parser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDatalogGrammarParser}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDatalogGrammarParser_1_1OutputContext}{Output\+Context}}
+\item 
+class \mbox{\hyperlink{classDatalogGrammarParser_1_1Predicate__atomContext}{Predicate\+\_\+atom\+Context}}
+\item 
+class \mbox{\hyperlink{classDatalogGrammarParser_1_1TermContext}{Term\+Context}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDatalogGrammarParser_a1dd975c43b3c25118a5f0207befc982a}{Datalog\+Grammar\+Parser}} (IToken\+Stream input)
+\item 
+\mbox{\hyperlink{classDatalogGrammarParser_ad07ae5eecba418f371528030d93f0ad0}{Datalog\+Grammar\+Parser}} (IToken\+Stream input, Text\+Writer \mbox{\hyperlink{classDatalogGrammarParser_afa1de6a6b2dd54ba524b14c7be61a8b8}{output}}, Text\+Writer error\+Output)
+\item 
+\mbox{\hyperlink{classDatalogGrammarParser_1_1OutputContext}{Output\+Context}} \mbox{\hyperlink{classDatalogGrammarParser_afa1de6a6b2dd54ba524b14c7be61a8b8}{output}} ()
+\item 
+\mbox{\hyperlink{classDatalogGrammarParser_1_1Predicate__atomContext}{Predicate\+\_\+atom\+Context}} \mbox{\hyperlink{classDatalogGrammarParser_a2e47958d08fb2a96722c66edbd960b4d}{predicate\+\_\+atom}} ()
+\item 
+\mbox{\hyperlink{classDatalogGrammarParser_1_1TermContext}{Term\+Context}} \mbox{\hyperlink{classDatalogGrammarParser_ac4ec9c85e6fdabbb99ac2baec3006717}{term}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classDatalogGrammarParser_ab1c6e6e5c0323fa8097c63677bcdb89a}{T\+\_\+\+\_\+0}} =1
+\item 
+const int \mbox{\hyperlink{classDatalogGrammarParser_a6bc7c2ab55b085702b8826b6d02e93bb}{RULE\+\_\+output}} = 0
+\item 
+static readonly string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classDatalogGrammarParser_af773db293b743cc8eb222f4e9bcde771}{rule\+Names}}
+\item 
+static readonly IVocabulary \mbox{\hyperlink{classDatalogGrammarParser_ac6abc246859b3857fb4aa12c43233210}{Default\+Vocabulary}} = new \mbox{\hyperlink{classDatalogGrammarParser_a1ec798bcae5ee8fcad46e422759f060a}{Vocabulary}}(\+\_\+\+Literal\+Names, \+\_\+\+Symbolic\+Names)
+\item 
+static readonly ATN \mbox{\hyperlink{classDatalogGrammarParser_adf65546c52ddad1e527e31fab7f6b20b}{\+\_\+\+ATN}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{ASPGrammarLexer_8cs_adff82417cdaed8e1b025db27c7c11fc3}{DFA}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classDatalogGrammarParser_a4652f2dd83af46a5ee3478a8d2e8d7bc}{decision\+To\+DFA}}
+\item 
+static Prediction\+Context\+Cache \mbox{\hyperlink{classDatalogGrammarParser_a28c97ea634a5b6f27a23c6c1760d84af}{shared\+Context\+Cache}} = new Prediction\+Context\+Cache()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override IVocabulary \mbox{\hyperlink{classDatalogGrammarParser_a1ec798bcae5ee8fcad46e422759f060a}{Vocabulary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override string \mbox{\hyperlink{classDatalogGrammarParser_a5423f643d0d32a6230f0c158e0ca4275}{Grammar\+File\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classDatalogGrammarParser_a41cb024be32d7f26e24d3dc58993d30d}{Rule\+Names}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override string \mbox{\hyperlink{classDatalogGrammarParser_a30a613dc5dafca92801bba590bf78362}{Serialized\+Atn}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDatalogGrammarParser_a1dd975c43b3c25118a5f0207befc982a}\label{classDatalogGrammarParser_a1dd975c43b3c25118a5f0207befc982a}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!DatalogGrammarParser@{DatalogGrammarParser}}
+\index{DatalogGrammarParser@{DatalogGrammarParser}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{DatalogGrammarParser()}{DatalogGrammarParser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Datalog\+Grammar\+Parser.\+Datalog\+Grammar\+Parser (\begin{DoxyParamCaption}\item[{IToken\+Stream}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_ad07ae5eecba418f371528030d93f0ad0}\label{classDatalogGrammarParser_ad07ae5eecba418f371528030d93f0ad0}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!DatalogGrammarParser@{DatalogGrammarParser}}
+\index{DatalogGrammarParser@{DatalogGrammarParser}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{DatalogGrammarParser()}{DatalogGrammarParser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Datalog\+Grammar\+Parser.\+Datalog\+Grammar\+Parser (\begin{DoxyParamCaption}\item[{IToken\+Stream}]{input,  }\item[{Text\+Writer}]{output,  }\item[{Text\+Writer}]{error\+Output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatalogGrammarParser_afa1de6a6b2dd54ba524b14c7be61a8b8}\label{classDatalogGrammarParser_afa1de6a6b2dd54ba524b14c7be61a8b8}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!output@{output}}
+\index{output@{output}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDatalogGrammarParser_1_1OutputContext}{Output\+Context}} Datalog\+Grammar\+Parser.\+output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_a2e47958d08fb2a96722c66edbd960b4d}\label{classDatalogGrammarParser_a2e47958d08fb2a96722c66edbd960b4d}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!predicate\_atom@{predicate\_atom}}
+\index{predicate\_atom@{predicate\_atom}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{predicate\_atom()}{predicate\_atom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDatalogGrammarParser_1_1Predicate__atomContext}{Predicate\+\_\+atom\+Context}} Datalog\+Grammar\+Parser.\+predicate\+\_\+atom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_ac4ec9c85e6fdabbb99ac2baec3006717}\label{classDatalogGrammarParser_ac4ec9c85e6fdabbb99ac2baec3006717}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!term@{term}}
+\index{term@{term}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{term()}{term()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDatalogGrammarParser_1_1TermContext}{Term\+Context}} Datalog\+Grammar\+Parser.\+term (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDatalogGrammarParser_adf65546c52ddad1e527e31fab7f6b20b}\label{classDatalogGrammarParser_adf65546c52ddad1e527e31fab7f6b20b}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!\_ATN@{\_ATN}}
+\index{\_ATN@{\_ATN}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{\_ATN}{\_ATN}}
+{\footnotesize\ttfamily readonly ATN Datalog\+Grammar\+Parser.\+\_\+\+ATN\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        \textcolor{keyword}{new} ATNDeserializer().Deserialize(\_serializedATN)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDatalogGrammarParser_a4652f2dd83af46a5ee3478a8d2e8d7bc}\label{classDatalogGrammarParser_a4652f2dd83af46a5ee3478a8d2e8d7bc}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!decisionToDFA@{decisionToDFA}}
+\index{decisionToDFA@{decisionToDFA}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{decisionToDFA}{decisionToDFA}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ASPGrammarLexer_8cs_adff82417cdaed8e1b025db27c7c11fc3}{DFA}} \mbox{[}$\,$\mbox{]} Datalog\+Grammar\+Parser.\+decision\+To\+DFA\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_ac6abc246859b3857fb4aa12c43233210}\label{classDatalogGrammarParser_ac6abc246859b3857fb4aa12c43233210}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!DefaultVocabulary@{DefaultVocabulary}}
+\index{DefaultVocabulary@{DefaultVocabulary}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{DefaultVocabulary}{DefaultVocabulary}}
+{\footnotesize\ttfamily readonly IVocabulary Datalog\+Grammar\+Parser.\+Default\+Vocabulary = new \mbox{\hyperlink{classDatalogGrammarParser_a1ec798bcae5ee8fcad46e422759f060a}{Vocabulary}}(\+\_\+\+Literal\+Names, \+\_\+\+Symbolic\+Names)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_a6bc7c2ab55b085702b8826b6d02e93bb}\label{classDatalogGrammarParser_a6bc7c2ab55b085702b8826b6d02e93bb}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!RULE\_output@{RULE\_output}}
+\index{RULE\_output@{RULE\_output}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{RULE\_output}{RULE\_output}}
+{\footnotesize\ttfamily const int Datalog\+Grammar\+Parser.\+RULE\+\_\+output = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_af773db293b743cc8eb222f4e9bcde771}\label{classDatalogGrammarParser_af773db293b743cc8eb222f4e9bcde771}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!ruleNames@{ruleNames}}
+\index{ruleNames@{ruleNames}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{ruleNames}{ruleNames}}
+{\footnotesize\ttfamily readonly string \mbox{[}$\,$\mbox{]} Datalog\+Grammar\+Parser.\+rule\+Names\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}output"{}}, \textcolor{stringliteral}{"{}predicate\_atom"{}}, \textcolor{stringliteral}{"{}term"{}}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDatalogGrammarParser_a28c97ea634a5b6f27a23c6c1760d84af}\label{classDatalogGrammarParser_a28c97ea634a5b6f27a23c6c1760d84af}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!sharedContextCache@{sharedContextCache}}
+\index{sharedContextCache@{sharedContextCache}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{sharedContextCache}{sharedContextCache}}
+{\footnotesize\ttfamily Prediction\+Context\+Cache Datalog\+Grammar\+Parser.\+shared\+Context\+Cache = new Prediction\+Context\+Cache()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_ab1c6e6e5c0323fa8097c63677bcdb89a}\label{classDatalogGrammarParser_ab1c6e6e5c0323fa8097c63677bcdb89a}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!T\_\_0@{T\_\_0}}
+\index{T\_\_0@{T\_\_0}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{T\_\_0}{T\_\_0}}
+{\footnotesize\ttfamily const int Datalog\+Grammar\+Parser.\+T\+\_\+\+\_\+0 =1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classDatalogGrammarParser_a5423f643d0d32a6230f0c158e0ca4275}\label{classDatalogGrammarParser_a5423f643d0d32a6230f0c158e0ca4275}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!GrammarFileName@{GrammarFileName}}
+\index{GrammarFileName@{GrammarFileName}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{GrammarFileName}{GrammarFileName}}
+{\footnotesize\ttfamily override string Datalog\+Grammar\+Parser.\+Grammar\+File\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_a41cb024be32d7f26e24d3dc58993d30d}\label{classDatalogGrammarParser_a41cb024be32d7f26e24d3dc58993d30d}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!RuleNames@{RuleNames}}
+\index{RuleNames@{RuleNames}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{RuleNames}{RuleNames}}
+{\footnotesize\ttfamily override string \mbox{[}$\,$\mbox{]} Datalog\+Grammar\+Parser.\+Rule\+Names\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_a30a613dc5dafca92801bba590bf78362}\label{classDatalogGrammarParser_a30a613dc5dafca92801bba590bf78362}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!SerializedAtn@{SerializedAtn}}
+\index{SerializedAtn@{SerializedAtn}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{SerializedAtn}{SerializedAtn}}
+{\footnotesize\ttfamily override string Datalog\+Grammar\+Parser.\+Serialized\+Atn\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{classDatalogGrammarParser_a1ec798bcae5ee8fcad46e422759f060a}\label{classDatalogGrammarParser_a1ec798bcae5ee8fcad46e422759f060a}} 
+\index{DatalogGrammarParser@{DatalogGrammarParser}!Vocabulary@{Vocabulary}}
+\index{Vocabulary@{Vocabulary}!DatalogGrammarParser@{DatalogGrammarParser}}
+\doxysubsubsection{\texorpdfstring{Vocabulary}{Vocabulary}}
+{\footnotesize\ttfamily override IVocabulary Datalog\+Grammar\+Parser.\+Vocabulary\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/datalog/datalog\+\_\+parser\+\_\+base/\mbox{\hyperlink{DatalogGrammarParser_8cs}{Datalog\+Grammar\+Parser.\+cs}}\end{DoxyCompactItemize}

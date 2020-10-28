@@ -1,0 +1,72 @@
+\hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser}{}\doxysection{it.\+unical.\+mat.\+parsers.\+pddl.\+PDDLParser Class Reference}
+\label{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser}\index{it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}}
+Inheritance diagram for it.\+unical.\+mat.\+parsers.\+pddl.\+PDDLParser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.323651cm]{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a47e8be73bcbab8322a99d1b902879637}{get\+Parameters}} ()
+\item 
+Void \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a8c3dc50f05f7169ce0546b14b31bacab}{visit\+Atom}} (PDDLGrammar\+Parser.\+Atom\+Context ctx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static final \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser}{PDDLParser}} \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_addbcdef33f671a5f444f3899417f2ea7}{parse}} (final String action)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a47e8be73bcbab8322a99d1b902879637}\label{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a47e8be73bcbab8322a99d1b902879637}} 
+\index{it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}!getParameters@{getParameters}}
+\index{getParameters@{getParameters}!it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}}
+\doxysubsubsection{\texorpdfstring{getParameters()}{getParameters()}}
+{\footnotesize\ttfamily String \mbox{[}$\,$\mbox{]} it.\+unical.\+mat.\+parsers.\+pddl.\+PDDLParser.\+get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_addbcdef33f671a5f444f3899417f2ea7}\label{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_addbcdef33f671a5f444f3899417f2ea7}} 
+\index{it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}!parse@{parse}}
+\index{parse@{parse}!it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily static final \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser}{PDDLParser}} it.\+unical.\+mat.\+parsers.\+pddl.\+PDDLParser.\+parse (\begin{DoxyParamCaption}\item[{final String}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a8c3dc50f05f7169ce0546b14b31bacab}\label{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1PDDLParser_a8c3dc50f05f7169ce0546b14b31bacab}} 
+\index{it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}!visitAtom@{visitAtom}}
+\index{visitAtom@{visitAtom}!it.unical.mat.parsers.pddl.PDDLParser@{it.unical.mat.parsers.pddl.PDDLParser}}
+\doxysubsubsection{\texorpdfstring{visitAtom()}{visitAtom()}}
+{\footnotesize\ttfamily Void it.\+unical.\+mat.\+parsers.\+pddl.\+PDDLParser.\+visit\+Atom (\begin{DoxyParamCaption}\item[{PDDLGrammar\+Parser.\+Atom\+Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Visit a parse tree produced by \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarParser_a16e6182aaadddac4529dc92f6349505c}{PDDLGrammar\+Parser\#atom}}. 
+\begin{DoxyParams}{Parameters}
+{\em ctx} & the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visitor result
+\end{DoxyReturn}
+
+
+The default implementation returns the result of calling \mbox{\hyperlink{}{visit\+Children}} on
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ctx }
+
+\end{DoxyCode}
+ .
+
+The default implementation returns the result of calling \mbox{\hyperlink{}{visit\+Children}} on
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ctx }
+
+\end{DoxyCode}
+ .
+
+Reimplemented from \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1pddl__parser__base_1_1PDDLGrammarBaseVisitor_a27fa1c7d3b1c0e396b6d1afcdade2ce9}{it.\+unical.\+mat.\+parsers.\+pddl.\+pddl\+\_\+parser\+\_\+base.\+PDDLGrammar\+Base\+Visitor$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/java/app/src/main/java/it/unical/mat/parsers/pddl/\mbox{\hyperlink{PDDLParser_8java}{PDDLParser.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,207 @@
+\hypertarget{classDLV2ParserBaseVisitor}{}\doxysection{DLV2\+Parser\+Base\+Visitor$<$ Result $>$ Class Template Reference}
+\label{classDLV2ParserBaseVisitor}\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+
+
+This class provides an empty implementation of IDLV2\+Parser\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods.  
+
+
+Inheritance diagram for DLV2\+Parser\+Base\+Visitor$<$ Result $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDLV2ParserBaseVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_a4d07c3ba4e99523ca4d645cb268a44ba}{Visit\+Answer\+\_\+set}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Answer\+\_\+set\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+answer\+\_\+set. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_a4d140889efce03808f7fba31f3bcdc53}{Visit\+Cost}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Cost\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+cost. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_a4ffb005272b3ad9e9fd331e32fea0079}{Visit\+Level}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Level\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+level. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_ab04c1bba88a33b17f3998dc2a2d7acc8}{Visit\+Model}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Model\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+model. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_a693bcc320ddbcae268c653d61c40cc0b}{Visit\+Output}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Output\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+output. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_aa0e1f50e2b2cc62005826a1dd423ffcd}{Visit\+Predicate\+\_\+atom}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Predicate\+\_\+atom\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+predicate\+\_\+atom. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor_a98ca5e824f17d6b45b930008658bee52}{Visit\+Term}} (\mbox{[}Not\+Null\mbox{]} DLV2\+Parser.\+Term\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by DLV2\+Parser.\+term. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides an empty implementation of IDLV2\+Parser\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Result} & The return type of the visit operation.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_a4d07c3ba4e99523ca4d645cb268a44ba}\label{classDLV2ParserBaseVisitor_a4d07c3ba4e99523ca4d645cb268a44ba}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitAnswer\_set@{VisitAnswer\_set}}
+\index{VisitAnswer\_set@{VisitAnswer\_set}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitAnswer\_set()}{VisitAnswer\_set()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Answer\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Answer\+\_\+set\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+answer\+\_\+set. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_a36a5a79b373acd0f9d3e0a35a861ff0c}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv2_1_1DLV2ParserBaseVisitorImplementation_a656cc45358b585cfd1b77bff38151057}{it.\+unical.\+mat.\+parsers.\+asp.\+dlv2.\+DLV2\+Parser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_a4d140889efce03808f7fba31f3bcdc53}\label{classDLV2ParserBaseVisitor_a4d140889efce03808f7fba31f3bcdc53}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitCost@{VisitCost}}
+\index{VisitCost@{VisitCost}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitCost()}{VisitCost()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Cost (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Cost\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+cost. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_a3f7050f4bee4e85a1edd8b04fa756f2d}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_a4ffb005272b3ad9e9fd331e32fea0079}\label{classDLV2ParserBaseVisitor_a4ffb005272b3ad9e9fd331e32fea0079}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitLevel@{VisitLevel}}
+\index{VisitLevel@{VisitLevel}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitLevel()}{VisitLevel()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Level (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Level\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+level. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_a53ff7a785cc876fcc20539818bc02ff0}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv2_1_1DLV2ParserBaseVisitorImplementation_a368b1e8aff5fd508995d14abdbf55f43}{it.\+unical.\+mat.\+parsers.\+asp.\+dlv2.\+DLV2\+Parser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_ab04c1bba88a33b17f3998dc2a2d7acc8}\label{classDLV2ParserBaseVisitor_ab04c1bba88a33b17f3998dc2a2d7acc8}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitModel@{VisitModel}}
+\index{VisitModel@{VisitModel}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitModel()}{VisitModel()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Model (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Model\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+model. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_a514562970491a01b6c67665d885de427}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_a693bcc320ddbcae268c653d61c40cc0b}\label{classDLV2ParserBaseVisitor_a693bcc320ddbcae268c653d61c40cc0b}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitOutput@{VisitOutput}}
+\index{VisitOutput@{VisitOutput}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitOutput()}{VisitOutput()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Output (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Output\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+output. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_ac1f33feb58d8d9b3c44849dce1f84593}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_aa0e1f50e2b2cc62005826a1dd423ffcd}\label{classDLV2ParserBaseVisitor_aa0e1f50e2b2cc62005826a1dd423ffcd}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitPredicate\_atom@{VisitPredicate\_atom}}
+\index{VisitPredicate\_atom@{VisitPredicate\_atom}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitPredicate\_atom()}{VisitPredicate\_atom()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Predicate\+\_\+atom (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Predicate\+\_\+atom\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+predicate\+\_\+atom. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_a74624c3ae7a7b0886e83c7a7707c4939}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv2_1_1DLV2ParserBaseVisitorImplementation_ab1e58a6aa15b2d3c173d2e07c0b95b84}{it.\+unical.\+mat.\+parsers.\+asp.\+dlv2.\+DLV2\+Parser\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classDLV2ParserBaseVisitor_a98ca5e824f17d6b45b930008658bee52}\label{classDLV2ParserBaseVisitor_a98ca5e824f17d6b45b930008658bee52}} 
+\index{DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}!VisitTerm@{VisitTerm}}
+\index{VisitTerm@{VisitTerm}!DLV2ParserBaseVisitor$<$ Result $>$@{DLV2ParserBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitTerm()}{VisitTerm()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classDLV2ParserBaseVisitor}{DLV2\+Parser\+Base\+Visitor}}$<$ Result $>$.Visit\+Term (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} DLV2\+Parser.\+Term\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by DLV2\+Parser.\+term. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceIDLV2ParserVisitor_ad6479adab7c92293cceee300f29b864e}{IDLV2\+Parser\+Visitor$<$ Result $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/asp/dlv2/\mbox{\hyperlink{DLV2ParserBaseVisitor_8cs}{DLV2\+Parser\+Base\+Visitor.\+cs}}\end{DoxyCompactItemize}

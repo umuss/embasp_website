@@ -1,0 +1,268 @@
+\hypertarget{classSPDGrammarBaseVisitor}{}\doxysection{SPDGrammar\+Base\+Visitor$<$ Result $>$ Class Template Reference}
+\label{classSPDGrammarBaseVisitor}\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+
+
+This class provides an empty implementation of ISPDGrammar\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods.  
+
+
+Inheritance diagram for SPDGrammar\+Base\+Visitor$<$ Result $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSPDGrammarBaseVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_adb5820b0b3acfd7a133b5794fe9347dd}{Visit\+Array}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Array\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by SPDGrammar\+Parser.\+array. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_abd418356db11545f3ebc9693f6d1b4c8}{Visit\+Json}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Json\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by SPDGrammar\+Parser.\+json. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_afd48f375f3663bf63bf7d8c6be5da7fa}{Visit\+OBj\+EcT}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+OBj\+Ec\+TContext context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by SPDGrammar\+Parser.\+o\+Bj\+EcT. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_a3355d7270a0721bd49c30d3100d509be}{Visit\+Pair}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Pair\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by SPDGrammar\+Parser.\+pair. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_ac80b5e1decf2c216744ceb5b87e9c621}{Visit\+Array\+Value}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Array\+Value\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Array\+Value} labeled alternative in SPDGrammar\+Parser.\+value. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_aa3c845d022c0606a6b1f67ae298c93ac}{Visit\+Boolean\+Value}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Boolean\+Value\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Boolean\+Value} labeled alternative in SPDGrammar\+Parser.\+value. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_a1b1c390724c419bcd49a18313debbd30}{Visit\+Integer\+Value}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Integer\+Value\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Integer\+Value} labeled alternative in SPDGrammar\+Parser.\+value. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_a8a78e40269059a81a5aee6b5a25f1a1b}{Visit\+Null\+Value}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Null\+Value\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Null\+Value} labeled alternative in SPDGrammar\+Parser.\+value. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_aae0e1db11b6b2a4e5a7e0a82c4855a9d}{Visit\+Object\+Value}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+Object\+Value\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily Object\+Value} labeled alternative in SPDGrammar\+Parser.\+value. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor_a91f6fdfd92f69257894dc2c26ea71b65}{Visit\+String\+Value}} (\mbox{[}Not\+Null\mbox{]} SPDGrammar\+Parser.\+String\+Value\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by the {\ttfamily String\+Value} labeled alternative in SPDGrammar\+Parser.\+value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides an empty implementation of ISPDGrammar\+Visitor$<$\+Result$>$, which can be extended to create a visitor which only needs to handle a subset of the available methods. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Result} & The return type of the visit operation.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_adb5820b0b3acfd7a133b5794fe9347dd}\label{classSPDGrammarBaseVisitor_adb5820b0b3acfd7a133b5794fe9347dd}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitArray@{VisitArray}}
+\index{VisitArray@{VisitArray}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitArray()}{VisitArray()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Array (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Array\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by SPDGrammar\+Parser.\+array. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_ab919f4377788af1068e6af0e4655623b}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_ac80b5e1decf2c216744ceb5b87e9c621}\label{classSPDGrammarBaseVisitor_ac80b5e1decf2c216744ceb5b87e9c621}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitArrayValue@{VisitArrayValue}}
+\index{VisitArrayValue@{VisitArrayValue}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitArrayValue()}{VisitArrayValue()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Array\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Array\+Value\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Array\+Value} labeled alternative in SPDGrammar\+Parser.\+value. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_afd9b686eae4812114252b4fe7a4edafb}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_aa3c845d022c0606a6b1f67ae298c93ac}\label{classSPDGrammarBaseVisitor_aa3c845d022c0606a6b1f67ae298c93ac}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitBooleanValue@{VisitBooleanValue}}
+\index{VisitBooleanValue@{VisitBooleanValue}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitBooleanValue()}{VisitBooleanValue()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Boolean\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Boolean\+Value\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Boolean\+Value} labeled alternative in SPDGrammar\+Parser.\+value. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_a411311b3a8749a22735311e1aa255abc}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_a1b1c390724c419bcd49a18313debbd30}\label{classSPDGrammarBaseVisitor_a1b1c390724c419bcd49a18313debbd30}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitIntegerValue@{VisitIntegerValue}}
+\index{VisitIntegerValue@{VisitIntegerValue}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitIntegerValue()}{VisitIntegerValue()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Integer\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Integer\+Value\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Integer\+Value} labeled alternative in SPDGrammar\+Parser.\+value. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_ac6328d7aeda516544cd68dbe3fa1cd42}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_abd418356db11545f3ebc9693f6d1b4c8}\label{classSPDGrammarBaseVisitor_abd418356db11545f3ebc9693f6d1b4c8}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitJson@{VisitJson}}
+\index{VisitJson@{VisitJson}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitJson()}{VisitJson()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Json (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Json\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by SPDGrammar\+Parser.\+json. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_a3f1c870ff82a7e753c3e903ad98ab83f}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_a8a78e40269059a81a5aee6b5a25f1a1b}\label{classSPDGrammarBaseVisitor_a8a78e40269059a81a5aee6b5a25f1a1b}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitNullValue@{VisitNullValue}}
+\index{VisitNullValue@{VisitNullValue}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitNullValue()}{VisitNullValue()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Null\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Null\+Value\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Null\+Value} labeled alternative in SPDGrammar\+Parser.\+value. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_acd585b220e5b9fdf3c4ccb5a77318c8e}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_afd48f375f3663bf63bf7d8c6be5da7fa}\label{classSPDGrammarBaseVisitor_afd48f375f3663bf63bf7d8c6be5da7fa}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitOBjEcT@{VisitOBjEcT}}
+\index{VisitOBjEcT@{VisitOBjEcT}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitOBjEcT()}{VisitOBjEcT()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+OBj\+EcT (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+OBj\+Ec\+TContext}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by SPDGrammar\+Parser.\+o\+Bj\+EcT. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_afc0bf9d8f22199c4b3de817c2efb9c57}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_aae0e1db11b6b2a4e5a7e0a82c4855a9d}\label{classSPDGrammarBaseVisitor_aae0e1db11b6b2a4e5a7e0a82c4855a9d}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitObjectValue@{VisitObjectValue}}
+\index{VisitObjectValue@{VisitObjectValue}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitObjectValue()}{VisitObjectValue()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Object\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Object\+Value\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily Object\+Value} labeled alternative in SPDGrammar\+Parser.\+value. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_ae94232455f2a01de333ec32bcc3bd10f}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_a3355d7270a0721bd49c30d3100d509be}\label{classSPDGrammarBaseVisitor_a3355d7270a0721bd49c30d3100d509be}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitPair@{VisitPair}}
+\index{VisitPair@{VisitPair}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitPair()}{VisitPair()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+Pair (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+Pair\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by SPDGrammar\+Parser.\+pair. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_a6208ed7e5d96bef2256a08964986713c}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarBaseVisitorImplementation_a77226aa6d55ce5c59408feeb9271f79d}{it.\+unical.\+mat.\+parsers.\+pddl.\+solver\+\_\+planning\+\_\+domains.\+SPDGrammar\+Base\+Visitor\+Implementation}}.
+
+\mbox{\Hypertarget{classSPDGrammarBaseVisitor_a91f6fdfd92f69257894dc2c26ea71b65}\label{classSPDGrammarBaseVisitor_a91f6fdfd92f69257894dc2c26ea71b65}} 
+\index{SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}!VisitStringValue@{VisitStringValue}}
+\index{VisitStringValue@{VisitStringValue}!SPDGrammarBaseVisitor$<$ Result $>$@{SPDGrammarBaseVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitStringValue()}{VisitStringValue()}}
+{\footnotesize\ttfamily virtual Result \mbox{\hyperlink{classSPDGrammarBaseVisitor}{SPDGrammar\+Base\+Visitor}}$<$ Result $>$.Visit\+String\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} SPDGrammar\+Parser.\+String\+Value\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by the {\ttfamily String\+Value} labeled alternative in SPDGrammar\+Parser.\+value. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implements \mbox{\hyperlink{interfaceISPDGrammarVisitor_a2544294744da2e97a4df9fe9741f7776}{ISPDGrammar\+Visitor$<$ Result $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/pddl/solver\+\_\+planning\+\_\+domains/\mbox{\hyperlink{SPDGrammarBaseVisitor_8cs}{SPDGrammar\+Base\+Visitor.\+cs}}\end{DoxyCompactItemize}

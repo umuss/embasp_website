@@ -1,0 +1,97 @@
+\hypertarget{interfaceIASPGrammarVisitor}{}\doxysection{IASPGrammar\+Visitor$<$ Result $>$ Interface Template Reference}
+\label{interfaceIASPGrammarVisitor}\index{IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}}
+
+
+This interface defines a complete generic visitor for a parse tree produced by ASPGrammar\+Parser.  
+
+
+Inheritance diagram for IASPGrammar\+Visitor$<$ Result $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interfaceIASPGrammarVisitor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Result \mbox{\hyperlink{interfaceIASPGrammarVisitor_af6ee9a022e4a01c297b4901dd5cd18a6}{Visit\+Output}} (\mbox{[}Not\+Null\mbox{]} ASPGrammar\+Parser.\+Output\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by ASPGrammar\+Parser.\+output. \end{DoxyCompactList}\item 
+Result \mbox{\hyperlink{interfaceIASPGrammarVisitor_afd7dddf8726d13a551eba95a145efd2b}{Visit\+Predicate\+\_\+atom}} (\mbox{[}Not\+Null\mbox{]} ASPGrammar\+Parser.\+Predicate\+\_\+atom\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by ASPGrammar\+Parser.\+predicate\+\_\+atom. \end{DoxyCompactList}\item 
+Result \mbox{\hyperlink{interfaceIASPGrammarVisitor_a8c5d9d2d428f35e72ff68e6c8ff456d3}{Visit\+Term}} (\mbox{[}Not\+Null\mbox{]} ASPGrammar\+Parser.\+Term\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by ASPGrammar\+Parser.\+term. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines a complete generic visitor for a parse tree produced by ASPGrammar\+Parser. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Result} & The return type of the visit operation.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceIASPGrammarVisitor_af6ee9a022e4a01c297b4901dd5cd18a6}\label{interfaceIASPGrammarVisitor_af6ee9a022e4a01c297b4901dd5cd18a6}} 
+\index{IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}!VisitOutput@{VisitOutput}}
+\index{VisitOutput@{VisitOutput}!IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitOutput()}{VisitOutput()}}
+{\footnotesize\ttfamily Result \mbox{\hyperlink{interfaceIASPGrammarVisitor}{IASPGrammar\+Visitor}}$<$ Result $>$.Visit\+Output (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} ASPGrammar\+Parser.\+Output\+Context}]{context }\end{DoxyParamCaption})}
+
+
+
+Visit a parse tree produced by ASPGrammar\+Parser.\+output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implemented in \mbox{\hyperlink{classASPGrammarBaseVisitor_ada4904754bcfbb2e6f3fcf1861e8b6fc}{ASPGrammar\+Base\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{interfaceIASPGrammarVisitor_afd7dddf8726d13a551eba95a145efd2b}\label{interfaceIASPGrammarVisitor_afd7dddf8726d13a551eba95a145efd2b}} 
+\index{IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}!VisitPredicate\_atom@{VisitPredicate\_atom}}
+\index{VisitPredicate\_atom@{VisitPredicate\_atom}!IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitPredicate\_atom()}{VisitPredicate\_atom()}}
+{\footnotesize\ttfamily Result \mbox{\hyperlink{interfaceIASPGrammarVisitor}{IASPGrammar\+Visitor}}$<$ Result $>$.Visit\+Predicate\+\_\+atom (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} ASPGrammar\+Parser.\+Predicate\+\_\+atom\+Context}]{context }\end{DoxyParamCaption})}
+
+
+
+Visit a parse tree produced by ASPGrammar\+Parser.\+predicate\+\_\+atom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implemented in \mbox{\hyperlink{classASPGrammarBaseVisitor_a06bafe7c31d0650d03d7fa55960a3559}{ASPGrammar\+Base\+Visitor$<$ Result $>$}}.
+
+\mbox{\Hypertarget{interfaceIASPGrammarVisitor_a8c5d9d2d428f35e72ff68e6c8ff456d3}\label{interfaceIASPGrammarVisitor_a8c5d9d2d428f35e72ff68e6c8ff456d3}} 
+\index{IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}!VisitTerm@{VisitTerm}}
+\index{VisitTerm@{VisitTerm}!IASPGrammarVisitor$<$ Result $>$@{IASPGrammarVisitor$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{VisitTerm()}{VisitTerm()}}
+{\footnotesize\ttfamily Result \mbox{\hyperlink{interfaceIASPGrammarVisitor}{IASPGrammar\+Visitor}}$<$ Result $>$.Visit\+Term (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} ASPGrammar\+Parser.\+Term\+Context}]{context }\end{DoxyParamCaption})}
+
+
+
+Visit a parse tree produced by ASPGrammar\+Parser.\+term. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Implemented in \mbox{\hyperlink{classASPGrammarBaseVisitor_a5f48d61cfbedeee2e5a5308947548105}{ASPGrammar\+Base\+Visitor$<$ Result $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/asp/asp\+\_\+parser\+\_\+base/\mbox{\hyperlink{ASPGrammarVisitor_8cs}{ASPGrammar\+Visitor.\+cs}}\end{DoxyCompactItemize}

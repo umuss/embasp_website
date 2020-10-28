@@ -1,0 +1,76 @@
+\hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation}{}\doxysection{it.\+unical.\+mat.\+parsers.\+datalog.\+idlv.\+IDLVParser\+Base\+Visitor\+Implementation Class Reference}
+\label{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation}\index{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}}
+Inheritance diagram for it.\+unical.\+mat.\+parsers.\+datalog.\+idlv.\+IDLVParser\+Base\+Visitor\+Implementation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override object \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_a3baeebce606e1307c951f472152b8168}{Visit\+Minimal\+\_\+model}} (IDLVParser.\+Minimal\+\_\+model\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by IDLVParser.\+minimal\+\_\+model. \end{DoxyCompactList}\item 
+override object \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_af512b14a9b7c181deb1c4b1a89e3599d}{Visit\+Predicate\+\_\+atom}} (IDLVParser.\+Predicate\+\_\+atom\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by IDLVParser.\+predicate\+\_\+atom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_a51f6a6b33d84915032a00820829c6296}{Parse}} (\mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1IDatalogDataCollection}{IDatalog\+Data\+Collection}} minimal\+Models, string atoms\+List, bool two\+\_\+stage\+Parsing)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_a51f6a6b33d84915032a00820829c6296}\label{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_a51f6a6b33d84915032a00820829c6296}} 
+\index{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}!Parse@{Parse}}
+\index{Parse@{Parse}!it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily static void it.\+unical.\+mat.\+parsers.\+datalog.\+idlv.\+IDLVParser\+Base\+Visitor\+Implementation.\+Parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1IDatalogDataCollection}{IDatalog\+Data\+Collection}}}]{minimal\+Models,  }\item[{string}]{atoms\+List,  }\item[{bool}]{two\+\_\+stage\+Parsing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_a3baeebce606e1307c951f472152b8168}\label{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_a3baeebce606e1307c951f472152b8168}} 
+\index{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}!VisitMinimal\_model@{VisitMinimal\_model}}
+\index{VisitMinimal\_model@{VisitMinimal\_model}!it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}}
+\doxysubsubsection{\texorpdfstring{VisitMinimal\_model()}{VisitMinimal\_model()}}
+{\footnotesize\ttfamily override object it.\+unical.\+mat.\+parsers.\+datalog.\+idlv.\+IDLVParser\+Base\+Visitor\+Implementation.\+Visit\+Minimal\+\_\+model (\begin{DoxyParamCaption}\item[{IDLVParser.\+Minimal\+\_\+model\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by IDLVParser.\+minimal\+\_\+model. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Reimplemented from \mbox{\hyperlink{classIDLVParserBaseVisitor_a3113f2b55e5030a946b652e8ef45eee9}{IDLVParser\+Base\+Visitor$<$ object $>$}}.
+
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_af512b14a9b7c181deb1c4b1a89e3599d}\label{classit_1_1unical_1_1mat_1_1parsers_1_1datalog_1_1idlv_1_1IDLVParserBaseVisitorImplementation_af512b14a9b7c181deb1c4b1a89e3599d}} 
+\index{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}!VisitPredicate\_atom@{VisitPredicate\_atom}}
+\index{VisitPredicate\_atom@{VisitPredicate\_atom}!it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation@{it.unical.mat.parsers.datalog.idlv.IDLVParserBaseVisitorImplementation}}
+\doxysubsubsection{\texorpdfstring{VisitPredicate\_atom()}{VisitPredicate\_atom()}}
+{\footnotesize\ttfamily override object it.\+unical.\+mat.\+parsers.\+datalog.\+idlv.\+IDLVParser\+Base\+Visitor\+Implementation.\+Visit\+Predicate\+\_\+atom (\begin{DoxyParamCaption}\item[{IDLVParser.\+Predicate\+\_\+atom\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by IDLVParser.\+predicate\+\_\+atom. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Reimplemented from \mbox{\hyperlink{classIDLVParserBaseVisitor_a0591639a6fb4459c560f5f300faf7262}{IDLVParser\+Base\+Visitor$<$ object $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/datalog/idlv/\mbox{\hyperlink{IDLVParserBaseVisitorImplementation_8cs}{IDLVParser\+Base\+Visitor\+Implementation.\+cs}}\end{DoxyCompactItemize}

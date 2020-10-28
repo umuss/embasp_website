@@ -1,0 +1,61 @@
+\hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser}{}\doxysection{it.\+unical.\+mat.\+parsers.\+asp.\+ASPParser Class Reference}
+\label{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser}\index{it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}}
+Inheritance diagram for it.\+unical.\+mat.\+parsers.\+asp.\+ASPParser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_a453f15f33cf4d1a4f3b8c00d37a8210f}{Get\+Parameters}} ()
+\item 
+override object \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_a47e3dccc1cdb65655f588f63f92cb07b}{Visit\+Term}} (ASPGrammar\+Parser.\+Term\+Context context)
+\begin{DoxyCompactList}\small\item\em Visit a parse tree produced by ASPGrammar\+Parser.\+term. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser}{ASPParser}} \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_ae6912117f371c49898fc4015f5c6abe5}{Parse}} (string atom)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_a453f15f33cf4d1a4f3b8c00d37a8210f}\label{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_a453f15f33cf4d1a4f3b8c00d37a8210f}} 
+\index{it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}!GetParameters@{GetParameters}}
+\index{GetParameters@{GetParameters}!it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}}
+\doxysubsubsection{\texorpdfstring{GetParameters()}{GetParameters()}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} it.\+unical.\+mat.\+parsers.\+asp.\+ASPParser.\+Get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_ae6912117f371c49898fc4015f5c6abe5}\label{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_ae6912117f371c49898fc4015f5c6abe5}} 
+\index{it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}!Parse@{Parse}}
+\index{Parse@{Parse}!it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser}{ASPParser}} it.\+unical.\+mat.\+parsers.\+asp.\+ASPParser.\+Parse (\begin{DoxyParamCaption}\item[{string}]{atom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_a47e3dccc1cdb65655f588f63f92cb07b}\label{classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1ASPParser_a47e3dccc1cdb65655f588f63f92cb07b}} 
+\index{it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}!VisitTerm@{VisitTerm}}
+\index{VisitTerm@{VisitTerm}!it.unical.mat.parsers.asp.ASPParser@{it.unical.mat.parsers.asp.ASPParser}}
+\doxysubsubsection{\texorpdfstring{VisitTerm()}{VisitTerm()}}
+{\footnotesize\ttfamily override object it.\+unical.\+mat.\+parsers.\+asp.\+ASPParser.\+Visit\+Term (\begin{DoxyParamCaption}\item[{ASPGrammar\+Parser.\+Term\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visit a parse tree produced by ASPGrammar\+Parser.\+term. 
+
+The default implementation returns the result of calling Abstract\+Parse\+Tree\+Visitor$<$\+Result$>$.\+Visit\+Children(\+IRule\+Node) on {\itshape context} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The parse tree.\\
+\hline
+\end{DoxyParams}
+$<$return$>$The visitor result.$<$/return$>$ 
+
+Reimplemented from \mbox{\hyperlink{classASPGrammarBaseVisitor_a5f48d61cfbedeee2e5a5308947548105}{ASPGrammar\+Base\+Visitor$<$ object $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+embasp-\/csharp/it/unical/mat/parsers/asp/\mbox{\hyperlink{ASPParser_8cs}{ASPParser.\+cs}}\end{DoxyCompactItemize}

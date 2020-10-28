@@ -112,6 +112,7 @@
                         <a class="dropdown-item" href="version_3x.html">Version 3x</a>
                         <a class="dropdown-item" href="version_4x.html">Version 4x</a>
                         <a class="dropdown-item" href="version_5x.html">Version 5x</a>
+                        <a class="dropdown-item" href="version_6x.html">Version 6x</a>
                     </div>
                 </li>
             </ul>
@@ -160,7 +161,9 @@
                         <a href="http://www.dlvsystem.com/dlv">DLV</a>,
                         <a href="https://www.mat.unical.it/DLV2">DLV2</a>,
                         <a href="https://potassco.org/clingo">clingo</a>,
-                        <a href="http://www.kr.tuwien.ac.at/research/systems/dlvhex/">DLVHEX</a> and the
+                        <a href="http://www.kr.tuwien.ac.at/research/systems/dlvhex/">DLVHEX</a>,
+                        the embedding of the <em>Datalog</em> engine <a href="https://github.com/DeMaCS-UNICAL/I-DLV">I-DLV</a>
+                         and the
                         <em>PDDL (Planning Domain Definition Language)</em> cloud solver
                         <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (SPD) on the Desktop platform and of DLV and SPD on the Mobile (Android&trade;)
                         one (available only for the Java version).
@@ -175,7 +178,7 @@
 
             <div class="alert alert-info" role="alert">
                 NOTE: this is the official site of versions
-                <strong>6</strong> of the EmbASP Framework. If you are looking for an older version, please check the last item in
+                <strong>7</strong> of the EmbASP Framework. If you are looking for an older version, please check the last item in
                 the top menu.
             </div>
         </div>
@@ -295,6 +298,11 @@
                             <code>AnswerSet</code>, represents the
                             <code>Output</code> for ASP. Moreover the
                             <code>ASPMapper</code> allow the management of ASP input facts and answer sets via objects.
+                            The Datalog sub-module resembles the ASP sub-module very closely: 
+                            <code>DatalogInputProgram</code> is the Datalog equivalent of <code>ASPInputProgram</code>,
+                            <code>MinimalModels</code> is the equivalent of <code>AnswerSets</code>,
+                            <code>MinimalModel</code> is the equivalent of <code>AnswerSet</code>, 
+                            and <code>DatalogMapper</code> is the equivalent of <code>ASPMapper</code>.
                             Similarly, the sub-module PDDL includes
                             <code>PDDLInputProgram</code>,
                             <code>Action</code>,
@@ -313,11 +321,11 @@
                         </p>
                         <p>
                             In particular, this module contains specific extensions for the different solvers of the <code>DesktopService</code> (
-                            <code>DLVDesktopService</code>, <code>DLV2DesktopService</code>, <code>DLVHEXDesktopService</code>, 
+                            <code>DLVDesktopService</code>, <code>DLV2DesktopService</code>, <code>IDLVDesktopService</code>, <code>DLVHEXDesktopService</code>, 
                             <code>ClingoDesktopService</code> and <code>SPDDesktopService</code>) and the <code>AndroidService</code> (
                             <code>DLVAndroidService</code>, <code>DLV2AndroidService</code> and <code></code>). There are also the extensions of the 
                             <code>AnswerSets</code> for ASP language (<code>DLVAnswerSets</code>, <code>DLV2AnswerSets</code>, <code>DLVHEXAnswerSets</code> and 
-                            <code>ClingoAnswerSets</code>) and of the <code>Plan</code> for PDDL language (<code>SPDPlan</code>).
+                            <code>ClingoAnswerSets</code>) of the <code>Plan</code> for PDDL language (<code>SPDPlan</code>), and of the <code>MinimalModels</code> for the Datalog language (<code>IDLVMinimalModels</code>).
                         </p>
                     </div>
                 </div>

@@ -111,33 +111,33 @@ For the desktop platform we developed a |DesktopHandler|_ and a |DesktopService|
 Languages module implementation
 ===============================
 
-This module includes specific classes for the management of input and output to ASP and PDDL solvers.
+This module includes specific classes for the management of input and output to ASP, Datalog and PDDL solvers.
 
 The |Mapper|_ component of the :guilabel:`Languages` module is implemented via a |Mapper|_ class, that allows to translate input and output into C# objects.
 Such translations are guided by `ANTLR4 <https://www.antlr.org/>`_ library and `C# Attributes <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/>`_, a form of metadata that mark C# code and provide information that is not part of the program itself: they have no direct effect on the operation of the code they annotate.
 
 In our setting, we make use of such features so that it is possible to translate facts into strings and vice-versa via two custom attributes, defined according to the following syntax:
 
-* *[Id(string_name)]* : the target must be a class, and defines the predicate name (in the ASP case) and the action name (in the PDDL case) the class is mapped to;
-* *[Param(integer_position)]* : the target must be a field of a class annotated via *[Id(string_name)]*, and defines the term (and its position) in the atom (in the ASP case) and in the action (in the PDDL case) the field is mapped to.
+* *[Id(string_name)]* : the target must be a class, and defines the predicate name (in the ASP/Datalog case) and the action name (in the PDDL case) the class is mapped to;
+* *[Param(integer_position)]* : the target must be a field of a class annotated via *[Id(string_name)]*, and defines the term (and its position) in the atom (in the ASP/Datalog case) and in the action (in the PDDL case) the field is mapped to.
 
 By means of the `C# Reflection <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection>`_ mechanism, attributes are examined at runtime, and taken into account to properly define the translation.
 
 If the classes intended for the translation are not annotated or not correctly annotated, an exception is raised.
 
-In addition to the |Mapper|_, this module features two sub-modules which are more strictly related to ASP and PDDL.
+In addition to the |Mapper|_, this module features three sub-modules which are more strictly related to ASP, Datalog and PDDL.
 
 Specialization module implementation
 ====================================
 
-The classes |DLVAnswerSets|_, |DLV2AnswerSets|_, |ClingoAnswerSets|_, |DLVHEXAnswerSets|_ and |SPDPlan|_ implement specific extensions of the |AnswerSets|_ or |Plan|_ classes, in charge of manipulating the output of the respective solvers.
+The classes |DLVAnswerSets|_, |DLV2AnswerSets|_, |ClingoAnswerSets|_, |DLVHEXAnswerSets|_ implement specific extensions of the |AnswerSets|_ class, the |SPDPlan|_ class extends |Plan|_, while |IDLVMinimalModels|_ extends |MinimalModels|_ . These classes are in charge of manipulating the output of the respective solvers (e.g. IDLV).
 
 Moreover, this module can contain classes extending |OptionDescriptor|_ to implement specific options of the solver at hand. 
 
 Class Diagram
 =============
 
-A complete UML Class Diagram is available `here <../_static/complete_diagram_csharp.svg>`_.
+A complete UML Class Diagram is available `here <../_static/complete_diagram_csharp_v7.svg>`_.
 
 |
 
@@ -158,6 +158,8 @@ For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ 
 .. |SPDPlan| replace:: ``SPDPlan``
 .. |AnswerSets| replace:: ``AnswerSets``
 .. |Plan| replace:: ``Plan``
+.. |IDLVMinimalModels| replace:: ``IDLVMinimalModels``
+.. |MinimalModels| replace:: ``MinimalModels``
 
 .. _Handler: ../_static/doxygen/cSharp/classbase_1_1Handler.html
 .. _InputProgram: ../_static/doxygen/cSharp/classbase_1_1InputProgram.html
@@ -174,4 +176,6 @@ For further information, contact `embasp@mat.unical.it <embasp@mat.unical.it>`_ 
 .. _SPDPlan: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1solver__planning__domains_1_1SPDPlan.html
 .. _AnswerSets: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1AnswerSets.html
 .. _Plan: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1Plan.html
+.. _IDLVMinimalModels: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1idlv_1_1IDLVMinimalModels.html
+.. _MinimalModels: ../_static/doxygen/cSharp/classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1datalog_1_1MinimalModels.html
 
