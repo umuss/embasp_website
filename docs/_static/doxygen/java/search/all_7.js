@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['mapper_88',['Mapper',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html',1,'it::unical::mat::embasp::languages']]]
+  ['handleactionsolve_211',['handleActionSolve',['../classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv_1_1android_1_1DLVAndroidReasoner.html#afcb43c998dcb5a0f8d2c1abc983935d6',1,'it.unical.mat.embasp.specializations.dlv.android.DLVAndroidReasoner.handleActionSolve()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1specializations_1_1dlv2_1_1android_1_1DLV2AndroidReasoner.html#a2d94c7442ed3c02806d4a22be4ad38a5',1,'it.unical.mat.embasp.specializations.dlv2.android.DLV2AndroidReasoner.handleActionSolve()']]],
+  ['handler_212',['Handler',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html',1,'it.unical.mat.embasp.base.Handler'],['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html#a24f1fb919872f638a09d313e3bf736d7',1,'it.unical.mat.embasp.base.Handler.Handler()']]],
+  ['handler_2ejava_213',['Handler.java',['../Handler_8java.html',1,'']]],
+  ['header_214',['HEADER',['../classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv_1_1DLVLexer.html#a910bf81410bf4b03e0517a1594da7a2a',1,'it.unical.mat.parsers.asp.dlv.DLVLexer.HEADER()'],['../classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlv_1_1DLVParser.html#ae291640b304055bcbed324fb52245c1c',1,'it.unical.mat.parsers.asp.dlv.DLVParser.HEADER()'],['../classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex_1_1DLVHEXLexer.html#acc21a1a1ef8d30dc2eb74a175fcb31dc',1,'it.unical.mat.parsers.asp.dlvhex.DLVHEXLexer.HEADER()'],['../classit_1_1unical_1_1mat_1_1parsers_1_1asp_1_1dlvhex_1_1DLVHEXParser.html#afdfef52042cfa55a788170de2e6ac00f',1,'it.unical.mat.parsers.asp.dlvhex.DLVHEXParser.HEADER()']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['separator_317',['separator',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html#af35f2c71363088825a4a323bdd8d506d',1,'it.unical.mat.embasp.base.InputProgram.separator()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html#a196cdb5096886890973fde21005f58e1',1,'it.unical.mat.embasp.base.OptionDescriptor.separator()']]]
+  ['errors_872',['errors',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Output.html#a6694f9c796fc0ddc47613d0e90b10cbb',1,'it::unical::mat::embasp::base::Output']]],
+  ['exe_5fpath_873',['exe_path',['../classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopService.html#af2c8013d29278fa7da75edba519a383b',1,'it::unical::mat::embasp::platforms::desktop::DesktopService']]]
 ];

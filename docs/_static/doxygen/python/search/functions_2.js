@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['clear_244',['clear',['../classbase_1_1option__descriptor_1_1OptionDescriptor.html#a5f7b6c27b3cec229959291298f896e81',1,'base::option_descriptor::OptionDescriptor']]],
-  ['clear_5fall_245',['clear_all',['../classbase_1_1input__program_1_1InputProgram.html#a7b544bbbef323baffaa9d6eaccf5c535',1,'base::input_program::InputProgram']]],
-  ['clear_5ffiles_5fpaths_246',['clear_files_paths',['../classbase_1_1input__program_1_1InputProgram.html#a241f73c273026f3ff6af22ee9b7c5272',1,'base::input_program::InputProgram']]],
-  ['clear_5fprograms_247',['clear_programs',['../classbase_1_1input__program_1_1InputProgram.html#acb4c96b236c12c01a0f4e6bc9e729f82',1,'base::input_program::InputProgram']]]
+  ['boolean_819',['BOOLEAN',['../classparsers_1_1asp_1_1dlv_1_1DLVParser_1_1DLVParser_1_1GroundQueryContext.html#acafc93777fe2778fa42125c1166e22b9',1,'parsers.asp.dlv.DLVParser.DLVParser.GroundQueryContext.BOOLEAN()'],['../classparsers_1_1asp_1_1dlvhex_1_1DLVHEXParser_1_1DLVHEXParser_1_1GroundQueryContext.html#ac1d0e16a9e716b06811bdc0b6d8afaa1',1,'parsers.asp.dlvhex.DLVHEXParser.DLVHEXParser.GroundQueryContext.BOOLEAN()'],['../classparsers_1_1pddl_1_1solver__planning__domains_1_1SPDGrammarParser_1_1SPDGrammarParser_1_1BooleanValueContext.html#ac54e19f29e0850d0fe192a55afaaf98f',1,'parsers.pddl.solver_planning_domains.SPDGrammarParser.SPDGrammarParser.BooleanValueContext.BOOLEAN()']]]
 ];

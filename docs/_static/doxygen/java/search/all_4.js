@@ -1,16 +1,6 @@
 var searchData=
 [
-  ['getanswerset_70',['getAnswerSet',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1AnswerSet.html#aee54c0a97a5dc2bc830547a30a318690',1,'it::unical::mat::embasp::languages::asp::AnswerSet']]],
-  ['getatoms_71',['getAtoms',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1AnswerSet.html#a15e83c02d9ff5adc5faa2cdc75cec9b2',1,'it::unical::mat::embasp::languages::asp::AnswerSet']]],
-  ['getid_72',['getId',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html#a9e7167c9d0f83abe41c10c7fd98530b2',1,'it.unical.mat.embasp.languages.asp.ASPMapper.getId()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html#a3f33123ddfecd71da02432f0867fc86e',1,'it.unical.mat.embasp.languages.Mapper.getId()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1PDDLMapper.html#a2bd56143af4e4c84a3627b19d6a8485a',1,'it.unical.mat.embasp.languages.pddl.PDDLMapper.getId()']]],
-  ['getinputprogram_73',['getInputProgram',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html#a1367c395416a731944008346c77d139f',1,'it::unical::mat::embasp::base::Handler']]],
-  ['getobject_74',['getObject',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html#adc0c9b4ca5f819038747a4e73b796723',1,'it::unical::mat::embasp::languages::Mapper']]],
-  ['getoptiondescriptor_75',['getOptionDescriptor',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Handler.html#a09b6535d3a64d8339639b4732f0a994e',1,'it::unical::mat::embasp::base::Handler']]],
-  ['getoptions_76',['getOptions',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html#a29ae2ea87c4c7b3d520bb723ad3c4e40',1,'it::unical::mat::embasp::base::OptionDescriptor']]],
-  ['getparam_77',['getParam',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1ASPMapper.html#a8b2e24f84067f2a78193715a61e1005a',1,'it.unical.mat.embasp.languages.asp.ASPMapper.getParam()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html#a556d6b066295641610440aa2ed4b7f5a',1,'it.unical.mat.embasp.languages.Mapper.getParam()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1pddl_1_1PDDLMapper.html#ac801f9272d4d6a9ad5b48e2e2e4b76a5',1,'it.unical.mat.embasp.languages.pddl.PDDLMapper.getParam()']]],
-  ['getprograms_78',['getPrograms',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html#a414e3713fd9b807778433afe95cd4977',1,'it::unical::mat::embasp::base::InputProgram']]],
-  ['getseparator_79',['getSeparator',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html#a6479581d69b696d3dada838565ebf8cc',1,'it.unical.mat.embasp.base.InputProgram.getSeparator()'],['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1OptionDescriptor.html#a86b9e317b08e722fddfdf8fdd565ccb3',1,'it.unical.mat.embasp.base.OptionDescriptor.getSeparator()']]],
-  ['getstring_80',['getString',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1Mapper.html#acac65a4153b2b715019b511753f16846',1,'it::unical::mat::embasp::languages::Mapper']]],
-  ['getstringoffilespaths_81',['getStringOfFilesPaths',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1InputProgram.html#a667e96fbf5b195c48c5bc1d65a64acc2',1,'it::unical::mat::embasp::base::InputProgram']]],
-  ['getweights_82',['getWeights',['../classit_1_1unical_1_1mat_1_1embasp_1_1languages_1_1asp_1_1AnswerSet.html#aae53495acb36941ce2ed0c1eae079e0f',1,'it::unical::mat::embasp::languages::asp::AnswerSet']]]
+  ['errors_162',['errors',['../classit_1_1unical_1_1mat_1_1embasp_1_1base_1_1Output.html#a6694f9c796fc0ddc47613d0e90b10cbb',1,'it::unical::mat::embasp::base::Output']]],
+  ['exe_5fpath_163',['exe_path',['../classit_1_1unical_1_1mat_1_1embasp_1_1platforms_1_1desktop_1_1DesktopService.html#af2c8013d29278fa7da75edba519a383b',1,'it::unical::mat::embasp::platforms::desktop::DesktopService']]],
+  ['embasp_164',['EmbASP',['../index.html',1,'']]]
 ];
