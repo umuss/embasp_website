@@ -27,7 +27,7 @@ To this purpose, the following classes are intended to represent possible predic
 .. code-block:: csharp
 
     [Id("path")]
-    class UnweightedPath
+    class Path
     {
         [Param(0)]
         private int from;
@@ -35,25 +35,26 @@ To this purpose, the following classes are intended to represent possible predic
         [Param(1)]
         private int to;
 
-        public UnweightedPath()
+        public Path()
         {
             this.from = 0;
             this.to = 0;
         }
 
-        public UnweightedPath(int from, int to)
+        public Path(int from, int to)
         {
             this.from = from;
             this.to = to;
         }
 
         [...]
+    }
     
 
 .. code-block:: csharp
 
-  [Id("edge")]
-    class UnweightedEdge
+    [Id("edge")]
+    class Edge
     {
         [Param(0)]
         private int from;
@@ -61,20 +62,20 @@ To this purpose, the following classes are intended to represent possible predic
         [Param(1)]
         private int to;
 
-        public UnweightedEdge()
+        public Edge()
         {
             this.from = 0;
             this.to = 0;
         }
 
-        public UnweightedEdge(int from, int to)
+        public Edge(int from, int to)
         {
             this.from = from;
             this.to = to;
         }
 
         [...]
-  }
+    }
 
 At this point, supposing that we have embedded the IDLV Datalog engine in this project, we can start deploying our application:
 
@@ -82,27 +83,22 @@ At this point, supposing that we have embedded the IDLV Datalog engine in this p
 
     public class TransitiveClosure
     {
-
-        [TestMethod]
-        public void TransitiveClosureTest()
+        public static void Main(string[] args)
         {
             try
             {
-                DesktopHandler handler = new DesktopHandler(new IDLVDesktopService("executables/idlv"));
-
-                DatalogMapper.Instance.RegisterClass(typeof(UnweightedPath));
-
                 InputProgram input = new DatalogInputProgram();
-                input.AddObjectInput(new UnweightedEdge(1,2));
-                input.AddObjectInput(new UnweightedEdge(2,3));
-                input.AddObjectInput(new UnweightedEdge(2,4));
-                input.AddObjectInput(new UnweightedEdge(3,5));
-                input.AddObjectInput(new UnweightedEdge(3,6));    
-
+                DesktopHandler handler = new DesktopHandler(new IDLVDesktopService("executables/idlv"));
+                DatalogMapper.Instance.RegisterClass(typeof(Path));
                 input.AddProgram("path(X,Y) :- edge(X,Y).");
                 input.AddProgram("path(X,Y) :- path(X,Z), path(Z,Y).");
-
                 handler.AddProgram(input);
+
+                input.AddObjectInput(new Edge(1,2));
+                input.AddObjectInput(new Edge(2,3));
+                input.AddObjectInput(new Edge(2,4));
+                input.AddObjectInput(new Edge(3,5));
+                input.AddObjectInput(new Edge(3,6));    
 
                 IDLVMinimalModels minimalModels = (IDLVMinimalModels)handler.StartSync();
 
@@ -110,7 +106,7 @@ At this point, supposing that we have embedded the IDLV Datalog engine in this p
                 {
                     foreach (object a in m.Atoms)
                     {
-                        if (typeof(UnweightedPath).IsInstanceOfType(a))
+                        if (typeof(Path).IsInstanceOfType(a))
                         {
                             Console.WriteLine(a);
                         }

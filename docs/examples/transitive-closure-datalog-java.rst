@@ -71,26 +71,20 @@ At this point, supposing that we have embedded the IDLV Datalog engine in this p
     public static void main(String[] args) {
 
       try {
-        Edge o1 = new Edge(1, 2);
-        Edge o2 = new Edge(2, 3);
-        Edge o3 = new Edge(2, 4);
-        Edge o4 = new Edge(3, 5);
-        Edge o5 = new Edge(5, 6);
-
-        Handler testHandler = new DesktopHandler(new IDLVDesktopService("executable/idlv"));
-        InputProgram testInputProgram = new DatalogInputProgram();
-        testInputProgram.addProgram("path(X,Y) :- edge(X,Y).");
-        testInputProgram.addProgram("path(X,Y) :- path(X,Z), path(Z,Y). ");
-        testInputProgram.addObjectInput(o1);
-        testInputProgram.addObjectInput(o2);
-        testInputProgram.addObjectInput(o3);
-        testInputProgram.addObjectInput(o4);
-        testInputProgram.addObjectInput(o5);
-
-        testHandler.addProgram(testInputProgram);
+        InputProgram input = new DatalogInputProgram();
+        Handler handler = new DesktopHandler(new IDLVDesktopService("executables/idlv"));
         DatalogMapper.getInstance().registerClass(Path.class);
+        input.addProgram("path(X,Y) :- edge(X,Y).");
+        input.addProgram("path(X,Y) :- path(X,Z), path(Z,Y). ");
+        handler.addProgram(input);
 
-        MinimalModels minimalModels = (MinimalModels) testHandler.startSync();
+        input.addObjectInput(new Edge(1,2));
+        input.addObjectInput(new Edge(2,3));
+        input.addObjectInput(new Edge(2,4));
+        input.addObjectInput(new Edge(3,5));
+        input.addObjectInput(new Edge(5,6));
+
+        MinimalModels minimalModels = (MinimalModels) handler.startSync();
         
         for (MinimalModel m : minimalModels.getMinimalModels()) {
             for (Object a : m.getAtomsAsObjectSet()) {

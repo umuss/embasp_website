@@ -139,17 +139,16 @@
                     <h1 class="display-4">
                         <em>EmbASP</em>
                     </h1>
-                    <p class="lead">A framework for the integration (embedding) of Logic Programming in external systems for generic applications.
-                        <br /> It helps developers at designing and implementing complex reasoning tasks by means of solvers on
-                        different platforms.
+                    <p class="lead">A framework for the integration of Logic Programming in external systems for generic applications,
+                        conceived in order to help developers at designing and implementing complex reasoning tasks by means of logic-based solvers on different platforms.
                     </p>
                     <hr class="my-4">
                     <p>
-                        <p>We currently provide 3 implementations (in <a href="https://www.java.com">Java</a>, in <a href="https://www.python.org">Python</a> and in <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a>) 
-                            and ready-made libraries for the embedding several logic programming languages (mainly on the Desktop platform). In particular, we provide support for: </p>
+                        <p>We currently provide implementations of EmbASP in three different programming languages: <a href="https://www.java.com">Java</a>, <a href="https://www.python.org">Python</a>, and <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#.</a> 
+                            EmbASP also contains ready-made libraries for embedding several logic-based solvers: </p>
                             <ul>
                             <li>ASP (Answer Set Programming) solvers<ul>
-                            <li><a href="http://www.dlvsystem.com/dlv">DLV</a> (also for the Android platform, for the Java language)</li>
+                            <li><a href="http://www.dlvsystem.com/dlv">DLV</a></li>
                             <li><a href="https://www.mat.unical.it/DLV2">DLV2</a> </li>
                             <li><a href="https://potassco.org/clingo">clingo</a> </li>
                             <li><a href="http://www.kr.tuwien.ac.at/research/systems/dlvhex/">DLVHEX</a></li>
@@ -158,21 +157,25 @@
                             </ul>
                             <ul>
                             <li>PDDL (Planning Domain Definition Language) <ul>
-                            <li>Cloud solver <a href="http://solver.planning.domains">Solver.Planning.Domains</a> (also for the Android platform, for the Java language).</li>
+                            <li><a href="http://solver.planning.domains">Solver.Planning.Domains</a></li>
                             </ul>
                             </li>
                             </ul>
                             <ul>
                             <li>Datalog<ul>
-                            <li><a href="https://github.com/DeMaCS-UNICAL/I-DLV">I-DLV</a> grounder</li>
+                            <li><a href="https://github.com/DeMaCS-UNICAL/I-DLV">I-DLV</a></li>
                             </ul>
                             </li>
                             </ul>                                                                  
                     </p>
                     <p>
-                        However, the framework has been designed to be easily extensible and adaptable to different solvers and platforms. It is
-                        worth to notice that solvers are invoked in different modes; for instance, SPD is invoked via a remote
-                        connection, while for the other, binaries are effectively embedded and natively executed.
+                        Note that DLV, DLV2 and Solver.Planning.Domains can also be used on Android.
+                    </p>
+                    <p>
+                        The framework has been designed to be easily extensible and adaptable to different solvers and platforms. 
+                        Solvers can be invoked in different ways: via REST API as for Solver.Planning.Domains, 
+                        native binary execution as for most of the "desktop solvers", 
+                        library invocation as in the Android solvers, or any other way that can be implemented using the OOP paradigm.
                     </p>
                 </div>
             </div>

@@ -34,7 +34,7 @@ To this purpose, the following classes are intended to represent possible predic
           self.source = source
           self.destination = destination
 
-      # [...]
+      [...]
   
 
 .. code-block:: python
@@ -47,7 +47,7 @@ To this purpose, the following classes are intended to represent possible predic
           self.source = source
           self.destination = destination
 
-      # [...]
+      [...]
   
 
 At this point, supposing that we have embedded the IDLV Datalog engine in this project, we can start deploying our application:
@@ -56,26 +56,18 @@ At this point, supposing that we have embedded the IDLV Datalog engine in this p
 
   def test_find_reachable_nodes(self):
     try:
-        o1 = Edge(1, 2)
-        o2 = Edge(2, 3)
-        o3 = Edge(2, 4)
-        o4 = Edge(3, 5)
-        o5 = Edge(5, 6)
-
+        input = DatalogInputProgram()
         handler = DesktopHandler(IDLVDesktopService("executable/idlv"))
-        testInputProgram = DatalogInputProgram()
-        testInputProgram.add_program("path(X,Y) :- edge(X,Y).")
-        testInputProgram.add_program("path(X,Y) :- path(X,Z), path(Z,Y). ")
-
-        testInputProgram.add_object_input(o1)
-        testInputProgram.add_object_input(o2)
-        testInputProgram.add_object_input(o3)
-        testInputProgram.add_object_input(o4)
-        testInputProgram.add_object_input(o5)
-
-        handler.add_program(testInputProgram)
-
         DatalogMapper.get_instance().register_class(Path)
+        input.add_program("path(X,Y) :- edge(X,Y).")
+        input.add_program("path(X,Y) :- path(X,Z), path(Z,Y). ")
+        handler.add_program(input)
+
+        input.add_object_input(Edge(1,2))
+        input.add_object_input(Edge(2,3))
+        input.add_object_input(Edge(2,4))
+        input.add_object_input(Edge(3,5))
+        input.add_object_input(Edge(5,6))
 
         minimalModels = handler.start_sync()
 
@@ -86,9 +78,7 @@ At this point, supposing that we have embedded the IDLV Datalog engine in this p
     except Exception as e:
         print(str(e))
 
-    # [...]
 
-  
 
 The main method contains an |Handler|_ instance, that is initialized with a |DesktopHandler|_ using the parameter |IDLVDesktopService|_ with a string representing the path to the IDLV local grounder.
 

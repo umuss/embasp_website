@@ -82,7 +82,7 @@ The following figure provides some details about classes and interfaces of the i
    </script>
 
    <div class="img-magnifier-container">
-     <img id="myimage" src="../_static/class_diagram_python_v7.png" width="1000" height="500">
+     <img id="myimage" src="../_static/class_diagram_python.svg" width="1000" height="500">
    </div>
 
    <script>
@@ -136,7 +136,7 @@ Moreover, this module can contain classes extending |OptionDescriptor|_ to imple
 Class Diagram
 =============
 
-A complete UML Class Diagram is available `here <../_static/complete_diagram_python_v7.png>`_.
+A complete UML Class Diagram is available `here <../_static/complete_diagram_python.svg>`_.
 
 |
 

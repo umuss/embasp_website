@@ -82,7 +82,7 @@ The following figure provides some details about classes and interfaces of the i
    </script>
 
    <div class="img-magnifier-container">
-     <img id="myimage" src="../_static/class_diagram_java_v7.svg" width="1000" height="500">
+     <img id="myimage" src="../_static/class_diagram_java.svg" width="1000" height="500">
    </div>
 
    <script>
@@ -138,7 +138,7 @@ Moreover, this module can contain classes extending |OptionDescriptor|_ to imple
 Class Diagram
 =============
 
-A complete UML Class Diagram is available `here <../_static/complete_diagram_java_v7.svg>`_.
+A complete UML Class Diagram is available `here <../_static/complete_diagram_java.svg>`_.
 
 |
 
